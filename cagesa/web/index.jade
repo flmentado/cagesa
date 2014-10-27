@@ -6,92 +6,120 @@ html
 		link(rel="stylesheet",href="css/foundation.css")
 		link(rel="stylesheet",href="css/normalize.css")
 		link(rel="stylesheet",href="css/person.css")
+		link(rel="css/app.css")
+		link(rel="css/icons.css")
+		link(rel="css/style.css")
+		script(src="js/vendor/jquery-2.1.1.js")
 		script(src="js/vendor/modernizr.js")
-
+		script(src="js/jquery.stellar.js")
 
 	body
+		.mq-check
 
-	.row
-		.contain-to-grid.fixed
-			nav.topbar(data-topbar role="navigation" data-options="sticky_on: large")
-				section.top-bar-section
-					ul.left
-						li.name.logo.small-1.medium-3.columns
-							img(src="img/logoLarge.jpg")
+			.contain-to-grid.fixed.gris
+				nav.top-bar(data-topbar)
+					ul.title-area
+						li.name
+							h1
+								a(href="#") Logo Cagesa
+						li.toggle-topbar.menu-icon
+							a(href="#")
+								span Menu
 
-					ul.right
-						li.quienes.select.small-3.medium-3.columns.long
-							a Quienes somos
-						li.serv.small-3.medium-3.columns
-							a Servicios
-						li.client.small-3.medium-3.columns
-							a Clientes
-						li.contact.small-3.medium-3.columns.end
-							a Contacto
-		//- .cabecera.small-12.columns
-		//- 	.small-2.columns.logo
-		//- 	.titulo.long.quienes
-		//- 		a(href="#") Quienes Somos
-		//- 	.titulo.serv
-		//- 		a(href="#") Servicios
-		//- 	.titulo.client
-		//- 		a(href="#") Clientes
-		//- 	.titulo.end.contact
-		//- 		a(href="#") Contacto
-	.row.trampa
-	.row
-		.slide.small-12.columns
-			img(src="img/bg2.jpg")
-	.row
-		.lema.small-12.columns
-			p Canarias de Gestion y Suministros para Areas Verdes
-	.row
-		hr
-		h4.somos Quienes Somos
-		.somostext.small-12.medium-6.columns
-			p.panel Canarias de gestión y suministros para areas verdes S.L. es una empresa perteneciente al Grupo Castillo. Su ámbito de actuacion es la jardinería, el sector medioambiental y los servicios
-			p.panel  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque optio dolore a quibusdam necessitatibus. Dolor delectus quam eligendi vel atque fugiat nostrum quia cupiditate, aliquid voluptatum officia asperiores dolore eum.
-		.somosSlide.small-12.medium-6.columns.end
-			img(src="img/bg6.jpg")
-	.row
-		hr
-		h4.servicios Servicios
-		ul.small-block-grid-1.medium-block-grid-3
-			li
-				img(src="img/mantenimiento.png" class="lolo")
-				p.panel  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt cum, autem amet quasi quas error facilis cupiditate dolorem nobis, doloribus.
-			li
-				img(src="img/instalaciones.png")
-				p.panel  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id voluptas unde corporis accusamus nesciunt, consequuntur officia deleniti consectetur repellat ducimus.
-			li
-				img(src="img/servicios.png")
-				p.panel  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam obcaecati impedit deleniti cupiditate possimus blanditiis totam explicabo, iste non maxime.
-	.row
-		hr
-		h4.clientes Clientes
-		ul.small-block-grid-1.medium-block-grid-4
-			li
-				p.panel  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt cum, autem amet quasi quas error facilis cupiditate dolorem nobis, doloribus.
-			li
-				img(src="img/bg4.jpg")
-			li
-				img(src="img/bg5.jpg")
-			li
-				img(src="img/bg6.jpg")
-	.row
-		hr
-		h4.contacto Contacto
-		form.contacto
-			input(type="text" placeholder="Nombre")
-			input(id="particular" type="radio" name="particular" value="particular")
-			label(for="particular") Particular
-			input(type="text" placeholder="Nombre")
-			input(type="text" placeholder="Nombre")
-			input(type="text" placeholder="Nombre")
-			input(type="text" placeholder="Nombre")
-			input(type="text" placeholder="Nombre")
+					section.top-bar-section
+						ul.right
+							li.divider
+							li.active.quienes
+								a(href="#") Quienes Somos
+							li.divider
+							li
+								a(href="#") Servicios
+							li.divider
+							li
+								a(href="#") Clientes
+							li.divider
+							li
+								a(href="#") Contacto
+							li.divider
+			.row.trampa
+			.row
+				.slide.small-12.columns
+						img(src="img/bg2.jpg").slide
+			//- .row
+			//- 	.lema.small-12.columns
+			//- 		p Canarias de Gestion y Suministros para Areas Verdes
 
-		script(src="js/vendor/jquery-2.1.1.js")
+
+
+			.small-12.bgstellar(data-stellar-background-ratio="0.4")
+				.row
+
+					hr
+					h4.somos Quienes Somos
+					.somostext.small-12.medium-6.columns
+						p.panel Canarias de gestión y suministros para areas verdes S.L. es una empresa perteneciente al Grupo Castillo. Su ámbito de actuacion es la jardinería, el sector medioambiental y los servicios
+						p.panel  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque optio dolore a quibusdam necessitatibus. Dolor delectus quam eligendi vel atque fugiat nostrum quia cupiditate, aliquid voluptatum officia asperiores dolore eum.
+					.somosSlide.small-12.medium-6.columns.end
+						a.th
+							img(src="img/alta/imagen (83).jpg")
+			.small-12
+				.row
+					hr
+					h4.servicios Servicios
+					ul.small-block-grid-1.medium-block-grid-3.pagination-centered
+						li
+							a.th
+								img(src='img/alta/imagen (32).jpg')
+							p.panel  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt cum, autem amet quasi quas error facilis cupiditate dolorem nobis, doloribus.
+						li
+							a.th
+								img(src='img/alta/imagen (15).jpg')
+							p.panel  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id voluptas unde corporis accusamus nesciunt, consequuntur officia deleniti consectetur repellat ducimus.
+						li
+							a.th
+								img(src='img/alta/imagen (26).jpg')
+							p.panel  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam obcaecati impedit deleniti cupiditate possimus blanditiis totam explicabo, iste non maxime.
+			.small-12.bgstellar(data-stellar-background-ratio="0.4")
+				.row
+					hr
+					h4.clientes Clientes
+					ul.small-block-grid-1.medium-block-grid-4
+						li
+							p.panel  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt cum, autem amet quasi quas error facilis cupiditate dolorem nobis, doloribus.
+						li
+							a.th
+								img(src="img/alta/imagen (83).jpg")
+						li
+							a.th
+								img(src="img/alta/imagen (81).jpg")
+						li
+							a.th
+								img(src="img/alta/imagen (12).jpg")
+
+			.row
+				.small-12
+					hr
+					h4.contacto Contacto
+					form.contacto
+						input(type="text" placeholder="Nombre")
+						input(id="particular" type="radio" name="particular" value="particular")
+						label(for="particular") Particular
+						input(type="text" placeholder="Nombre")
+						input(type="text" placeholder="Nombre")
+						input(type="text" placeholder="Nombre")
+						input(type="text" placeholder="Nombre")
+						input(type="text" placeholder="Nombre")
+
+
+
+
+			.row
+				.footer-section
+					.row
+						.small-12.columns
+							p.text-center Copryrigth 2014
+
 		script(src="js/foundation/foundation.js")
+		script(src="js/foundation/foundation.topbar.js")
 		script(src="js/user.js")
 		script $(document).foundation();
