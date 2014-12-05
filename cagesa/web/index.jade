@@ -1,0 +1,97 @@
+html
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		title Cagesa
+		link(rel="stylesheet",href="css/foundation.css")
+		link(rel="stylesheet",href="css/normalize.css")
+		link(rel="stylesheet",href="css/person.css")
+		script(src="js/vendor/modernizr.js")
+
+
+	body
+
+	.row
+		.contain-to-grid.fixed
+			nav.topbar(data-topbar role="navigation" data-options="sticky_on: large")
+				section.top-bar-section
+					ul.left
+						li.name.logo.small-1.medium-3.columns
+							img(src="img/logoLarge.jpg")
+
+					ul.right
+						li.quienes.select.small-3.medium-3.columns.long
+							a Quienes somos
+						li.serv.small-3.medium-3.columns
+							a Servicios
+						li.client.small-3.medium-3.columns
+							a Clientes
+						li.contact.small-3.medium-3.columns.end
+							a Contacto
+		//- .cabecera.small-12.columns
+		//- 	.small-2.columns.logo
+		//- 	.titulo.long.quienes
+		//- 		a(href="#") Quienes Somos
+		//- 	.titulo.serv
+		//- 		a(href="#") Servicios
+		//- 	.titulo.client
+		//- 		a(href="#") Clientes
+		//- 	.titulo.end.contact
+		//- 		a(href="#") Contacto
+	.row.trampa
+	.row
+		.slide.small-12.columns
+			img(src="img/bg2.jpg")
+	.row
+		.lema.small-12.columns
+			p Canarias de Gestion y Suministros para Areas Verdes
+	.row
+		hr
+		h4.somos Quienes Somos
+		.somostext.small-12.medium-6.columns
+			p.panel Canarias de gestión y suministros para areas verdes S.L. es una empresa perteneciente al Grupo Castillo. Su ámbito de actuacion es la jardinería, el sector medioambiental y los servicios
+			p.panel  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque optio dolore a quibusdam necessitatibus. Dolor delectus quam eligendi vel atque fugiat nostrum quia cupiditate, aliquid voluptatum officia asperiores dolore eum.
+		.somosSlide.small-12.medium-6.columns.end
+			img(src="img/bg6.jpg")
+	.row
+		hr
+		h4.servicios Servicios
+		ul.small-block-grid-1.medium-block-grid-3
+			li
+				img(src="img/mantenimiento.png" class="lolo")
+				p.panel  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt cum, autem amet quasi quas error facilis cupiditate dolorem nobis, doloribus.
+			li
+				img(src="img/instalaciones.png")
+				p.panel  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id voluptas unde corporis accusamus nesciunt, consequuntur officia deleniti consectetur repellat ducimus.
+			li
+				img(src="img/servicios.png")
+				p.panel  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam obcaecati impedit deleniti cupiditate possimus blanditiis totam explicabo, iste non maxime.
+	.row
+		hr
+		h4.clientes Clientes
+		ul.small-block-grid-1.medium-block-grid-4
+			li
+				p.panel  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt cum, autem amet quasi quas error facilis cupiditate dolorem nobis, doloribus.
+			li
+				img(src="img/bg4.jpg")
+			li
+				img(src="img/bg5.jpg")
+			li
+				img(src="img/bg6.jpg")
+	.row
+		hr
+		h4.contacto Contacto
+		form.contacto
+			input(type="text" placeholder="Nombre")
+			input(id="particular" type="radio" name="particular" value="particular")
+			label(for="particular") Particular
+			input(type="text" placeholder="Nombre")
+			input(type="text" placeholder="Nombre")
+			input(type="text" placeholder="Nombre")
+			input(type="text" placeholder="Nombre")
+			input(type="text" placeholder="Nombre")
+
+		script(src="js/vendor/jquery-2.1.1.js")
+		script(src="js/foundation/foundation.js")
+		script(src="js/user.js")
+		script $(document).foundation();

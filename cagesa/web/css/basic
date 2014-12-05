@@ -1,0 +1,12 @@
+@media all and (max-width: 800px) {
+.navigation {
+justify-content: space-around;
+}
+}
+
+@media all and (max-width: 600px) {
+.navigation {
+-webkit-flex-flow: column wrap;
+flex-flow: column wrap;
+padding: 0;
+}

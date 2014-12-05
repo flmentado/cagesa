@@ -1,0 +1,89 @@
+@import url(foundation.less);
+
+html,body{
+	font-size: 10px;
+	background-color: #DDD;
+}
+
+
+.cabecera{
+	background-color: #FFF;
+	z-index: 10;
+
+}
+
+.cabecera div{
+	height: 5em;
+	list-style: none;
+	font-size: 1em;
+	text-align: right;
+	padding-top:2%;
+}
+.trampa{
+	height: 50px;
+}
+.logo{
+	height: 50px;
+	width: 100px;
+}
+.titulo:extend(.small-1,.columns,.push-5){}
+.serv{
+
+}
+.long{
+
+width: 120px;
+}
+
+hr{
+border-style: solid;
+border-color: none;
+background: #EEE;
+-moz-border-top-colors: none;
+-moz-border-right-colors: none;
+-moz-border-bottom-colors: none;
+-moz-border-left-colors: none;
+border-image: none;
+border-width: 10px;
+clear: both;
+margin: 1.25rem 0px 1.1875rem;
+height: 2px;
+
+}
+
+.lema:extend(.panel){
+	text-align: center;
+}
+.lema p{
+	margin-top: 1rem;
+	font-size: 2rem;
+
+}
+img+p{
+	margin-top: 5%;
+}
+hr+h4{
+	margin-left: 1%;
+}
+
+ul{
+list-style-type: none;
+}
+/*
+ul li img{margin-top: 2%;}*/
+.servicios+ul li img{
+
+	margin-left: 25%;
+	width: 100px;
+	height: 100px;
+}
+.top-bar-section li a:hover{
+    background: #0F0 !important;
+}
+
+.active{
+	background: #050 !important;
+}
+.right ul{
+	border: 3px solid;
+}
