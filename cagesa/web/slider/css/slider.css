@@ -174,7 +174,7 @@ body, html {
   margin: 0 auto;
   width: 100%;
   text-align: center;
-  background-image: url("../img/fondo.jpg");
+    background-image: url("../../img/bg4.jpg");
   border-top: 4px solid rgba(0, 0, 0, 0.7);
   border-bottom: 4px solid rgba(0, 0, 0, 0.7);
   font-family: Arial, Verdana, Sans-Serif;
