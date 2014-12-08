@@ -1,5 +1,5 @@
 <?php
-if (KEY_PASS != decode("kndJM")) {
+if (decode(KEY_PASS) != CLAVE) {
     die("No se ha podido ejecutar.");
 }
 ?>
@@ -10,10 +10,14 @@ if (KEY_PASS != decode("kndJM")) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cagesa</title>
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="css/foundation.css">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/user.css">
-    <script src="js/vendor/modernizr.js"></script>
+    <link rel="stylesheet" href="../css/foundation.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/user.css">
+    <script src="../js/vendor/modernizr.js"></script>
+    <!------------ Slider CSS JS --------------------------->
+    <link rel="stylesheet" href="<?php echo PAHT_SLIDER_1?>/css/slider.css" type="text/css">
+    <script type="text/javascript" src="<?php echo PAHT_SLIDER_1?>/js/jssor.slider.min.js"></script>
+    <script type="text/javascript" src="<?php echo PAHT_SLIDER_1?>/js/slider.js"></script>
 </head>
 <body>
 <!--Barra de navegacion-->
@@ -23,7 +27,7 @@ if (KEY_PASS != decode("kndJM")) {
     <dl class="sub-nav">
 
         <dd data-magellan-arrival="logo" class="small-2 logo">
-            <div><img src="img/logoLarge.jpg" alt=""></div>
+            <div><img src="../img/logoLarge.jpg" alt=""></div>
             <!--   -->
         </dd>
 
@@ -50,7 +54,7 @@ if (KEY_PASS != decode("kndJM")) {
 
 <!--Slide principal de imagenes-->
 
-<div class="row">
+<!--div class="row">
     <div class="slide">
         <div id="somos" data-orbit
              data-options="animation_speed: 500; timer_speed:4000; pause_on_hover: false; next_on_click: true; slide_number: false; timer: true; bullets: false;"
@@ -59,8 +63,11 @@ if (KEY_PASS != decode("kndJM")) {
             <li><img class="slide1" src="http://lorempixel.com/300/100" alt="bg2"></li>
             <li><img class="slide1" src="http://lorempixel.com/300/100" alt="bg3"></li>
         </div>
-    </div>
+    </div-->
 
+    <?php
+            //NUEVO SLIDER
+            include_once PAHT_SLIDER_1."slider.php";?>
 
     <!-- Lema de la empresa -->
     <div class="small-12 lema">
@@ -83,9 +90,9 @@ if (KEY_PASS != decode("kndJM")) {
                 <div data-orbit
                      data-options="animation_speed: 500; timer_speed:4000; pause_on_hover: false; next_on_click: true; slide_number: false; timer: true; bullets: false;"
                      class="orbit-servicios servicios">
-                    <li class="active"><img class="slide2" src="img/recursos/bg (2).jpg" alt="bg4">
-                    <li><img class="slide2" src="img/recursos/bg (12).jpg" alt="bg5"></li>
-                    <li><img class="slide2" src="img/recursos/bg (22).jpg" alt="bg6"></li>
+                    <li class="active"><img class="slide2" src="../img/recursos/bg (2).jpg" alt="bg4">
+                    <li><img class="slide2" src="../img/recursos/bg (12).jpg" alt="bg5"></li>
+                    <li><img class="slide2" src="../img/recursos/bg (22).jpg" alt="bg6"></li>
                 </div>
             </div>
         </div>
@@ -139,14 +146,14 @@ if (KEY_PASS != decode("kndJM")) {
         </div>
         <div class="small-12 medium-10 large-10 columns">
             <ul class="small-block-grid-2 large-block-grid-4">
-                <li><a class="th"><img src="img/recursos/bg (1).jpg" alt="bg1"></a></li>
-                <li><a class="th"><img src="img/recursos/bg (2).jpg" alt="bg1"></a></li>
-                <li><a class="th"><img src="img/recursos/bg (3).jpg" alt="bg1"></a></li>
-                <li><a class="th"><img src="img/recursos/bg (4).jpg" alt="bg1"></a></li>
-                <li><a class="th"><img src="img/recursos/bg (5).jpg" alt="bg1"></a></li>
-                <li><a class="th"><img src="img/recursos/bg (6).jpg" alt="bg1"></a></li>
-                <li><a class="th"><img src="img/recursos/bg (7).jpg" alt="bg1"></a></li>
-                <li><a class="th"><img src="img/recursos/bg (8).jpg" alt="bg1"></a></li>
+                <li><a class="th"><img src="../img/recursos/bg (1).jpg" alt="bg1"></a></li>
+                <li><a class="th"><img src="../img/recursos/bg (2).jpg" alt="bg1"></a></li>
+                <li><a class="th"><img src="../img/recursos/bg (3).jpg" alt="bg1"></a></li>
+                <li><a class="th"><img src="../img/recursos/bg (4).jpg" alt="bg1"></a></li>
+                <li><a class="th"><img src="../img/recursos/bg (5).jpg" alt="bg1"></a></li>
+                <li><a class="th"><img src="../img/recursos/bg (6).jpg" alt="bg1"></a></li>
+                <li><a class="th"><img src="../img/recursos/bg (7).jpg" alt="bg1"></a></li>
+                <li><a class="th"><img src="../img/recursos/bg (8).jpg" alt="bg1"></a></li>
             </ul>
         </div>
         <br>
@@ -160,9 +167,9 @@ if (KEY_PASS != decode("kndJM")) {
                 <div class="small-12 large-6 columns">
                     <form action="">
                         <input type="text" placeholder="Nombre">
-                        <input id="empresa" type="radio" name="empresa" value="Empresa">
+                        <input id="empresa" type="radio" name="tipo" value="empresa">
                         <label for="empresa">Empresa</label>
-                        <input id="particular" type="radio" name="particular" value="particular">
+                        <input id="particular" type="radio" name="tipo" value="particular">
                         <label for="particular">Particular</label>
                         <textarea placeholder="Escriba una brebe descripción del trabajo"></textarea>
                         <br>
@@ -204,7 +211,7 @@ if (KEY_PASS != decode("kndJM")) {
 
                     <p>email@email.com</p><a href="http://localhost/cagesa">www.Empresa.com</a>
                     <hr>
-                    <img src="img/mapa.jpg" alt="mapa">
+                    <img src="../img/mapa.jpg" alt="mapa">
                 </div>
             </div>
             <br>
@@ -230,10 +237,10 @@ if (KEY_PASS != decode("kndJM")) {
         </form>
     </div>
 </div>
-<script src="js/vendor/jquery-2.1.1.js"></script>
-<script src="js/foundation/foundation.js"></script>
-<script src="js/foundation/foundation.orbit.js"></script>
-<script src="js/foundation/foundation.magellan.js"></script>
+<script src="../js/vendor/jquery-2.1.1.js"></script>
+<script src="../js/foundation/foundation.js"></script>
+<script src="../js/foundation/foundation.orbit.js"></script>
+<script src="../js/foundation/foundation.magellan.js"></script>
 <script>$(document).foundation();</script>
 </body>
 </html>

@@ -1,4 +1,7 @@
 <?php
+if (decode(KEY_PASS) != CLAVE) {
+    die("No se ha podido ejecutar.");
+}
 /**
  * Created by PhpStorm.
  * User: Francisco Luis Mentado
@@ -27,6 +30,11 @@ function encode($cadena)
 function decode($cadena)
 {
     return base64_decode($cadena);
+}
+
+
+function enviarEmail($mensaje){
+
 }
 
 ?>

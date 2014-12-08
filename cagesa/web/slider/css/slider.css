@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* line 5, ../sass/slider.scss */
 body, html {
-  background: linear-gradient(to right, #c5deea 0%, #8abbd7 31%, #066dab 100%);
+  background: linear-gradient(135deg, #c9de96 0%, #8ab66b 44%, #398235 100%);
   margin: 0;
   padding: 0;
 }
@@ -174,7 +174,7 @@ body, html {
   margin: 0 auto;
   width: 100%;
   text-align: center;
-    background-image: url("../../img/bg4.jpg");
+  background-image: url("../img/background.jpg");
   border-top: 4px solid rgba(0, 0, 0, 0.7);
   border-bottom: 4px solid rgba(0, 0, 0, 0.7);
   font-family: Arial, Verdana, Sans-Serif;

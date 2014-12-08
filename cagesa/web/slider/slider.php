@@ -1,14 +1,7 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CAGESA</title>
-    <link rel="stylesheet" href="css/slider.css" type="text/css">
-    <script type="text/javascript" src="js/jssor.slider.min.js"></script>
-    <script type="text/javascript" src="js/slider.js"></script>
-</head>
-<body>
+﻿<?php if (decode(KEY_PASS) != CLAVE) {
+    die("No se ha podido ejecutar.");
+}
+?>
 <div class="slider_block">
 <div id="sliderc_container">
 <div u="slides" class="slides outside">
@@ -23,23 +16,22 @@
         <div u="slides" class="inside">
             <!-- separador -->
             <div>
-                <a u="image" href=''><img src="img/002.jpg" alt="image jquery slider"/></a>
-
+                <a u="image" href='#'><img src="<?php echo PAHT_SLIDER_1?>img/002.jpg" alt="image jquery slider"/></a>
                 <div u=caption t="*"></div>
                 <!-- sepasdasor -->
             </div>
             <div>
-                <a u="image" href=''><img src="img/003.jpg" alt="image jquery slider"/></a>
+                <a u="image" href='#'><img src="<?php echo PAHT_SLIDER_1?>img/003.jpg" alt="image jquery slider"/></a>
 
                 <div u=caption t="*"></div>
             </div>
             <div>
-                <a u="image" href=''><img src="img/004.jpg" alt="responsive image slider"/></a>
+                <a u="image" href='#'><img src="<?php echo PAHT_SLIDER_1?>img/004.jpg" alt="responsive image slider"/></a>
 
                 <div u=caption t="*"></div>
             </div>
             <div>
-                <a u="image" href=''><img src="img/005.jpg" alt="touch swipe image slider"/></a>
+                <a u="image" href='#'><img src="<?php echo PAHT_SLIDER_1?>img/005.jpg" alt="touch swipe image slider"/></a>
 
                 <div u=caption t="*"></div>
             </div>
@@ -75,7 +67,7 @@
             <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
                                 background-color: #000; top: 0px; left: 0px;width: 100%;height:100%;">
             </div>
-            <div style="position: absolute; display: block; background: url('img/loading.gif') no-repeat center center;
+            <div style="position: absolute; display: block; background: url('<?php echo PAHT_SLIDER_1?>img/loading.gif') no-repeat center center;
                                 top: 0px; left: 0px;width: 100%;height:100%;">
             </div>
         </div>
@@ -84,36 +76,28 @@
         <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 600px; height: 300px;
                             overflow: hidden;">
             <div>
-                <a u=image href="http://www.jssor.com/demos/banner-rotator.html"><img src="img/002.jpg"
-                                                                                      alt="banner rotator"/></a>
-
+                <a u=image href="#"><img src="<?php echo PAHT_SLIDER_1?>img/002.jpg" alt="banner rotator"/></a>
                 <div u=caption t="*" class="captionOrange"
                      style="position:absolute; left:20px; top: 30px; width:300px; height:30px;">
                     slider 2 text 1
                 </div>
             </div>
             <div>
-                <a u=image href="http://www.jssor.com/demos/banner-rotator.html"><img src="img/003.jpg"
-                                                                                      alt="jquery banner rotator"/></a>
-
+                <a u=image href="#"><img src="<?php echo PAHT_SLIDER_1?>img/003.jpg" alt="jquery banner rotator"/></a>
                 <div u=caption t="*" class="captionOrange"
                      style="position:absolute; left:20px; top: 30px; width:300px; height:30px;">
                     slider 2 text 2
                 </div>
             </div>
             <div>
-                <a u=image href="http://www.jssor.com/demos/banner-rotator.html"><img src="img/004.jpg"
-                                                                                      alt="responsive banner rotator"/></a>
-
+                <a u=image href="#"><img src="<?php echo PAHT_SLIDER_1?>img/004.jpg" alt="responsive banner rotator"/></a>
                 <div u=caption t="*" class="captionOrange"
                      style="position:absolute; left:20px; top: 30px; width:300px; height:30px;">
                     mobile ready, touch swipe
                 </div>
             </div>
             <div>
-                <a u=image href="http://www.jssor.com/demos/banner-rotator.html"><img src="img/005.jpg"
-                                                                                      alt="touch swipe banner rotator"/></a>
-
+                <a u=image href="#"><img src="<?php echo PAHT_SLIDER_1?>img/005.jpg" alt="touch swipe banner rotator"/></a>
                 <div u=caption t="*" class="captionOrange"
                      style="position:absolute; left:20px; top: 30px; width:300px; height:30px;">
                     slider 2 text 3
@@ -125,17 +109,19 @@
             <!-- bullet navigator item prototype -->
             <div u="prototype" class="prototype "></div>
         </div>
-        <!-- Bullet Navigator Skin End -->
+        <?php
+        // <!-- Bullet Navigator Skin End -->
 
-        <!-- Arrow Navigator Skin Begin -->
-        <!-- Arrow Left -->
-        <!--span u="arrowleft" class="jssora05l" style="width: 40px; height: 40px; top: 123px; left: 8px;">
-        </span>
-        <!-- Arrow Right -->
-        <!--span u="arrowright" class="jssora05r" style="width: 40px; height: 40px; top: 123px; right: 8px">
-        </span>
-        <!-- Arrow Navigator Skin End -->
-        <!--a style="display: none" href="http://www.jssor.com">image carousel</a-->
+        // <!-- Arrow Navigator Skin Begin -->
+        // <!-- Arrow Left -->
+        // <span u="arrowleft" class="jssora05l" style="width: 40px; height: 40px; top: 123px; left: 8px;">
+        // </span>
+        // <!-- Arrow Right -->
+        // <span u="arrowright" class="jssora05r" style="width: 40px; height: 40px; top: 123px; right: 8px">
+        // </span>
+        // <!-- Arrow Navigator Skin End -->
+        // <a style="display: none" href="http://www.jssor.com">image carousel</a>
+        ?>
     </div>
     <!-- Jssor Slider End -->
     <div u="caption" t="T|IE*IE" t2="B*IB"
@@ -163,8 +149,7 @@
     </div>
 
     <a class="captionTextBlack" u="caption" t="L|EP"
-       href="http://www.jssor.com/development/tool-slideshow-transition-viewer.html"
-       style="position: absolute; top: 210px; left: 0px; width: 320px; height: 30px; font-size: 26px; background-color:transparent;">360+
+       href="#" style="position: absolute; top: 210px; left: 0px; width: 320px; height: 30px; font-size: 26px; background-color:transparent;">360+
         slideshow transitions</a>
 
     <div u="caption" t="B*IB" t2="NO" style="position: absolute; top: 260px; left: 0px; width: 320px; height: 80px;">
@@ -193,7 +178,7 @@
             <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
                                 background-color: #000; top: 0px; left: 0px;width: 100%;height:100%;">
             </div>
-            <div style="position: absolute; display: block; background: url('img/loading.gif') no-repeat center center;
+            <div style="position: absolute; display: block; background: url('<?php echo PAHT_SLIDER_1?>img/loading.gif') no-repeat center center;
                                 top: 0px; left: 0px;width: 100%;height:100%;">
             </div>
         </div>
@@ -202,27 +187,19 @@
         <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 600px; height: 300px;
                             overflow: hidden;">
             <div>
-                <a u=image href="http://www.jssor.com/demos/banner-slider.html"><img src="img/002.jpg"
-                                                                                     alt="banner slider"/></a>
-
+                <a u=image href="#"><img src="<?php echo PAHT_SLIDER_1?>img/002.jpg" alt="banner slider"/></a>
                 <div u="thumb">Do you notice it is draggable by mouse/finger?</div>
             </div>
             <div>
-                <a u=image href="http://www.jssor.com/demos/banner-slider.html"><img src="img/003.jpg"
-                                                                                     alt="jquery banner slider"/></a>
-
+                <a u=image href="#"><img src="<?php echo PAHT_SLIDER_1?>img/003.jpg" alt="jquery banner slider"/></a>
                 <div u="thumb">Did you drag by either horizontal or vertical?</div>
             </div>
             <div>
-                <a u=image href="http://www.jssor.com/demos/banner-slider.html"><img src="img/004.jpg"
-                                                                                     alt="responsive banner slider"/></a>
-
+                <a u=image href="#"><img src="<?php echo PAHT_SLIDER_1?>img/004.jpg" alt="responsive banner slider"/></a>
                 <div u="thumb">Do you notice navigator responses when drag?</div>
             </div>
             <div>
-                <a u=image href="http://www.jssor.com/demos/banner-slider.html"><img src="img/005.jpg"
-                                                                                     alt="touch swipe banner slider"/></a>
-
+                <a u=image href="#"><img src="<?php echo PAHT_SLIDER_1?>img/005.jpg" alt="touch swipe banner slider"/></a>
                 <div u="thumb">Do you notice arrow responses when click?</div>
             </div>
         </div>
@@ -336,5 +313,3 @@
 </div>
 <!-- Jssor Slider End -->
 </div>
-</body>
-</html>
