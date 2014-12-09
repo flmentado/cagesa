@@ -131,15 +131,15 @@ $block_team_1_left:640px;
 $block_team_1_top:110px;
 $block_team_1_width:320px;
 $block_team_1_height:250px;
-//Simbolo x
-$block_team_1_char_symbol_1: '+';
+
+$block_team_1_char_symbol_1: 'F';
 $block_team_1_char_symbol_1_left:0px;
 $block_team_1_char_symbol_1_top:10px;
 $block_team_1_char_symbol_1_width:30px;
 $block_team_1_char_symbol_1_height:$block_team_1_char_symbol_1_width;
 $block_team_1_char_symbol_1_color:$blue;
 $block_team_1_char_symbol_1_shadow:$shadow_red;
-//texto x+1
+
 $block_team_1_text_1: 'Texto slider 1';
 $block_team_1_text_1_left:40px;
 $block_team_1_text_1_top:10px;
@@ -148,7 +148,7 @@ $block_team_1_text_1_height:30px;
 $block_team_1_text_1_color:$green;
 $block_team_1_text_1_shadow:$shadow_blue;
 
-$block_team_1_char_symbol_2: '+';
+$block_team_1_char_symbol_2: 'L';
 $block_team_1_char_symbol_2_left:$block_team_1_char_symbol_1_left;
 $block_team_1_char_symbol_2_top:$block_team_1_char_symbol_1_top+$incremental_text_height;
 $block_team_1_char_symbol_2_width:$block_team_1_char_symbol_1_width;
@@ -164,7 +164,7 @@ $block_team_1_text_2_height:$block_team_1_text_1_height;
 $block_team_1_text_2_color:$blue;
 $block_team_1_text_2_shadow:$shadow_black;
 
-$block_team_1_char_symbol_3: '+';
+$block_team_1_char_symbol_3: 'M';
 $block_team_1_char_symbol_3_left:$block_team_1_char_symbol_1_left;
 $block_team_1_char_symbol_3_top:$block_team_1_char_symbol_2_top+$incremental_text_height;
 $block_team_1_char_symbol_3_width:$block_team_1_char_symbol_1_width;
@@ -180,7 +180,7 @@ $block_team_1_text_3_height:$block_team_1_text_1_height;
 $block_team_1_text_3_color:$red;
 $block_team_1_text_3_shadow:$shadow_white;
 
-$block_team_1_char_symbol_4: '+';
+$block_team_1_char_symbol_4: 'M';
 $block_team_1_char_symbol_4_left:$block_team_1_char_symbol_1_left;
 $block_team_1_char_symbol_4_top:$block_team_1_char_symbol_3_top+$incremental_text_height;
 $block_team_1_char_symbol_4_width:$block_team_1_char_symbol_1_width;
@@ -204,7 +204,7 @@ $block_team_1_char_symbol_5_height:$block_team_1_char_symbol_5_width;
 $block_team_1_char_symbol_5_color:$white;
 $block_team_1_char_symbol_5_shadow:$shadow_black;
 
-$block_team_1_text_5: 'Hola';
+$block_team_1_text_5: 'Texto slider 5';
 $block_team_1_text_5_left:$block_team_1_text_1_left;
 $block_team_1_text_5_top:$block_team_1_text_4_top+$incremental_text_height;
 $block_team_1_text_5_width:$block_team_1_text_1_width;
@@ -215,7 +215,7 @@ $block_team_1_text_5_shadow:$shadow_green;
 
 
 //OUTSIDE SLIDER BLOCK
-$background_image_slider_outside_block: '../img/background.jpg';
+$background_image_slider_outside_block: '../img/fondo.jpg';
 $width_slider_outside_block: 100%;
 $border_width_slider_outside_block: $border_width_medium;
 $color_border_slider_outside_block: rgba(0, 0, 0, 7/10);
@@ -234,53 +234,31 @@ $border_width_slider_inside_block: $no_border_width;
 $color_border_slider_inside_block: rgba(0, 0, 0, 7/10);
 $border_slider_inside_block: $border_width_slider_inside_block solid $color_border_slider_inside_block;
 $border_radius_slider_inside_block: $border_radius_small;
-
 //Slider1
 $slider_inside_text_1: 'Slider 1 inside';
 $slider_inside_text_1_color: $blue;
 $slider_inside_text_1_shadow: $shadow_red;
-$slider_inside_text_1_left:20px;
-$slider_inside_text_1_top:30px;
-$slider_inside_text_1_width:300px;
-$slider_inside_text_1_height:$caption_line_height;
 
-$slider_inside_text_2: 'Slider 2 inside';
-$slider_inside_text_2_color: $red;
-$slider_inside_text_2_shadow: $shadow_blue;
-$slider_inside_text_2_left:160px;
-$slider_inside_text_2_top:70px;
-$slider_inside_text_2_width:300px;
-$slider_inside_text_2_height:$caption_line_height;
 
-$slider_inside_text_3: 'Slider 3 inside';
-$slider_inside_text_3_color: $yellow;
-$slider_inside_text_3_shadow: $shadow_green;
-$slider_inside_text_3_left:0px;
-$slider_inside_text_3_top:120px;
-$slider_inside_text_3_width:100%;
-$slider_inside_text_3_height:$caption_line_height;
 
-$slider_inside_text_4: 'Slider 4 inside';
-$slider_inside_text_4_color: $black;
-$slider_inside_text_4_shadow: $shadow_white;
-$slider_inside_text_4_left:50px;
-$slider_inside_text_4_top:0px;
-$slider_inside_text_4_width:100%;
-$slider_inside_text_4_height:$caption_line_height;
+
+
+
+
 
 //NAVIGATION BULLET
 $navigation_posY: 270px;
 $navigation_posX: 500px;
-$navigation_background: rgba(0,0,0,.5);
+$navigation_background: $shadow_black;
 $navigation_padding: 5px;
 $navigation_border_radius: 25px;
 $navigation_bullet_border_radius: 50%;
-$navigation_bullet_box_shadow: 0 0 6px rgba(255,255,255, 10/10);
+$navigation_bullet_box_shadow: 0 0 6px rgba(0, 255, 0, 10/10);
 $navigation_bullet_size: 12px;
 $navigation_bullet_opacity: $spinner_opacity;
-$navigation_bullet_border: $border_width_small solid $white;
+$navigation_bullet_border: $border_width_small solid $green;
 $navigation_bullet_background: $shadow_white;
-$navigation_bullet_color_actual: rgba(0,180,0,10/10);
+$navigation_bullet_margin: $navigation_padding - 1px;
 $navigation_bullet_color_hover: $blue;
 $navigation_bullet_color_active: $red;
-$navigation_bullet_color_click: $green;
+$navigation_bullet_color_click: $yellow;

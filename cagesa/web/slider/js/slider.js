@@ -565,11 +565,12 @@ window.onload=function() {
         var slider1Options = {
             $AutoPlayInterval: 3000,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
             $DragOrientation: 0,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+            $PauseOnHover: 0,                                   //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, 4 freeze for desktop, 8 freeze for touch device, 12 freeze for desktop and touch device, default value is 1
 
             $CaptionSliderOptions: {                            //[Optional] Options which specifies how to animate caption
                 $Class: $JssorCaptionSlider$,                   //[Required] Class to create instance to animate caption
                 $CaptionTransitions: captionTransitions_childSliders,       //[Required] An array of caption transitions to play caption, see caption transition section at jssor slideshow transition builder
-                $PlayInMode: 1,                                 //[Optional] 0 None (no play), 1 Chain (goes after main slide), 3 Chain Flatten (goes after main slide and flatten all caption animations), default value is 1
+                $PlayInMode: 3,                                 //[Optional] 0 None (no play), 1 Chain (goes after main slide), 3 Chain Flatten (goes after main slide and flatten all caption animations), default value is 1
                 $PlayOutMode: 3                                 //[Optional] 0 None (no play), 1 Chain (goes before main slide), 3 Chain Flatten (goes before main slide and flatten all caption animations), default value is 1
             },
 
@@ -582,7 +583,7 @@ window.onload=function() {
 
             $ArrowNavigatorOptions: {
                 $Class: $JssorArrowNavigator$,              //[Requried] Class to create arrow navigator instance
-                $ChanceToShow: 2                                //[Required] 0 Never, 1 Mouse Over, 2 Always
+                $ChanceToShow: 0                                //[Required] 0 Never, 1 Mouse Over, 2 Always
             }
         };
 
@@ -591,6 +592,7 @@ window.onload=function() {
         var slider2Options = {
             $AutoPlayInterval: 3000,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
             $DragOrientation: 0,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+            $PauseOnHover: 0,                                   //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, 4 freeze for desktop, 8 freeze for touch device, 12 freeze for desktop and touch device, default value is 1
 
             $SlideshowOptions: {                                //[Optional] Options to specify and enable slideshow or not
                 $Class: $JssorSlideshowRunner$,                 //[Required] Class to create instance of slideshow
@@ -615,7 +617,7 @@ window.onload=function() {
 
             $ArrowNavigatorOptions: {
                 $Class: $JssorArrowNavigator$,              //[Requried] Class to create arrow navigator instance
-                $ChanceToShow: 2                                //[Required] 0 Never, 1 Mouse Over, 2 Always
+                $ChanceToShow: 0                                //[Required] 0 Never, 1 Mouse Over, 2 Always
             }
         };
 
@@ -643,6 +645,7 @@ window.onload=function() {
         var slider3Options = {
             $AutoPlayInterval: 3000,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
             $DragOrientation: 0,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+            $PauseOnHover: 0,                                   //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, 4 freeze for desktop, 8 freeze for touch device, 12 freeze for desktop and touch device, default value is 1
 
             $SlideshowOptions: {                                //[Optional] Options to specify and enable slideshow or not
                 $Class: $JssorSlideshowRunner$,                 //[Required] Class to create instance of slideshow
@@ -660,7 +663,7 @@ window.onload=function() {
 
             $ArrowNavigatorOptions: {
                 $Class: $JssorArrowNavigator$,              //[Requried] Class to create arrow navigator instance
-                $ChanceToShow: 2                                //[Required] 0 Never, 1 Mouse Over, 2 Always
+                $ChanceToShow: 0                                //[Required] 0 Never, 1 Mouse Over, 2 Always
             },
 
             $ThumbnailNavigatorOptions: {
@@ -672,7 +675,7 @@ window.onload=function() {
         };
 
         var jssorSlider3 = new $JssorSlider$("slider3_container", slider3Options);
-
+        //Slider Principal
         var sliderClusterSlideshowOptions = ($Jssor$.$IsBrowserIE() && $Jssor$.$BrowserEngineVersion() < 8) ? null : {                                //[Optional] Options to specify and enable slideshow or not
             $Class: $JssorSlideshowRunner$,                 //[Required] Class to create instance of slideshow
             $Transitions: _SlideshowTransitions,            //[Required] An array of slideshow transitions to play slideshow
@@ -683,12 +686,12 @@ window.onload=function() {
         var slidercOptions = {
             $AutoPlay: false,                                   //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
             $AutoPlayInterval: 3000,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
-            $PauseOnHover: 1,                                   //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, 4 freeze for desktop, 8 freeze for touch device, 12 freeze for desktop and touch device, default value is 1
+            $PauseOnHover: 0,                                   //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, 4 freeze for desktop, 8 freeze for touch device, 12 freeze for desktop and touch device, default value is 1
 
-            $ArrowKeyNavigation: true,   			            //Allows arrow key to navigate or not
+            $ArrowKeyNavigation: false,   			            //Allows arrow key to navigate or not
             $SlideDuration: 800,                                //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
             $UISearchMode: 0,                                   //[Optional] The way (0 parellel, 1 recursive, default value is 1) to search UI components (slides container, loading screen, navigator container, arrow navigator container, thumbnail navigator container etc).
-            $DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+            $DragOrientation: 0,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
 
             $SlideshowOptions: sliderClusterSlideshowOptions,
 
@@ -701,19 +704,19 @@ window.onload=function() {
 
             $ArrowNavigatorOptions: {                       //[Optional] Options to specify and enable arrow navigator or not
                 $Class: $JssorArrowNavigator$,              //[Requried] Class to create arrow navigator instance
-                $ChanceToShow: 1,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+                $ChanceToShow: 0,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
                 $AutoCenter: 2                                  //[Optional] Auto center arrows in parent container, 0 No, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
             },
 
             $BulletNavigatorOptions: {                                //[Optional] Options to specify and enable navigator or not
                 $Class: $JssorBulletNavigator$,                       //[Required] Class to create navigator instance
-                $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+                $ChanceToShow: 0,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
                 $AutoCenter: 1,                                 //[Optional] Auto center navigator in parent container, 0 None, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
-                $SpacingX: 4,                                   //[Optional] Horizontal space between each item in pixel, default value is 0
-                $SpacingY: 4                                    //[Optional] Vertical space between each item in pixel, default value is 0
+                $SpacingX: 10,                                   //[Optional] Horizontal space between each item in pixel, default value is 0
+                $SpacingY: 10                                    //[Optional] Vertical space between each item in pixel, default value is 0
             }
         };
-
+        //Slider principal
         var jssorSliderc = new $JssorSlider$(containerId, slidercOptions);
 
         //responsive code begin

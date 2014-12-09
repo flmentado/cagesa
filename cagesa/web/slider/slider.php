@@ -13,27 +13,33 @@
             <div></div>
         </div>
         <!-- Slides Container -->
+
         <div u="slides" class="inside">
             <!-- separador -->
             <div>
-                <a u="image" href='#'><img src="<?php echo PAHT_SLIDER_1?>img/002.jpg" alt="image jquery slider"/></a>
-                <div u=caption t="*"></div>
-                <!-- sepasdasor -->
+                <a u="image" href='#'><img src="<?php echo PATH_SLIDER_1_IMG?>001.jpg" alt="image jquery slider"/></a>
+                <div u=caption t="*" class="caption captionColor captionOrange">
+                    slider 1 texto 1
+                </div>
+
             </div>
             <div>
-                <a u="image" href='#'><img src="<?php echo PAHT_SLIDER_1?>img/003.jpg" alt="image jquery slider"/></a>
-
-                <div u=caption t="*"></div>
+                <a u="image" href='#'><img src="<?php echo PATH_SLIDER_1_IMG?>002.jpg" alt="image jquery slider"/></a>
+                <div u=caption t="*" class="caption captionColor captionOrange">
+                    slider 1 texto 2
+                </div>
             </div>
             <div>
-                <a u="image" href='#'><img src="<?php echo PAHT_SLIDER_1?>img/004.jpg" alt="responsive image slider"/></a>
-
-                <div u=caption t="*"></div>
+                <a u="image" href='#'><img src="<?php echo PATH_SLIDER_1_IMG?>003.jpg" alt="responsive image slider"/></a>
+                <div u=caption t="*" class="caption captionColor captionOrange">
+                    slider 1 texto 3
+                </div>
             </div>
             <div>
-                <a u="image" href='#'><img src="<?php echo PAHT_SLIDER_1?>img/005.jpg" alt="touch swipe image slider"/></a>
-
-                <div u=caption t="*"></div>
+                <a u="image" href='#'><img src="<?php echo PATH_SLIDER_1_IMG?>004.jpg" alt="touch swipe image slider"/></a>
+                <div u=caption t="*" class="caption captionColor captionOrange">
+                    slider 1 texto 4
+                </div>
             </div>
         </div>
         <div u="navigator" class="jssorb01">
@@ -76,28 +82,28 @@
         <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 600px; height: 300px;
                             overflow: hidden;">
             <div>
-                <a u=image href="#"><img src="<?php echo PAHT_SLIDER_1?>img/002.jpg" alt="banner rotator"/></a>
+                <a u=image href="#"><img src="<?php echo PATH_SLIDER_1_IMG?>/2-001.jpg" alt="banner rotator"/></a>
                 <div u=caption t="*" class="captionOrange"
                      style="position:absolute; left:20px; top: 30px; width:300px; height:30px;">
                     slider 2 text 1
                 </div>
             </div>
             <div>
-                <a u=image href="#"><img src="<?php echo PAHT_SLIDER_1?>img/003.jpg" alt="jquery banner rotator"/></a>
+                <a u=image href="#"><img src="<?php echo PATH_SLIDER_1_IMG?>002.jpg" alt="jquery banner rotator"/></a>
                 <div u=caption t="*" class="captionOrange"
                      style="position:absolute; left:20px; top: 30px; width:300px; height:30px;">
                     slider 2 text 2
                 </div>
             </div>
             <div>
-                <a u=image href="#"><img src="<?php echo PAHT_SLIDER_1?>img/004.jpg" alt="responsive banner rotator"/></a>
+                <a u=image href="#"><img src="<?php echo PATH_SLIDER_1_IMG?>003.jpg" alt="responsive banner rotator"/></a>
                 <div u=caption t="*" class="captionOrange"
                      style="position:absolute; left:20px; top: 30px; width:300px; height:30px;">
                     mobile ready, touch swipe
                 </div>
             </div>
             <div>
-                <a u=image href="#"><img src="<?php echo PAHT_SLIDER_1?>img/005.jpg" alt="touch swipe banner rotator"/></a>
+                <a u=image href="#"><img src="<?php echo PATH_SLIDER_1_IMG?>004.jpg" alt="touch swipe banner rotator"/></a>
                 <div u=caption t="*" class="captionOrange"
                      style="position:absolute; left:20px; top: 30px; width:300px; height:30px;">
                     slider 2 text 3
@@ -187,19 +193,19 @@
         <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 600px; height: 300px;
                             overflow: hidden;">
             <div>
-                <a u=image href="#"><img src="<?php echo PAHT_SLIDER_1?>img/002.jpg" alt="banner slider"/></a>
+                <a u=image href="#"><img src="<?php echo PATH_SLIDER_1_IMG?>001.jpg" alt="banner slider"/></a>
                 <div u="thumb">Do you notice it is draggable by mouse/finger?</div>
             </div>
             <div>
-                <a u=image href="#"><img src="<?php echo PAHT_SLIDER_1?>img/003.jpg" alt="jquery banner slider"/></a>
+                <a u=image href="#"><img src="<?php echo PATH_SLIDER_1_IMG?>002.jpg" alt="jquery banner slider"/></a>
                 <div u="thumb">Did you drag by either horizontal or vertical?</div>
             </div>
             <div>
-                <a u=image href="#"><img src="<?php echo PAHT_SLIDER_1?>img/004.jpg" alt="responsive banner slider"/></a>
+                <a u=image href="#"><img src="<?php echo PATH_SLIDER_1_IMG?>003.jpg" alt="responsive banner slider"/></a>
                 <div u="thumb">Do you notice navigator responses when drag?</div>
             </div>
             <div>
-                <a u=image href="#"><img src="<?php echo PAHT_SLIDER_1?>img/005.jpg" alt="touch swipe banner slider"/></a>
+                <a u=image href="#"><img src="<?php echo PATH_SLIDER_1_IMG?>/004.jpg" alt="touch swipe banner slider"/></a>
                 <div u="thumb">Do you notice arrow responses when click?</div>
             </div>
         </div>

@@ -1,5 +1,5 @@
 <?php
-if (decode(KEY_PASS) != CLAVE) {
+if (@decode(KEY_PASS) != @CLAVE) {
     die("No se ha podido ejecutar.");
 }
 ?>
@@ -44,29 +44,12 @@ if (decode(KEY_PASS) != CLAVE) {
 
             <a href="#clientes">Clientes</a>
         </dd>
-
         <dd data-magellan-arrival="contacto" class="small-1 sliding-u-l-r-l">
             <a href="#contacto">Contacto</a>
         </dd>
-
     </dl>
 </div>
-
-<!--Slide principal de imagenes-->
-
-<!--div class="row">
-    <div class="slide">
-        <div id="somos" data-orbit
-             data-options="animation_speed: 500; timer_speed:4000; pause_on_hover: false; next_on_click: true; slide_number: false; timer: true; bullets: false;"
-             class="orbit-principal" data-magellan-destination="somos">
-            <li class="active"><img class="slide1" src="http://lorempixel.com/300/100" alt="bg1"></li>
-            <li><img class="slide1" src="http://lorempixel.com/300/100" alt="bg2"></li>
-            <li><img class="slide1" src="http://lorempixel.com/300/100" alt="bg3"></li>
-        </div>
-    </div-->
-
-    <?php
-            //NUEVO SLIDER
+    <?php   //NUEVO SLIDER
             include_once PAHT_SLIDER_1."slider.php";?>
 
     <!-- Lema de la empresa -->
@@ -104,7 +87,6 @@ if (decode(KEY_PASS) != CLAVE) {
 <!--Descripción de los servicios-->
 <div class="row">
     <hr>
-    fff
     <div id="servicios" class="small-12 columns small-centered" data-magellan-destination="servicios">
         <ul class="small-block-grid-1 large-block-grid-3 pagination-centered">
             <li class="servicios">
@@ -162,45 +144,45 @@ if (decode(KEY_PASS) != CLAVE) {
 <!--Información de contacto-->
 <div class="row">
     <div id="contacto" class="small-12" data-magellan-destination="contacto">
-        <form>
-            <div class="row">
+           <div class="row">
                 <div class="small-12 large-6 columns">
-                    <form action="">
-                        <input type="text" placeholder="Nombre">
-                        <input id="empresa" type="radio" name="tipo" value="empresa">
+                    <form name="subir" method="post" action="<?php $_SERVER['PHP_SELF'];?>">
+                        <input type="text" name="nombre" placeholder="Nombre" value="">
+                        <input type="text" name="email" placeholder="Email" value="">
+                        <input id="empresa" type="radio" name="tipo" value="empresa" <?php if($tipo=='empresa'){echo " checked='checked' ";} ?>>
                         <label for="empresa">Empresa</label>
                         <input id="particular" type="radio" name="tipo" value="particular">
                         <label for="particular">Particular</label>
-                        <textarea placeholder="Escriba una brebe descripción del trabajo"></textarea>
+                        <textarea name="descripcion" col="40" row="20" placeholder="Escriba una brebe descripción del trabajo  a realizar"></textarea>
                         <br>
                         <label>Elija los servicios que necesita.</label><br>
                         <ul class="no-bullet">
                             <li>
-                                <input id="checkbox1" type="checkbox">
+                                <input id="checkbox1" type="checkbox" name="poda">
                                 <label for="checkbox1">Poda</label>
                             </li>
                             <li>
-                                <input id="checkbox2" type="checkbox">
+                                <input id="checkbox2" type="checkbox" name="tala">
                                 <label for="checkbox2">Tala</label>
                             </li>
                             <li>
-                                <input id="checkbox3" type="checkbox">
+                                <input id="checkbox3" type="checkbox" name="fumigacion">
                                 <label for="checkbox3">Fumigación</label>
                             </li>
                             <li>
-                                <input id="checkbox4" type="checkbox">
+                                <input id="checkbox4" type="checkbox" name="abonado">
                                 <label for="checkbox4">Abonado</label>
                             </li>
                             <li>
-                                <input id="checkbox4" type="checkbox">
+                                <input id="checkbox4" type="checkbox" name="sembrado">
                                 <label for="checkbox4">Sembrado</label>
                             </li>
                             <li>
-                                <input id="checkbox5" type="checkbox">
+                                <input id="checkbox5" type="checkbox" name="mantenimiento">
                                 <label for="checkbox5">Mantenimiento</label>
                             </li>
                         </ul>
-                        <input type="button" class="button round small-12 large-6" value="Enviar"></a>
+                        <input type="submit" class="button round small-12 large-6" name="enviar" value="Enviar">
                     </form>
                 </div>
 
