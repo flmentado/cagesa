@@ -20,8 +20,9 @@ html
 				nav.top-bar(data-topbar)
 					ul.title-area
 						li.name
-							h1
-								a(href="#") Logo Cagesa
+							.logoBlanco
+							//- h1
+							//- 	a(href="#") Logo Cagesa
 						li.toggle-topbar.menu-icon
 							a(href="#")
 								span Menu
@@ -32,74 +33,95 @@ html
 							li.active.quienes
 								a(href="#") Quienes Somos
 							li.divider
-							li
+							li.serv
 								a(href="#") Servicios
 							li.divider
-							li
+							li.client
 								a(href="#") Clientes
 							li.divider
-							li
+							li.contat
 								a(href="#") Contacto
 							li.divider
-			.row.trampa
-			.row
-				.slide.small-12.columns
-						img(src="img/bg2.jpg").slide
+			//- .row.trampa
+			.small-12.bgstellar(data-stellar-background-ratio="0.8")
+				//- .bgstellar3(data-stellar-background-ratio="0.8")
+				.row
+					.slide
+						.lema
+							p Cagesa más de 20 años a tu servicio.
+						//- img(src="img/paralax2.jpg")
 			//- .row
 			//- 	.lema.small-12.columns
 			//- 		p Canarias de Gestion y Suministros para Areas Verdes
 
-
-
-			.small-12.bgstellar(data-stellar-background-ratio="0.4")
+			//- .small-12
+			//- 	.row
+			//- 		.panel
+			//- 			p Mas de
+			.small-12.somos
+				//- .bgstellar(data-stellar-background-ratio="0.8")
 				.row
-
-					hr
-					h4.somos Quienes Somos
+					br
 					.somostext.small-12.medium-6.columns
-						p.panel Canarias de gestión y suministros para areas verdes S.L. es una empresa perteneciente al Grupo Castillo. Su ámbito de actuacion es la jardinería, el sector medioambiental y los servicios
-						p.panel  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque optio dolore a quibusdam necessitatibus. Dolor delectus quam eligendi vel atque fugiat nostrum quia cupiditate, aliquid voluptatum officia asperiores dolore eum.
+						h4.somos QUIENES SOMOS
+						p
+							span.nombre Canarias de gestión y suministros para areas verdes S.L.
+						p Es una empresa perteneciente al Grupo Castillo. Su ámbito de actuacion es la jardinería, el sector medioambiental y los servicios
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque optio dolore a quibusdam necessitatibus. Dolor delectus quam eligendi vel atque fugiat nostrum quia cupiditate, aliquid voluptatum officia asperiores dolore eum.
 					.somosSlide.small-12.medium-6.columns.end
-						a.th
+						a
 							img(src="img/alta/imagen (83).jpg")
-			.small-12
+			.small-12.servicios
 				.row
 					hr
-					h4.servicios Servicios
-					ul.small-block-grid-1.medium-block-grid-3.pagination-centered
-						li
-							a.th
-								img(src='img/alta/imagen (32).jpg')
-							p.panel  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt cum, autem amet quasi quas error facilis cupiditate dolorem nobis, doloribus.
-						li
-							a.th
-								img(src='img/alta/imagen (15).jpg')
-							p.panel  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id voluptas unde corporis accusamus nesciunt, consequuntur officia deleniti consectetur repellat ducimus.
-						li
-							a.th
-								img(src='img/alta/imagen (26).jpg')
-							p.panel  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam obcaecati impedit deleniti cupiditate possimus blanditiis totam explicabo, iste non maxime.
-			.small-12.bgstellar(data-stellar-background-ratio="0.4")
+					.small-12.columns
+						h4.servicios SERVICIOS
+						ul.small-block-grid-1.medium-block-grid-3.pagination-centered
+							li
+								.mantenimiento
+									.servicioCaption
+										p Mantenimiento
+								//- a
+								//- 	img(src='img/alta/imagen (32).jpg')
+								p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt cum, autem amet quasi quas error facilis cupiditate dolorem nobis, doloribus.
+							li
+								.asesor
+									.servicioCaption
+										p Asesoramiento Técnico
+								//- a
+								//- 	img(src='img/alta/imagen (15).jpg')
+								p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id voluptas unde corporis accusamus nesciunt, consequuntur officia deleniti consectetur repellat ducimus.
+							li
+								.instalaciones
+									.servicioCaption
+										p Instalaciones
+								//- a
+								//- 	img(src='img/alta/imagen (26).jpg')
+								p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam obcaecati impedit deleniti cupiditate possimus blanditiis totam explicabo, iste non maxime.
+			.small-12.clientes
+				//- .bgstellar2(data-stellar-background-ratio="0.8")
 				.row
-					hr
-					h4.clientes Clientes
-					ul.small-block-grid-1.medium-block-grid-4
-						li
-							p.panel  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt cum, autem amet quasi quas error facilis cupiditate dolorem nobis, doloribus.
-						li
-							a.th
-								img(src="img/alta/imagen (83).jpg")
-						li
-							a.th
-								img(src="img/alta/imagen (81).jpg")
-						li
-							a.th
-								img(src="img/alta/imagen (12).jpg")
+					.small-12.columns
+						hr
+						h4.clientes CLIENTES
+						ul.small-block-grid-1.medium-block-grid-4
+							li
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt cum, autem amet quasi quas error facilis cupiditate dolorem nobis, doloribus.
+							li
+								//- .probandito(data-stellar-ratio="1.2")
+								a
+									img(src="img/alta/imagen (83).jpg")
+							li
+								a
+									img(src="img/alta/imagen (81).jpg")
+							li
+								a
+									img(src="img/alta/imagen (12).jpg")
 
-			.row
+			.row.contacto
 				.small-12
 					hr
-					h4.contacto Contacto
+					h4.contacto CONTACTO
 					form.contacto
 						input(type="text" placeholder="Nombre")
 						input(id="particular" type="radio" name="particular" value="particular")
