@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* line 5, ../sass/slider.scss */
 body, html {
-  background: linear-gradient(to right, #c5deea 0%, #8abbd7 31%, #066dab 100%);
+  background: linear-gradient(135deg, #c9de96 0%, #8ab66b 44%, #398235 100%);
   margin: 0;
   padding: 0;
 }
@@ -13,7 +13,7 @@ body, html {
 }
 
 /* line 15, ../sass/slider.scss */
-#sliderc_container .captionColor, .slider_block #sliderc_container #slider1_container .inside div:nth-of-type(2) > div, .slider_block #sliderc_container #slider1_container .inside div:nth-of-type(3) > div, .slider_block #sliderc_container #slider1_container .inside div:nth-of-type(4) > div, .slider_block #sliderc_container #slider1_container .inside div:nth-of-type(5) > div, .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(1), .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(2), .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(3), .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(4), .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(5), .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(6), .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(7), .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(8), .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(9), .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(10) {
+#sliderc_container .captionColor, .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(1), .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(2), .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(3), .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(4), .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(5), .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(6), .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(7), .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(8), .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(9), .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(10) {
   display: block;
   font-size: 20px;
   line-height: 30px;
@@ -21,7 +21,7 @@ body, html {
   border-radius: 4px;
 }
 /* line 22, ../sass/slider.scss */
-#sliderc_container .captionOrange, .slider_block #sliderc_container #slider1_container .inside div:nth-of-type(2) > div, .slider_block #sliderc_container #slider1_container .inside div:nth-of-type(3) > div, .slider_block #sliderc_container #slider1_container .inside div:nth-of-type(4) > div, .slider_block #sliderc_container #slider1_container .inside div:nth-of-type(5) > div, .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(2), .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(4), .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(6), .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(8), .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(10) {
+#sliderc_container .captionOrange, .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(2), .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(4), .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(6), .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(8), .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(10) {
   background: rgba(235, 81, 0, 0.6);
 }
 /* line 25, ../sass/slider.scss */
@@ -54,24 +54,24 @@ body, html {
   color: white;
 }
 /* line 49, ../sass/slider.scss */
-#sliderc_container a .captionOrange, .slider_block #sliderc_container a #slider1_container .inside div:nth-of-type(2) > div, .slider_block #sliderc_container #slider1_container .inside a div:nth-of-type(2) > div, .slider_block #sliderc_container a #slider1_container .inside div:nth-of-type(3) > div, .slider_block #sliderc_container #slider1_container .inside a div:nth-of-type(3) > div, .slider_block #sliderc_container a #slider1_container .inside div:nth-of-type(4) > div, .slider_block #sliderc_container #slider1_container .inside a div:nth-of-type(4) > div, .slider_block #sliderc_container a #slider1_container .inside div:nth-of-type(5) > div, .slider_block #sliderc_container #slider1_container .inside a div:nth-of-type(5) > div, .slider_block #sliderc_container a .slider_team_group_1 div:nth-of-type(2), .slider_block #sliderc_container .slider_team_group_1 a div:nth-of-type(2), .slider_block #sliderc_container a .slider_team_group_1 div:nth-of-type(4), .slider_block #sliderc_container .slider_team_group_1 a div:nth-of-type(4), .slider_block #sliderc_container a .slider_team_group_1 div:nth-of-type(6), .slider_block #sliderc_container .slider_team_group_1 a div:nth-of-type(6), .slider_block #sliderc_container a .slider_team_group_1 div:nth-of-type(8), .slider_block #sliderc_container .slider_team_group_1 a div:nth-of-type(8), .slider_block #sliderc_container a .slider_team_group_1 div:nth-of-type(10), .slider_block #sliderc_container .slider_team_group_1 a div:nth-of-type(10) {
+#sliderc_container a .captionOrange, .slider_block #sliderc_container a .slider_team_group_1 div:nth-of-type(2), .slider_block #sliderc_container .slider_team_group_1 a div:nth-of-type(2), .slider_block #sliderc_container a .slider_team_group_1 div:nth-of-type(4), .slider_block #sliderc_container .slider_team_group_1 a div:nth-of-type(4), .slider_block #sliderc_container a .slider_team_group_1 div:nth-of-type(6), .slider_block #sliderc_container .slider_team_group_1 a div:nth-of-type(6), .slider_block #sliderc_container a .slider_team_group_1 div:nth-of-type(8), .slider_block #sliderc_container .slider_team_group_1 a div:nth-of-type(8), .slider_block #sliderc_container a .slider_team_group_1 div:nth-of-type(10), .slider_block #sliderc_container .slider_team_group_1 a div:nth-of-type(10) {
   color: #fff;
   text-decoration: none;
 }
 /* line 52, ../sass/slider.scss */
-#sliderc_container a .captionOrange:hover, .slider_block #sliderc_container a #slider1_container .inside div:nth-of-type(2) > div:hover, .slider_block #sliderc_container #slider1_container .inside a div:nth-of-type(2) > div:hover, .slider_block #sliderc_container a #slider1_container .inside div:nth-of-type(3) > div:hover, .slider_block #sliderc_container #slider1_container .inside a div:nth-of-type(3) > div:hover, .slider_block #sliderc_container a #slider1_container .inside div:nth-of-type(4) > div:hover, .slider_block #sliderc_container #slider1_container .inside a div:nth-of-type(4) > div:hover, .slider_block #sliderc_container a #slider1_container .inside div:nth-of-type(5) > div:hover, .slider_block #sliderc_container #slider1_container .inside a div:nth-of-type(5) > div:hover, .slider_block #sliderc_container a .slider_team_group_1 div:hover:nth-of-type(2), .slider_block #sliderc_container .slider_team_group_1 a div:hover:nth-of-type(2), .slider_block #sliderc_container a .slider_team_group_1 div:hover:nth-of-type(4), .slider_block #sliderc_container .slider_team_group_1 a div:hover:nth-of-type(4), .slider_block #sliderc_container a .slider_team_group_1 div:hover:nth-of-type(6), .slider_block #sliderc_container .slider_team_group_1 a div:hover:nth-of-type(6), .slider_block #sliderc_container a .slider_team_group_1 div:hover:nth-of-type(8), .slider_block #sliderc_container .slider_team_group_1 a div:hover:nth-of-type(8), .slider_block #sliderc_container a .slider_team_group_1 div:hover:nth-of-type(10), .slider_block #sliderc_container .slider_team_group_1 a div:hover:nth-of-type(10) {
+#sliderc_container a .captionOrange:hover, .slider_block #sliderc_container a .slider_team_group_1 div:hover:nth-of-type(2), .slider_block #sliderc_container .slider_team_group_1 a div:hover:nth-of-type(2), .slider_block #sliderc_container a .slider_team_group_1 div:hover:nth-of-type(4), .slider_block #sliderc_container .slider_team_group_1 a div:hover:nth-of-type(4), .slider_block #sliderc_container a .slider_team_group_1 div:hover:nth-of-type(6), .slider_block #sliderc_container .slider_team_group_1 a div:hover:nth-of-type(6), .slider_block #sliderc_container a .slider_team_group_1 div:hover:nth-of-type(8), .slider_block #sliderc_container .slider_team_group_1 a div:hover:nth-of-type(8), .slider_block #sliderc_container a .slider_team_group_1 div:hover:nth-of-type(10), .slider_block #sliderc_container .slider_team_group_1 a div:hover:nth-of-type(10) {
   color: #eb5100;
   text-decoration: underline;
   background-color: #eeeeee;
   background-color: rgba(238, 238, 238, 0.7);
 }
 /* line 58, ../sass/slider.scss */
-#sliderc_container a .captionOrange:active, .slider_block #sliderc_container a #slider1_container .inside div:nth-of-type(2) > div:active, .slider_block #sliderc_container #slider1_container .inside a div:nth-of-type(2) > div:active, .slider_block #sliderc_container a #slider1_container .inside div:nth-of-type(3) > div:active, .slider_block #sliderc_container #slider1_container .inside a div:nth-of-type(3) > div:active, .slider_block #sliderc_container a #slider1_container .inside div:nth-of-type(4) > div:active, .slider_block #sliderc_container #slider1_container .inside a div:nth-of-type(4) > div:active, .slider_block #sliderc_container a #slider1_container .inside div:nth-of-type(5) > div:active, .slider_block #sliderc_container #slider1_container .inside a div:nth-of-type(5) > div:active, .slider_block #sliderc_container a .slider_team_group_1 div:active:nth-of-type(2), .slider_block #sliderc_container .slider_team_group_1 a div:active:nth-of-type(2), .slider_block #sliderc_container a .slider_team_group_1 div:active:nth-of-type(4), .slider_block #sliderc_container .slider_team_group_1 a div:active:nth-of-type(4), .slider_block #sliderc_container a .slider_team_group_1 div:active:nth-of-type(6), .slider_block #sliderc_container .slider_team_group_1 a div:active:nth-of-type(6), .slider_block #sliderc_container a .slider_team_group_1 div:active:nth-of-type(8), .slider_block #sliderc_container .slider_team_group_1 a div:active:nth-of-type(8), .slider_block #sliderc_container a .slider_team_group_1 div:active:nth-of-type(10), .slider_block #sliderc_container .slider_team_group_1 a div:active:nth-of-type(10) {
+#sliderc_container a .captionOrange:active, .slider_block #sliderc_container a .slider_team_group_1 div:active:nth-of-type(2), .slider_block #sliderc_container .slider_team_group_1 a div:active:nth-of-type(2), .slider_block #sliderc_container a .slider_team_group_1 div:active:nth-of-type(4), .slider_block #sliderc_container .slider_team_group_1 a div:active:nth-of-type(4), .slider_block #sliderc_container a .slider_team_group_1 div:active:nth-of-type(6), .slider_block #sliderc_container .slider_team_group_1 a div:active:nth-of-type(6), .slider_block #sliderc_container a .slider_team_group_1 div:active:nth-of-type(8), .slider_block #sliderc_container .slider_team_group_1 a div:active:nth-of-type(8), .slider_block #sliderc_container a .slider_team_group_1 div:active:nth-of-type(10), .slider_block #sliderc_container .slider_team_group_1 a div:active:nth-of-type(10) {
   color: #fff;
   text-decoration: none;
 }
 /* line 62, ../sass/slider.scss */
-#sliderc_container a .captionOrange:visited, .slider_block #sliderc_container a #slider1_container .inside div:nth-of-type(2) > div:visited, .slider_block #sliderc_container #slider1_container .inside a div:nth-of-type(2) > div:visited, .slider_block #sliderc_container a #slider1_container .inside div:nth-of-type(3) > div:visited, .slider_block #sliderc_container #slider1_container .inside a div:nth-of-type(3) > div:visited, .slider_block #sliderc_container a #slider1_container .inside div:nth-of-type(4) > div:visited, .slider_block #sliderc_container #slider1_container .inside a div:nth-of-type(4) > div:visited, .slider_block #sliderc_container a #slider1_container .inside div:nth-of-type(5) > div:visited, .slider_block #sliderc_container #slider1_container .inside a div:nth-of-type(5) > div:visited, .slider_block #sliderc_container a .slider_team_group_1 div:visited:nth-of-type(2), .slider_block #sliderc_container .slider_team_group_1 a div:visited:nth-of-type(2), .slider_block #sliderc_container a .slider_team_group_1 div:visited:nth-of-type(4), .slider_block #sliderc_container .slider_team_group_1 a div:visited:nth-of-type(4), .slider_block #sliderc_container a .slider_team_group_1 div:visited:nth-of-type(6), .slider_block #sliderc_container .slider_team_group_1 a div:visited:nth-of-type(6), .slider_block #sliderc_container a .slider_team_group_1 div:visited:nth-of-type(8), .slider_block #sliderc_container .slider_team_group_1 a div:visited:nth-of-type(8), .slider_block #sliderc_container a .slider_team_group_1 div:visited:nth-of-type(10), .slider_block #sliderc_container .slider_team_group_1 a div:visited:nth-of-type(10) {
+#sliderc_container a .captionOrange:visited, .slider_block #sliderc_container a .slider_team_group_1 div:visited:nth-of-type(2), .slider_block #sliderc_container .slider_team_group_1 a div:visited:nth-of-type(2), .slider_block #sliderc_container a .slider_team_group_1 div:visited:nth-of-type(4), .slider_block #sliderc_container .slider_team_group_1 a div:visited:nth-of-type(4), .slider_block #sliderc_container a .slider_team_group_1 div:visited:nth-of-type(6), .slider_block #sliderc_container .slider_team_group_1 a div:visited:nth-of-type(6), .slider_block #sliderc_container a .slider_team_group_1 div:visited:nth-of-type(8), .slider_block #sliderc_container .slider_team_group_1 a div:visited:nth-of-type(8), .slider_block #sliderc_container a .slider_team_group_1 div:visited:nth-of-type(10), .slider_block #sliderc_container .slider_team_group_1 a div:visited:nth-of-type(10) {
   color: #fff;
   text-decoration: none;
 }
@@ -121,67 +121,70 @@ body, html {
 }
 /* line 104, ../sass/slider.scss */
 #sliderc_container .jssorb01 {
-  position: relative;
+  position: absolute;
+  box-sizing: content-box;
   top: 270px;
   left: 500px;
-  background: 1px 1px rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.5);
   padding: 5px;
   border-radius: 25px;
 }
-/* line 111, ../sass/slider.scss */
+/* line 112, ../sass/slider.scss */
 #sliderc_container .jssorb01 .prototype {
+  box-sizing: content-box;
   border-radius: 50%;
-  box-shadow: 0 0 6px lime;
+  box-shadow: 0 0 6px white;
   POSITION: absolute;
   WIDTH: 12px;
   HEIGHT: 12px;
-  margin: 4px;
+  margin-top: 4px;
+  margin-left: 4px;
 }
-/* line 119, ../sass/slider.scss */
+/* line 122, ../sass/slider.scss */
 #sliderc_container .jssorb01 div {
   filter: alpha(opacity=70);
   opacity: 0.7;
   cursor: pointer;
-  border: 1px solid lime;
+  border: 1px solid white;
   background: 1px 1px rgba(255, 255, 255, 0.5);
   overflow: hidden;
 }
-/* line 126, ../sass/slider.scss */
+/* line 129, ../sass/slider.scss */
 #sliderc_container .jssorb01 div:hover {
   background-color: blue;
 }
-/* line 130, ../sass/slider.scss */
+/* line 133, ../sass/slider.scss */
 #sliderc_container .jssorb01 .av {
-  background-color: yellow;
+  background-color: #00b400;
 }
-/* line 132, ../sass/slider.scss */
+/* line 135, ../sass/slider.scss */
 #sliderc_container .jssorb01 .av:hover {
   background-color: red;
 }
-/* line 136, ../sass/slider.scss */
+/* line 139, ../sass/slider.scss */
 #sliderc_container .jssorb01 .dn {
   background-color: #fff;
 }
-/* line 138, ../sass/slider.scss */
+/* line 141, ../sass/slider.scss */
 #sliderc_container .jssorb01 .dn:hover {
-  background-color: yellow;
+  background-color: lime;
 }
 
-/* line 145, ../sass/slider.scss */
+/* line 148, ../sass/slider.scss */
 .slider_block {
   display: block;
   float: none;
   margin: 0 auto;
   width: 100%;
   text-align: center;
-  background-image: url("../img/fondo.jpg");
+  background-image: url("../img/background.jpg");
   border-top: 4px solid rgba(0, 0, 0, 0.7);
   border-bottom: 4px solid rgba(0, 0, 0, 0.7);
   font-family: Arial, Verdana, Sans-Serif;
   border-radius: 0px;
   overflow: hidden;
 }
-/* line 157, ../sass/slider.scss */
+/* line 160, ../sass/slider.scss */
 .slider_block #sliderc_container {
   position: relative;
   margin: 0 auto;
@@ -190,20 +193,20 @@ body, html {
   text-align: left;
   overflow: hidden;
 }
-/* line 163, ../sass/slider.scss */
+/* line 166, ../sass/slider.scss */
 .slider_block #sliderc_container .slides, .slider_block #sliderc_container #slider1_container .spinner, .slider_block #sliderc_container #slider1_container .spinner > div, .slider_block #sliderc_container #slider1_container .spinner > div + div, .slider_block #sliderc_container #slider1_container .inside {
   position: absolute;
   left: 0;
   top: 0;
   overflow: hidden;
 }
-/* line 168, ../sass/slider.scss */
+/* line 171, ../sass/slider.scss */
 .slider_block #sliderc_container .outside {
   cursor: move;
   width: 960px;
   height: 450px;
 }
-/* line 172, ../sass/slider.scss */
+/* line 175, ../sass/slider.scss */
 .slider_block #sliderc_container #slider1_container {
   position: absolute;
   left: 0px;
@@ -215,7 +218,7 @@ body, html {
   margin: 0px;
   overflow: hidden;
 }
-/* line 181, ../sass/slider.scss */
+/* line 184, ../sass/slider.scss */
 .slider_block #sliderc_container #slider1_container .spinner > div {
   display: block;
   filter: alpha(opacity=70);
@@ -224,76 +227,28 @@ body, html {
   width: 100%;
   height: 100%;
 }
-/* line 189, ../sass/slider.scss */
+/* line 192, ../sass/slider.scss */
 .slider_block #sliderc_container #slider1_container .spinner > div + div {
   display: block;
   background: url("../img/loading.gif") no-repeat center center;
   width: 100%;
   height: 100%;
 }
-/* line 196, ../sass/slider.scss */
+/* line 199, ../sass/slider.scss */
 .slider_block #sliderc_container #slider1_container .inside {
   cursor: not-allowed;
   width: 600px;
   height: 300px;
 }
-/* line 201, ../sass/slider.scss */
-.slider_block #sliderc_container #slider1_container .inside div:nth-of-type(2) > div {
+/* line 203, ../sass/slider.scss */
+.slider_block #sliderc_container #slider1_container .inside .caption {
   position: absolute;
   left: 20px;
   top: 30px;
   width: 300px;
   height: 30px;
 }
-/* line 64, ../sass/_sliderVariables.scss */
-.slider_block #sliderc_container #slider1_container .inside div:nth-of-type(2) > div:after {
-  content: "Slider 1 inside";
-  color: blue;
-  text-shadow: 1px 1px rgba(255, 0, 0, 0.5);
-}
-/* line 207, ../sass/slider.scss */
-.slider_block #sliderc_container #slider1_container .inside div:nth-of-type(3) > div {
-  position: absolute;
-  left: 160px;
-  top: 70px;
-  width: 300px;
-  height: 30px;
-}
-/* line 64, ../sass/_sliderVariables.scss */
-.slider_block #sliderc_container #slider1_container .inside div:nth-of-type(3) > div:after {
-  content: "Slider 2 inside";
-  color: red;
-  text-shadow: 1px 1px rgba(0, 0, 255, 0.5);
-}
-/* line 213, ../sass/slider.scss */
-.slider_block #sliderc_container #slider1_container .inside div:nth-of-type(4) > div {
-  position: absolute;
-  left: 0px;
-  top: 120px;
-  width: 100%;
-  height: 30px;
-}
-/* line 64, ../sass/_sliderVariables.scss */
-.slider_block #sliderc_container #slider1_container .inside div:nth-of-type(4) > div:after {
-  content: "Slider 3 inside";
-  color: yellow;
-  text-shadow: 1px 1px rgba(0, 255, 0, 0.5);
-}
-/* line 219, ../sass/slider.scss */
-.slider_block #sliderc_container #slider1_container .inside div:nth-of-type(5) > div {
-  position: absolute;
-  left: 50px;
-  top: 0px;
-  width: 100%;
-  height: 30px;
-}
-/* line 64, ../sass/_sliderVariables.scss */
-.slider_block #sliderc_container #slider1_container .inside div:nth-of-type(5) > div:after {
-  content: "Slider 4 inside";
-  color: black;
-  text-shadow: 1px 1px rgba(255, 255, 255, 0.5);
-}
-/* line 228, ../sass/slider.scss */
+/* line 209, ../sass/slider.scss */
 .slider_block #sliderc_container .slider_header_title_1 {
   position: absolute;
   position: absolute;
@@ -311,7 +266,7 @@ body, html {
 .slider_block #sliderc_container .slider_header_title_1:after {
   content: "Mi super titulo";
 }
-/* line 233, ../sass/slider.scss */
+/* line 214, ../sass/slider.scss */
 .slider_block #sliderc_container .slider_team_group_1 {
   position: absolute;
   left: 640px;
@@ -319,7 +274,7 @@ body, html {
   width: 320px;
   height: 250px;
 }
-/* line 236, ../sass/slider.scss */
+/* line 217, ../sass/slider.scss */
 .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(1) {
   position: absolute;
   left: 0px;
@@ -329,11 +284,11 @@ body, html {
 }
 /* line 46, ../sass/_sliderVariables.scss */
 .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(1):after {
-  content: "F";
+  content: "+";
   color: blue;
   text-shadow: 1px 1px rgba(255, 0, 0, 0.5);
 }
-/* line 242, ../sass/slider.scss */
+/* line 223, ../sass/slider.scss */
 .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(2) {
   position: absolute;
   left: 40px;
@@ -347,7 +302,7 @@ body, html {
   color: lime;
   text-shadow: 1px 1px rgba(0, 0, 255, 0.5);
 }
-/* line 248, ../sass/slider.scss */
+/* line 229, ../sass/slider.scss */
 .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(3) {
   position: absolute;
   left: 0px;
@@ -357,11 +312,11 @@ body, html {
 }
 /* line 46, ../sass/_sliderVariables.scss */
 .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(3):after {
-  content: "L";
+  content: "+";
   color: lime;
   text-shadow: 1px 1px rgba(0, 0, 255, 0.5);
 }
-/* line 254, ../sass/slider.scss */
+/* line 235, ../sass/slider.scss */
 .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(4) {
   position: absolute;
   left: 40px;
@@ -375,7 +330,7 @@ body, html {
   color: blue;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
 }
-/* line 260, ../sass/slider.scss */
+/* line 241, ../sass/slider.scss */
 .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(5) {
   position: absolute;
   left: 0px;
@@ -385,11 +340,11 @@ body, html {
 }
 /* line 46, ../sass/_sliderVariables.scss */
 .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(5):after {
-  content: "M";
+  content: "+";
   color: yellow;
   text-shadow: 1px 1px rgba(0, 255, 0, 0.5);
 }
-/* line 266, ../sass/slider.scss */
+/* line 247, ../sass/slider.scss */
 .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(6) {
   position: absolute;
   left: 40px;
@@ -403,7 +358,7 @@ body, html {
   color: red;
   text-shadow: 1px 1px rgba(255, 255, 255, 0.5);
 }
-/* line 272, ../sass/slider.scss */
+/* line 253, ../sass/slider.scss */
 .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(7) {
   position: absolute;
   left: 0px;
@@ -413,11 +368,11 @@ body, html {
 }
 /* line 46, ../sass/_sliderVariables.scss */
 .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(7):after {
-  content: "M";
+  content: "+";
   color: red;
   text-shadow: 1px 1px rgba(0, 255, 0, 0.5);
 }
-/* line 278, ../sass/slider.scss */
+/* line 259, ../sass/slider.scss */
 .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(8) {
   position: absolute;
   left: 40px;
@@ -431,7 +386,7 @@ body, html {
   color: white;
   text-shadow: 1px 1px rgba(255, 0, 0, 0.5);
 }
-/* line 284, ../sass/slider.scss */
+/* line 265, ../sass/slider.scss */
 .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(9) {
   position: absolute;
   left: 0px;
@@ -441,11 +396,11 @@ body, html {
 }
 /* line 46, ../sass/_sliderVariables.scss */
 .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(9):after {
-  content: "J";
+  content: "+";
   color: white;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
 }
-/* line 290, ../sass/slider.scss */
+/* line 271, ../sass/slider.scss */
 .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(10) {
   position: absolute;
   left: 40px;

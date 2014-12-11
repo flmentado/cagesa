@@ -2,148 +2,136 @@
 @import 'sliderVariables';
 
 //Caption Style
-body,html{
-  background:  linear-gradient(135deg, #c9de96 0%,#8ab66b 44%,#398235 100%);
-  margin: 0;
-  padding:0;
-}
-.slider_block{
-  visibility: hidden;
-  background: inherit;
-  }
 #sliderc_container {
-   .captionColor {
-     display: block;
-     font-size: $caption_font_size;
-     line-height: $caption_line_height;
-     text-align: center;
-     border-radius: $caption_border_radius;
-   }
-   .captionOrange {
-     background: rgba(235, 81, 0, 6/10);
-   }
-   .captionBlue {
-     background: rgba(21, 21, 120, 6/10);
-   }
-   .captionBlack {
-     background: rgba(0, 0, 0, 4/10);
-   }
-   .captionSymbol {
-     border-radius: $caption_symbol_border_radius !important;
-     font-weight: $caption_symbol_font_weight !important;
-     font-size: $caption_symbol_font_size !important;
-     background: $caption_symbol_background;
-   }
-   .captionText {
-     display: block;
-     font-size: $caption_font_size;
-     line-height: $caption_line_height;
-   }
-   .captionTextBlack {
-     color: $black;
-   }
-   .captionTextWhite {
-     color: $white;
-   }
-   a {
-     .captionOrange {
-       color: #fff;
-       text-decoration: none;
-       &:hover {
-         color: #eb5100;
-         text-decoration: underline;
-         background-color: #eeeeee;
-         background-color: rgba(238, 238, 238, 7/10);
-       }
-       &:active {
-         color: #fff;
-         text-decoration: none;
-       }
-       &:visited {
-         color: #fff;
-         text-decoration: none;
-       }
-     }
-     .captionTextWhite {
-       color: #fff;
-       text-decoration: none;
-       &:active {
-         color: #fff;
-         text-decoration: none;
-       }
-       &:visited {
-         color: #fff;
-         text-decoration: none;
-       }
-       &:hover {
-         color: #eb5100;
-         text-decoration: underline;
-       }
-     }
-     .captionTextBlack {
-       color: #fff;
-       text-decoration: none;
-       &:active {
-         color: #fff;
-         text-decoration: none;
-       }
-       &:visited {
-         color: #fff;
-         text-decoration: none;
-       }
-       &:hover {
-         color: #eb5100;
-         text-decoration: underline;
-       }
-     }
-   }
-   .bricon {
-     background: url('../img/browser-icons.png');
-   }
-   //Bullet
-   .jssorb01 {
-     position: absolute;
-     box-sizing: content-box;
-     top: $navigation_posY;
-     left: $navigation_posX;
-     background: $navigation_background;
-     padding: $navigation_padding;
-     border-radius: $navigation_border_radius;
-     .prototype {
-       box-sizing: content-box;
-       border-radius: $navigation_bullet_border_radius;
-       box-shadow: $navigation_bullet_box_shadow;
-       POSITION: absolute;
-       WIDTH: $navigation_bullet_size;
-       HEIGHT: $navigation_bullet_size;
-       margin-top: $navigation_padding - 1px;
-       margin-left: $navigation_padding - 1px;
-       }
-     div {
-       filter: alpha(opacity=$navigation_bullet_opacity*100);
-       opacity: $navigation_bullet_opacity;
-       cursor: pointer;
-       border: $navigation_bullet_border;
-       background: $navigation_bullet_background;
-       overflow: hidden;
-       &:hover {
-         background-color: $navigation_bullet_color_hover;
-       }
-     }
-     .av {
-       background-color: $navigation_bullet_color_actual;
-       &:hover {
-         background-color: $navigation_bullet_color_active;
-       }
-     }
-     .dn {
-       background-color: #fff;
-       &:hover {
-         background-color: $navigation_bullet_color_click;
-       }
-     }
-   }
- }
+  .captionColor {
+    display: block;
+    font-size: $caption_font_size;
+    line-height: $caption_line_height;
+    text-align: center;
+    border-radius: $caption_border_radius;
+  }
+  .captionOrange {
+    background: rgba(235, 81, 0, 6/10);
+  }
+  .captionBlue {
+    background: rgba(21, 21, 120, 6/10);
+  }
+  .captionBlack {
+    background: rgba(0, 0, 0, 4/10);
+  }
+  .captionSymbol {
+    border-radius: $caption_symbol_border_radius !important;
+    font-weight: $caption_symbol_font_weight !important;
+    font-size: $caption_symbol_font_size !important;
+    background: $caption_symbol_background;
+  }
+  .captionText {
+    display: block;
+    font-size: $caption_font_size;
+    line-height: $caption_line_height;
+  }
+  .captionTextBlack {
+    color: $black;
+  }
+  .captionTextWhite {
+    color: $white;
+  }
+  a {
+    .captionOrange {
+      color: #fff;
+      text-decoration: none;
+      &:hover {
+        color: #eb5100;
+        text-decoration: underline;
+        background-color: #eeeeee;
+        background-color: rgba(238, 238, 238, 7/10);
+      }
+      &:active {
+        color: #fff;
+        text-decoration: none;
+      }
+      &:visited {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+    .captionTextWhite {
+      color: #fff;
+      text-decoration: none;
+      &:active {
+        color: #fff;
+        text-decoration: none;
+      }
+      &:visited {
+        color: #fff;
+        text-decoration: none;
+      }
+      &:hover {
+        color: #eb5100;
+        text-decoration: underline;
+      }
+    }
+    .captionTextBlack {
+      color: #fff;
+      text-decoration: none;
+      &:active {
+        color: #fff;
+        text-decoration: none;
+      }
+      &:visited {
+        color: #fff;
+        text-decoration: none;
+      }
+      &:hover {
+        color: #eb5100;
+        text-decoration: underline;
+      }
+    }
+  }
+  .bricon {
+    background: url('../img/browser-icons.png');
+  }
+  //Bullet
+  .jssorb01 {
+    position: relative;
+    top: $navigation_posY;
+    left: $navigation_posX;
+    background: $navigation_background;
+    padding: $navigation_padding;
+    border-radius: $navigation_border_radius;
+    .prototype {
+      border-radius: $navigation_bullet_border_radius;
+      box-shadow: $navigation_bullet_box_shadow;
+      POSITION: absolute;
+      WIDTH: $navigation_bullet_size;
+      HEIGHT: $navigation_bullet_size;
+      margin: $navigation_bullet_margin;
+    }
+    div {
+      filter: alpha(opacity=$navigation_bullet_opacity*100);
+      opacity: $navigation_bullet_opacity;
+      cursor: pointer;
+      border: $navigation_bullet_border;
+      background: $navigation_bullet_background;
+      overflow: hidden;
+      &:hover {
+        background-color: $navigation_bullet_color_hover;
+      }
+    }
+    .av {
+      background-color: $yellow;
+      &:hover {
+        background-color: $navigation_bullet_color_active;
+      }
+    }
+    .dn {
+      background-color: #fff;
+      &:hover {
+        background-color: $navigation_bullet_color_click;
+      }
+    }
+  }
+}
 
 .slider_block {
   display: block;
