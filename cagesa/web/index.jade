@@ -15,100 +15,120 @@ html
 
 	body
 		.mq-check
+			.row
+				.contain-to-grid.fixed.gris
+					nav.top-bar(data-topbar)
+						ul.title-area
+							li.name
+								.logoBlanco
+							li.toggle-topbar.menu-icon
+								a(href="#")
+									span Menu
 
-			.contain-to-grid.fixed.gris
-				nav.top-bar(data-topbar)
-					ul.title-area
-						li.name
-							.logoBlanco
-							//- h1
-							//- 	a(href="#") Logo Cagesa
-						li.toggle-topbar.menu-icon
-							a(href="#")
-								span Menu
+						section.top-bar-section
+							ul.right
+								li.divider
+								li.active.quienes
+									a(href="#") Quienes Somos
+								li.divider
+								li.serv
+									a(href="#") Servicios
+								li.divider
+								li.client
+									a(href="#") Clientes
+								li.divider
+								li.contact
+									a(href="#") Contacto
+								li.divider
+			.row
+				.orbit-container.slide
+					ul.example-orbit(data-orbit data-options="animation_speed:200; pause_on_hover: false; next_on_click: true" )
+						li
+							img(src="img/alta/imagen (58).jpg" alt="")
+							.orbit-caption
+								span Cagesa 15 años, ofreciendo el mejor servicio.
+						li
+							img(src="img/alta/imagen (40).jpg" alt="")
+							.orbit-caption
+								span Cagesa 15 años, ofreciendo el mejor servicio.
+						li
+							img(src="img/alta/imagen (4).jpg" alt="")
+							.orbit-caption
+								span Cagesa 15 años, ofreciendo el mejor servicio.
+						li
+							img(src="img/alta/imagen (90).jpg" alt="")
+							.orbit-caption
+								span Cagesa 15 años, ofreciendo el mejor servicio.
 
-					section.top-bar-section
-						ul.right
-							li.divider
-							li.active.quienes
-								a(href="#") Quienes Somos
-							li.divider
-							li.serv
-								a(href="#") Servicios
-							li.divider
-							li.client
-								a(href="#") Clientes
-							li.divider
-							li.contat
-								a(href="#") Contacto
-							li.divider
-			//- .row.trampa
-			.small-12.bgstellar(data-stellar-background-ratio="0.8")
-				//- .bgstellar3(data-stellar-background-ratio="0.8")
-				.row
-					.slide
-						.lema
-							p Cagesa más de 20 años a tu servicio.
-						//- img(src="img/paralax2.jpg")
-			//- .row
-			//- 	.lema.small-12.columns
-			//- 		p Canarias de Gestion y Suministros para Areas Verdes
 
-			//- .small-12
-			//- 	.row
-			//- 		.panel
-			//- 			p Mas de
-			.small-12.somos
-				//- .bgstellar(data-stellar-background-ratio="0.8")
+			<!-- .small-12.columns -->
+			.row
+				br
+				.somostext.small-12.medium-6.columns
+					h4.somos QUIENES SOMOS
+					p
+						span.nombre Canarias de gestión y suministros para areas verdes S.L.
+					p Somos una empresa perteneciente al
+						span(id="tipGrupoCastillo" data-tooltip data-options="hover_delay: 50;" class="has-tip" title="Nace en diciembre del año 2000 al amparo de la empresa Elmasa Medio Ambiente, para dar respuesta a la necesidad de  servicio de jardinería turística y residencial privada.")  Grupo Castillo
+						span . Nuestro ámbito de actuación es la jardinería, el sector medio ambiental y los servicios forestales.
+					p CAGESA cuenta con la certificación
+						span(id="tipAenor" data-tooltip data-options="hover_delay: 50;" class="has-tip" title="Norma UNE  EN  ISO 9001")  AENOR
+						span . Además una de nuestras prioridades es la protección y cuidado del medio ambiente.
+				.somosSlide.small-12.medium-6.columns.end
+					a
+						img(src="img/alta/imagen (83).jpg")
+			br
+
+			.small-12.servicios.bgstellar(data-stellar-background-ratio="0.8")
 				.row
-					br
-					.somostext.small-12.medium-6.columns
-						h4.somos QUIENES SOMOS
-						p
-							span.nombre Canarias de gestión y suministros para areas verdes S.L.
-						p Es una empresa perteneciente al Grupo Castillo. Su ámbito de actuacion es la jardinería, el sector medioambiental y los servicios
-						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque optio dolore a quibusdam necessitatibus. Dolor delectus quam eligendi vel atque fugiat nostrum quia cupiditate, aliquid voluptatum officia asperiores dolore eum.
-					.somosSlide.small-12.medium-6.columns.end
-						a
-							img(src="img/alta/imagen (83).jpg")
-			.small-12.servicios
-				.row
-					hr
 					.small-12.columns
-						h4.servicios SERVICIOS
+						br
+						h4.servicios
+							a(data-reveal-id="myModal") SERVICIOS
+							div(id="myModal" class="reveal-modal" data-reveal)
+								hr
+								p -Diseño, construcción y mantenimiento de espacios verdes en general.
+								p -Proyectos de jardines, riegos, repoblaciones, reforestaciones
+								p -Obras de jardinería, tratamiento de taludes, restauración y recuperación paisajística, tratamientos selvícolas.
+								p -Mantenimientos de jardinería, hoteles y complejos hoteleros, jardines individuales, parque y espacios públicos.
+								p -Análisis, estudios y diagnóstico de arbolado y palmeras
+								p -Asesoramiento técnico, planes de gestión y estudios.
+								p -Podas, talas, limpiezas y actuaciones de choque.
+								p -Trasplantes en general.
+								p -Instalación de sistemas de riego, equipos de riego y fertirrigación.
+								hr
+								a(class="close-reveal-modal") &#215;
+
 						ul.small-block-grid-1.medium-block-grid-3.pagination-centered
 							li
 								.mantenimiento
 									.servicioCaption
 										p Mantenimiento
-								//- a
-								//- 	img(src='img/alta/imagen (32).jpg')
-								p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt cum, autem amet quasi quas error facilis cupiditate dolorem nobis, doloribus.
+								p  Ofrecemos servicios de poda de palmeras y árboles de gran porte, tratamientos fitosanitarios, instalaciones de riego, reparación de maquinaria,  tala de palmeras, recogida de residuos vegetales.
 							li
 								.asesor
 									.servicioCaption
 										p Asesoramiento Técnico
-								//- a
-								//- 	img(src='img/alta/imagen (15).jpg')
-								p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id voluptas unde corporis accusamus nesciunt, consequuntur officia deleniti consectetur repellat ducimus.
+								p  Contamos con Técnicos, delineantes, administrativos, Oficiales Jardineros, mecánicos y podadores acreditados por el
+									strong  Gobierno de Canarias
+									span  para la poda, transplante y tratamiento de las palmeras
 							li
 								.instalaciones
 									.servicioCaption
 										p Instalaciones
-								//- a
-								//- 	img(src='img/alta/imagen (26).jpg')
-								p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam obcaecati impedit deleniti cupiditate possimus blanditiis totam explicabo, iste non maxime.
-			.small-12.clientes
-				//- .bgstellar2(data-stellar-background-ratio="0.8")
+								p  En nuestro vivero de  10000 m2,  2000 de ellos de invernaderos. Producimos las plantas que suministramos en nuestros servicios y obras. Contamos con un stock  de maquinaria, material de riego, productos fitosanitarios, abonos, turbas, sustratos y áridos para facilitar el suministro a nuestros clientes.
+			.small-12.clientes.somos
+
 				.row
 					.small-12.columns
 						hr
-						h4.clientes CLIENTES
+
+						h4.clientes
+							span(id="tipClientes" data-tooltip aria-haspopup="true" class="has-tip" title="Prestamos servicios a las cadenas hoteleras más importantes, Sea Side (Grand Hotel Residencia 5*GL, Palm Beach 5*, Sandy Beach 4*) o Lopesan Hotels (Gran Hotel Lopesan Costa Meloneras, H. Lopesan Villa del Conde...") CLIENTES
 						ul.small-block-grid-1.medium-block-grid-4
 							li
-								p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt cum, autem amet quasi quas error facilis cupiditate dolorem nobis, doloribus.
+								p A lo largo de tiempo se ha ido consolidando en una empresa líder en este sector de la jardinería.
 							li
-								//- .probandito(data-stellar-ratio="1.2")
 								a
 									img(src="img/alta/imagen (83).jpg")
 							li
@@ -143,5 +163,8 @@ html
 
 		script(src="js/foundation/foundation.js")
 		script(src="js/foundation/foundation.topbar.js")
+		script(src="js/foundation/foundation.tooltip.js")
+		script(src="js/foundation/foundation.reveal.js")
+		script(src="js/foundation/foundation.orbit.js")
 		script(src="js/user.js")
-		script $(document).foundation();
+		script $(document).foundation() ;

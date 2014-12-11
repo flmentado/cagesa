@@ -156,8 +156,7 @@ select {
   clear: both;
 }
 .column,
-.columns,
-.titulo {
+.columns {
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
   width: 100%;
@@ -291,15 +290,13 @@ select {
     left: auto;
   }
   .column,
-  .columns,
-  .titulo {
+  .columns {
     position: relative;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
     float: left;
   }
-  .small-1,
-  .titulo {
+  .small-1 {
     width: 8.33333%;
   }
   .small-2 {
@@ -525,8 +522,7 @@ select {
     left: auto;
   }
   .column,
-  .columns,
-  .titulo {
+  .columns {
     position: relative;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -685,8 +681,7 @@ select {
     right: 33.33333%;
     left: auto;
   }
-  .push-5,
-  .titulo {
+  .push-5 {
     position: relative;
     left: 41.66667%;
     right: auto;
@@ -879,8 +874,7 @@ select {
     left: auto;
   }
   .column,
-  .columns,
-  .titulo {
+  .columns {
     position: relative;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -1039,8 +1033,7 @@ select {
     right: 33.33333%;
     left: auto;
   }
-  .push-5,
-  .titulo {
+  .push-5 {
     position: relative;
     left: 41.66667%;
     right: auto;
@@ -8183,11 +8176,6 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;*/
 }
-.name h1 {
-  background-image: url(../img/logoBlanco.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-}
 .logoBlanco {
   width: 110px;
   height: 60px;
@@ -8200,21 +8188,8 @@ body {
 }
 .gris nav section ul li,
 .gris nav section ul li a {
-  border: 0 !important;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 1px;
-}
-.name h1 a {
-  color: rgba(0, 0, 0, 0) !important;
-}
-.trampa {
-  height: 50px;
-}
-.logo img {
-  width: 120px;
-}
-.long {
-  width: 120px !important;
 }
 hr {
   border-style: solid;
@@ -8229,19 +8204,6 @@ hr {
   clear: both;
   margin: 1.25rem 0px 1.1875rem;
   height: 1px;
-}
-.lema {
-  position: relative;
-  background-color: rgba(0, 0, 0, 0.5);
-  top: 88%;
-  padding-left: 1.5rem;
-}
-.lema p {
-  color: #FFF;
-  font-size: 1.5em;
-}
-img + p {
-  margin-top: 5%;
 }
 hr + h4 {
   margin-left: 1%;
@@ -8269,9 +8231,6 @@ ul li img{margin-top: 2%;}*/
 .right ul {
   border: 3px solid;
 }
-.paralax > div {
-  top: -500 !important;
-}
 .bgstellar {
   background-image: url('../img/fondohojas.jpg') !important;
   background-size: cover;
@@ -8296,13 +8255,6 @@ ul li img{margin-top: 2%;}*/
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-}
-.probandito {
-  background-image: url('../img/alta/imagen (83).jpg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 150px;
-  width: 150px;
 }
 .nombre {
   color: #050;
@@ -8342,10 +8294,14 @@ ul li img{margin-top: 2%;}*/
   margin-left: 1rem;
   font-size: 1.2rem;
 }
-.slide {
+.slide,
+.slide img {
   width: 100%;
   height: 300px;
   background-image: url('../img/paralax1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+}
+.row {
+  max-width: 84%;
 }

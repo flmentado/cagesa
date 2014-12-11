@@ -1,4 +1,7 @@
+
 $(function(){
+
+
 
         $(window).stellar();
         $('.wrapper').css({
