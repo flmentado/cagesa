@@ -9,9 +9,13 @@ html
 		link(rel="css/app.css")
 		link(rel="css/icons.css")
 		link(rel="css/style.css")
+
 		script(src="js/vendor/jquery-2.1.1.js")
 		script(src="js/vendor/modernizr.js")
 		script(src="js/jquery.stellar.js")
+		link(rel="stylesheet" href="<?php echo PAHT_SLIDER_1?>/css/slider.css)" type="text/css")
+		script(type="text/javascript" src="<?php echo PAHT_SLIDER_1?>/js/jssor.slider.min.js")
+		script(type="text/javascript" src="<?php echo PAHT_SLIDER_1?>/js/slider.js")
 
 	body
 		.mq-check
@@ -41,24 +45,26 @@ html
 									a(href="#") Contacto
 								li.divider
 			.row
-				.orbit-container.slide
-					ul.example-orbit(data-orbit data-options="animation_speed:200; pause_on_hover: false; next_on_click: true" )
-						li
-							img(src="img/alta/imagen (58).jpg" alt="")
-							.orbit-caption
-								span Cagesa 15 años, ofreciendo el mejor servicio.
-						li
-							img(src="img/alta/imagen (40).jpg" alt="")
-							.orbit-caption
-								span Cagesa 15 años, ofreciendo el mejor servicio.
-						li
-							img(src="img/alta/imagen (4).jpg" alt="")
-							.orbit-caption
-								span Cagesa 15 años, ofreciendo el mejor servicio.
-						li
-							img(src="img/alta/imagen (90).jpg" alt="")
-							.orbit-caption
-								span Cagesa 15 años, ofreciendo el mejor servicio.
+				<?php include_once PAHT_SLIDER_1."slider.php"
+				?>
+				//- .orbit-container.slide
+				//- 	ul.example-orbit(data-orbit data-options="animation_speed:200; pause_on_hover: false; next_on_click: true" )
+				//- 		li
+				//- 			img(src="img/alta/imagen (58).jpg" alt="")
+				//- 			.orbit-caption
+				//- 				span Cagesa 15 años, ofreciendo el mejor servicio.
+				//- 		li
+				//- 			img(src="img/alta/imagen (40).jpg" alt="")
+				//- 			.orbit-caption
+				//- 				span Cagesa 15 años, ofreciendo el mejor servicio.
+				//- 		li
+				//- 			img(src="img/alta/imagen (4).jpg" alt="")
+				//- 			.orbit-caption
+				//- 				span Cagesa 15 años, ofreciendo el mejor servicio.
+				//- 		li
+				//- 			img(src="img/alta/imagen (90).jpg" alt="")
+				//- 			.orbit-caption
+				//- 				span Cagesa 15 años, ofreciendo el mejor servicio.
 
 
 			<!-- .small-12.columns -->

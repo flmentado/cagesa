@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* line 5, ../sass/slider.scss */
 body, html {
-  background: linear-gradient(135deg, #c9de96 0%, #8ab66b 44%, #398235 100%);
+  /*background: linear-gradient(135deg, #c9de96 0%, #8ab66b 44%, #398235 100%);*/
   margin: 0;
   padding: 0;
 }
