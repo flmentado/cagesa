@@ -14,7 +14,7 @@ if (@decode(KEY_PASS) != @CLAVE) {
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/user.css">
     <script src="../js/vendor/modernizr.js"></script>
-    <!------------ Slider CSS JS --------------------------->
+    <!------------ Slider CSS JS ------------------------- -->
     <link rel="stylesheet" href="<?php echo PAHT_SLIDER_1?>/css/slider.css" type="text/css">
     <script type="text/javascript" src="<?php echo PAHT_SLIDER_1?>/js/jssor.slider.min.js"></script>
     <script type="text/javascript" src="<?php echo PAHT_SLIDER_1?>/js/slider.js"></script>
@@ -147,38 +147,60 @@ if (@decode(KEY_PASS) != @CLAVE) {
            <div class="row">
                 <div class="small-12 large-6 columns">
                     <form name="subir" method="post" action="<?php $_SERVER['PHP_SELF'];?>">
-                        <input type="text" name="nombre" placeholder="Nombre" value="">
-                        <input type="text" name="email" placeholder="Email" value="">
+                        <input type="text" name="nombre" placeholder="Nombre" value="<?php if (isset($nombre)) {
+                            echo $nombre;
+                        } ?>">>
+                        <input type="text" name="email" placeholder="Email" value="<?php if (isset($email)) {
+                            echo $email;
+                        } ?>">
                         <input id="empresa" type="radio" name="tipo" value="empresa" <?php if($tipo=='empresa'){echo " checked='checked' ";} ?>>
                         <label for="empresa">Empresa</label>
-                        <input id="particular" type="radio" name="tipo" value="particular">
+                        <input id="particular" type="radio" name="tipo"
+                               value="particular" <?php if ($tipo == 'particular') {
+                            echo " checked='checked' ";
+                        } ?>>
                         <label for="particular">Particular</label>
                         <textarea name="descripcion" col="40" row="20" placeholder="Escriba una brebe descripción del trabajo  a realizar"></textarea>
                         <br>
                         <label>Elija los servicios que necesita.</label><br>
                         <ul class="no-bullet">
                             <li>
-                                <input id="checkbox1" type="checkbox" name="poda">
+                                <input id="checkbox1" type="checkbox" name="poda" value="<?php if (isset($poda)) {
+                                    echo $poda;
+                                } ?>">
                                 <label for="checkbox1">Poda</label>
                             </li>
                             <li>
-                                <input id="checkbox2" type="checkbox" name="tala">
+                                <input id="checkbox2" type="checkbox" name="tala" value="<?php if (isset($tala)) {
+                                    echo $tala;
+                                } ?>">
                                 <label for="checkbox2">Tala</label>
                             </li>
                             <li>
-                                <input id="checkbox3" type="checkbox" name="fumigacion">
+                                <input id="checkbox3" type="checkbox" name="fumigacion"
+                                       value="<?php if (isset($fumigacion)) {
+                                           echo $fumigacion;
+                                       } ?>">
                                 <label for="checkbox3">Fumigación</label>
                             </li>
                             <li>
-                                <input id="checkbox4" type="checkbox" name="abonado">
+                                <input id="checkbox4" type="checkbox" name="abonado" value="<?php if (isset($abonado)) {
+                                    echo $abonado;
+                                } ?>">
                                 <label for="checkbox4">Abonado</label>
                             </li>
                             <li>
-                                <input id="checkbox4" type="checkbox" name="sembrado">
+                                <input id="checkbox4" type="checkbox" name="sembrado"
+                                       value="<?php if (isset($sembrado)) {
+                                           echo $sembrado;
+                                       } ?>">
                                 <label for="checkbox4">Sembrado</label>
                             </li>
                             <li>
-                                <input id="checkbox5" type="checkbox" name="mantenimiento">
+                                <input id="checkbox5" type="checkbox" name="mantenimiento"
+                                       value="<?php if (isset($mantenimiento)) {
+                                           echo $mantenimiento;
+                                       } ?>">
                                 <label for="checkbox5">Mantenimiento</label>
                             </li>
                         </ul>
