@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import 'sliderVariables';
 
+
 //Caption Style
 body,html{
   background:  linear-gradient(135deg, #c9de96 0%,#8ab66b 44%,#398235 100%);
@@ -173,8 +174,7 @@ body,html{
       @include put_dimension($default_width_slider_outside, $default_height_slider_outside);
     }
     #slider1_container {
-      position: absolute;
-      @include put_position_dimension(0px, 90px, $default_width_slider_inside, $default_height_slider_inside);
+      @include put_position_dimension(absolute,0px, 90px, $default_width_slider_inside, $default_height_slider_inside);
       border: $border_slider_inside_block;
       border-radius: $border_radius_slider_inside_block;
       margin: $margin_slider_inside_block;
@@ -201,80 +201,31 @@ body,html{
         cursor: $default_pointer_cursor_inside;
         @include put_dimension($default_width_slider_inside, $default_height_slider_inside);
         .caption {
-          position: absolute;
-          @include put_position_dimension(20px, $caption_line_height, 300px, $caption_line_height);
+          @include put_position_dimension(absolute,20px, $caption_line_height, 300px, $caption_line_height);
         }
       }
     }
     .slider_header_title_1 {
-      position: absolute;
-      @include put_title_header($header_title_left,$header_title_top,$header_title_width,$header_title_height,
+      @include put_title_header(absolute,$header_title_left,$header_title_top,$header_title_width,$header_title_height,
               $header_title_font_size,$header_title_color,$header_title_text_shadow,center,$header_title_1);
     }
     .slider_team_group_1{
-      position: absolute;
-      @include put_position_dimension($block_team_1_left,$block_team_1_top,$block_team_1_width,$block_team_1_height);
-      & div:nth-of-type(1){
-        position: absolute;
-        @include put_position_dimension($block_team_1_char_symbol_1_left,$block_team_1_char_symbol_1_top,
-                $block_team_1_char_symbol_1_width,$block_team_1_char_symbol_1_height);
-        @include put_symbol($block_team_1_char_symbol_1,$block_team_1_char_symbol_1_color,$block_team_1_char_symbol_1_shadow);
-      }
-      & div:nth-of-type(2){
-        position: absolute;
-        @include put_position_dimension($block_team_1_text_1_left,$block_team_1_text_1_top,
-                $block_team_1_text_1_width,$block_team_1_text_1_height);
-        @include put_text($block_team_1_text_1,$block_team_1_text_1_color,$block_team_1_text_1_shadow);
-      }
-      & div:nth-of-type(3){
-        position: absolute;
-        @include put_position_dimension($block_team_1_char_symbol_2_left,$block_team_1_char_symbol_2_top,
-                $block_team_1_char_symbol_2_width,$block_team_1_char_symbol_2_height);
-        @include put_symbol($block_team_1_char_symbol_2,$block_team_1_char_symbol_2_color,$block_team_1_char_symbol_2_shadow);
-      }
-      & div:nth-of-type(4){
-        position: absolute;
-        @include put_position_dimension($block_team_1_text_2_left,$block_team_1_text_2_top,
-                $block_team_1_text_2_width,$block_team_1_text_2_height);
-        @include put_text($block_team_1_text_2,$block_team_1_text_2_color,$block_team_1_text_2_shadow);
-      }
-      & div:nth-of-type(5){
-        position: absolute;
-        @include put_position_dimension($block_team_1_char_symbol_3_left,$block_team_1_char_symbol_3_top,
-                $block_team_1_char_symbol_3_width,$block_team_1_char_symbol_3_height);
-        @include put_symbol($block_team_1_char_symbol_3,$block_team_1_char_symbol_3_color,$block_team_1_char_symbol_3_shadow);
-      }
-      & div:nth-of-type(6){
-        position: absolute;
-        @include put_position_dimension($block_team_1_text_3_left,$block_team_1_text_3_top,
-                $block_team_1_text_3_width,$block_team_1_text_3_height);
-        @include put_text($block_team_1_text_3,$block_team_1_text_3_color,$block_team_1_text_3_shadow);
-      }
-      & div:nth-of-type(7){
-        position: absolute;
-        @include put_position_dimension($block_team_1_char_symbol_4_left,$block_team_1_char_symbol_4_top,
-                $block_team_1_char_symbol_4_width,$block_team_1_char_symbol_4_height);
-        @include put_symbol($block_team_1_char_symbol_4,$block_team_1_char_symbol_4_color,$block_team_1_char_symbol_4_shadow);
-      }
-      & div:nth-of-type(8){
-        position: absolute;
-        @include put_position_dimension($block_team_1_text_4_left,$block_team_1_text_4_top,
-                $block_team_1_text_4_width,$block_team_1_text_4_height);
-        @include put_text($block_team_1_text_4,$block_team_1_text_4_color,$block_team_1_text_4_shadow);
-      }
-      & div:nth-of-type(9){
-        position: absolute;
-        @include put_position_dimension($block_team_1_char_symbol_5_left,$block_team_1_char_symbol_5_top,
-                $block_team_1_char_symbol_5_width,$block_team_1_char_symbol_5_height);
-        @include put_symbol($block_team_1_char_symbol_5,$block_team_1_char_symbol_5_color,$block_team_1_char_symbol_5_shadow);
-      }
-      & div:nth-of-type(10){
-        position: absolute;
-        @include put_position_dimension($block_team_1_text_5_left,$block_team_1_text_5_top,
-                $block_team_1_text_5_width,$block_team_1_text_5_height);
-        @include put_text($block_team_1_text_5,$block_team_1_text_5_color,$block_team_1_text_5_shadow);
+      @include put_position_dimension(absolute,$block_team_1_left,$block_team_1_top,$block_team_1_width,$block_team_1_height);
+      $i : 1;
+      @each $datos in $block_team_1 {
+        & div:nth-of-type(#{$i}) {
+          @include put_position_dimension(absolute, map-get($datos, left), map-get($datos, top),
+                  map-get($datos, width), map-get($datos, height));
+          @if (map-has-key($datos, caracter)) {
+            @include put_symbol(map-get($datos, caracter), map-get($datos, color), map-get($datos, text-shadow));
+          } @else {
+            @include put_text(map-get($datos, text), map-get($datos, color), map-get($datos, text-shadow));
+          }
+          $i: $i+1;
+        }
       }
     }
+
 
   }
 }

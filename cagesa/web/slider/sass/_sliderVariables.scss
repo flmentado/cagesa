@@ -67,9 +67,8 @@ $font_weight_thick: 600;
     text-shadow: $shadow;
   }
 }
-@mixin put_title_header($left, $top, $width, $height, $fontSize, $textColor, $textShadow, $textAlign,$title) {
-  position: absolute;
-  @include put_position_dimension($left, $top, $width, $height);
+@mixin put_title_header($position,$left, $top, $width, $height, $fontSize, $textColor, $textShadow, $textAlign,$title) {
+  @include put_position_dimension($position,$left, $top, $width, $height);
   font-size: $fontSize;
   color: $textColor;
   text-shadow: $textShadow;
@@ -80,7 +79,8 @@ $font_weight_thick: 600;
   }
 }
 
-@mixin put_position_dimension($left, $top, $width, $height) {
+@mixin put_position_dimension($position,$left, $top, $width, $height) {
+  position:#{$position};
   @include put_position($left, $top);
   @include put_dimension($width, $height);
 }
@@ -126,99 +126,43 @@ $header_title_width: 600px;
 $header_title_height:$header_title_line_height;
 
 //OUTSIDE TEAM 1
-$incremental_text_height:50px;
 $block_team_1_left:640px;
 $block_team_1_top:110px;
 $block_team_1_width:320px;
 $block_team_1_height:250px;
-//Simbolo x
-$block_team_1_char_symbol_1: '+';
-$block_team_1_char_symbol_1_left:0px;
-$block_team_1_char_symbol_1_top:10px;
-$block_team_1_char_symbol_1_width:30px;
-$block_team_1_char_symbol_1_height:$block_team_1_char_symbol_1_width;
-$block_team_1_char_symbol_1_color:$blue;
-$block_team_1_char_symbol_1_shadow:$shadow_red;
-//texto x+1
-$block_team_1_text_1: 'Texto slider 1';
-$block_team_1_text_1_left:40px;
-$block_team_1_text_1_top:10px;
-$block_team_1_text_1_width:280px;
-$block_team_1_text_1_height:30px;
-$block_team_1_text_1_color:$green;
-$block_team_1_text_1_shadow:$shadow_blue;
 
-$block_team_1_char_symbol_2: '+';
-$block_team_1_char_symbol_2_left:$block_team_1_char_symbol_1_left;
-$block_team_1_char_symbol_2_top:$block_team_1_char_symbol_1_top+$incremental_text_height;
-$block_team_1_char_symbol_2_width:$block_team_1_char_symbol_1_width;
-$block_team_1_char_symbol_2_height:$block_team_1_char_symbol_2_width;
-$block_team_1_char_symbol_2_color:$green;
-$block_team_1_char_symbol_2_shadow:$shadow_blue;
+//TEAM 1
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//char & text 1
+$block_team_1_char_1:(caracter:'+',left:0px,top:10px,width:30px,height:30px,color:$blue,text-shadow:$shadow_red);
+$block_team_1_text_1:(text:'Texto slider 1',left:40px,top:10px,width:280px,height:30px,color:$blue,box-shadow:$shadow_blue );
 
-$block_team_1_text_2: 'Texto slider 2';
-$block_team_1_text_2_left:$block_team_1_text_1_left;
-$block_team_1_text_2_top:$block_team_1_text_1_top+$incremental_text_height;
-$block_team_1_text_2_width:$block_team_1_text_1_width;
-$block_team_1_text_2_height:$block_team_1_text_1_height;
-$block_team_1_text_2_color:$blue;
-$block_team_1_text_2_shadow:$shadow_black;
+//char && text 2
+$block_team_1_char_2:(caracter:'f',left:0px,top:60px,width:30px,height:30px,color:$green,text-shadow:$shadow_blue);
+$block_team_1_text_2:(text:'Texto slider 2',left:40px,top:60px,width:280px,height:30px,color:$red,box-shadow:$shadow_black );
+//char && text 3
+$block_team_1_char_3:(caracter:'g',left:0px,top:110px,width:30px,height:30px,color:$yellow,text-shadow:$shadow_green);
+$block_team_1_text_3:(text:'Texto slider 3',left:40px,top:110px,width:280px,height:30px,color:$blue,box-shadow:$shadow_white );
 
-$block_team_1_char_symbol_3: '+';
-$block_team_1_char_symbol_3_left:$block_team_1_char_symbol_1_left;
-$block_team_1_char_symbol_3_top:$block_team_1_char_symbol_2_top+$incremental_text_height;
-$block_team_1_char_symbol_3_width:$block_team_1_char_symbol_1_width;
-$block_team_1_char_symbol_3_height:$block_team_1_char_symbol_3_width;
-$block_team_1_char_symbol_3_color:$yellow;
-$block_team_1_char_symbol_3_shadow:$shadow_green;
+//char && text 4
+$block_team_1_char_4:(caracter:'h',left:0px,top:160px,width:30px,height:30px,color:$red,text-shadow:$shadow_blue);
+$block_team_1_text_4:(text:'Texto slider 4',left:40px,top:160px,width:280px,height:30px,color:$white,box-shadow:$shadow_red );
 
-$block_team_1_text_3: 'Texto slider 3';
-$block_team_1_text_3_left:$block_team_1_text_1_left;
-$block_team_1_text_3_top:$block_team_1_text_2_top+$incremental_text_height;
-$block_team_1_text_3_width:$block_team_1_text_1_width;
-$block_team_1_text_3_height:$block_team_1_text_1_height;
-$block_team_1_text_3_color:$red;
-$block_team_1_text_3_shadow:$shadow_white;
-
-$block_team_1_char_symbol_4: '+';
-$block_team_1_char_symbol_4_left:$block_team_1_char_symbol_1_left;
-$block_team_1_char_symbol_4_top:$block_team_1_char_symbol_3_top+$incremental_text_height;
-$block_team_1_char_symbol_4_width:$block_team_1_char_symbol_1_width;
-$block_team_1_char_symbol_4_height:$block_team_1_char_symbol_4_width;
-$block_team_1_char_symbol_4_color:$red;
-$block_team_1_char_symbol_4_shadow:$shadow_green;
-
-$block_team_1_text_4: 'Texto slider 4';
-$block_team_1_text_4_left:$block_team_1_text_1_left;
-$block_team_1_text_4_top:$block_team_1_text_3_top+$incremental_text_height;
-$block_team_1_text_4_width:$block_team_1_text_1_width;
-$block_team_1_text_4_height:$block_team_1_text_1_height;
-$block_team_1_text_4_color:$white;
-$block_team_1_text_4_shadow:$shadow_red;
-
-$block_team_1_char_symbol_5: '+';
-$block_team_1_char_symbol_5_left:$block_team_1_char_symbol_1_left;
-$block_team_1_char_symbol_5_top:$block_team_1_char_symbol_4_top+$incremental_text_height;
-$block_team_1_char_symbol_5_width:$block_team_1_char_symbol_1_width;
-$block_team_1_char_symbol_5_height:$block_team_1_char_symbol_5_width;
-$block_team_1_char_symbol_5_color:$white;
-$block_team_1_char_symbol_5_shadow:$shadow_black;
-
-$block_team_1_text_5: 'Hola';
-$block_team_1_text_5_left:$block_team_1_text_1_left;
-$block_team_1_text_5_top:$block_team_1_text_4_top+$incremental_text_height;
-$block_team_1_text_5_width:$block_team_1_text_1_width;
-$block_team_1_text_5_height:$block_team_1_text_1_height;
-$block_team_1_text_5_color:$yellow;
-$block_team_1_text_5_shadow:$shadow_green;
+//char && text 5
+$block_team_1_char_5:(caracter:'i',left:0px,top:210px,width:30px,height:30px,color:$white,text-shadow:$shadow_black);
+$block_team_1_text_5:(text:'Texto slider 5',left:40px,top:210px,width:280px,height:30px,color:$yellow,box-shadow:$shadow_white );
 
 
+$block_team_1: $block_team_1_char_1, $block_team_1_text_1, $block_team_1_char_2, $block_team_1_text_2,
+               $block_team_1_char_3, $block_team_1_text_3,$block_team_1_char_4, $block_team_1_text_4,
+               $block_team_1_char_5, $block_team_1_text_5;
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //OUTSIDE SLIDER BLOCK
 $background_image_slider_outside_block: '../img/background.jpg';
 $width_slider_outside_block: 100%;
 $border_width_slider_outside_block: $border_width_medium;
-$color_border_slider_outside_block: rgba(0, 0, 0, 7/10);
+$color_border_slider_outside_block: rgba(0, 100, 0, 7/10);
 $border_slider_outside_block: $border-width-slider-outside_block solid $color_border_slider_outside_block;
 $font_family_slider_default: Arial, Verdana, Sans-Serif;
 $border_radius_slider_outside_block: $no_border_radius;
@@ -229,9 +173,9 @@ $spinner_opacity: 7/10;
 $spinner_background_color: rgb(0, 0, 0);
 
 //SLIDER INSIDE BLOCK
-$margin_slider_inside_block: $no_margin;
-$border_width_slider_inside_block: $no_border_width;
-$color_border_slider_inside_block: rgba(0, 0, 0, 7/10);
+$margin_slider_inside_block: 3px solid black;
+$border_width_slider_inside_block: 3px;
+$color_border_slider_inside_block: $black;
 $border_slider_inside_block: $border_width_slider_inside_block solid $color_border_slider_inside_block;
 $border_radius_slider_inside_block: $border_radius_small;
 
