@@ -1,0 +1,264 @@
+//VARIABLES**************************************************
+
+//COLOURS
+$white: rgba(255, 255, 255, 10/10);
+$black: rgba(0, 0, 0, 10/10);
+$red: rgba(255, 0, 0, 10/10);
+$blue: rgba(0, 0, 255, 10/10);
+$green: rgba(0, 255, 0, 10/10);
+$yellow: rgba(255, 255, 0, 10/10);
+
+//SHADOW
+$shadow_black: 1px 1px rgba(0, 0, 0, 3/10);
+$shadow_white: 1px 1px rgba(255, 255, 255, 5/10);
+$shadow_green: 1px 1px rgba(0, 255, 0, 5/10);
+$shadow_red: 1px 1px rgba(255, 0, 0, 5/10);
+$shadow_blue: 1px 1px rgba(0, 0, 255, 5/10);
+
+//BORDER RADIUS
+$no_border_radius: 0px;
+$border_radius_small: 4px;
+$border_radius_medium: 8px;
+$border_radius_large: 15px;
+$border_radius_circle: 50%;
+
+//BORDER
+$no_border_width: 0px;
+$border_width_small: 1px;
+$border_width_medium: 4px;
+$border_width_large: 8px;
+
+//MARGIN
+$no_margin: 0px;
+$margin_auto: 0 auto;
+$margin_small: 5px;
+
+//FONTS
+$font_weight_normal: 400;
+$font_weight_thick: 600;
+
+//**************************************************************
+
+//MIXIN
+@mixin put_symbol($char,$color,$shadow){
+  @extend .captionSymbol;
+  @extend .captionColor;
+  &:after{
+    content: $char;
+    color:$color;
+    text-shadow: $shadow;
+  }
+}
+@mixin put_text($text,$color,$shadow){
+  @extend .captionOrange;
+  @extend .captionColor;
+  &:after{
+    content: $text;
+    color:$color;
+    text-shadow: $shadow;
+  }
+}
+@mixin put_text_inside($text,$color,$shadow){
+  @extend .captionOrange;
+  @extend .captionColor;
+  &:after{
+    content: $text;
+    color:$color;
+    text-shadow: $shadow;
+  }
+}
+@mixin put_title_header($left, $top, $width, $height, $fontSize, $textColor, $textShadow, $textAlign,$title) {
+  position: absolute;
+  @include put_position_dimension($left, $top, $width, $height);
+  font-size: $fontSize;
+  color: $textColor;
+  text-shadow: $textShadow;
+  line-height: $height;
+  text-align: $textAlign;
+  &:after{
+    content: $title;
+  }
+}
+
+@mixin put_position_dimension($left, $top, $width, $height) {
+  @include put_position($left, $top);
+  @include put_dimension($width, $height);
+}
+
+@mixin put_position($left, $top) {
+  left: $left;
+  top: $top;
+}
+
+@mixin put_dimension($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+//CURSOR POINTER
+$default_pointer_cursor_outside: move;
+$default_pointer_cursor_inside: not-allowed;
+
+//CAPTION
+$caption_font_size: 20px;
+$caption_line_height: 30px;
+$caption_border_radius: $border_radius_small;
+$caption_symbol_border_radius: $border_radius_circle;
+$caption_symbol_font_size: 26px;
+$caption_symbol_font_weight: $font_weight_normal;
+$caption_symbol_background: $shadow-black;
+
+//DEFAULT DIMENSIONS FOR SLIDERS AREA
+$default_width_slider_outside: 960px;
+$default_height_slider_outside: 450px;
+$default_width_slider_inside: 600px;
+$default_height_slider_inside: 300px;
+
+//OUTSIDE HEADER TITLE 1
+$header_title_1: "Mi super titulo";
+$header_title_font_size: 28px;
+$header_title_color: rgba(0, 25, 25, 10/10);
+$header_title_line_height: 30px;
+$header_title_text_shadow: 1px 1px $shadow_white;
+$header_title_left: 0px;
+$header_title_top: 30px;
+$header_title_width: 600px;
+$header_title_height:$header_title_line_height;
+
+//OUTSIDE TEAM 1
+$incremental_text_height:50px;
+$block_team_1_left:640px;
+$block_team_1_top:110px;
+$block_team_1_width:320px;
+$block_team_1_height:250px;
+
+$block_team_1_char_symbol_1: 'F';
+$block_team_1_char_symbol_1_left:0px;
+$block_team_1_char_symbol_1_top:10px;
+$block_team_1_char_symbol_1_width:30px;
+$block_team_1_char_symbol_1_height:$block_team_1_char_symbol_1_width;
+$block_team_1_char_symbol_1_color:$blue;
+$block_team_1_char_symbol_1_shadow:$shadow_red;
+
+$block_team_1_text_1: 'Texto slider 1';
+$block_team_1_text_1_left:40px;
+$block_team_1_text_1_top:10px;
+$block_team_1_text_1_width:280px;
+$block_team_1_text_1_height:30px;
+$block_team_1_text_1_color:$green;
+$block_team_1_text_1_shadow:$shadow_blue;
+
+$block_team_1_char_symbol_2: 'L';
+$block_team_1_char_symbol_2_left:$block_team_1_char_symbol_1_left;
+$block_team_1_char_symbol_2_top:$block_team_1_char_symbol_1_top+$incremental_text_height;
+$block_team_1_char_symbol_2_width:$block_team_1_char_symbol_1_width;
+$block_team_1_char_symbol_2_height:$block_team_1_char_symbol_2_width;
+$block_team_1_char_symbol_2_color:$green;
+$block_team_1_char_symbol_2_shadow:$shadow_blue;
+
+$block_team_1_text_2: 'Texto slider 2';
+$block_team_1_text_2_left:$block_team_1_text_1_left;
+$block_team_1_text_2_top:$block_team_1_text_1_top+$incremental_text_height;
+$block_team_1_text_2_width:$block_team_1_text_1_width;
+$block_team_1_text_2_height:$block_team_1_text_1_height;
+$block_team_1_text_2_color:$blue;
+$block_team_1_text_2_shadow:$shadow_black;
+
+$block_team_1_char_symbol_3: 'M';
+$block_team_1_char_symbol_3_left:$block_team_1_char_symbol_1_left;
+$block_team_1_char_symbol_3_top:$block_team_1_char_symbol_2_top+$incremental_text_height;
+$block_team_1_char_symbol_3_width:$block_team_1_char_symbol_1_width;
+$block_team_1_char_symbol_3_height:$block_team_1_char_symbol_3_width;
+$block_team_1_char_symbol_3_color:$yellow;
+$block_team_1_char_symbol_3_shadow:$shadow_green;
+
+$block_team_1_text_3: 'Texto slider 3';
+$block_team_1_text_3_left:$block_team_1_text_1_left;
+$block_team_1_text_3_top:$block_team_1_text_2_top+$incremental_text_height;
+$block_team_1_text_3_width:$block_team_1_text_1_width;
+$block_team_1_text_3_height:$block_team_1_text_1_height;
+$block_team_1_text_3_color:$red;
+$block_team_1_text_3_shadow:$shadow_white;
+
+$block_team_1_char_symbol_4: 'M';
+$block_team_1_char_symbol_4_left:$block_team_1_char_symbol_1_left;
+$block_team_1_char_symbol_4_top:$block_team_1_char_symbol_3_top+$incremental_text_height;
+$block_team_1_char_symbol_4_width:$block_team_1_char_symbol_1_width;
+$block_team_1_char_symbol_4_height:$block_team_1_char_symbol_4_width;
+$block_team_1_char_symbol_4_color:$red;
+$block_team_1_char_symbol_4_shadow:$shadow_green;
+
+$block_team_1_text_4: 'Texto slider 4';
+$block_team_1_text_4_left:$block_team_1_text_1_left;
+$block_team_1_text_4_top:$block_team_1_text_3_top+$incremental_text_height;
+$block_team_1_text_4_width:$block_team_1_text_1_width;
+$block_team_1_text_4_height:$block_team_1_text_1_height;
+$block_team_1_text_4_color:$white;
+$block_team_1_text_4_shadow:$shadow_red;
+
+$block_team_1_char_symbol_5: '+';
+$block_team_1_char_symbol_5_left:$block_team_1_char_symbol_1_left;
+$block_team_1_char_symbol_5_top:$block_team_1_char_symbol_4_top+$incremental_text_height;
+$block_team_1_char_symbol_5_width:$block_team_1_char_symbol_1_width;
+$block_team_1_char_symbol_5_height:$block_team_1_char_symbol_5_width;
+$block_team_1_char_symbol_5_color:$white;
+$block_team_1_char_symbol_5_shadow:$shadow_black;
+
+$block_team_1_text_5: 'Texto slider 5';
+$block_team_1_text_5_left:$block_team_1_text_1_left;
+$block_team_1_text_5_top:$block_team_1_text_4_top+$incremental_text_height;
+$block_team_1_text_5_width:$block_team_1_text_1_width;
+$block_team_1_text_5_height:$block_team_1_text_1_height;
+$block_team_1_text_5_color:$yellow;
+$block_team_1_text_5_shadow:$shadow_green;
+
+
+
+//OUTSIDE SLIDER BLOCK
+$background_image_slider_outside_block: '../img/fondo.jpg';
+$width_slider_outside_block: 100%;
+$border_width_slider_outside_block: $border_width_medium;
+$color_border_slider_outside_block: rgba(0, 0, 0, 7/10);
+$border_slider_outside_block: $border-width-slider-outside_block solid $color_border_slider_outside_block;
+$font_family_slider_default: Arial, Verdana, Sans-Serif;
+$border_radius_slider_outside_block: $no_border_radius;
+
+//SPINNER
+$spinner_imagen: '../img/loading.gif';
+$spinner_opacity: 7/10;
+$spinner_background_color: rgb(0, 0, 0);
+
+//SLIDER INSIDE BLOCK
+$margin_slider_inside_block: $no_margin;
+$border_width_slider_inside_block: $no_border_width;
+$color_border_slider_inside_block: rgba(0, 0, 0, 7/10);
+$border_slider_inside_block: $border_width_slider_inside_block solid $color_border_slider_inside_block;
+$border_radius_slider_inside_block: $border_radius_small;
+//Slider1
+$slider_inside_text_1: 'Slider 1 inside';
+$slider_inside_text_1_color: $blue;
+$slider_inside_text_1_shadow: $shadow_red;
+
+
+
+
+
+
+
+
+//NAVIGATION BULLET
+$navigation_posY: 270px;
+$navigation_posX: 500px;
+$navigation_background: $shadow_black;
+$navigation_padding: 5px;
+$navigation_border_radius: 25px;
+$navigation_bullet_border_radius: 50%;
+$navigation_bullet_box_shadow: 0 0 6px rgba(0, 255, 0, 10/10);
+$navigation_bullet_size: 12px;
+$navigation_bullet_opacity: $spinner_opacity;
+$navigation_bullet_border: $border_width_small solid $green;
+$navigation_bullet_background: $shadow_white;
+$navigation_bullet_margin: $navigation_padding - 1px;
+$navigation_bullet_color_hover: $blue;
+$navigation_bullet_color_active: $red;
+$navigation_bullet_color_click: $yellow;
