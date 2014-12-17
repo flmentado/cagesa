@@ -3,53 +3,37 @@
 html,body{
 
 	font-size: 10px;
-	background-color: #DDD;
+	background-color: #FFF;
 }
 body{
 /*	background-image: url("../img/bg8.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;*/
-
 }
-.name h1{
-	background-image: url(../img/logoLarge.jpg);
+
+
+.logoBlanco{
+	width: 110px;
+	height: 60px;
+	margin-left: 10px;
+	margin-top: -7px;
+	background-image: url(../img/logoBlanco.png);
 	background-size: contain;
 	background-repeat: no-repeat;
-
+	background-position: center;
 }
-.gris, .gris nav, .gris nav section ul,.gris nav section ul li ,.gris nav section ul li a{
-	background-color: #CCC !important;
 
-}
 .gris nav section ul li,.gris nav section ul li a{
-		border: 0 !important;
-		border: 1px solid rgba(100,100,100,0.2);
+		border: 1px solid rgba(0,0,0,0.2);
 		border-radius: 1px;
 }
-.name h1 a{
-		color: rgba(0, 0, 0,0)!important;
-}
-.trampa{
-	height: 50px;
-}
 
-.logo img{
-	width: 120px;
-}
 
-.titulo:extend(.small-1,.columns,.push-5){}
-.serv{
 
-}
-.long{
-
-width: 120px !important;
-}
-.lemaSmall{}
 hr{
 border-style: solid;
-border-color: none;
-background: #EEE;
+border-color: #FFF;
+background: #AAA;
 -moz-border-top-colors: none;
 -moz-border-right-colors: none;
 -moz-border-bottom-colors: none;
@@ -58,21 +42,10 @@ border-image: none;
 border-width: 10px;
 clear: both;
 margin: 1.25rem 0px 1.1875rem;
-height: 2px;
+height: 1px;
 
 }
 
-.lema:extend(.panel){
-	text-align: center;
-}
-.lema p{
-	margin-top: 1rem;
-	font-size: 2rem;
-
-}
-img+p{
-	margin-top: 5%;
-}
 hr+h4{
 	margin-left: 1%;
 }
@@ -84,8 +57,12 @@ list-style-type: none;
 ul li img{margin-top: 2%;}*/
 .servicios+ul li a img{
 
-	width: 100px !important;
+	width: 150px !important;
 	height: 100px!important;
+}
+.servicios+ul li p{
+	padding-top: 0.8rem;
+	text-align: justify;
 }
 
 .top-bar-section li a:hover{
@@ -99,12 +76,87 @@ font-weight: bold;
 .right ul{
 	border: 3px solid;
 }
-.paralax>div{
-	top: -500 !important;
-}
+
 .bgstellar{
-	background-image: url('../img/alta/imagen (86).jpg')!important;
+	background-image: url('../img/fondohojas.jpg')!important;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 .bgstellar2{
-	background-image: url('../img/alta/imagen (90).jpg')!important;
+	background-image: url('../img/paralax2.jpg')!important;
+		background-size: cover;
+	background-repeat: no-repeat;
 }
+.bgstellar3{
+	background-image: url("../img/bg2.jpg")!important;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.bggris{
+padding: 0.45rem;
+margin:4,45rem;
+-webkit-box-shadow: 14px 9px 35px 27px rgba(0,0,0,0.75);
+-moz-box-shadow: 14px 9px 35px 27px rgba(0,0,0,0.75);
+box-shadow: 14px 9px 35px 27px rgba(0,0,0,0.75);
+
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+}
+
+.nombre{
+	color: #050;
+	font-weight: bold;
+	font-size: 1.6rem;
+}
+.mantenimiento{
+	width: 100%;
+	height: 140px;
+	background-image: url('../img/alta/imagen (32).jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.asesor{
+	width: 100%;
+	height: 140px;
+	background-image: url('../img/alta/imagen (15).jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.instalaciones{
+	width: 100%;
+	height: 140px;
+	background-image: url('../img/alta/imagen (26).jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+.servicioCaption{
+	position: relative;
+	width: 100%;
+	height: 20%;
+	background-color: rgba(0, 0, 0, 0.5);
+	top:70%;
+
+}
+.servicioCaption p{
+	color: #FFF;
+
+	margin-left: 1rem;
+	font-size: 1.2rem;
+}
+
+
+.slide, .slide img{
+	width: 100%;
+	height: 300px;
+	background-image: url('../img/paralax1.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.row{
+	max-width: 84%;
+}
+.quienes,.serv,.client,.contact{}
