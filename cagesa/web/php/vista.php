@@ -47,26 +47,8 @@
         </div>
       </div>
 <div class="small-12 columns">
-      <ul class="example-orbit" data-orbit>
-        <li>
-          <img src="../img/bg1.jpg" alt="slide 1" />
-          <div class="orbit-caption">
-            Cagesa, Más de 15 años a su servicio.
-          </div>
-        </li>
-        <li class="active">
-          <img src="../img/bg2.jpg" alt="slide 2" />
-          <div class="orbit-caption">
-            Nuestro equipo de profesionales esta acreditado por la UE.
-          </div>
-        </li>
-        <li>
-          <img src="../img/bg3.jpg" alt="slide 3" />
-          <div class="orbit-caption">
-            Consulta a nuestros expertos.
-          </div>
-        </li>
-      </ul>
+    <?php   //NUEVO SLIDER
+    include_once PAHT_SLIDER_1."slider.php";?>
 </div>
 
       <!-- .small-12.columns -->
