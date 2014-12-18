@@ -15,9 +15,11 @@
     <script src="../js/vendor/modernizr.js"></script>
     <script src="../js/jquery.stellar.js"></script>
 
+    <script src="../js/scroll.js"></script>
     <link rel="stylesheet" href="<?php echo PAHT_SLIDER_1?>css/slider.css" type="text/css"/>
     <script type="text/javascript" src="<?php echo PAHT_SLIDER_1?>js/jssor.slider.min.js"></script>
     <script type="text/javascript" src="<?php echo PAHT_SLIDER_1?>js/slider.js"></script>
+
   </head>
   <body>
     <div class="mq-check">
@@ -33,34 +35,35 @@
             <section class="top-bar-section">
               <ul class="right">
                 <li class="divider"></li>
-                <li class="active quienes"><a href="#">Quienes Somos</a></li>
+                <li class="active quienes"><a href="#somos">Nosotros</a></li>
                 <li class="divider"></li>
-                <li class="serv"><a href="#">Servicios</a></li>
+                <li class="serv"><a href="#servicio">Servicios</a></li>
                 <li class="divider"></li>
-                <li class="client"><a href="#">Clientes</a></li>
+                <li class="client"><a href="#cliente">Clientes</a></li>
                 <li class="divider"></li>
-                <li class="contact"><a href="#">Contacto</a></li>
+                <li class="contact"><a href="#contacto">Contacto</a></li>
                 <li class="divider"></li>
               </ul>
             </section>
           </nav>
         </div>
       </div>
-<div class="small-12 columns">
+<div style="float:none;margin:0 auto;width:82%;">
     <?php   //NUEVO SLIDER
     include_once PAHT_SLIDER_1."slider.php";?>
 </div>
-
       <!-- .small-12.columns -->
-      <div class="row"><br/>
+      <div class="row">
+          <br id="somos"/>
         <div class="somostext small-12 medium-6 columns">
-          <h4 class="somos">QUIENES SOMOS</h4>
+          <h4  class="somos">QUIENES SOMOS</h4>
           <p><span class="nombre">Canarias de gestión y suministros para areas verdes S.L.</span></p>
           <p>Somos una empresa perteneciente al<span id="tipGrupoCastillo" data-tooltip="data-tooltip" data-options="hover_delay: 50;" title="Nace en diciembre del año 2000 al amparo de la empresa Elmasa Medio Ambiente, para dar respuesta a la necesidad de  servicio de jardinería turística y residencial privada." class="has-tip"> Grupo Castillo</span><span>. Nuestro ámbito de actuación es la jardinería, el sector medio ambiental y los servicios forestales.</span></p>
           <p>CAGESA cuenta con la certificación<span id="tipAenor" data-tooltip="data-tooltip" data-options="hover_delay: 50;" title="Norma UNE  EN  ISO 9001" class="has-tip"> AENOR</span><span>. Además una de nuestras prioridades es la protección y cuidado del medio ambiente.</span></p>
         </div>
-        <div class="somosSlide small-12 medium-6 columns end"><a><img src="../img/alta/imagen (83).jpg"/></a></div>
-      </div><br/>
+        <div class="somosSlide small-12 medium-6 columns end"><a><img src="../img/bg2.jpg"/></a></div>
+      </div>
+        <br id="servicio"/>
       <div data-stellar-background-ratio="0.8" class="small-12 servicios bgstellar">
         <div class="row">
           <div class="small-12 columns"><br/>
@@ -108,7 +111,7 @@
           </div>
         </div>
       </div>
-      <div class="small-12 clientes somos">
+      <div id="cliente" class="small-12 clientes somos">
         <div class="row">
           <div class="small-12 columns">
             <hr/>
@@ -117,15 +120,15 @@
               <li>
                 <p>A lo largo de tiempo se ha ido consolidando en una empresa líder en este sector de la jardinería.</p>
               </li>
-              <li><a><img src="../img/alta/imagen (83).jpg"/></a></li>
-              <li><a><img src="../img/alta/imagen (81).jpg"/></a></li>
-              <li><a><img src="../img/alta/imagen (12).jpg"/></a></li>
+              <li><a><img src="../img/bg2.jpg"/></a></li>
+              <li><a><img src="../img/bg6.jpg"/></a></li>
+              <li><a><img src="../img/bg7.jpg"/></a></li>
             </ul>
           </div>
         </div>
       </div>
       <div class="row contacto">
-        <div class="small-12">
+        <div id="contacto" class="small-12">
           <hr/>
           <h4 class="contacto">CONTACTO</h4>
           <form class="contacto">
