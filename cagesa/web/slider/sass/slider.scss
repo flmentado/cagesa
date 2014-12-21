@@ -1,231 +1,153 @@
 @charset "UTF-8";
-@import 'sliderVariables';
-
-
-//Caption Style
-body,html{
-  background:  linear-gradient(135deg, #c9de96 0%,#8ab66b 44%,#398235 100%);
-  margin: 0;
-  padding:0;
+@import 'variables';
+@font-face {
+  font-family: map-get($fontNameDefault, titulo);
+  src: url('../fonts/fuente.ttf');
 }
-.slider_block{
+@font-face {
+  font-family: map-get($fontNameDefault, orange);
+  src: url('../fonts/action.ttf');
+}
+##{map-get($sliderBox, name)} {
   visibility: hidden;
-  background: inherit;
-  }
-#sliderc_container {
-   .captionColor {
-     display: block;
-     font-size: $caption_font_size;
-     line-height: $caption_line_height;
-     text-align: center;
-     border-radius: $caption_border_radius;
-   }
-   .captionOrange {
-     background: rgba(235, 81, 0, 6/10);
-   }
-   .captionBlue {
-     background: rgba(21, 21, 120, 6/10);
-   }
-   .captionBlack {
-     background: rgba(0, 0, 0, 4/10);
-   }
-   .captionSymbol {
-     border-radius: $caption_symbol_border_radius !important;
-     font-weight: $caption_symbol_font_weight !important;
-     font-size: $caption_symbol_font_size !important;
-     background: $caption_symbol_background;
-   }
-   .captionText {
-     display: block;
-     font-size: $caption_font_size;
-     line-height: $caption_line_height;
-   }
-   .captionTextBlack {
-     color: $black;
-   }
-   .captionTextWhite {
-     color: $white;
-   }
-   a {
-     .captionOrange {
-       color: #fff;
-       text-decoration: none;
-       &:hover {
-         color: #eb5100;
-         text-decoration: underline;
-         background-color: #eeeeee;
-         background-color: rgba(238, 238, 238, 7/10);
-       }
-       &:active {
-         color: #fff;
-         text-decoration: none;
-       }
-       &:visited {
-         color: #fff;
-         text-decoration: none;
-       }
-     }
-     .captionTextWhite {
-       color: #fff;
-       text-decoration: none;
-       &:active {
-         color: #fff;
-         text-decoration: none;
-       }
-       &:visited {
-         color: #fff;
-         text-decoration: none;
-       }
-       &:hover {
-         color: #eb5100;
-         text-decoration: underline;
-       }
-     }
-     .captionTextBlack {
-       color: #fff;
-       text-decoration: none;
-       &:active {
-         color: #fff;
-         text-decoration: none;
-       }
-       &:visited {
-         color: #fff;
-         text-decoration: none;
-       }
-       &:hover {
-         color: #eb5100;
-         text-decoration: underline;
-       }
-     }
-   }
-   .bricon {
-     background: url('../img/browser-icons.png');
-   }
-   //Bullet
-   .jssorb01 {
-     position: absolute;
-     box-sizing: content-box;
-     top: $navigation_posY;
-     left: $navigation_posX;
-     background: $navigation_background;
-     padding: $navigation_padding;
-     border-radius: $navigation_border_radius;
-     .prototype {
-       box-sizing: content-box;
-       border-radius: $navigation_bullet_border_radius;
-       box-shadow: $navigation_bullet_box_shadow;
-       POSITION: absolute;
-       WIDTH: $navigation_bullet_size;
-       HEIGHT: $navigation_bullet_size;
-       margin-top: $navigation_padding - 1px;
-       margin-left: $navigation_padding - 1px;
-       }
-     div {
-       filter: alpha(opacity=$navigation_bullet_opacity*100);
-       opacity: $navigation_bullet_opacity;
-       cursor: pointer;
-       border: $navigation_bullet_border;
-       background: $navigation_bullet_background;
-       overflow: hidden;
-       &:hover {
-         background-color: $navigation_bullet_color_hover;
-       }
-     }
-     .av {
-       background-color: $navigation_bullet_color_actual;
-       &:hover {
-         background-color: $navigation_bullet_color_active;
-       }
-     }
-     .dn {
-       background-color: #fff;
-       &:hover {
-         background-color: $navigation_bullet_color_click;
-       }
-     }
-   }
- }
-
-.slider_block {
-  display: block;
-  float: none;
-  margin: $margin_auto;
-  width: $width_slider_outside_block;
-  text-align: center;
-  background-image: url($background_image_slider_outside_block);
-  border-top: $border_slider_outside_block;
-  border-bottom: $border_slider_outside_block;
-  font-family: $font_family_slider_default;
-  border-radius: $border_radius_slider_outside_block;
+  float: map-get($sliderBox, float);
+  margin: map-get($sliderBox, margin);
+  position: map-get($sliderBox, position);
+  width: map-get($sliderBox, width);
+  height: map-get($sliderBox, height);
+  border-radius: map-get($sliderBox, radius);
+  box-shadow: map-get($sliderBox, boxShadow);
+  border:map-get($sliderBox, border);
+  border-top:map-get($sliderBox, borderTop);
+  border-right:map-get($sliderBox, borderRight);
+  border-bottom:map-get($sliderBox, borderBottom);
+  border-left:map-get($sliderBox, borderLeft);
   overflow: hidden;
-  #sliderc_container {
-    position: relative;
-    margin: $margin_auto;
-    @include put_dimension($default_width_slider_outside, $default_height_slider_outside);
-    text-align: left;
+  @media screen and (max-width:map-get($mediaScreen,small)){
+    border:none;
+  }
+  $strClass: #{''};
+  @each $class in $captionList {
+    $strClass: $strClass #{'.'}#{map-get($class, class)}#{','};
+  }
+  #{$strClass} {
+    height: map-get($caption, height);
+    line-height: map-get($caption, lineHeight);
+    text-align: #{map-get($caption, textAlign)};
+    border-radius: map-get($caption, borderRadius);
+  }
+  @each $cap in $captionList {
+    .#{map-get($cap, class)} {
+      @include put_class($cap);
+    }
+  }
+  a {//REVISAR
+    .captionOrange, .captionOrange:active, .captionOrange:visited {
+      color: #fff;
+      text-decoration: none;
+      &:hover {
+        color: #eb5100;
+        text-decoration: underline;
+        background-color: #eeeeee;
+        background-color: rgba(238, 238, 238, .7);
+      }
+    }
+  }
+  & div[u='loading'] {
+    @include put_position(absolute, 4px, 8px);
+    > div {
+      display: block;
+      filter: alpha(opacity=map-get($spinner, opacity)*100);
+      opacity: map-get($spinner, opacity);
+      @include put_position_dimension(absolute, 0px, 0px, 100%, 100%);
+    }
+    > div + div {
+      display: block;
+      @include put_position_dimension(absolute, 0px, 0px, 100%, 100%);
+      background: url(map-get($spinner, imagen)) no-repeat center center;
+      background-color: map-get($spinner, backGroundColor);
+    }
+  }
+  & div[u='slides'] {
+    cursor: map-get($cursorDefault, default);
+    @include put_position_dimension(absolute, 0, 0, map-get($sliderBox, width), map-get($sliderBox, height));
     overflow: hidden;
-    .slides {
-      position: absolute;
-      @include put_position(0, 0);
-      overflow: hidden;
-    }
-    .outside {
-      cursor: $default_pointer_cursor_outside;
-      @include put_dimension($default_width_slider_outside, $default_height_slider_outside);
-    }
-    #slider1_container {
-      @include put_position_dimension(absolute,0px, 90px, $default_width_slider_inside, $default_height_slider_inside);
-      border: $border_slider_inside_block;
-      border-radius: $border_radius_slider_inside_block;
-      margin: $margin_slider_inside_block;
-      overflow: hidden;
-      .spinner {
-        @extend .slides;
-        & > div {
-          display: block;
-          @extend .slides;
-          filter: alpha(opacity=$spinner_opacity*100);
-          opacity: $spinner_opacity;
-          background-color: $spinner_background_color;
-          @include put_dimension(100%, 100%);
-        }
-        & > div + div {
-          display: block;
-          @extend .slides;
-          background: url($spinner_imagen) no-repeat center center;
-          @include put_dimension(100%, 100%);
-        }
-      }
-      .inside {
-        @extend .slides;
-        cursor: $default_pointer_cursor_inside;
-        @include put_dimension($default_width_slider_inside, $default_height_slider_inside);
-        .caption {
-          @include put_position_dimension(absolute,20px, $caption_line_height, 300px, $caption_line_height);
-        }
-      }
-    }
-    .slider_header_title_1 {
-      @include put_title_header(absolute,$header_title_left,$header_title_top,$header_title_width,$header_title_height,
-              $header_title_font_size,$header_title_color,$header_title_text_shadow,center,$header_title_1);
-    }
-    .slider_team_group_1{
-      @include put_position_dimension(absolute,$block_team_1_left,$block_team_1_top,$block_team_1_width,$block_team_1_height);
-      $i : 1;
-      @each $datos in $block_team_1 {
-        & div:nth-of-type(#{$i}) {
-          @include put_position_dimension(absolute, map-get($datos, left), map-get($datos, top),
-                  map-get($datos, width), map-get($datos, height));
-          @if (map-has-key($datos, caracter)) {
-            @include put_symbol(map-get($datos, caracter), map-get($datos, color), map-get($datos, text-shadow));
-          } @else {
-            @include put_text(map-get($datos, text), map-get($datos, color), map-get($datos, text-shadow));
+    $numSlider: 2; //Comienza en el 2 siempre, el 1 es generado dinamicamente con las transiciones entre sliders
+    @each $i, $captionSlider in $captionSliders {
+      & > div:nth-of-type(#{$numSlider}) {
+        $div: 2; //Saltamos la etiqueta imagen del html
+        @each $indice, $datos in $captionSlider {
+          & > :nth-child(#{$div}) {
+            @if map-has-key($datos,imageSliderUrl){
+              @include put_slider_image($datos)
+            }@else {
+              @include put_caption($datos);
+            }
+            $div: $div+1;
           }
-          $i: $i+1;
         }
       }
+      $numSlider: $numSlider+1;
     }
+    @media screen and (max-width:map-get($mediaScreen,small)){
+      .block{
+        display:none;
+      }
 
-
+    }
+  }
+  .bullet {
+    position: absolute;
+    box-sizing: content-box;
+    top: map-get($navigationBullet, posY);
+    left: map-get($navigationBullet, posX);
+    background: map-get($navigationBullet, backGroundColor);
+    padding: map-get($navigationBullet, padding);;
+    border-radius: map-get($navigationBullet, radius);
+    .prototype {
+      box-sizing: border-box;
+      border-radius: map-get($navigationBullet, bulletRadius);
+      box-shadow: map-get($navigationBullet, bulletShadow);
+      POSITION: absolute;
+      WIDTH: map-get($navigationBullet, bulletWidth);
+      HEIGHT: map-get($navigationBullet, bulletHeight);
+      margin-top: map-get($navigationBullet, bulletMarginTop);
+      margin-left: map-get($navigationBullet, bulletMarginLeft);
+      transition: map-get($navigationBullet, bulletTransition);
+    }
+    div {
+      filter: alpha(opacity=map-get($navigationBullet, bulletOpacity)*100);
+      opacity: map-get($navigationBullet, bulletOpacity);
+      cursor: map-get($navigationBullet, bulletCursor);
+      border: map-get($navigationBullet, bulletBorder);
+      background: map-get($navigationBullet, bulletBackGroundColor);
+      overflow: hidden;
+      &:hover {
+        background-color: map-get($navigationBullet, bulletHoverColor);
+      }
+    }
+    .av {
+      background-color: map-get($navigationBullet, bulletColor);
+      &:hover {
+        background-color: map-get($navigationBullet, bulletColor);
+      }
+    }
+    .dn {
+      background-color: #fff;
+      &:hover {
+        background-color: map-get($navigationBullet, bulletClickColor);
+      }
+    }
+  }
+  & .imagenLogo {
+    background: url(../img/img/browser-icons.png);
+  }
+  & .arrow{
+    display:none;
+    @media screen and (max-width:map-get($mediaScreen,small)){
+       display:block;
+    }
   }
 }
+
+

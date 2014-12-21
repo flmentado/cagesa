@@ -1,285 +1,101 @@
-body, html {
-  /*background: linear-gradient(135deg, #c9de96 0%, #8ab66b 44%, #398235 100%);*/
-  margin: 0;
-  padding: 0; }
-
-.slider_block {
-  visibility: hidden;
-  background: inherit; }
-
-#sliderc_container .captionColor, .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(1), .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(2), .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(3), .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(4), .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(5), .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(6), .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(7), .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(8), .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(9), .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(10) {
-  display: block;
-  font-size: 20px;
-  line-height: 30px;
-  text-align: center;
-  border-radius: 4px; }
-#sliderc_container .captionOrange, .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(2), .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(4), .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(6), .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(8), .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(10) {
-  background: rgba(235, 81, 0, 0.6); }
-#sliderc_container .captionBlue {
-  background: rgba(21, 21, 120, 0.6); }
-#sliderc_container .captionBlack {
-  background: rgba(0, 0, 0, 0.4); }
-#sliderc_container .captionSymbol, .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(1), .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(3), .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(5), .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(7), .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(9) {
-  border-radius: 50% !important;
-  font-weight: 400 !important;
-  font-size: 26px !important;
-  background: 1px 1px rgba(0, 0, 0, 0.3); }
-#sliderc_container .captionText {
-  display: block;
-  font-size: 20px;
-  line-height: 30px; }
-#sliderc_container .captionTextBlack {
-  color: black; }
-#sliderc_container .captionTextWhite {
-  color: white; }
-#sliderc_container a .captionOrange, .slider_block #sliderc_container a .slider_team_group_1 div:nth-of-type(2), .slider_block #sliderc_container .slider_team_group_1 a div:nth-of-type(2), .slider_block #sliderc_container a .slider_team_group_1 div:nth-of-type(4), .slider_block #sliderc_container .slider_team_group_1 a div:nth-of-type(4), .slider_block #sliderc_container a .slider_team_group_1 div:nth-of-type(6), .slider_block #sliderc_container .slider_team_group_1 a div:nth-of-type(6), .slider_block #sliderc_container a .slider_team_group_1 div:nth-of-type(8), .slider_block #sliderc_container .slider_team_group_1 a div:nth-of-type(8), .slider_block #sliderc_container a .slider_team_group_1 div:nth-of-type(10), .slider_block #sliderc_container .slider_team_group_1 a div:nth-of-type(10) {
-  color: #fff;
-  text-decoration: none; }
-  #sliderc_container a .captionOrange:hover, .slider_block #sliderc_container a .slider_team_group_1 div:hover:nth-of-type(2), .slider_block #sliderc_container .slider_team_group_1 a div:hover:nth-of-type(2), .slider_block #sliderc_container a .slider_team_group_1 div:hover:nth-of-type(4), .slider_block #sliderc_container .slider_team_group_1 a div:hover:nth-of-type(4), .slider_block #sliderc_container a .slider_team_group_1 div:hover:nth-of-type(6), .slider_block #sliderc_container .slider_team_group_1 a div:hover:nth-of-type(6), .slider_block #sliderc_container a .slider_team_group_1 div:hover:nth-of-type(8), .slider_block #sliderc_container .slider_team_group_1 a div:hover:nth-of-type(8), .slider_block #sliderc_container a .slider_team_group_1 div:hover:nth-of-type(10), .slider_block #sliderc_container .slider_team_group_1 a div:hover:nth-of-type(10) {
-    color: #eb5100;
-    text-decoration: underline;
-    background-color: #eeeeee;
-    background-color: rgba(238, 238, 238, 0.7); }
-  #sliderc_container a .captionOrange:active, .slider_block #sliderc_container a .slider_team_group_1 div:active:nth-of-type(2), .slider_block #sliderc_container .slider_team_group_1 a div:active:nth-of-type(2), .slider_block #sliderc_container a .slider_team_group_1 div:active:nth-of-type(4), .slider_block #sliderc_container .slider_team_group_1 a div:active:nth-of-type(4), .slider_block #sliderc_container a .slider_team_group_1 div:active:nth-of-type(6), .slider_block #sliderc_container .slider_team_group_1 a div:active:nth-of-type(6), .slider_block #sliderc_container a .slider_team_group_1 div:active:nth-of-type(8), .slider_block #sliderc_container .slider_team_group_1 a div:active:nth-of-type(8), .slider_block #sliderc_container a .slider_team_group_1 div:active:nth-of-type(10), .slider_block #sliderc_container .slider_team_group_1 a div:active:nth-of-type(10) {
-    color: #fff;
-    text-decoration: none; }
-  #sliderc_container a .captionOrange:visited, .slider_block #sliderc_container a .slider_team_group_1 div:visited:nth-of-type(2), .slider_block #sliderc_container .slider_team_group_1 a div:visited:nth-of-type(2), .slider_block #sliderc_container a .slider_team_group_1 div:visited:nth-of-type(4), .slider_block #sliderc_container .slider_team_group_1 a div:visited:nth-of-type(4), .slider_block #sliderc_container a .slider_team_group_1 div:visited:nth-of-type(6), .slider_block #sliderc_container .slider_team_group_1 a div:visited:nth-of-type(6), .slider_block #sliderc_container a .slider_team_group_1 div:visited:nth-of-type(8), .slider_block #sliderc_container .slider_team_group_1 a div:visited:nth-of-type(8), .slider_block #sliderc_container a .slider_team_group_1 div:visited:nth-of-type(10), .slider_block #sliderc_container .slider_team_group_1 a div:visited:nth-of-type(10) {
-    color: #fff;
-    text-decoration: none; }
-#sliderc_container a .captionTextWhite {
-  color: #fff;
-  text-decoration: none; }
-  #sliderc_container a .captionTextWhite:active {
-    color: #fff;
-    text-decoration: none; }
-  #sliderc_container a .captionTextWhite:visited {
-    color: #fff;
-    text-decoration: none; }
-  #sliderc_container a .captionTextWhite:hover {
-    color: #eb5100;
-    text-decoration: underline; }
-#sliderc_container a .captionTextBlack {
-  color: #fff;
-  text-decoration: none; }
-  #sliderc_container a .captionTextBlack:active {
-    color: #fff;
-    text-decoration: none; }
-  #sliderc_container a .captionTextBlack:visited {
-    color: #fff;
-    text-decoration: none; }
-  #sliderc_container a .captionTextBlack:hover {
-    color: #eb5100;
-    text-decoration: underline; }
-#sliderc_container .bricon {
-  background: url("../img/browser-icons.png"); }
-#sliderc_container .jssorb01 {
-  position: absolute;
-  box-sizing: content-box;
-  top: 270px;
-  left: 500px;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 5px;
-  border-radius: 25px; }
-  #sliderc_container .jssorb01 .prototype {
-    box-sizing: content-box;
-    border-radius: 50%;
-    box-shadow: 0 0 6px white;
-    POSITION: absolute;
-    WIDTH: 12px;
-    HEIGHT: 12px;
-    margin-top: 4px;
-    margin-left: 4px; }
-  #sliderc_container .jssorb01 div {
-    filter: alpha(opacity=70);
-    opacity: 0.7;
-    cursor: pointer;
-    border: 1px solid white;
-    background: 1px 1px rgba(255, 255, 255, 0.5);
-    overflow: hidden; }
-    #sliderc_container .jssorb01 div:hover {
-      background-color: blue; }
-  #sliderc_container .jssorb01 .av {
-    background-color: #00b400; }
-    #sliderc_container .jssorb01 .av:hover {
-      background-color: red; }
-  #sliderc_container .jssorb01 .dn {
-    background-color: #fff; }
-    #sliderc_container .jssorb01 .dn:hover {
-      background-color: lime; }
-
-.slider_block {
-  display: block;
-  float: none;
-  margin: 0 auto;
-  width: 100%;
-  text-align: center;
-  background-image: url("../img/background.jpg");
-  border-top: 4px solid rgba(0, 100, 0, 0.7);
-  border-bottom: 4px solid rgba(0, 100, 0, 0.7);
-  font-family: Arial, Verdana, Sans-Serif;
-  border-radius: 0px;
-  overflow: hidden; }
-  .slider_block #sliderc_container {
-    position: relative;
-    margin: 0 auto;
-    width: 960px;
-    height: 450px;
-    text-align: left;
-    overflow: hidden; }
-    .slider_block #sliderc_container .slides, .slider_block #sliderc_container #slider1_container .spinner, .slider_block #sliderc_container #slider1_container .spinner > div, .slider_block #sliderc_container #slider1_container .spinner > div + div, .slider_block #sliderc_container #slider1_container .inside {
-      position: absolute;
-      left: 0;
-      top: 0;
-      overflow: hidden; }
-    .slider_block #sliderc_container .outside {
-      cursor: move;
-      width: 960px;
-      height: 450px; }
-    .slider_block #sliderc_container #slider1_container {
-      position: absolute;
-      left: 0px;
-      top: 90px;
-      width: 600px;
-      height: 300px;
-      border: 3px solid black;
-      border-radius: 4px;
-      margin: 3px solid black;
-      overflow: hidden; }
-      .slider_block #sliderc_container #slider1_container .spinner > div {
-        display: block;
-        filter: alpha(opacity=70);
-        opacity: 0.7;
-        background-color: black;
-        width: 100%;
-        height: 100%; }
-      .slider_block #sliderc_container #slider1_container .spinner > div + div {
-        display: block;
-        background: url("../img/loading.gif") no-repeat center center;
-        width: 100%;
-        height: 100%; }
-      .slider_block #sliderc_container #slider1_container .inside {
-        cursor: not-allowed;
-        width: 600px;
-        height: 300px; }
-        .slider_block #sliderc_container #slider1_container .inside .caption {
-          position: absolute;
-          left: 20px;
-          top: 30px;
-          width: 300px;
-          height: 30px; }
-    .slider_block #sliderc_container .slider_header_title_1 {
-      position: absolute;
-      left: 0px;
-      top: 30px;
-      width: 600px;
-      height: 30px;
-      font-size: 28px;
-      color: #001919;
-      text-shadow: 1px 1px 1px 1px rgba(255, 255, 255, 0.5);
-      line-height: 30px;
-      text-align: center; }
-      .slider_block #sliderc_container .slider_header_title_1:after {
-        content: "Mi super titulo"; }
-    .slider_block #sliderc_container .slider_team_group_1 {
-      position: absolute;
-      left: 640px;
-      top: 110px;
-      width: 320px;
-      height: 250px; }
-      .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(1) {
-        position: absolute;
-        left: 0px;
-        top: 10px;
-        width: 30px;
-        height: 30px; }
-        .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(1):after {
-          content: "+";
-          color: blue;
-          text-shadow: 1px 1px rgba(255, 0, 0, 0.5); }
-      .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(2) {
-        position: absolute;
-        left: 40px;
-        top: 10px;
-        width: 280px;
-        height: 30px; }
-        .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(2):after {
-          content: "Texto slider 1";
-          color: blue; }
-      .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(3) {
-        position: absolute;
-        left: 0px;
-        top: 60px;
-        width: 30px;
-        height: 30px; }
-        .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(3):after {
-          content: "f";
-          color: lime;
-          text-shadow: 1px 1px rgba(0, 0, 255, 0.5); }
-      .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(4) {
-        position: absolute;
-        left: 40px;
-        top: 60px;
-        width: 280px;
-        height: 30px; }
-        .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(4):after {
-          content: "Texto slider 2";
-          color: red; }
-      .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(5) {
-        position: absolute;
-        left: 0px;
-        top: 110px;
-        width: 30px;
-        height: 30px; }
-        .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(5):after {
-          content: "g";
-          color: yellow;
-          text-shadow: 1px 1px rgba(0, 255, 0, 0.5); }
-      .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(6) {
-        position: absolute;
-        left: 40px;
-        top: 110px;
-        width: 280px;
-        height: 30px; }
-        .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(6):after {
-          content: "Texto slider 3";
-          color: blue; }
-      .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(7) {
-        position: absolute;
-        left: 0px;
-        top: 160px;
-        width: 30px;
-        height: 30px; }
-        .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(7):after {
-          content: "h";
-          color: red;
-          text-shadow: 1px 1px rgba(0, 0, 255, 0.5); }
-      .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(8) {
-        position: absolute;
-        left: 40px;
-        top: 160px;
-        width: 280px;
-        height: 30px; }
-        .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(8):after {
-          content: "Texto slider 4";
-          color: white; }
-      .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(9) {
-        position: absolute;
-        left: 0px;
-        top: 210px;
-        width: 30px;
-        height: 30px; }
-        .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(9):after {
-          content: "i";
-          color: white;
-          text-shadow: 1px 1px rgba(0, 0, 0, 0.3); }
-      .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(10) {
-        position: absolute;
-        left: 40px;
-        top: 210px;
-        width: 280px;
-        height: 30px; }
-        .slider_block #sliderc_container .slider_team_group_1 div:nth-of-type(10):after {
-          content: "Texto slider 5";
-          color: yellow; }
-
-/*# sourceMappingURL=slider.css.map */
+@charset "UTF-8";
+@font-face { font-family: titulo; src: url("../fonts/fuente.ttf"); }
+@font-face { font-family: orange; src: url("../fonts/action.ttf"); }
+#sliderContainer { visibility: hidden; float: none; margin: 10px auto; position: relative; width: 980px; height: 380px; border-top: 3px solid rgba(0, 0, 0, 0.3); border-bottom: 3px solid rgba(0, 0, 0, 0.3); overflow: hidden; }
+@media screen and (max-width: 480px) { #sliderContainer { border: none; } }
+#sliderContainer .captionOrange, #sliderContainer div[u='slides'] > div:nth-of-type(2) > :nth-child(2), #sliderContainer div[u='slides'] > div:nth-of-type(2) > :nth-child(3), #sliderContainer div[u='slides'] > div:nth-of-type(2) > :nth-child(6), #sliderContainer div[u='slides'] > div:nth-of-type(2) > :nth-child(7), #sliderContainer div[u='slides'] > div:nth-of-type(3) > :nth-child(2), #sliderContainer div[u='slides'] > div:nth-of-type(3) > :nth-child(3), #sliderContainer div[u='slides'] > div:nth-of-type(3) > :nth-child(5), #sliderContainer div[u='slides'] > div:nth-of-type(4) > :nth-child(2), #sliderContainer div[u='slides'] > div:nth-of-type(4) > :nth-child(4), #sliderContainer div[u='slides'] > div:nth-of-type(4) > :nth-child(6), #sliderContainer div[u='slides'] > div:nth-of-type(4) > :nth-child(7), #sliderContainer div[u='slides'] > div:nth-of-type(4) > :nth-child(8), #sliderContainer div[u='slides'] > div:nth-of-type(4) > :nth-child(9), #sliderContainer div[u='slides'] > div:nth-of-type(4) > :nth-child(10), #sliderContainer div[u='slides'] > div:nth-of-type(5) > :nth-child(2), #sliderContainer div[u='slides'] > div:nth-of-type(5) > :nth-child(4), #sliderContainer div[u='slides'] > div:nth-of-type(5) > :nth-child(10), #sliderContainer div[u='slides'] > div:nth-of-type(5) > :nth-child(11), #sliderContainer .captionBlack, #sliderContainer div[u='slides'] > div:nth-of-type(2) > :nth-child(4), #sliderContainer div[u='slides'] > div:nth-of-type(2) > :nth-child(5), #sliderContainer div[u='slides'] > div:nth-of-type(2) > :nth-child(8), #sliderContainer div[u='slides'] > div:nth-of-type(2) > :nth-child(9), #sliderContainer div[u='slides'] > div:nth-of-type(3) > :nth-child(4), #sliderContainer div[u='slides'] > div:nth-of-type(4) > :nth-child(5), #sliderContainer div[u='slides'] > div:nth-of-type(4) > :nth-child(11), #sliderContainer div[u='slides'] > div:nth-of-type(4) > :nth-child(14), #sliderContainer div[u='slides'] > div:nth-of-type(5) > :nth-child(3), #sliderContainer div[u='slides'] > div:nth-of-type(5) > :nth-child(14) { height: 30px; line-height: 30px; text-align: center; border-radius: 5px; }
+#sliderContainer .captionOrange, #sliderContainer div[u='slides'] > div:nth-of-type(2) > :nth-child(2), #sliderContainer div[u='slides'] > div:nth-of-type(2) > :nth-child(3), #sliderContainer div[u='slides'] > div:nth-of-type(2) > :nth-child(6), #sliderContainer div[u='slides'] > div:nth-of-type(2) > :nth-child(7), #sliderContainer div[u='slides'] > div:nth-of-type(3) > :nth-child(2), #sliderContainer div[u='slides'] > div:nth-of-type(3) > :nth-child(3), #sliderContainer div[u='slides'] > div:nth-of-type(3) > :nth-child(5), #sliderContainer div[u='slides'] > div:nth-of-type(4) > :nth-child(2), #sliderContainer div[u='slides'] > div:nth-of-type(4) > :nth-child(4), #sliderContainer div[u='slides'] > div:nth-of-type(4) > :nth-child(6), #sliderContainer div[u='slides'] > div:nth-of-type(4) > :nth-child(7), #sliderContainer div[u='slides'] > div:nth-of-type(4) > :nth-child(8), #sliderContainer div[u='slides'] > div:nth-of-type(4) > :nth-child(9), #sliderContainer div[u='slides'] > div:nth-of-type(4) > :nth-child(10), #sliderContainer div[u='slides'] > div:nth-of-type(5) > :nth-child(2), #sliderContainer div[u='slides'] > div:nth-of-type(5) > :nth-child(4), #sliderContainer div[u='slides'] > div:nth-of-type(5) > :nth-child(10), #sliderContainer div[u='slides'] > div:nth-of-type(5) > :nth-child(11) { font-family: titulo; font-size: 14px; color: white; text-shadow: 1px 1px rgba(0, 0, 0, 0.3); background-color: rgba(235, 81, 0, 0.6); }
+#sliderContainer .captionBlack, #sliderContainer div[u='slides'] > div:nth-of-type(2) > :nth-child(4), #sliderContainer div[u='slides'] > div:nth-of-type(2) > :nth-child(5), #sliderContainer div[u='slides'] > div:nth-of-type(2) > :nth-child(8), #sliderContainer div[u='slides'] > div:nth-of-type(2) > :nth-child(9), #sliderContainer div[u='slides'] > div:nth-of-type(3) > :nth-child(4), #sliderContainer div[u='slides'] > div:nth-of-type(4) > :nth-child(5), #sliderContainer div[u='slides'] > div:nth-of-type(4) > :nth-child(11), #sliderContainer div[u='slides'] > div:nth-of-type(4) > :nth-child(14), #sliderContainer div[u='slides'] > div:nth-of-type(5) > :nth-child(3), #sliderContainer div[u='slides'] > div:nth-of-type(5) > :nth-child(14) { font-family: orange; font-size: 14px; color: black; text-shadow: 1px 1px rgba(255, 255, 255, 0.5); background-color: rgba(0, 0, 0, 0.4); }
+#sliderContainer a .captionOrange, #sliderContainer a div[u='slides'] > div:nth-of-type(2) > :nth-child(2), #sliderContainer a div[u='slides'] > div:nth-of-type(2) > :nth-child(3), #sliderContainer a div[u='slides'] > div:nth-of-type(2) > :nth-child(6), #sliderContainer a div[u='slides'] > div:nth-of-type(2) > :nth-child(7), #sliderContainer a div[u='slides'] > div:nth-of-type(3) > :nth-child(2), #sliderContainer a div[u='slides'] > div:nth-of-type(3) > :nth-child(3), #sliderContainer a div[u='slides'] > div:nth-of-type(3) > :nth-child(5), #sliderContainer a div[u='slides'] > div:nth-of-type(4) > :nth-child(2), #sliderContainer a div[u='slides'] > div:nth-of-type(4) > :nth-child(4), #sliderContainer a div[u='slides'] > div:nth-of-type(4) > :nth-child(6), #sliderContainer a div[u='slides'] > div:nth-of-type(4) > :nth-child(7), #sliderContainer a div[u='slides'] > div:nth-of-type(4) > :nth-child(8), #sliderContainer a div[u='slides'] > div:nth-of-type(4) > :nth-child(9), #sliderContainer a div[u='slides'] > div:nth-of-type(4) > :nth-child(10), #sliderContainer a div[u='slides'] > div:nth-of-type(5) > :nth-child(2), #sliderContainer a div[u='slides'] > div:nth-of-type(5) > :nth-child(4), #sliderContainer a div[u='slides'] > div:nth-of-type(5) > :nth-child(10), #sliderContainer a div[u='slides'] > div:nth-of-type(5) > :nth-child(11), #sliderContainer a .captionOrange:active, #sliderContainer a div[u='slides'] > div:nth-of-type(2) > :active:nth-child(2), #sliderContainer a div[u='slides'] > div:nth-of-type(2) > :active:nth-child(3), #sliderContainer a div[u='slides'] > div:nth-of-type(2) > :active:nth-child(6), #sliderContainer a div[u='slides'] > div:nth-of-type(2) > :active:nth-child(7), #sliderContainer a div[u='slides'] > div:nth-of-type(3) > :active:nth-child(2), #sliderContainer a div[u='slides'] > div:nth-of-type(3) > :active:nth-child(3), #sliderContainer a div[u='slides'] > div:nth-of-type(3) > :active:nth-child(5), #sliderContainer a div[u='slides'] > div:nth-of-type(4) > :active:nth-child(2), #sliderContainer a div[u='slides'] > div:nth-of-type(4) > :active:nth-child(4), #sliderContainer a div[u='slides'] > div:nth-of-type(4) > :active:nth-child(6), #sliderContainer a div[u='slides'] > div:nth-of-type(4) > :active:nth-child(7), #sliderContainer a div[u='slides'] > div:nth-of-type(4) > :active:nth-child(8), #sliderContainer a div[u='slides'] > div:nth-of-type(4) > :active:nth-child(9), #sliderContainer a div[u='slides'] > div:nth-of-type(4) > :active:nth-child(10), #sliderContainer a div[u='slides'] > div:nth-of-type(5) > :active:nth-child(2), #sliderContainer a div[u='slides'] > div:nth-of-type(5) > :active:nth-child(4), #sliderContainer a div[u='slides'] > div:nth-of-type(5) > :active:nth-child(10), #sliderContainer a div[u='slides'] > div:nth-of-type(5) > :active:nth-child(11), #sliderContainer a .captionOrange:visited, #sliderContainer a div[u='slides'] > div:nth-of-type(2) > :visited:nth-child(2), #sliderContainer a div[u='slides'] > div:nth-of-type(2) > :visited:nth-child(3), #sliderContainer a div[u='slides'] > div:nth-of-type(2) > :visited:nth-child(6), #sliderContainer a div[u='slides'] > div:nth-of-type(2) > :visited:nth-child(7), #sliderContainer a div[u='slides'] > div:nth-of-type(3) > :visited:nth-child(2), #sliderContainer a div[u='slides'] > div:nth-of-type(3) > :visited:nth-child(3), #sliderContainer a div[u='slides'] > div:nth-of-type(3) > :visited:nth-child(5), #sliderContainer a div[u='slides'] > div:nth-of-type(4) > :visited:nth-child(2), #sliderContainer a div[u='slides'] > div:nth-of-type(4) > :visited:nth-child(4), #sliderContainer a div[u='slides'] > div:nth-of-type(4) > :visited:nth-child(6), #sliderContainer a div[u='slides'] > div:nth-of-type(4) > :visited:nth-child(7), #sliderContainer a div[u='slides'] > div:nth-of-type(4) > :visited:nth-child(8), #sliderContainer a div[u='slides'] > div:nth-of-type(4) > :visited:nth-child(9), #sliderContainer a div[u='slides'] > div:nth-of-type(4) > :visited:nth-child(10), #sliderContainer a div[u='slides'] > div:nth-of-type(5) > :visited:nth-child(2), #sliderContainer a div[u='slides'] > div:nth-of-type(5) > :visited:nth-child(4), #sliderContainer a div[u='slides'] > div:nth-of-type(5) > :visited:nth-child(10), #sliderContainer a div[u='slides'] > div:nth-of-type(5) > :visited:nth-child(11) { color: #fff; text-decoration: none; }
+#sliderContainer a .captionOrange:hover, #sliderContainer a div[u='slides'] > div:nth-of-type(2) > :hover:nth-child(2), #sliderContainer a div[u='slides'] > div:nth-of-type(2) > :hover:nth-child(3), #sliderContainer a div[u='slides'] > div:nth-of-type(2) > :hover:nth-child(6), #sliderContainer a div[u='slides'] > div:nth-of-type(2) > :hover:nth-child(7), #sliderContainer a div[u='slides'] > div:nth-of-type(3) > :hover:nth-child(2), #sliderContainer a div[u='slides'] > div:nth-of-type(3) > :hover:nth-child(3), #sliderContainer a div[u='slides'] > div:nth-of-type(3) > :hover:nth-child(5), #sliderContainer a div[u='slides'] > div:nth-of-type(4) > :hover:nth-child(2), #sliderContainer a div[u='slides'] > div:nth-of-type(4) > :hover:nth-child(4), #sliderContainer a div[u='slides'] > div:nth-of-type(4) > :hover:nth-child(6), #sliderContainer a div[u='slides'] > div:nth-of-type(4) > :hover:nth-child(7), #sliderContainer a div[u='slides'] > div:nth-of-type(4) > :hover:nth-child(8), #sliderContainer a div[u='slides'] > div:nth-of-type(4) > :hover:nth-child(9), #sliderContainer a div[u='slides'] > div:nth-of-type(4) > :hover:nth-child(10), #sliderContainer a div[u='slides'] > div:nth-of-type(5) > :hover:nth-child(2), #sliderContainer a div[u='slides'] > div:nth-of-type(5) > :hover:nth-child(4), #sliderContainer a div[u='slides'] > div:nth-of-type(5) > :hover:nth-child(10), #sliderContainer a div[u='slides'] > div:nth-of-type(5) > :hover:nth-child(11), #sliderContainer a .captionOrange:active:hover, #sliderContainer a div[u='slides'] > div:nth-of-type(2) > :active:hover:nth-child(2), #sliderContainer a div[u='slides'] > div:nth-of-type(2) > :active:hover:nth-child(3), #sliderContainer a div[u='slides'] > div:nth-of-type(2) > :active:hover:nth-child(6), #sliderContainer a div[u='slides'] > div:nth-of-type(2) > :active:hover:nth-child(7), #sliderContainer a div[u='slides'] > div:nth-of-type(3) > :active:hover:nth-child(2), #sliderContainer a div[u='slides'] > div:nth-of-type(3) > :active:hover:nth-child(3), #sliderContainer a div[u='slides'] > div:nth-of-type(3) > :active:hover:nth-child(5), #sliderContainer a div[u='slides'] > div:nth-of-type(4) > :active:hover:nth-child(2), #sliderContainer a div[u='slides'] > div:nth-of-type(4) > :active:hover:nth-child(4), #sliderContainer a div[u='slides'] > div:nth-of-type(4) > :active:hover:nth-child(6), #sliderContainer a div[u='slides'] > div:nth-of-type(4) > :active:hover:nth-child(7), #sliderContainer a div[u='slides'] > div:nth-of-type(4) > :active:hover:nth-child(8), #sliderContainer a div[u='slides'] > div:nth-of-type(4) > :active:hover:nth-child(9), #sliderContainer a div[u='slides'] > div:nth-of-type(4) > :active:hover:nth-child(10), #sliderContainer a div[u='slides'] > div:nth-of-type(5) > :active:hover:nth-child(2), #sliderContainer a div[u='slides'] > div:nth-of-type(5) > :active:hover:nth-child(4), #sliderContainer a div[u='slides'] > div:nth-of-type(5) > :active:hover:nth-child(10), #sliderContainer a div[u='slides'] > div:nth-of-type(5) > :active:hover:nth-child(11), #sliderContainer a .captionOrange:visited:hover, #sliderContainer a div[u='slides'] > div:nth-of-type(2) > :visited:hover:nth-child(2), #sliderContainer a div[u='slides'] > div:nth-of-type(2) > :visited:hover:nth-child(3), #sliderContainer a div[u='slides'] > div:nth-of-type(2) > :visited:hover:nth-child(6), #sliderContainer a div[u='slides'] > div:nth-of-type(2) > :visited:hover:nth-child(7), #sliderContainer a div[u='slides'] > div:nth-of-type(3) > :visited:hover:nth-child(2), #sliderContainer a div[u='slides'] > div:nth-of-type(3) > :visited:hover:nth-child(3), #sliderContainer a div[u='slides'] > div:nth-of-type(3) > :visited:hover:nth-child(5), #sliderContainer a div[u='slides'] > div:nth-of-type(4) > :visited:hover:nth-child(2), #sliderContainer a div[u='slides'] > div:nth-of-type(4) > :visited:hover:nth-child(4), #sliderContainer a div[u='slides'] > div:nth-of-type(4) > :visited:hover:nth-child(6), #sliderContainer a div[u='slides'] > div:nth-of-type(4) > :visited:hover:nth-child(7), #sliderContainer a div[u='slides'] > div:nth-of-type(4) > :visited:hover:nth-child(8), #sliderContainer a div[u='slides'] > div:nth-of-type(4) > :visited:hover:nth-child(9), #sliderContainer a div[u='slides'] > div:nth-of-type(4) > :visited:hover:nth-child(10), #sliderContainer a div[u='slides'] > div:nth-of-type(5) > :visited:hover:nth-child(2), #sliderContainer a div[u='slides'] > div:nth-of-type(5) > :visited:hover:nth-child(4), #sliderContainer a div[u='slides'] > div:nth-of-type(5) > :visited:hover:nth-child(10), #sliderContainer a div[u='slides'] > div:nth-of-type(5) > :visited:hover:nth-child(11) { color: #eb5100; text-decoration: underline; background-color: #eeeeee; background-color: rgba(238, 238, 238, 0.7); }
+#sliderContainer div[u='loading'] { position: absolute; top: 4px; left: 8px; }
+#sliderContainer div[u='loading'] > div { display: block; filter: alpha(opacity=70); opacity: 0.7; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; }
+#sliderContainer div[u='loading'] > div + div { display: block; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; background: url("../img/spinner/loading.gif") no-repeat center center; background-color: rgba(0, 0, 0, 0.4); }
+#sliderContainer div[u='slides'] { cursor: default; position: absolute; top: 0; left: 0; width: 980px; height: 380px; overflow: hidden; }
+#sliderContainer div[u='slides'] > div:nth-of-type(2) > :nth-child(2) { position: absolute; top: 10px; left: 10px; width: 220px; height: 75px; border-radius: 50%; color: #780000; font-size: 60px; height: 75px; line-height: 70px; }
+#sliderContainer div[u='slides'] > div:nth-of-type(2) > :nth-child(2):after { content: "Cagesa"; }
+#sliderContainer div[u='slides'] > div:nth-of-type(2) > :nth-child(3) { position: absolute; top: 130px; left: 60px; width: 260px; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3); font-size: 20px; }
+#sliderContainer div[u='slides'] > div:nth-of-type(2) > :nth-child(3):after { content: "Texto con sombra"; }
+#sliderContainer div[u='slides'] > div:nth-of-type(2) > :nth-child(4) { position: absolute; top: 180px; left: 80px; width: 250px; text-shadow: 1px 1px rgba(0, 0, 0, 0.3); color: #000078; font-size: 14px; text-align: right; padding: 0 10px 0 0; }
+#sliderContainer div[u='slides'] > div:nth-of-type(2) > :nth-child(4):after { content: "Texto derecha con padding"; }
+#sliderContainer div[u='slides'] > div:nth-of-type(2) > :nth-child(5) { position: absolute; top: 215px; left: 80px; width: 200px; height: 120px; text-shadow: 1px 1px rgba(255, 255, 255, 0.5); color: black; font-size: 14px; height: 120px; }
+#sliderContainer div[u='slides'] > div:nth-of-type(2) > :nth-child(6) { position: absolute; top: 340px; left: 80px; width: 330px; text-shadow: 1px 1px rgba(255, 255, 255, 0.5); color: #780000; font-size: 16px; text-align: left; }
+#sliderContainer div[u='slides'] > div:nth-of-type(2) > :nth-child(6):after { content: "Texto izquierda sin padding"; }
+#sliderContainer div[u='slides'] > div:nth-of-type(2) > :nth-child(7) { position: absolute; top: 280px; left: 420px; width: 90px; height: 40px; text-shadow: 1px 1px rgba(0, 0, 0, 0.3); color: black; font-size: 28px; height: 40px; line-height: 40px; }
+#sliderContainer div[u='slides'] > div:nth-of-type(2) > :nth-child(7):after { content: "390+"; }
+#sliderContainer div[u='slides'] > div:nth-of-type(2) > :nth-child(8) { position: absolute; top: 280px; left: 520px; width: 160px; height: 40px; text-shadow: 1px 1px rgba(255, 255, 255, 0.5); color: black; font-size: 28px; height: 40px; line-height: 40px; }
+#sliderContainer div[u='slides'] > div:nth-of-type(2) > :nth-child(8):after { content: "Etiquetas"; }
+#sliderContainer div[u='slides'] > div:nth-of-type(2) > :nth-child(9) { position: absolute; top: 280px; left: 720px; width: 220px; height: 40px; text-shadow: 1px 1px rgba(0, 0, 0, 0.3); color: white; font-size: 28px; height: 40px; line-height: 40px; }
+#sliderContainer div[u='slides'] > div:nth-of-type(2) > :nth-child(9):after { content: "Transiciones"; }
+#sliderContainer div[u='slides'] > div:nth-of-type(3) > :nth-child(2) { position: absolute; top: 300px; left: 630px; width: 250px; text-shadow: 1px 1px rgba(0, 0, 0, 0.3); color: white; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3); }
+#sliderContainer div[u='slides'] > div:nth-of-type(3) > :nth-child(2):after { content: "Mas de 360 transiciones"; }
+#sliderContainer div[u='slides'] > div:nth-of-type(3) > :nth-child(3) { position: absolute; top: 300px; left: 20px; width: 500px; text-shadow: 1px 1px rgba(0, 0, 0, 0.3); color: white; font-size: 20px; }
+#sliderContainer div[u='slides'] > div:nth-of-type(3) > :nth-child(3):after { content: "Este es uno de los mejores slider"; }
+#sliderContainer div[u='slides'] > div:nth-of-type(3) > :nth-child(4) { position: absolute; top: 120px; left: 100px; width: 200px; height: 90px; text-shadow: 1px 1px rgba(255, 255, 255, 0.5); color: black; height: 90px; }
+#sliderContainer div[u='slides'] > div:nth-of-type(3) > :nth-child(5) { position: absolute; top: 90px; left: 720px; width: 160px; height: 90px; text-shadow: 1px 1px rgba(0, 0, 0, 0.3); color: white; height: 90px; line-height: 90px; }
+#sliderContainer div[u='slides'] > div:nth-of-type(3) > :nth-child(5):after { content: "Código reducido"; }
+#sliderContainer div[u='slides'] > div:nth-of-type(3) > :nth-child(6) { position: absolute; top: 40px; left: 505px; width: 200px; text-shadow: 1px 1px rgba(255, 255, 255, 0.5); color: black; font-size: 28px; }
+#sliderContainer div[u='slides'] > div:nth-of-type(3) > :nth-child(6):after { content: "Uso de la CPU"; }
+#sliderContainer div[u='slides'] > div:nth-of-type(3) > :nth-child(7) { position: absolute; top: 90px; left: 325px; width: 350px; color: #00b400; font-size: 20px; }
+#sliderContainer div[u='slides'] > div:nth-of-type(3) > :nth-child(7):after { content: "Rapidez"; }
+#sliderContainer div[u='slides'] > div:nth-of-type(3) > :nth-child(8) { position: absolute; top: 130px; left: 325px; width: 350px; color: #780000; font-size: 20px; }
+#sliderContainer div[u='slides'] > div:nth-of-type(3) > :nth-child(8):after { content: "mas rapidez"; }
+#sliderContainer div[u='slides'] > div:nth-of-type(3) > :nth-child(9) { position: absolute; top: 170px; left: 325px; width: 350px; color: #000078; font-size: 20px; }
+#sliderContainer div[u='slides'] > div:nth-of-type(3) > :nth-child(9):after { content: "mas mas rapidez"; }
+#sliderContainer div[u='slides'] > div:nth-of-type(4) > :nth-child(2) { position: absolute; top: 20px; left: 700px; width: 260px; text-shadow: 1px 1px rgba(255, 255, 255, 0.5); color: #000078; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3); font-size: 28px; line-height: 40px; }
+#sliderContainer div[u='slides'] > div:nth-of-type(4) > :nth-child(2):after { content: "Clientes satisfechos"; }
+#sliderContainer div[u='slides'] > div:nth-of-type(4) > :nth-child(3) { position: absolute; top: 30px; left: 20px; width: 600px; height: 90; text-shadow: 1px 1px rgba(0, 0, 0, 0.3); color: white; font-size: 14px; height: 90; }
+#sliderContainer div[u='slides'] > div:nth-of-type(4) > :nth-child(4) { position: absolute; top: 300px; left: 20px; width: 130px; text-shadow: 1px 1px rgba(0, 0, 0, 0.3); color: white; font-size: 20px; }
+#sliderContainer div[u='slides'] > div:nth-of-type(4) > :nth-child(4):after { content: "Reforestamos"; }
+#sliderContainer div[u='slides'] > div:nth-of-type(4) > :nth-child(5) { position: absolute; top: 300px; left: 160px; width: 90px; text-shadow: 1px 1px rgba(0, 0, 0, 0.3); color: white; font-size: 20px; }
+#sliderContainer div[u='slides'] > div:nth-of-type(4) > :nth-child(5):after { content: "cualquier"; }
+#sliderContainer div[u='slides'] > div:nth-of-type(4) > :nth-child(6) { position: absolute; top: 300px; left: 260px; width: 200px; color: #00b400; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3); font-size: 20px; }
+#sliderContainer div[u='slides'] > div:nth-of-type(4) > :nth-child(6):after { content: "Terreno"; }
+#sliderContainer div[u='slides'] > div:nth-of-type(4) > :nth-child(7) { position: absolute; top: 240px; left: 460px; width: 50px; color: #780000; font-size: 20px; }
+#sliderContainer div[u='slides'] > div:nth-of-type(4) > :nth-child(7):after { content: "para"; }
+#sliderContainer div[u='slides'] > div:nth-of-type(4) > :nth-child(8) { position: absolute; top: 220px; left: 580px; width: 120px; text-shadow: 1px 1px rgba(0, 0, 0, 0.3); color: white; font-size: 20px; }
+#sliderContainer div[u='slides'] > div:nth-of-type(4) > :nth-child(8):after { content: "Acondicionar"; }
+#sliderContainer div[u='slides'] > div:nth-of-type(4) > :nth-child(9) { position: absolute; top: 160px; left: 680px; width: 110px; text-shadow: 1px 1px rgba(0, 0, 0, 0.3); color: black; font-size: 20px; }
+#sliderContainer div[u='slides'] > div:nth-of-type(4) > :nth-child(9):after { content: "Mejorar"; }
+#sliderContainer div[u='slides'] > div:nth-of-type(4) > :nth-child(10) { position: absolute; top: 110px; left: 660px; width: 110px; text-shadow: 1px 1px rgba(0, 0, 0, 0.3); color: white; font-size: 20px; }
+#sliderContainer div[u='slides'] > div:nth-of-type(4) > :nth-child(10):after { content: "Satisfacer"; }
+#sliderContainer div[u='slides'] > div:nth-of-type(4) > :nth-child(11) { position: absolute; top: 160px; left: 790px; width: 30px; text-shadow: 1px 1px rgba(255, 255, 255, 0.5); color: #780000; font-size: 20px; }
+#sliderContainer div[u='slides'] > div:nth-of-type(4) > :nth-child(11):after { content: "a"; }
+#sliderContainer div[u='slides'] > div:nth-of-type(4) > :nth-child(12) { position: absolute; top: 210px; left: 800px; width: 120px; text-shadow: 1px 1px rgba(0, 0, 0, 0.3); color: #000078; font-size: 28px; }
+#sliderContainer div[u='slides'] > div:nth-of-type(4) > :nth-child(12):after { content: "clientes"; }
+#sliderContainer div[u='slides'] > div:nth-of-type(4) > :nth-child(13) { position: absolute; top: 250px; left: 780px; width: 120px; text-shadow: 1px 1px rgba(255, 255, 255, 0.5); font-size: 28px; }
+#sliderContainer div[u='slides'] > div:nth-of-type(4) > :nth-child(13):after { content: "exigentes"; }
+#sliderContainer div[u='slides'] > div:nth-of-type(4) > :nth-child(14) { position: absolute; top: 295px; left: 680px; width: 220px; text-shadow: 1px 1px rgba(0, 0, 0, 0.3); color: white; font-size: 40px; line-height: 40px; }
+#sliderContainer div[u='slides'] > div:nth-of-type(4) > :nth-child(14):after { content: "como tu"; }
+#sliderContainer div[u='slides'] > div:nth-of-type(5) > :nth-child(2) { position: absolute; top: 330px; left: 20px; width: 300px; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3); font-size: 20px; }
+#sliderContainer div[u='slides'] > div:nth-of-type(5) > :nth-child(2):after { content: "Cagesa siempre a su servicio."; }
+#sliderContainer div[u='slides'] > div:nth-of-type(5) > :nth-child(3) { position: absolute; top: 330px; left: 330px; width: 110px; color: white; font-size: 20px; }
+#sliderContainer div[u='slides'] > div:nth-of-type(5) > :nth-child(3):after { content: "desde el"; }
+#sliderContainer div[u='slides'] > div:nth-of-type(5) > :nth-child(4) { position: absolute; top: 330px; left: 450px; width: 130px; color: #000078; font-size: 20px; }
+#sliderContainer div[u='slides'] > div:nth-of-type(5) > :nth-child(4):after { content: "2000"; }
+#sliderContainer div[u='slides'] > div:nth-of-type(5) > :nth-child(5) { position: absolute; top: 50px; left: 80px; width: 30px; height: 30px; background-position: 0px 0px; height: 30px; }
+#sliderContainer div[u='slides'] > div:nth-of-type(5) > :nth-child(6) { position: absolute; top: 100px; left: 80px; width: 30px; height: 30px; background-position: -30px 0px; height: 30px; }
+#sliderContainer div[u='slides'] > div:nth-of-type(5) > :nth-child(7) { position: absolute; top: 150px; left: 80px; width: 30px; height: 30px; background-position: -60px 0px; height: 30px; }
+#sliderContainer div[u='slides'] > div:nth-of-type(5) > :nth-child(8) { position: absolute; top: 200px; left: 80px; width: 30px; height: 30px; background-position: -90px 0px; height: 30px; }
+#sliderContainer div[u='slides'] > div:nth-of-type(5) > :nth-child(9) { position: absolute; top: 250px; left: 80px; width: 30px; height: 30px; background-position: -120px 0px; height: 30px; }
+#sliderContainer div[u='slides'] > div:nth-of-type(5) > :nth-child(10) { position: absolute; top: 50px; left: 160px; width: 180px; height: 250px; text-shadow: 1px 1px rgba(0, 0, 0, 0.3); color: white; font-size: 28px; height: 250px; line-height: 50px; }
+#sliderContainer div[u='slides'] > div:nth-of-type(5) > :nth-child(11) { position: absolute; top: 40px; left: 700px; width: 130px; text-shadow: 1px 1px rgba(255, 255, 255, 0.5); color: #780000; font-size: 20px; }
+#sliderContainer div[u='slides'] > div:nth-of-type(5) > :nth-child(11):after { content: "Nuestros servicios"; }
+#sliderContainer div[u='slides'] > div:nth-of-type(5) > :nth-child(12) { position: absolute; top: 210px; left: 800px; width: 120px; text-shadow: 1px 1px rgba(0, 0, 0, 0.3); color: #000078; font-size: 28px; }
+#sliderContainer div[u='slides'] > div:nth-of-type(5) > :nth-child(12):after { content: "clientes"; }
+#sliderContainer div[u='slides'] > div:nth-of-type(5) > :nth-child(13) { position: absolute; top: 250px; left: 780px; width: 120px; text-shadow: 1px 1px rgba(255, 255, 255, 0.5); font-size: 28px; }
+#sliderContainer div[u='slides'] > div:nth-of-type(5) > :nth-child(13):after { content: "exigentes"; }
+#sliderContainer div[u='slides'] > div:nth-of-type(5) > :nth-child(14) { position: absolute; top: 300px; left: 680px; width: 220px; text-shadow: 1px 1px rgba(0, 0, 0, 0.3); color: white; font-size: 40px; }
+#sliderContainer div[u='slides'] > div:nth-of-type(5) > :nth-child(14):after { content: "como tu"; }
+@media screen and (max-width: 480px) { #sliderContainer div[u='slides'] .block { display: none; } }
+#sliderContainer .bullet { position: absolute; box-sizing: content-box; top: 342px; left: 860px; background: rgba(0, 0, 0, 0.4); padding: 5px; border-radius: 20px; }
+#sliderContainer .bullet .prototype { box-sizing: border-box; border-radius: 50%; box-shadow: 0 0 6px white; POSITION: absolute; WIDTH: 20px; HEIGHT: 20px; margin-top: 5px; margin-left: 5px; transition: background-color 1s ease-in-out; }
+#sliderContainer .bullet div { filter: alpha(opacity=70); opacity: 0.7; cursor: pointer; border: 1px solid white; background: rgba(235, 81, 0, 0.6); overflow: hidden; }
+#sliderContainer .bullet div:hover { background-color: white; }
+#sliderContainer .bullet .av { background-color: #00b400; }
+#sliderContainer .bullet .av:hover { background-color: #00b400; }
+#sliderContainer .bullet .dn { background-color: #fff; }
+#sliderContainer .bullet .dn:hover { background-color: white; }
+#sliderContainer .imagenLogo { background: url(../img/img/browser-icons.png); }
+#sliderContainer .arrow { display: none; }
+@media screen and (max-width: 480px) { #sliderContainer .arrow { display: block; } }

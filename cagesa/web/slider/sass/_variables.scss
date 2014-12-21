@@ -1,0 +1,764 @@
+@import 'mixin';
+//CURSOR
+$cursorDefault: (
+        pointer : pointer,
+        default: default
+);
+//BORDER
+$borderWidthDefault: (
+        small:1px,
+        medium:4px,
+        large:8px
+);
+//FONTS
+$fontNameDefault: (
+        titulo: titulo,
+        orange: orange
+);
+//FONT SIZE
+$fontSizeDefault: (
+        small:14px,
+        medium:16px,
+        large:20px,
+        extra:28px,
+        super:40px
+);
+//RADIUS
+$radiusDefault: (
+        small:1px,
+        normal:5px,
+        large:10px,
+        extra:20px,
+        circle: 50%
+);
+
+// TRANSPARENCY LEVEL
+$transparencyLevel: (
+        level_0: 0,
+        level_1: .1,
+        level_2: .2,
+        level_3: .3,
+        level_4: .4,
+        level_5: .5,
+        level_6: .6,
+        level_7: .7,
+        level_8: .8,
+        level_9: .9,
+        level_10: 1
+);
+//USER COLOR
+$colorDefault: (
+        blue: rgb(0, 0, 120),
+        greenMedium:rgb(0, 180, 0),
+        red: rgb(120, 0, 0),
+        white:rgb(255, 255, 255),
+        black:rgb(0, 0, 0),
+        orange:rgb(235, 81, 0)
+);
+//BACKGROUND
+$backGroundColorDefault: (
+        orange:rgba(map-get($colorDefault, orange), map-get($transparencyLevel, level_6)),
+        grayLight:rgba(map-get($colorDefault, black), map-get($transparencyLevel, level_4))
+);
+//SHADOW COLOR
+$shadowDefaultColor: (
+        black:rgba(map-get($colorDefault, black), map-get($transparencyLevel, level_3)),
+        blackSolid: rgba(map-get($colorDefault, black), map-get($transparencyLevel, level_10)),
+        blackMedium: rgba(map-get($colorDefault, black), map-get($transparencyLevel, level_5)),
+        white:rgba(map-get($colorDefault, white), map-get($transparencyLevel, level_5)),
+        whiteSolid:rgba(map-get($colorDefault, white), map-get($transparencyLevel, level_10))
+);
+//SHADOW
+$boxShadowDefault: (
+        bullet:0 0 6px map-get($shadowDefaultColor, whiteSolid),
+        slider: 0 0 6px map-get($shadowDefaultColor, blackMedium),
+        downRight: 4px 4px 4px map-get($shadowDefaultColor, black)
+);
+//MEDIA SCREEN
+$mediaScreen:(
+        small:480px,
+        medium:600px,
+        large:967px
+);
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// SLIDER
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Parametros:
+//-------------------------------------------
+// float:
+// margin:
+// position:
+// width:
+// height:
+// border-radius:
+// box-shadow:
+// border:
+// border-top:
+// border-right:
+// border-bottom:
+// border-left:
+//
+$sliderBox: (
+        name: sliderContainer,
+        position:relative,
+        float: none,
+        width:980px,
+        height:380px,
+        margin:10px auto,
+        borderTop: 3px solid map-get($shadowDefaultColor, black),
+        borderBottom: 3px solid map-get($shadowDefaultColor, black)
+);
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// CAPTIONS (CLASS)
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Parametros:
+//-------------------------------------------
+// class -> Obligatorio
+// height:
+// lineHeight:
+// fontFamily:
+// fontSize:
+// color:
+// backGroundColor:
+// borderRadius:
+// textAlign:
+// textShadow:
+//
+$firstTypeOfCaption: captionOrange;
+$secondTypeOfCaption: captionBlack;
+
+$caption: (//Default property for captions
+        height : 30px,
+        lineHeight:30px,
+        textAlign : center,
+        borderRadius :map-get($radiusDefault, normal)
+);
+
+$captionOrange: (
+        class:$firstTypeOfCaption,
+        fontFamily: map-get($fontNameDefault, titulo),
+        fontSize: map-get($fontSizeDefault, small),
+        color: map-get($colorDefault, white),
+        backGroundColor: map-get($backGroundColorDefault, orange),
+        textShadow: 1px 1px map-get($shadowDefaultColor, black)
+);
+
+$captionBlack: (
+        class:$secondTypeOfCaption,
+        fontFamily:map-get($fontNameDefault, orange),
+        fontSize: map-get($fontSizeDefault, small),
+        color: map-get($colorDefault, black),
+        backGroundColor: map-get($backGroundColorDefault, grayLight),
+        textShadow: 1px 1px map-get($shadowDefaultColor, white)
+);
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// CAPTION CLASS LIST
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+$captionList: $captionOrange, $captionBlack;
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// SPINNER
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+$spinner: (
+        imagen:'../img/spinner/loading.gif',
+        opacity: .7,
+        backGroundColor:map-get($backGroundColorDefault, grayLight)
+);
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//  CAPTIONS TRANSITIONS
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Parametros
+// ------------------------------------------------------------
+// class ->obligatorio
+// position ->obligatorio
+// left ->obligatorio
+// top ->obligatorio
+// width ->obligatorio
+// height
+// textAlign
+// textPadding
+// lineHeight
+// content
+// boxShadow -> Sólo para los que son de tamaño fijo
+// boderRadius
+// backGroundPosition-> para imagenes puedes dejar la clase nula.
+// fontName
+// fontSize
+// textColor
+// textShadow
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// SLIDER 1
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+$captionSlider_1_1: (
+        class: map-get($captionOrange, class),
+        position:absolute,
+        left:10px,
+        top: 10px,
+        width:220px,
+        height:75px,
+        lineHeight: 70px,
+        content: 'Cagesa',
+        borderRadius:map-get($radiusDefault,circle),
+        fontSize:1.5*map-get($fontSizeDefault,super),
+        textColor:map-get($colorDefault, red),
+);
+$captionSlider_1_2: (
+        class: map-get($captionOrange, class),
+        position:absolute,
+        left:60px,
+        top: 130px,
+        width:260px,
+        content: 'Texto con sombra',
+        boxShadow:map-get($boxShadowDefault, downRight),
+        fontSize: map-get($fontSizeDefault, large)
+
+);
+$captionSlider_1_3: (
+        class: map-get($captionBlack, class),
+        position:absolute,
+        left:80px,
+        top: 180px,
+        width:250px,
+        textAlign:right,
+        textPadding:0 10px 0 0,
+        content: 'Texto derecha con padding',
+        fontSize: map-get($fontSizeDefault, small),
+        textColor:map-get($colorDefault, blue),
+        textShadow:map-get($captionOrange, textShadow)
+);
+
+$captionSlider_1_4: (
+        class: map-get($captionBlack, class),
+        position:absolute,
+        left:80px,
+        top: 215px,
+        width:200px,
+        height:120px,
+        fontSize: map-get($fontSizeDefault, small),
+        textColor:map-get($colorDefault, black),
+        textShadow:map-get($captionBlack, textShadow)
+);
+
+$captionSlider_1_5: (
+        class: map-get($captionOrange, class),
+        position:absolute,
+        left:80px,
+        top: 340px,
+        width:330px,
+        textAlign:left,
+        content: "Texto izquierda sin padding",
+        fontSize: map-get($fontSizeDefault, medium),
+        textColor:map-get($colorDefault, red),
+        textShadow:map-get($captionBlack, textShadow)
+);
+$captionSlider_1_6: (
+        class: map-get($captionOrange, class),
+        position:absolute,
+        left:420px,
+        top: 280px,
+        width:90px,
+        height:40px,
+        lineHeight:40px,
+        content: "390+",
+        fontSize: map-get($fontSizeDefault, extra),
+        textColor:map-get($colorDefault, black),
+        textShadow:map-get($captionOrange, textShadow)
+);
+$captionSlider_1_7: (
+        class: map-get($captionBlack, class),
+        position:absolute,
+        left:520px,
+        top: 280px,
+        width:160px,
+        height:40px,
+        lineHeight:40px,
+        content: "Etiquetas",
+        fontSize: map-get($fontSizeDefault, extra),
+        textColor:map-get($colorDefault, black),
+        textShadow:map-get($captionBlack, textShadow)
+);
+$captionSlider_1_8: (
+        class: map-get($captionBlack, class),
+        position:absolute,
+        left:720px,
+        top: 280px,
+        width:220px,
+        height:40px,
+        lineHeight:40px,
+        content: "Transiciones",
+        fontSize: map-get($fontSizeDefault, extra),
+        textColor:map-get($colorDefault, white),
+        textShadow:map-get($captionOrange, textShadow)
+);
+// ARRAYS CAPTIONS SLIDER 1
+$captionSliders_1: (
+        caption_1: $captionSlider_1_1,
+        caption_2: $captionSlider_1_2,
+        caption_3: $captionSlider_1_3,
+        caption_4: $captionSlider_1_4,
+        caption_5: $captionSlider_1_5,
+        caption_6: $captionSlider_1_6,
+        caption_7: $captionSlider_1_7,
+        caption_8: $captionSlider_1_8
+);
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// SLIDER 2
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+$captionSlider_2_1: (
+        class: map-get($captionOrange, class),
+        position:absolute,
+        left:630px,
+        top: 300px,
+        width:250px,
+        content: 'Mas de 360 transiciones',
+        boxShadow:map-get($boxShadowDefault, downRight),
+        fontSize:map-get($fontSizeDefault, normal),
+        textColor:map-get($colorDefault, white),
+        textShadow:map-get($captionOrange, textShadow)
+);
+$captionSlider_2_2: (
+        class: map-get($captionOrange, class),
+        position:absolute,
+        left:20px,
+        top: 300px,
+        width:500px,
+        content: 'Este es uno de los mejores slider',
+        fontSize:map-get($fontSizeDefault, large),
+        textColor:map-get($captionOrange, color),
+        textShadow:map-get($captionOrange, textShadow)
+);
+$captionSlider_2_3: (
+        class: map-get($captionBlack, class),
+        position:absolute,
+        left:100px,
+        top: 120px,
+        width:200px,
+        height:90px,
+        fontSize:map-get($fontSizeDefault, normal),
+        textColor:map-get($captionBlack, color),
+        textShadow:map-get($captionBlack, textShadow)
+);
+$captionSlider_2_4: (
+        class: map-get($captionOrange, class),
+        position:absolute,
+        left:720px,
+        top: 90px,
+        width:160px,
+        height:90px,
+        lineHeight:90px,
+        content: 'Código reducido',
+        fontSize:map-get($fontSizeDefault, normal),
+        textColor:map-get($captionOrange, color),
+        textShadow:map-get($captionOrange, textShadow)
+);
+$captionSlider_2_5: (
+        class:'', //Not class its Text
+        position:absolute,
+        left:505px,
+        top: 40px,
+        width:200px,
+        content: 'Uso de la CPU',
+        fontSize:map-get($fontSizeDefault, extra),
+        textColor:map-get($colorDefault, black),
+        textShadow:map-get($captionBlack, textShadow)
+);
+$captionSlider_2_6: (
+        class:'', //not class its Text
+        position:absolute,
+        left:325px,
+        top: 90px,
+        width:350px,
+        content: 'Rapidez',
+        fontSize:map-get($fontSizeDefault, large),
+        textColor:map-get($colorDefault, greenMedium)
+);
+$captionSlider_2_7: (
+        class:'', //not class its Text
+        position:absolute,
+        left:325px,
+        top: 130px,
+        width:350px,
+        content: 'mas rapidez',
+        fontSize:map-get($fontSizeDefault, large),
+        textColor:map-get($colorDefault, red)
+);
+$captionSlider_2_8: (
+        class:'', //not class its Text
+        position:absolute,
+        left:325px,
+        top: 170px,
+        width:350px,
+        content: 'mas mas rapidez',
+        fontSize:map-get($fontSizeDefault, large),
+        textColor:map-get($colorDefault, blue)
+);
+// ARRAYS CAPTIONS SLIDER 2
+$captionSliders_2: (
+        caption_1: $captionSlider_2_1,
+        caption_2: $captionSlider_2_2,
+        caption_3: $captionSlider_2_3,
+        caption_4: $captionSlider_2_4,
+        caption_5: $captionSlider_2_5,
+        caption_6: $captionSlider_2_6,
+        caption_7: $captionSlider_2_7,
+        caption_8: $captionSlider_2_8
+);
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// SLIDER 3
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+$captionSlider_3_1: (
+        class: map-get($captionOrange, class),
+        position:absolute,
+        left:700px,
+        top: 20px,
+        width:260px,
+        lineHeight:40px,
+        content: 'Clientes satisfechos',
+        boxShadow:map-get($boxShadowDefault, downRight),
+        fontSize:map-get($fontSizeDefault, extra),
+        textColor:map-get($colorDefault, blue),
+        textShadow:map-get($captionBlack, textShadow)
+);
+
+$captionSlider_3_2: (
+        class: '', //not class
+        position:absolute,
+        left:20px,
+        top: 30px,
+        width:600px,
+        height:90,
+        fontSize:map-get($fontSizeDefault, small),
+        textColor:map-get($colorDefault, white),
+        textShadow:map-get($captionOrange, textShadow)
+);
+$captionSlider_3_3: (
+        class: map-get($captionOrange, class),
+        position:absolute,
+        left:20px,
+        top: 300px,
+        width:130px,
+        content:'Reforestamos',
+        fontSize:map-get($fontSizeDefault, large),
+        textColor:map-get($colorDefault, white),
+        textShadow:map-get($captionOrange, textShadow)
+);
+$captionSlider_3_4: (
+        class: map-get($captionBlack, class),
+        position:absolute,
+        left:160px,
+        top: 300px,
+        width:90px,
+        content: 'cualquier',
+        fontSize:map-get($fontSizeDefault, large),
+        textColor:map-get($colorDefault, white),
+        textShadow:map-get($captionOrange, textShadow)
+);
+$captionSlider_3_5: (
+        class:map-get($captionOrange, class),
+        position:absolute,
+        left:260px,
+        top: 300px,
+        width:200px,
+        boxShadow:map-get($boxShadowDefault, downRight),
+        content: 'Terreno',
+        fontSize:map-get($fontSizeDefault, large),
+        textColor:map-get($colorDefault, greenMedium)
+);
+$captionSlider_3_6: (
+        class:map-get($captionOrange, class),
+        position:absolute,
+        left:460px,
+        top: 240px,
+        width:50px,
+        content: 'para',
+        fontSize:map-get($fontSizeDefault, large),
+        textColor:map-get($colorDefault, red)
+);
+$captionSlider_3_7: (
+        class:map-get($captionOrange, class),
+        position:absolute,
+        left:580px,
+        top: 220px,
+        width:120px,
+        content: 'Acondicionar',
+        fontSize:map-get($fontSizeDefault, large),
+        textColor:map-get($colorDefault, white),
+        textShadow:map-get($captionOrange, textShadow)
+);
+$captionSlider_3_8: (
+        class:map-get($captionOrange, class),
+        position:absolute,
+        left:680px,
+        top: 160px,
+        width:110px,
+        content: 'Mejorar',
+        fontSize:map-get($fontSizeDefault, large),
+        textColor:map-get($colorDefault, black),
+        textShadow:map-get($captionOrange, textShadow)
+);
+$captionSlider_3_9: (
+        class:map-get($captionOrange, class),
+        position:absolute,
+        left:660px,
+        top: 110px,
+        width:110px,
+        content: 'Satisfacer',
+        fontSize:map-get($fontSizeDefault, large),
+        textColor:map-get($colorDefault, white),
+        textShadow:map-get($captionOrange, textShadow)
+);
+$captionSlider_3_10: (
+        class:map-get($captionBlack, class),
+        position:absolute,
+        left:790px,
+        top: 160px,
+        width:30px,
+        content: 'a',
+        fontSize:map-get($fontSizeDefault, large),
+        textColor:map-get($colorDefault, red),
+        textShadow:map-get($captionBlack, textShadow)
+);
+$captionSlider_3_11: (
+        class:'', // not class
+        position:absolute,
+        left:800px,
+        top: 210px,
+        width:120px,
+        content: 'clientes',
+        fontSize:map-get($fontSizeDefault, extra),
+        textColor:map-get($colorDefault, blue),
+        textShadow:map-get($captionOrange, textShadow)
+);
+$captionSlider_3_12: (
+        class:'', // not class
+        position:absolute,
+        left:780px,
+        top: 250px,
+        width:120px,
+        content: 'exigentes',
+        fontSize:map-get($fontSizeDefault, extra),
+        textColor:map-get($colorDefault, green),
+        textShadow:map-get($captionBlack, textShadow)
+);
+$captionSlider_3_13: (
+        class:map-get($captionBlack, class),
+        position:absolute,
+        left:680px,
+        top: 295px,
+        width:220px,
+        lineHeight:40px,
+        content: 'como tu',
+        fontSize:map-get($fontSizeDefault, super),
+        textColor:map-get($colorDefault, white),
+        textShadow:map-get($captionOrange, textShadow)
+);
+// ARRAYS CAPTIONS SLIDER 3
+$captionSliders_3: (
+        caption_1: $captionSlider_3_1,
+        caption_2: $captionSlider_3_2,
+        caption_3: $captionSlider_3_3,
+        caption_4: $captionSlider_3_4,
+        caption_5: $captionSlider_3_5,
+        caption_6: $captionSlider_3_6,
+        caption_7: $captionSlider_3_7,
+        caption_8: $captionSlider_3_8,
+        caption_9: $captionSlider_3_9,
+        caption_10: $captionSlider_3_10,
+        caption_11: $captionSlider_3_11,
+        caption_12: $captionSlider_3_12,
+        caption_13: $captionSlider_3_13
+);
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// SLIDER 4
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+$captionSlider_4_1: (
+        class: map-get($captionOrange, class),
+        position:absolute,
+        left:20px,
+        top: 330px,
+        width:300px,
+        content: 'Cagesa siempre a su servicio.',
+        boxShadow:map-get($boxShadowDefault, downRight),
+        fontSize:map-get($fontSizeDefault, large),
+);
+$captionSlider_4_2: (
+        class: map-get($captionBlack, class),
+        position:absolute,
+        left:330px,
+        top: 330px,
+        width:110px,
+        content: 'desde el',
+        fontSize:map-get($fontSizeDefault, large),
+        textColor:map-get($colorDefault, white),
+);
+$captionSlider_4_3: (
+        class: map-get($captionOrange, class),
+        position:absolute,
+        left:450px,
+        top: 330px,
+        width:130px,
+        content:'2000',
+        fontSize:map-get($fontSizeDefault, large),
+        textColor:map-get($colorDefault, blue),
+ );
+$captionSlider_4_4: (
+        class: '',//not class its a image
+        position:absolute,
+        left:80px,
+        top: 50px,
+        width:30px,
+        height:30px,
+        backGroundPosition: 0px 0px
+);
+$captionSlider_4_5: (
+        class: '',//not class its a image
+        position:absolute,
+        left:80px,
+        top: 100px,
+        width:30px,
+        height:30px,
+        backGroundPosition: -30px 0px
+);
+$captionSlider_4_6: (
+        class: '',//not class its a image
+        position:absolute,
+        left:80px,
+        top: 150px,
+        width:30px,
+        height:30px,
+        backGroundPosition: -60px 0px
+);
+$captionSlider_4_7: (
+        class: '',//not class its a image
+        position:absolute,
+        left:80px,
+        top: 200px,
+        width:30px,
+        height:30px,
+        backGroundPosition: -90px 0px
+);
+$captionSlider_4_8: (
+        class: '',//not class its a image
+        position:absolute,
+        left:80px,
+        top: 250px,
+        width:30px,
+        height:30px,
+        backGroundPosition: -120px 0px
+);
+
+$captionSlider_4_9: (
+        class:map-get($captionOrange, class),
+        position:absolute,
+        left:160px,
+        top: 50px,
+        width:180px,
+        height:250px,
+        lineHeight:50px,
+        texAlign:left,
+        fontSize:map-get($fontSizeDefault, extra),
+        textColor:map-get($colorDefault, white),
+        textShadow:map-get($captionOrange, textShadow)
+);
+$captionSlider_4_10: (
+        class:map-get($captionOrange, class),
+        position:absolute,
+        left:700px,
+        top: 40px,
+        width:130px,
+        content: 'Nuestros servicios',
+        fontSize:map-get($fontSizeDefault, large),
+        textColor:map-get($colorDefault, red),
+        textShadow:map-get($captionBlack, textShadow)
+);
+$captionSlider_4_11: (
+        class:'', // not class
+        position:absolute,
+        left:800px,
+        top: 210px,
+        width:120px,
+        content: 'clientes',
+        fontSize:map-get($fontSizeDefault, extra),
+        textColor:map-get($colorDefault, blue),
+        textShadow:map-get($captionOrange, textShadow)
+);
+$captionSlider_4_12: (
+        class:'', // not class
+        position:absolute,
+        left:780px,
+        top: 250px,
+        width:120px,
+        content: 'exigentes',
+        fontSize:map-get($fontSizeDefault, extra),
+        textColor:map-get($colorDefault, green),
+        textShadow:map-get($captionBlack, textShadow)
+);
+$captionSlider_4_13: (
+        class:map-get($captionBlack, class),
+        position:absolute,
+        left:680px,
+        top: 300px,
+        width:220px,
+        content: 'como tu',
+        fontSize:map-get($fontSizeDefault, super),
+        textColor:map-get($colorDefault, white),
+        textShadow:map-get($captionOrange, textShadow)
+);
+// ARRAYS CAPTIONS SLIDER 4
+$captionSliders_4: (
+        caption_1: $captionSlider_4_1,
+        caption_2: $captionSlider_4_2,
+        caption_3: $captionSlider_4_3,
+        caption_4: $captionSlider_4_4,
+        caption_5: $captionSlider_4_5,
+        caption_6: $captionSlider_4_6,
+        caption_7: $captionSlider_4_7,
+        caption_8: $captionSlider_4_8,
+        caption_9: $captionSlider_4_9,
+        caption_10: $captionSlider_4_10,
+        caption_11: $captionSlider_4_11,
+        caption_12: $captionSlider_4_12,
+        caption_13: $captionSlider_4_13
+);
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ARRAY SLIDERS
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+$captionSliders: (
+        slider_1:$captionSliders_1,
+        slider_2:$captionSliders_2,
+        slider_3:$captionSliders_3,
+        slider_4:$captionSliders_4
+);
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// NAVIGATION BULLET
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+$navigationBullet: (
+        posX:860px,
+        posY:342px,
+        backGroundColor: map-get($backGroundColorDefault, grayLight),
+        padding: 5px,
+        radius: map-get($radiusDefault, extra),
+        bulletMarginTop:5px,
+        bulletMarginLeft:5px,
+        bulletRadius: map-get($radiusDefault, circle),
+        bulletShadow:map-get($boxShadowDefault, bullet),
+        bulletWidth:20px,
+        bulletHeight:20px,
+        bulletOpacity:.7,
+        bulletCursor: pointer,
+        bulletBorder: map-get($borderWidthDefault, small) solid map-get($colorDefault, white),
+        bulletBackGroundColor:map-get($backGroundColorDefault, orange),
+        bulletColor:map-get($colorDefault, greenMedium),
+        bulletHoverColor:map-get($colorDefault, white),
+        bulletActiveColor:map-get($colorDefault, black),
+        bulletClickColor:map-get($colorDefault, white),
+        bulletTransition:background-color 1s ease-in-out
+);
+$arrowNavigation:(
+
+);

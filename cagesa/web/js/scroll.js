@@ -2,7 +2,7 @@
  * Created by Francisco Luis Mentado Manzanares on 17/12/2014.
  */
 $(function () {
-    $('ul.right>li>a[href*=#]:not([href=#])').on("click", function (event) {
+    $('a[href*=#]:not([href=#])').on("click", function (event) {
         event.preventDefault();
         var target = $($(this)[0].hash);
         if (target.length) {

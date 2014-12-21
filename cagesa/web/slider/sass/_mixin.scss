@@ -1,0 +1,61 @@
+//CAPTION
+@mixin put_class($datos) {
+  font-family: map-get($datos, fontFamily);
+  font-size: map-get($datos, fontSize);
+  color: map-get($datos, color);
+  text-shadow: map-get($datos, textShadow);
+  background-color: map-get($datos, backGroundColor);
+}
+
+//POSITION AND SIZE
+@mixin put_position_dimension($position, $top, $left, $width, $height) {
+  @include put_position($position, $top, $left);
+  @include put_dimension($width, $height);
+}
+
+//POSITION
+@mixin put_position($position, $top, $left) {
+  position: $position;
+  top: $top;
+  left: $left;
+}
+
+//SIZE
+@mixin put_dimension($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+//PUT CAPTION
+@mixin put_caption($datos) {
+  @include put_position_dimension(
+          map-get($datos, position),
+          map-get($datos, top),
+          map-get($datos, left),
+          map-get($datos, width),
+          map-get($datos, height)
+  );
+  @if str-length(#{map-get($datos, class)})>0 {
+    @extend .#{#{map-get($datos, class)}};
+  }
+  background-position:map-get($datos, backGroundPosition);
+  border-radius:map-get($datos, borderRadius);
+  text-shadow: map-get($datos, textShadow);
+  color: map-get($datos, textColor);
+  box-shadow: map-get($datos, boxShadow);
+  font-family: map-get($datos, fontFamily);
+  font-size: map-get($datos, fontSize); //
+  text-align: map-get($datos, textAlign);
+  padding: map-get($datos, textPadding);
+  height: map-get($datos, height);
+  line-height: map-get($datos, lineHeight);
+  &:after {
+    content: map-get($datos, content);
+  }
+}
+@mixin put_slider_image($datos){
+  background-image:url("#{map-get($datos,imageUrl)}");
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size: 100% 100%;
+}
