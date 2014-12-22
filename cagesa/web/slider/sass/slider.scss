@@ -10,6 +10,7 @@
 }
 ##{map-get($sliderBox, name)} {
   visibility: hidden;
+  box-sizing: content-box;
   float: map-get($sliderBox, float);
   margin: map-get($sliderBox, margin);
   position: map-get($sliderBox, position);
@@ -41,18 +42,9 @@
       @include put_class($cap);
     }
   }
-  a {//REVISAR
-    .captionOrange, .captionOrange:active, .captionOrange:visited {
-      color: #fff;
-      text-decoration: none;
-      &:hover {
-        color: #eb5100;
-        text-decoration: underline;
-        background-color: #eeeeee;
-        background-color: rgba(238, 238, 238, .7);
-      }
+  a {
+    text-decoration: none;
     }
-  }
   & div[u='loading'] {
     @include put_position(absolute, 4px, 8px);
     > div {
@@ -64,7 +56,7 @@
     > div + div {
       display: block;
       @include put_position_dimension(absolute, 0px, 0px, 100%, 100%);
-      background: url(map-get($spinner, imagen)) no-repeat center center;
+      @include put_image($spinner);
       background-color: map-get($spinner, backGroundColor);
     }
   }
@@ -93,7 +85,6 @@
       .block{
         display:none;
       }
-
     }
   }
   .bullet {
@@ -139,14 +130,53 @@
       }
     }
   }
-  & .imagenLogo {
-    background: url(../img/img/browser-icons.png);
-  }
-  & .arrow{
+  & span.arrow{
     display:none;
     @media screen and (max-width:map-get($mediaScreen,small)){
        display:block;
     }
+  }
+  & span.jssoral, & span.jssorar, & span.jssoraldn, & span.jssorardn{
+    position:absolute;
+    cursor: map-get($arrowNavigation,cursor);
+    @if map-has-key($arrowNavigation,imageUrl) {
+      background-image: url(map-get($arrowNavigation,imageUrl));
+    }
+    overflow:hidden;
+  }
+  & span.jssoral {
+    background-position: map-get($arrowNavigation, arrowLeftPosition);
+    @include put_position(
+            '',
+            map-get($arrowNavigation, arrowLeftTop),
+            map-get($arrowNavigation, arrowLeftLeft)
+    );
+    @include put_dimension(
+            map-get($arrowNavigation, arrowLeftWidth),
+            map-get($arrowNavigation, arrowLeftHeight)
+    );
+    :hover{
+      background-position: map-get($arrowNavigation, arrowLeftPositionHover);
+    }
+  }
+  & span.jssorar {
+    background-position: map-get($arrowNavigation, arrowRightPosition);
+    @include put_position_dimension(
+            map-get($arrowNavigation, position),
+            map-get($arrowNavigation, arrowLeftTop),
+            map-get($arrowNavigation, arrowRightLeft),
+            map-get($arrowNavigation, arrowLeftWidth),
+            map-get($arrowNavigation, arrowLeftHeight)
+    );
+    :hover{
+      background-position: map-get($arrowNavigation, arrowRightPositionHover);
+    }
+  }
+  & span.jssoraldn {
+    background-position: map-get($arrowNavigation, arrowLeftPositionClick);
+  }
+  & span.jssorardn {
+    background-position: map-get($arrowNavigation, arrowRightPositionClick);
   }
 }
 

@@ -51,11 +51,11 @@
             <div u=caption t="RTTS|T" d=-300 t2="B"></div>
             <div u=caption t="T|IB" t2="T" d=-300 class="block"></div>
             <div u=caption t="T|IB" t2=L d=-900 class="block"></div>
-            <div u="caption" t="WV|B" t2="T" d=-600 class="imagenLogo block"></div>
-            <div u="caption" t="WV|B" t2="T" d="-1100" class="imagenLogo block"></div>
-            <div u="caption" t="WV|B" t2="T" d="-1100" class="imagenLogo block"></div>
-            <div u="caption" t="WV|B" t2="T" d="-1100" class="imagenLogo block"></div>
-            <div u="caption" t="WV|B" t2="T" d="-1100" class="imagenLogo block"></div>
+            <div u="caption" t="WV|B" t2="T" d=-600 class="block"></div>
+            <div u="caption" t="WV|B" t2="T" d="-1100" class="block"></div>
+            <div u="caption" t="WV|B" t2="T" d="-1100" class="block"></div>
+            <div u="caption" t="WV|B" t2="T" d="-1100" class="block"></div>
+            <div u="caption" t="WV|B" t2="T" d="-1100" class="block"></div>
             <div u="caption" t="LISTH|R" t2="CLIP|TB" d=-600 class="block">
                 Chrome&nbsp; &nbsp; &nbsp; 3+<br/>
                 Firerfox&nbsp; &nbsp; &nbsp; 2+<br/>
@@ -63,51 +63,18 @@
                 Safari&nbsp; &nbsp; &nbsp; &nbsp; 3.1+<br/>
                 Opera&nbsp; &nbsp; &nbsp; &nbsp;10+
             </div>
-            <div u=caption t="TR" t2="T" d=-900 class="block"></div>
-            <div u=caption t="R" t2=R d=-900 class="captionBlack"
-                 style="position:absolute; left:780px; top: 55px; width:100px; height:30px;">
-                supported
-            </div>
-            <div u="caption" t="T|IB" d=-900
-                 style="position:absolute;left:525px;top:90px;width:220px;height:30px;font-size:28px;color:#fff;line-height:30px;">
-                Windows Phone
-            </div>
-            <div u="caption" t="T|IB" t2="ZMF|10" d=-900
-                 style="position:absolute;left:560px;top:160px;width:120px;height:30px;font-size:28px;color:#fff;line-height:30px;">
-                Android
-            </div>
-            <div u="caption" t="T|IB" t2=R d=-900
-                 style="position:absolute;left:760px;top:140px;width:60px;height:30px;font-size:28px;color:#fff;line-height:30px;">
-                iOS
-            </div>
-            <div u="caption" t="T|IB" t2=B d=-900  style="position:absolute;left:600px;top:230px;width:120px;height:80px;background-image:url('../slider/img/img/moc-iphone.png');"></div>
-            <div u="caption" t="RTTL|BR" d=-450 style="position:absolute;left:750px;top:220px;width:77px;height:100px;background-image:url('../slider/img/img/moc-ipad.png');" />
+           <div u=caption t="TR" t2="T" d=-900 class="block"></div>
+            <div u=caption t="R" t2=R d=-900 class="block"></div>
+            <div u="caption" t="T|IB" d=-900 class="block"></div>
+            <div u="caption" t="T|IB" t2="ZMF|10" d=-900 class="block"></div>
+            <div u="caption" t="T|IB" t2=R d=-900 class="block"></div>
+            <div u="caption" t="T|IB" t2=B d=-900 class="block"></div>
+            <div u="caption" t="RTTL|BR" d=-450" class="block"></div>
         </div>
     </div>
     <div u="navigator" class="bullet">
         <div u="prototype" class="prototype "></div>
     </div>
-    <style>
-    .jssoral, .jssorar, .jssoraldn, .jssorardn
-    {
-    position: absolute;
-    cursor: pointer;
-    display: block;
-    background: url('img/arrow/arrow.png') no-repeat;
-    overflow:hidden;
-    }
-    .jssoral { background-position: 0px 0px; }
-    .jssorar { background-position: -55px 0px; }
-    .jssoral:hover { background-position: -110px 0px; }
-    .jssorar:hover { background-position: -165px 0px; }
-    .jssoraldn { background-position: -220px 0px; }
-    .jssorardn { background-position: -275px 0px; }
-    </style>
-    <!-- Arrow Left -->
-    <span u="arrowleft" class="jssoral arrow" style="width: 55px; height: 166px; top: 123px; left: 2px;">
-    </span>
-    <!-- Arrow Right -->
-    <span u="arrowright" class="jssorar arrow" style="width: 55px; height: 166px; top: 123px; right: 2px">
-    </span>
-    <!-- Arrow Navigator Skin End -->
+    <span u="arrowleft" class="jssoral arrow"></span>
+    <span u="arrowright" class="jssorar arrow"></span>
 </div>

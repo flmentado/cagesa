@@ -38,24 +38,34 @@
   @if str-length(#{map-get($datos, class)})>0 {
     @extend .#{#{map-get($datos, class)}};
   }
-  background-position:map-get($datos, backGroundPosition);
+  @if map-has-key($datos,imageUrl){
+    background-image:url(map-get($datos,imageUrl));
+  }
+  background-position:map-get($datos, imagePosition);
+  background-repeat:map-get($datos,imageRepeat);
+  background-size: map-get($datos,imageSize);
   border-radius:map-get($datos, borderRadius);
   text-shadow: map-get($datos, textShadow);
   color: map-get($datos, textColor);
   box-shadow: map-get($datos, boxShadow);
   font-family: map-get($datos, fontFamily);
-  font-size: map-get($datos, fontSize); //
+  font-size: map-get($datos, fontSize);
+  font-style: map-get($datos, fontStyle);
   text-align: map-get($datos, textAlign);
   padding: map-get($datos, textPadding);
   height: map-get($datos, height);
   line-height: map-get($datos, lineHeight);
+  transition:transform 1s lineal;
   &:after {
     content: map-get($datos, content);
+   }
+  &:hover{
+  transform: scale(1.1);
   }
 }
-@mixin put_slider_image($datos){
-  background-image:url("#{map-get($datos,imageUrl)}");
-  background-repeat:no-repeat;
-  background-position:center;
-  background-size: 100% 100%;
+@mixin put_image($datos){
+  background-image:url(map-get($datos,imageUrl));
+  background-repeat:map-get($datos,imageRepeat);
+  background-position:map-get($datos,imagePosition);
+  background-size: map-get($datos,imageSize);
 }

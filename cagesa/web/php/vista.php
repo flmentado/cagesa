@@ -132,14 +132,20 @@
           <hr/>
           <h4 class="contacto">CONTACTO</h4>
           <form class="contacto">
-            <input type="text" placeholder="Nombre"/>
-            <input id="particular" type="radio" name="particular" value="particular"/>
+            <input id="particular" type="radio" name="tipoRemitente" value="particular"/>
             <label for="particular">Particular</label>
-            <input type="text" placeholder="Nombre"/>
-            <input type="text" placeholder="Nombre"/>
-            <input type="text" placeholder="Nombre"/>
-            <input type="text" placeholder="Nombre"/>
-            <input type="text" placeholder="Nombre"/>
+            <input id="empresa" type="radio" name="tipoRemitente" value="empresa"/>
+            <label for="empresa">Empresa</label>
+            <input type="text" name="remitente" placeholder="Nombre"/>
+            <input type="text" name='telefono' placeholder="Teléfono contacto"/>
+            <input type="text" name='fax' placeholder="Fax"/>
+            <input type="text" name='email' placeholder="Email"/>
+            <span>Estoy interesado en :</span>
+            <label for="mantenimiento"><input id='mantenimiento' type="checkbox" name="mantenimiento"/> Mantenimiento de jardines.</label>
+            <label for="poda"><input id='poda' type="checkbox" name="poda"/> Poda/Tala de palmeras y árboles.</label>
+            <label for="tratamiento"><input id='tratamiento' type="checkbox" name="tratamiento"/> Tratamiento fitosanitario.</label>
+            <label for="instalar"><input id='instalar' type="checkbox" name="instalacion"/> Instalacion/Reparación de sistemas de riego.</label>
+            <label for="recogerResiduos"><input id='recogerResiduos' type="checkbox" name="recogerResiduos"/> Recogida de residuos vegetales.</label>
           </form>
         </div>
       </div>
