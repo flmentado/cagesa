@@ -1,7 +1,8 @@
 <?php
-if (@decode(KEY_PASS) != @CLAVE) {
+if (!function_exists ('decode') || decode(KEY_PASS) != @CLAVE) {
     die("No se ha podido ejecutar.");
 }
+?>
 /**
  * Created by PhpStorm.
  * User: Francisco Luis Mentado

@@ -104,7 +104,7 @@ $sliderBox: (
         position:relative,
         float: none,
         width:980px,
-        height:380px,
+        height:500px,
         margin:0px auto,
         borderTop: 3px solid map-get($shadowDefaultColor, black),
         borderBottom: 3px solid map-get($shadowDefaultColor, black)
@@ -724,14 +724,25 @@ $captionSlider_4_13: (
         width:160px,
         content: 'Certificación',
         fontSize:map-get($fontSizeDefault, super),
-        textColor:map-get($colorDefault, greenMedium),
+        textColor:map-get($colorDefault, white),
         textShadow:map-get($captionOrange, textShadow)
 );
 $captionSlider_4_14: (
         class:'', // not class
         position:absolute,
+        left:740px,
+        top: 135px,
+        width:160px,
+        content: 'acreditada',
+        fontSize:map-get($fontSizeDefault, super),
+        textColor:map-get($colorDefault, white),
+        textShadow:map-get($captionOrange, textShadow)
+);
+$captionSlider_4_15: (
+        class:'', // not class
+        position:absolute,
         left:840px,
-        top: 150px,
+        top: 160px,
         width:80px,
         height:160px,
         imageUrl:'../img/img/aenorempresa.png',
@@ -739,11 +750,11 @@ $captionSlider_4_14: (
         imageSize: 100% 100%
 );
 
-$captionSlider_4_15: (
+$captionSlider_4_16: (
         class:'', // not class
         position:absolute,
         left:750px,
-        top: 150px,
+        top: 160px,
         width:80px,
         height:160px,
         imageUrl:'../img/img/aenorambiental.png',
@@ -768,7 +779,8 @@ $captionSliders_4: (
         caption_12: $captionSlider_4_12,
         caption_13: $captionSlider_4_13,
         caption_14: $captionSlider_4_14,
-        caption_15: $captionSlider_4_15
+        caption_15: $captionSlider_4_15,
+        caption_16: $captionSlider_4_16
 );
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -785,8 +797,8 @@ $captionSliders: (
 // NAVIGATION BULLET
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 $navigationBullet: (
-        posX:860px,
-        posY:342px,
+        posX:map-get($sliderBox,width)-124px,
+        posY:map-get($sliderBox,height)-40px,
         backGroundColor: map-get($backGroundColorDefault, grayLight),
         padding: 5px,
         radius: map-get($radiusDefault, extra),

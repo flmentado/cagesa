@@ -7,9 +7,9 @@
             //Collapse Random
             {
                 $Duration: 1000,
-                $Delay: 80,
-                $Cols: 10,
-                $Rows: 4,
+                $Delay: 0,
+                $Cols: 4,
+                $Rows: 3,
                 $Clip: 15,
                 $SlideOut: true,
                 $Easing: $JssorEasing$.$EaseOutQuad
@@ -19,9 +19,9 @@
             , {
                 $Duration: 1200,
                 y: 0.3,
-                $Cols: 2,
-                $During: {$Top: [0.3, 0.7]},
-                $ChessMode: {$Column: 12},
+                $Cols: 3,
+                $During: {$Top: [0.7, 0.3]},
+                $ChessMode: {$Column: 4},
                 $Easing: {$Top: $JssorEasing$.$EaseInCubic, $Opacity: $JssorEasing$.$EaseLinear},
                 $Opacity: 2,
                 $Outside: true
@@ -33,7 +33,7 @@
                 x: -1,
                 y: 2,
                 $Rows: 2,
-                $Zoom: 11,
+                $Zoom: 10,
                 $Rotate: 1,
                 $SlideOut: true,
                 $Assembly: 2049,
@@ -50,14 +50,14 @@
             }
 
             ////Swing Inside in Stairs *
-            , { $Duration: 1200, x: 0.2, y: -0.1, $Delay: 20, $Cols: 10, $Rows: 4, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $Formation: $JssorSlideshowFormations$.$FormationStraightStairs, $Assembly: 260, $Easing: { $Left: $JssorEasing$.$EaseInWave, $Top: $JssorEasing$.$EaseInWave, $Clip: $JssorEasing$.$EaseOutQuad }, $Round: { $Left: 1.3, $Top: 2.5} }
+            //, { $Duration: 1200, x: 0.2, y: -0.1, $Delay: 20, $Cols: 10, $Rows: 4, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $Formation: $JssorSlideshowFormations$.$FormationStraightStairs, $Assembly: 260, $Easing: { $Left: $JssorEasing$.$EaseInWave, $Top: $JssorEasing$.$EaseInWave, $Clip: $JssorEasing$.$EaseOutQuad }, $Round: { $Left: 1.3, $Top: 2.5} }
 
             //Zoom HDouble+ out
             , {
                 $Duration: 1200,
                 x: 4,
                 $Cols: 2,
-                $Zoom: 11,
+                $Zoom: 10,
                 $SlideOut: true,
                 $Assembly: 2049,
                 $ChessMode: {$Column: 15},
@@ -70,14 +70,14 @@
             }
 
             ////Dodge Pet Inside in Stairs *
-            , { $Duration: 1500, x: 0.2, y: -0.1, $Delay: 20, $Cols: 10, $Rows: 4, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $Formation: $JssorSlideshowFormations$.$FormationStraightStairs, $Assembly: 260, $Easing: { $Left: $JssorEasing$.$EaseInWave, $Top: $JssorEasing$.$EaseInWave, $Clip: $JssorEasing$.$EaseOutQuad }, $Round: { $Left: 0.8, $Top: 2.5} }
+            //, { $Duration: 1500, x: 0.2, y: -0.1, $Delay: 20, $Cols: 10, $Rows: 4, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $Formation: $JssorSlideshowFormations$.$FormationStraightStairs, $Assembly: 260, $Easing: { $Left: $JssorEasing$.$EaseInWave, $Top: $JssorEasing$.$EaseInWave, $Clip: $JssorEasing$.$EaseOutQuad }, $Round: { $Left: 0.8, $Top: 2.5} }
 
             //Rotate Zoom+ out BL
             , {
                 $Duration: 1200,
                 x: 4,
                 y: -4,
-                $Zoom: 11,
+                $Zoom: 10,
                 $Rotate: 1,
                 $SlideOut: true,
                 $Easing: {
@@ -96,9 +96,9 @@
                 $Duration: 1500,
                 x: 0.3,
                 y: -0.3,
-                $Delay: 80,
-                $Cols: 10,
-                $Rows: 4,
+                $Delay: 10,
+                $Cols: 5,
+                $Rows: 3,
                 $Clip: 15,
                 $During: {$Left: [0.3, 0.7], $Top: [0.3, 0.7]},
                 $Easing: {
@@ -135,23 +135,34 @@
             , {
                 $Duration: 1200,
                 y: -1,
-                $Cols: 10,
-                $Rows: 4,
+                $Cols: 5,
+                $Rows: 3,
                 $Clip: 15,
                 $During: {$Top: [0.5, 0.5], $Clip: [0, 0.5]},
                 $Formation: $JssorSlideshowFormations$.$FormationStraight,
                 $ChessMode: {$Column: 12},
                 $ScaleClip: 0.5
             }
+           ///////Flutter inside in column
+           ,{
+               $Duration:1500,
+               x:0.2,
+               y:-0.1,
+               $Delay:150,
+               $Cols:4,
+               $Formation:$JssorSlideshowFormations$.$FormationStraightStairs,$Assembly:260,$Easing:{$Left:$JssorEasing$.$EaseLinear,$Top:$JssorEasing$.$EaseOutWave,$Opacity:$JssorEasing$.$EaseLinear},
+               $Opacity:2,
+               $Round:{$Top:2}
+           }
 
             ////Swing Inside in Swirl *
-            , { $Duration: 1200, x: 0.2, y: -0.1, $Delay: 20, $Cols: 10, $Rows: 4, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $Formation: $JssorSlideshowFormations$.$FormationSwirl, $Assembly: 260, $Easing: { $Left: $JssorEasing$.$EaseInWave, $Top: $JssorEasing$.$EaseInWave, $Clip: $JssorEasing$.$EaseOutQuad }, $Round: { $Left: 1.3, $Top: 2.5} }
+            //, { $Duration: 1200, x: 0.2, y: -0.1, $Delay: 20, $Cols: 10, $Rows: 4, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $Formation: $JssorSlideshowFormations$.$FormationSwirl, $Assembly: 260, $Easing: { $Left: $JssorEasing$.$EaseInWave, $Top: $JssorEasing$.$EaseInWave, $Clip: $JssorEasing$.$EaseOutQuad }, $Round: { $Left: 1.3, $Top: 2.5} }
 
             ////Rotate Zoom+ out *
-            , { $Duration: 1200, $Zoom: 11, $Rotate: 1, $SlideOut: true, $Easing: { $Zoom: $JssorEasing$.$EaseInCubic, $Rotate: $JssorEasing$.$EaseInCubic }, $Opacity: 2, $Round: { $Rotate: 0.7} }
+            //, { $Duration: 1200, $Zoom: 11, $Rotate: 1, $SlideOut: true, $Easing: { $Zoom: $JssorEasing$.$EaseInCubic, $Rotate: $JssorEasing$.$EaseInCubic }, $Opacity: 2, $Round: { $Rotate: 0.7} }
 
             ////Dodge Pet Inside in ZigZag *
-            , { $Duration: 1500, x: 0.2, y: -0.1, $Delay: 20, $Cols: 10, $Rows: 4, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $Formation: $JssorSlideshowFormations$.$FormationZigZag, $Assembly: 260, $Easing: { $Left: $JssorEasing$.$EaseInWave, $Top: $JssorEasing$.$EaseInWave, $Clip: $JssorEasing$.$EaseOutQuad }, $Round: { $Left: 0.8, $Top: 2.5} }
+            //, { $Duration: 1500, x: 0.2, y: -0.1, $Delay: 20, $Cols: 10, $Rows: 4, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $Formation: $JssorSlideshowFormations$.$FormationZigZag, $Assembly: 260, $Easing: { $Left: $JssorEasing$.$EaseInWave, $Top: $JssorEasing$.$EaseInWave, $Clip: $JssorEasing$.$EaseOutQuad }, $Round: { $Left: 0.8, $Top: 2.5} }
 
             //Rotate Zoom- out TL
             , {
@@ -194,7 +205,7 @@
                 $Duration: 1500,
                 y: -0.5,
                 $Delay: 60,
-                $Cols: 24,
+                $Cols: 8,
                 $SlideOut: true,
                 $Formation: $JssorSlideshowFormations$.$FormationCircle,
                 $Easing: $JssorEasing$.$EaseInWave,
@@ -205,8 +216,8 @@
             , {
                 $Duration: 1000,
                 $Delay: 30,
-                $Cols: 10,
-                $Rows: 4,
+                $Cols: 5,
+                $Rows: 3,
                 $Clip: 15,
                 $Formation: $JssorSlideshowFormations$.$FormationStraightStairs,
                 $Assembly: 2050,

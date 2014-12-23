@@ -1,4 +1,5 @@
-﻿<?php if (decode(KEY_PASS) != CLAVE) {
+﻿<?php
+if (!function_exists ('decode') || decode(KEY_PASS) != @CLAVE) {
     die("No se ha podido ejecutar.");
 }
 ?>
@@ -32,7 +33,7 @@
         </div>
         <div>
             <img u="image" src="<?php echo PATH_SLIDER_1_IMG?>03.jpg"/>
-            <a href="http://#contacto"></a>
+            <a href="#servicio"></a>
             <div u=caption t="T" t2=NO class="block">Pendiente de ver si se puede poner varias lineas.<br/>En un after:{content}<br/>para eliminar estas líneas en el html.</div>
             <div u=caption t="L" d=-750 class="block"></div>
             <div u=caption t="CLIP|L" t2=B d=-450 class="block"></div>
@@ -66,10 +67,10 @@
            <div u=caption t="TR" t2="T" d=-900 class="block"></div>
             <div u=caption t="R" t2=R d=-900 class="block"></div>
             <div u="caption" t="T|IB" d=-900 class="block"></div>
-            <div u="caption" t="T|IB" t2="ZMF|10" d=-900 class="block"></div>
-            <div u="caption" t="T|IB" t2=R d=-900 class="block"></div>
-            <div u="caption" t="T|IB" t2=B d=-900 class="block"></div>
-            <div u="caption" t="RTTL|BR" d=-450" class="block"></div>
+            <div u="caption" t="T|IB" t2="ZMF|10" d=-900 class="ablock"></div>
+            <div u="caption" t="T|IB" t2=R d=-900 class="ablock"></div>
+            <div u="caption" t="T|IB" t2=B d=-900 class="ablock"></div>
+            <div u="caption" t="RTTL|BR" d=-450" class="ablock"></div>
         </div>
     </div>
     <div u="navigator" class="bullet">

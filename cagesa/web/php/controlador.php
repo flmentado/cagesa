@@ -14,7 +14,6 @@ define("PATH_SLIDER_1_IMG",PAHT_SLIDER_1.'img/slider/');
 $sercicios=array("empresa"=>array("poda","tala","fumigacion","abonado","sembrado","mantenimiento"),
                  "particular"=>array("poda","tala","fumigacion","abonado","sembrado","mantenimiento")
 );
-
 $tipo=isset($_POST['tipo'])?$_POST['tipo']:'';
 // incluimos las funciones php
 @require "modelo.php";
