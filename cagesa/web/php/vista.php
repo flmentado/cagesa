@@ -26,6 +26,8 @@ if (!function_exists ('decode') || @decode(KEY_PASS) != @CLAVE) {
 
 </head>
 <body>
+<?php include_once("analitica.php") ?>
+<?php  if (isset($formularioError))echo "<script> $('a[href=#contacto]').trigger('click')</script>" ?>
 <div class="mq-check">
     <div class="row">
         <div class="contain-to-grid fixed gris">
@@ -168,27 +170,27 @@ if (!function_exists ('decode') || @decode(KEY_PASS) != @CLAVE) {
         <div id="contacto" class="small-12">
             <hr/>
             <h4 class="contacto">CONTACTO</h4>
-
-            <form class="contacto">
-                <input id="particular" type="radio" name="tipoRemitente" value="particular"/>
+            <form class="contacto" method="post" action="<?php echo $_SERVER['PHP_SELF']?>">
+                <input id="particular" type="radio" <?php if (isset($formulario["contacto"]["tipoRemitente"]) && strcmp($formulario["contacto"]["tipoRemitente"],'particular')==0)echo "checked='cheched'"?> name="tipoRemitente" value="particular"/>
                 <label for="particular">Particular</label>
-                <input id="empresa" type="radio" name="tipoRemitente" value="empresa"/>
+                <input id="empresa" type="radio" <?php if (isset($formulario["contacto"]["tipoRemitente"]) && strcmp($formulario["contacto"]["tipoRemitente"],'empresa')==0)echo "checked='cheched'"?> name="tipoRemitente" value="empresa"/>
                 <label for="empresa">Empresa</label>
-                <input type="text" name="remitente" placeholder="Nombre"/>
-                <input type="text" name='telefono' placeholder="Teléfono contacto"/>
-                <input type="text" name='fax' placeholder="Fax"/>
-                <input type="text" name='email' placeholder="Email"/>
+                <input type="text" name="remitente" value="<?php if (isset($formulario["contacto"]["remitente"])) echo $formulario["contacto"]["remitente"]?>" placeholder="Nombre"/>
+                <input type="text" name='tlf' value="<?php if (isset($formulario["contacto"]["tlf"])) echo $formulario["contacto"]["tlf"]?>" placeholder="Teléfono contacto"/>
+                <input type="text" name='fax' value="<?php if (isset($formulario["contacto"]["fax"])) echo $formulario["contacto"]["fax"]?>" placeholder="Fax"/>
+                <input type="text" name='email' <?php if (isset($formulario["contacto"]["email"]) && strlen($formulario["contacto"]["email"])==0) echo "class='error'"?> value="<?php echo $formulario["contacto"]["email"]?>" placeholder="Email"/>
                 <span>Estoy interesado en :</span>
-                <label for="mantenimiento"><input id='mantenimiento' type="checkbox" name="mantenimiento"/>
+                <label for="mantenimiento"><input id='mantenimiento' type="checkbox"  <?php if (isset($formulario["contacto"]["mantenimiento"]) && strlen($formulario["contacto"]["mantenimiento"])>0)echo "checked='checked'" ?> name="mantenimiento"/>
                     Mantenimiento de jardines.</label>
-                <label for="poda"><input id='poda' type="checkbox" name="poda"/> Poda/Tala de palmeras y
+                <label for="poda"><input id='poda' type="checkbox" <?php if (isset($formulario["contacto"]["podaTala"]) && strlen($formulario["contacto"]["podaTala"])>0)echo "checked='checked'" ?>name="podaTala"/> Poda/Tala de palmeras y
                     árboles.</label>
-                <label for="tratamiento"><input id='tratamiento' type="checkbox" name="tratamiento"/> Tratamiento
+                <label for="tratamiento"><input id='tratamiento' type="checkbox" <?php if (isset($formulario["contacto"]["tratamientoFitosanitario"]) && strlen($formulario["contacto"]["tratamientoFitosanitario"])>0)echo "checked='checked'" ?> name="tratamientoFitosanitario"/> Tratamiento
                     fitosanitario.</label>
-                <label for="instalar"><input id='instalar' type="checkbox" name="instalacion"/> Instalacion/Reparación
+                <label for="instalar"><input id='instalar' type="checkbox" <?php if (isset($formulario["contacto"]["instalarReparar"]) && strlen($formulario["contacto"]["instalarReparar"])>0)echo "checked='checked'" ?> name="instalarReparar"/> Instalacion/Reparación
                     de sistemas de riego.</label>
-                <label for="recogerResiduos"><input id='recogerResiduos' type="checkbox" name="recogerResiduos"/>
+                <label for="recogerResiduos"><input id='recogerResiduos' type="checkbox" <?php if (isset($formulario["contacto"]["recogerResiduos"]) && strlen($formulario["contacto"]["recogerResiduos"])>0)echo "checked='checked'" ?> name="recogerResiduos"/>
                     Recogida de residuos vegetales.</label>
+                <input type="submit" name="enviar" value="Enviar"/>
             </form>
         </div>
     </div>
