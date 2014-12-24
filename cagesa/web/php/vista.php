@@ -27,7 +27,6 @@ if (!function_exists ('decode') || @decode(KEY_PASS) != @CLAVE) {
 </head>
 <body>
 <?php include_once("analitica.php") ?>
-<?php  if (isset($formularioError))echo "<script> $('a[href=#contacto]').trigger('click')</script>" ?>
 <div class="mq-check">
     <div class="row">
         <div class="contain-to-grid fixed gris">
