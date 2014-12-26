@@ -1,13 +1,16 @@
 @charset "UTF-8";
 @import 'variables';
+
 @font-face {
   font-family: map-get($fontNameDefault, titulo);
   src: url('../fonts/fuente.ttf');
 }
+
 @font-face {
   font-family: map-get($fontNameDefault, orange);
   src: url('../fonts/action.ttf');
 }
+
 ##{map-get($sliderBox, name)} {
   visibility: hidden;
   box-sizing: content-box;
@@ -18,14 +21,14 @@
   height: map-get($sliderBox, height);
   border-radius: map-get($sliderBox, radius);
   box-shadow: map-get($sliderBox, boxShadow);
-  border:map-get($sliderBox, border);
-  border-top:map-get($sliderBox, borderTop);
-  border-right:map-get($sliderBox, borderRight);
-  border-bottom:map-get($sliderBox, borderBottom);
-  border-left:map-get($sliderBox, borderLeft);
+  border: map-get($sliderBox, border);
+  border-top: map-get($sliderBox, borderTop);
+  border-right: map-get($sliderBox, borderRight);
+  border-bottom: map-get($sliderBox, borderBottom);
+  border-left: map-get($sliderBox, borderLeft);
   overflow: hidden;
-  @media screen and (max-width:map-get($mediaScreen,small)){
-    border:none;
+  @media screen and (max-width: map-get($mediaScreen, small)) {
+    border: none;
   }
   $strClass: #{''};
   @each $class in $captionList {
@@ -44,7 +47,7 @@
   }
   a {
     text-decoration: none;
-    }
+  }
   & div[u='loading'] {
     @include put_position(absolute, 4px, 8px);
     > div {
@@ -70,9 +73,9 @@
         $div: 2; //Saltamos la etiqueta imagen del html
         @each $indice, $datos in $captionSlider {
           & > :nth-child(#{$div}) {
-            @if map-has-key($datos,imageSliderUrl){
+            @if map-has-key($datos, imageSliderUrl) {
               @include put_slider_image($datos)
-            }@else {
+            } @else {
               @include put_caption($datos);
             }
             $div: $div+1;
@@ -81,9 +84,9 @@
       }
       $numSlider: $numSlider+1;
     }
-    @media screen and (max-width:map-get($mediaScreen,small)){
-      .block{
-        display:none;
+    @media screen and (max-width: map-get($mediaScreen, small)) {
+      .block {
+        display: none;
       }
     }
   }
@@ -130,19 +133,19 @@
       }
     }
   }
-  & span.arrow{
-    display:none;
-    @media screen and (max-width:map-get($mediaScreen,small)){
-       display:block;
+  & span.arrow {
+    display: none;
+    @media screen and (max-width: map-get($mediaScreen, small)) {
+      display: block;
     }
   }
-  & span.jssoral, & span.jssorar, & span.jssoraldn, & span.jssorardn{
-    position:absolute;
-    cursor: map-get($arrowNavigation,cursor);
-    @if map-has-key($arrowNavigation,imageUrl) {
+  & span.jssoral, & span.jssorar, & span.jssoraldn, & span.jssorardn {
+    position: absolute;
+    cursor: map-get($arrowNavigation, cursor);
+    @if map-has-key($arrowNavigation, imageUrl) {
       background-image: url(map-get($arrowNavigation,imageUrl));
     }
-    overflow:hidden;
+    overflow: hidden;
   }
   & span.jssoral {
     background-position: map-get($arrowNavigation, arrowLeftPosition);
@@ -155,7 +158,7 @@
             map-get($arrowNavigation, arrowLeftWidth),
             map-get($arrowNavigation, arrowLeftHeight)
     );
-    :hover{
+    :hover {
       background-position: map-get($arrowNavigation, arrowLeftPositionHover);
     }
   }
@@ -168,7 +171,7 @@
             map-get($arrowNavigation, arrowLeftWidth),
             map-get($arrowNavigation, arrowLeftHeight)
     );
-    :hover{
+    :hover {
       background-position: map-get($arrowNavigation, arrowRightPositionHover);
     }
   }

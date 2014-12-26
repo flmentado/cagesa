@@ -1,4 +1,5 @@
 @import 'mixin';
+
 //CURSOR
 $cursorDefault: (
         pointer : pointer,
@@ -75,7 +76,7 @@ $boxShadowDefault: (
         downRight: 4px 4px 4px map-get($shadowDefaultColor, black)
 );
 //MEDIA SCREEN
-$mediaScreen:(
+$mediaScreen: (
         small:480px,
         medium:600px,
         large:967px
@@ -211,7 +212,7 @@ $captionSlider_1_1: (
         height:75px,
         lineHeight: 70px,
         content: 'Cagesa',
-        borderRadius:map-get($radiusDefault,circle),
+        borderRadius:map-get($radiusDefault, circle),
         fontSize:1.5*map-get($fontSizeDefault,super),
         textColor:map-get($colorDefault, red)
 );
@@ -224,7 +225,6 @@ $captionSlider_1_2: (
         content: 'Texto con sombra',
         boxShadow:map-get($boxShadowDefault, downRight),
         fontSize: map-get($fontSizeDefault, large)
-
 );
 $captionSlider_1_3: (
         class: map-get($captionBlack, class),
@@ -326,7 +326,7 @@ $captionSlider_2_1: (
         height:75px,
         lineHeight: 70px,
         content: 'Calidad',
-        borderRadius:map-get($radiusDefault,circle),
+        borderRadius:map-get($radiusDefault, circle),
         fontSize:1.4*map-get($fontSizeDefault,super),
         textColor:map-get($colorDefault, red)
 );
@@ -430,7 +430,7 @@ $captionSlider_3_1: (
         height:75px,
         lineHeight: 70px,
         content: 'Servicios',
-        borderRadius:map-get($radiusDefault,circle),
+        borderRadius:map-get($radiusDefault, circle),
         fontSize:1.2*map-get($fontSizeDefault,super),
         textColor:map-get($colorDefault, red)
 );
@@ -595,8 +595,8 @@ $captionSlider_4_1: (
         height:75px,
         lineHeight: 70px,
         content: 'Profesionalidad',
-        borderRadius:map-get($radiusDefault,small),
-        fontSize:map-get($fontSizeDefault,super),
+        borderRadius:map-get($radiusDefault, small),
+        fontSize:map-get($fontSizeDefault, super),
         textColor:map-get($colorDefault, white)
 );
 $captionSlider_4_2: (
@@ -618,9 +618,9 @@ $captionSlider_4_3: (
         content:'2000',
         fontSize:map-get($fontSizeDefault, large),
         textColor:map-get($colorDefault, blue),
- );
+);
 $captionSlider_4_4: (
-        class: '',//not class its a image
+        class: '', //not class its a image
         position:absolute,
         left:80px,
         top: 50px,
@@ -630,7 +630,7 @@ $captionSlider_4_4: (
         imagePosition: 0px 0px
 );
 $captionSlider_4_5: (
-        class: '',//not class its a image
+        class: '', //not class its a image
         position:absolute,
         left:80px,
         top: 100px,
@@ -640,7 +640,7 @@ $captionSlider_4_5: (
         imagePosition: -30px 0px
 );
 $captionSlider_4_6: (
-        class: '',//not class its a image
+        class: '', //not class its a image
         position:absolute,
         left:80px,
         top: 150px,
@@ -650,7 +650,7 @@ $captionSlider_4_6: (
         imagePosition: -60px 0px
 );
 $captionSlider_4_7: (
-        class: '',//not class its a image
+        class: '', //not class its a image
         position:absolute,
         left:80px,
         top: 200px,
@@ -660,7 +660,7 @@ $captionSlider_4_7: (
         imagePosition: -90px 0px
 );
 $captionSlider_4_8: (
-        class: '',//not class its a image
+        class: '', //not class its a image
         position:absolute,
         left:80px,
         top: 250px,
@@ -760,8 +760,6 @@ $captionSlider_4_16: (
         imageUrl:'../img/img/aenorambiental.png',
         imageRepeat:no-repeat,
         imageSize: 100% 100%
-
-
 );
 // ARRAYS CAPTIONS SLIDER 4
 $captionSliders_4: (
@@ -821,8 +819,8 @@ $navigationBullet: (
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // ARROW NAVIGATION
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-$arrowNavigation:(
-        cursor:map-get($cursorDefault,pointer),
+$arrowNavigation: (
+        cursor:map-get($cursorDefault, pointer),
         position:abolute,
         imageUrl:"../img/arrow/arrow.png",
         arrowLeftPosition:0px 0px,
@@ -831,7 +829,7 @@ $arrowNavigation:(
         arrowLeftTop:123px,
         arrowLeftLeft:2px,
         arrowRightPosition:-55px 0px,
-        arrowRightLeft:map-get($sliderBox,width) - 57 , //Ancho del slider - ancho de la imagen -2px
+        arrowRightLeft:map-get($sliderBox,width) - 57, //Ancho del slider - ancho de la imagen -2px
         arrowLeftPositionHover:-110px 0px,
         arrowRightPositionHover:-165px 0px,
         arrowLeftPositionClick:-220px 0px,

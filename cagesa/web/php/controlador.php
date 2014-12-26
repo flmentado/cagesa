@@ -1,45 +1,45 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Francisco Mentado Manzanares
- * Date: 08/12/2014
- * Time: 8:32
- */
-//Constantes
-define("CLAVE","kndJM");
-define("KEY_PASS", base64_encode(CLAVE));
-define("PAHT_SLIDER_1","../slider/");
-define("PATH_SLIDER_1_IMG",PAHT_SLIDER_1.'img/slider/');
-//Variables
-@require "modelo.php";
-// incluimos las funciones php
-
-if (isset($_POST["enviar"]) && strcmp($_POST["enviar"],"Enviar")==0){
-    $formulario=array("contacto"=>array(
-        "tipoRemitente"=>"",
-        "remitente"=>"",
-        "tlf"=>"",
-        "fax"=>"",
-        "email"=>"",
-        "mantenimiento"=>"",
-        "podaTala"=>"",
-        "tratamientoFitosanitario"=>"",
-        "instalarReparar"=>"",
-        "recogerResiduos"=>"")
+    /**
+     * Created by PhpStorm.
+     * User: Francisco Mentado Manzanares
+     * Date: 08/12/2014
+     * Time: 8:32
+     */
+    //Constantes
+    define("CLAVE", "kndJM");
+    define("KEY_PASS", base64_encode (CLAVE));
+    define("PAHT_SLIDER_1", "../slider/");
+    define("PATH_SLIDER_1_IMG", PAHT_SLIDER_1 . 'img/slider/');
+    //Variables
+    @require "modelo.php";
+    // incluimos las funciones php
+    $formulario = array ("contacto" => array (
+        "tipoRemitente" => array("value"=>""),
+        "remitente" => array ("placeholder" => "Nombre", "value" => ""),
+        "direccion" => array ("placeholder" => "Dirección", "value" => ""),
+        "tlf" => array ("placeholder" => "Teléfono", "value" => ""),
+        "fax" => array ("placeholder" => "Fax", "value" => ""),
+        "email" => array ("placeholder" => "Correo Electrónico", "value" => ""),
+        "mantenimiento" => array ("text" => "Mantenimiento de Jardines.", "value" => ""),
+        "podaTala" => array ("text" => "Poda y/o Tala de palmeras y árboles.", "value" => ""),
+        "tratamientoFitosanitario" => array ("text" => "Tratamientos fitosanitarios.", "value" => ""),
+        "instalarReparar" => array ("text" => "Instalación y/o Reparación de sistemas de riego.", "value" => ""),
+        "recogerResiduos" => array ("text" => "Recogida de residuos vegetales.", "value" => ""))
     );
-    $formulario["contacto"]["tipoRemitente"]=isset($_POST['tipoRemitente'])?$_POST['tipoRemitente']:'';
-    $formulario["contacto"]["remitente"]=isset($_POST['remitente'])?limpiar_input(ucwords($_POST['remitente'])):'';
-    $formulario["contacto"]["tlf"]=isset($_POST['tlf'])?$_POST['tlf']:'';
-    $formulario["contacto"]["fax"]=isset($_POST['fax'])?$_POST['fax']:'';
-    $formulario["contacto"]["direccion"]=isset($_POST['direccion'])?$_POST['direccion']:'';
-    $formulario["contacto"]["email"]=isset($_POST['email'])&& filter_input(INPUT_POST,'email',FILTER_VALIDATE_EMAIL)?$_POST['email']:'';
-    $formulario["contacto"]["mantenimiento"]=isset($_POST['mantenimiento'])?$_POST['mantenimiento']:'';
-    $formulario["contacto"]["podaTala"]=isset($_POST['podaTala'])?$_POST['podaTala']:'';
-    $formulario["contacto"]["tratamientoFitosanitario"]=isset($_POST['tratamientoFitosanitario'])?$_POST['tratamientoFitosanitario']:'';
-    $formulario["contacto"]["instalarReparar"]=isset($_POST['instalarReparar'])?$_POST['instalarReparar']:'';
-    $formulario["contacto"]["recogerResiduos"]=isset($_POST['recogerResiduos'])?$_POST['recogerResiduos']:'';
-    enviarEmail('');
-    //$_POST=array();
-}
-@require "vista.php";
+
+    if (isset($_POST["enviar"]) && strcmp ($_POST["enviar"], "Enviar") == 0) {
+
+        print_r($formulario);
+        $msgError = verificarFormulario ($formulario);
+        if (strlen ($msgError) == 0) {
+            if (enviarEmail ($formulario))
+                echo "FORMULARIO OK, MAIL OK"; else
+                echo "FORMULARIO OK, MAIL FAIL";
+        } else {
+            echo $msgError;
+            echo "FORMULARIO FAIL";
+        }
+
+    }
+    @require "vista.php";
 ?>

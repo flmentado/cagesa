@@ -5,16 +5,13 @@
 ?>
 <html>
 <head>
-    <meta charset="utf-8"/>
+    <meta charset="UTF-8">
     <meta name="viewport"
         content="width=device-width, initial-scale=1"/>
     <title>Cagesa</title>
-    <link rel="stylesheet"
-        href="../css/foundation.css"/>
-    <link rel="stylesheet"
-        href="../css/normalize.css"/>
-    <link rel="stylesheet"
-        href="../css/person.css"/>
+    <link rel="stylesheet" href="../css/foundation.css"/>
+    <link rel="stylesheet" href="../css/normalize.css"/>
+    <link rel="stylesheet" href="../css/person.css"/>
     <link rel="../css/app.css"/>
     <link rel="../css/icons.css"/>
     <link rel="../css/style.css"/>
@@ -78,7 +75,8 @@
                 data-tooltip="data-tooltip"
                 data-options="hover_delay: 50;"
                 title="Nace en diciembre del año 2000 al amparo de la empresa Elmasa Medio Ambiente, para dar respuesta a la necesidad de  servicio de jardinería turística y residencial privada."
-                class="has-tip"> Grupo Castillo</span><span>. Nuestro ámbito de actuación es la jardinería, el sector medio ambiental y los servicios forestales.</span>
+                class="has-tip"> Grupo Castillo</span>
+            <span>. Nuestro ámbito de actuación es la jardinería, el sector medio ambiental y los servicios forestales.</span>
         </p>
 
         <p>CAGESA cuenta con la certificación<span id="tipAenor"
@@ -187,86 +185,8 @@
         class="small-12">
         <hr/>
         <h4 class="contacto">CONTACTO</h4>
-
-        <form class="contacto"
-            method="post"
-            action="<?php echo $_SERVER['PHP_SELF'] ?>">
-            <input id="particular"
-                type="radio" <?php if (isset($formulario["contacto"]["tipoRemitente"]) && strcmp ($formulario["contacto"]["tipoRemitente"],
-                    'particular') == 0
-            )
-                echo "checked='cheched'" ?>
-                name="tipoRemitente"
-                value="particular"/>
-            <label for="particular">Particular</label>
-            <input id="empresa"
-                type="radio" <?php if (isset($formulario["contacto"]["tipoRemitente"]) && strcmp ($formulario["contacto"]["tipoRemitente"],
-                    'empresa') == 0
-            )
-                echo "checked='cheched'" ?>
-                name="tipoRemitente"
-                value="empresa"/>
-            <label for="empresa">Empresa</label>
-            <input type="text"
-                class="obligatorio"
-                name="remitente"
-                value="<?php if (isset($formulario["contacto"]["remitente"]))
-                    echo $formulario["contacto"]["remitente"] ?>"
-                placeholder="Nombre"/>
-            <input type="text"
-                name='direccion'
-                class="obligatorio"
-                value="<?php if (isset($formulario["contacto"]["direccion"]))
-                    echo $formulario["contacto"]["direccion"] ?>"
-                placeholder="Dirección"/>
-            <input type="text"
-                name='tlf'
-                class="obligatorio"
-                value="<?php if (isset($formulario["contacto"]["tlf"]))
-                    echo $formulario["contacto"]["tlf"] ?>"
-                placeholder="Teléfono contacto"/>
-            <input type="text"
-                name='fax'
-                value="<?php if (isset($formulario["contacto"]["fax"]))
-                    echo $formulario["contacto"]["fax"] ?>"
-                placeholder="Fax"/>
-            <input type="text"
-                class="obligatorio"
-                name='email' <?php if (isset($formulario["contacto"]["email"]) && strlen ($formulario["contacto"]["email"]) == 0)
-                echo "class='error'" ?>
-                value="<?php echo $formulario["contacto"]["email"] ?>"
-                placeholder="Email"/>
-            <span>Estoy interesado en :</span>
-            <label for="mantenimiento"><input id='mantenimiento'
-                    type="checkbox"  <?php if (isset($formulario["contacto"]["mantenimiento"]) && strlen ($formulario["contacto"]["mantenimiento"]) > 0)
-                    echo "checked='checked'" ?>
-                    name="mantenimiento"/>
-                Mantenimiento de jardines.</label>
-            <label for="poda"><input id='poda'
-                    type="checkbox"
-                    <?php if (isset($formulario["contacto"]["podaTala"]) && strlen ($formulario["contacto"]["podaTala"]) > 0)
-                        echo "checked='checked'" ?>name="podaTala"/>
-                Poda/Tala de palmeras y
-                árboles.</label>
-            <label for="tratamiento"><input id='tratamiento'
-                    type="checkbox" <?php if (isset($formulario["contacto"]["tratamientoFitosanitario"]) && strlen ($formulario["contacto"]["tratamientoFitosanitario"]) > 0)
-                    echo "checked='checked'" ?>
-                    name="tratamientoFitosanitario"/> Tratamiento
-                fitosanitario.</label>
-            <label for="instalar"><input id='instalar'
-                    type="checkbox" <?php if (isset($formulario["contacto"]["instalarReparar"]) && strlen ($formulario["contacto"]["instalarReparar"]) > 0)
-                    echo "checked='checked'" ?>
-                    name="instalarReparar"/> Instalacion/Reparación
-                de sistemas de riego.</label>
-            <label for="recogerResiduos"><input id='recogerResiduos'
-                    type="checkbox" <?php if (isset($formulario["contacto"]["recogerResiduos"]) && strlen ($formulario["contacto"]["recogerResiduos"]) > 0)
-                    echo "checked='checked'" ?>
-                    name="recogerResiduos"/>
-                Recogida de residuos vegetales.</label>
-            <input type="submit"
-                name="enviar"
-                value="Enviar"/>
-        </form>
+        <?php   //FORMULARIO
+            include_once "formulario.php";?>
     </div>
 </div>
 <div class="row">
