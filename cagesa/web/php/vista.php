@@ -5,7 +5,7 @@
 ?>
 <html>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport"
         content="width=device-width, initial-scale=1"/>
     <title>Cagesa</title>
@@ -186,7 +186,7 @@
         <hr/>
         <h4 class="contacto">CONTACTO</h4>
         <?php   //FORMULARIO
-            include_once "formulario.php";?>
+            include_once "../forms/contacto/php/formulario.php";?>
     </div>
 </div>
 <div class="row">

@@ -207,3 +207,19 @@ ul li img{margin-top: 2%;}*/
 #formularioContacto #email{
   background-image:url("../img/icon/mail.png");
 }
+#formularioContacto div#captcha {
+  box-sizing: border-box;
+  display: block;
+  float: left;
+  width: 300px;
+  height: 100px;
+  background-image: url("../captcha/php/captcha.php?rand=<?php echo rand(); ?>");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+#formularioContacto input[type='submit']{
+  clear: both;
+  display:block;
+  float:left;
+}

@@ -11,25 +11,25 @@
     define("PAHT_SLIDER_1", "../slider/");
     define("PATH_SLIDER_1_IMG", PAHT_SLIDER_1 . 'img/slider/');
     //Variables
-    @require "modelo.php";
-    // incluimos las funciones php
-    $formulario = array ("contacto" => array (
-        "tipoRemitente" => array("value"=>""),
-        "remitente" => array ("placeholder" => "Nombre", "value" => ""),
-        "direccion" => array ("placeholder" => "Dirección", "value" => ""),
-        "tlf" => array ("placeholder" => "Teléfono", "value" => ""),
-        "fax" => array ("placeholder" => "Fax", "value" => ""),
-        "email" => array ("placeholder" => "Correo Electrónico", "value" => ""),
-        "mantenimiento" => array ("text" => "Mantenimiento de Jardines.", "value" => ""),
-        "podaTala" => array ("text" => "Poda y/o Tala de palmeras y árboles.", "value" => ""),
-        "tratamientoFitosanitario" => array ("text" => "Tratamientos fitosanitarios.", "value" => ""),
-        "instalarReparar" => array ("text" => "Instalación y/o Reparación de sistemas de riego.", "value" => ""),
-        "recogerResiduos" => array ("text" => "Recogida de residuos vegetales.", "value" => ""))
+    @require_once "modelo.php";
+    // incluimos las funciones contacto
+    $formulario = array (
+        "contacto" => array (
+            "tipoRemitente" => array("value"=>""),
+            "remitente" => array ("placeholder" => "Nombre", "value" => ""),
+            "direccion" => array ("placeholder" => "Dirección", "value" => ""),
+            "tlf" => array ("placeholder" => "Teléfono", "value" => ""),
+            "fax" => array ("placeholder" => "Fax", "value" => ""),
+            "email" => array ("placeholder" => "Correo Electrónico", "value" => "")),
+        "servicios" => array(
+            "mantenimiento" => array ("text" => "Mantenimiento de Jardines.", "value" => ""),
+            "podaTala" => array ("text" => "Poda y/o Tala de palmeras y árboles.", "value" => ""),
+            "tratamientoFitosanitario" => array ("text" => "Tratamientos fitosanitarios.", "value" => ""),
+            "instalarReparar" => array ("text" => "Instalación y/o Reparación de sistemas de riego.", "value" => ""),
+            "recogerResiduos" => array ("text" => "Recogida de residuos vegetales.", "value" => ""))
     );
 
     if (isset($_POST["enviar"]) && strcmp ($_POST["enviar"], "Enviar") == 0) {
-
-        print_r($formulario);
         $msgError = verificarFormulario ($formulario);
         if (strlen ($msgError) == 0) {
             if (enviarEmail ($formulario))
@@ -41,5 +41,5 @@
         }
 
     }
-    @require "vista.php";
+    @require_once "vista.php";
 ?>
