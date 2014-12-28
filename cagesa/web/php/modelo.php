@@ -1,13 +1,14 @@
 <?php
-    if (!function_exists ('decode') || @decode (KEY_PASS) != @CLAVE) {
-        die("No se ha podido ejecutar.");
-    }
-    /**
+     /**
      * Created by PhpStorm.
      * User: Francisco Luis Mentado
      * Date: 08/12/2014
      * Time: 8:40
      */
+    if (!function_exists ('decode') || @decode (KEY_PASS) != @CLAVE) {
+        die("No se ha podido ejecutar.");
+    }
+
     //////////////////////////////////////////////////////////////////////////////////////////////
     // FUNCIONES ENCRIPTACION
     //////////////////////////////////////////////////////////////////////////////////////////////
@@ -43,9 +44,12 @@
      */
     function limpiar_input ($cadena) {
         $cadena = trim ($cadena);
-        $cadena = htmlentities($cadena);
         $cadena= htmlspecialchars($cadena);
         return stripslashes ($cadena);
+    }
+    function verificarCaptcha($TextCaptcha){
+        session_start();
+        return  md5( $TextCaptcha) != $_SESSION["clave"]?false:true;
     }
     function verificarFormulario(&$formulario){
         $expresionRegularTelefono='/^[9|6|7][0-9]{8}$/';
@@ -68,7 +72,7 @@
         if (isset($_POST['fax']) &&  preg_match($expresionRegularTelefono, $_POST['fax']))
             $formulario["contacto"]["fax"]["value"]=limpiar_input($_POST['fax']);
         if (isset($_POST['direccion']) && strlen($_POST['direccion'])>1)
-            $formulario["contacto"]["direccion"]["value"]=$_POST['direccion'];
+            $formulario["contacto"]["direccion"]["value"]=limpiar_input($_POST['direccion']);
         else
             $msgError.="Dirección Errónea."."<br/>";
         if (isset($_POST['email']) && filter_input (INPUT_POST, 'email',FILTER_VALIDATE_EMAIL))

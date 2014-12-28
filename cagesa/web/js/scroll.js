@@ -1,7 +1,7 @@
 /**
  * Created by Francisco Luis Mentado Manzanares on 17/12/2014.
  */
-$(function () {
+$(document).ready(function () {
     $('a[href*=#]:not([href=#])').click(function (event) {
         event.preventDefault();
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {

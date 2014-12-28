@@ -21,6 +21,7 @@
     <script src="../js/jquery.stellar.js"></script>
 
     <script src="../js/scroll.js"></script>
+    <script src="../captcha/js/captcha.js"></script>
     <link rel="stylesheet"
         href="<?php echo PAHT_SLIDER_1 ?>css/slider.css"
         type="text/css"/>
@@ -187,7 +188,7 @@
         <h4 class="contacto">CONTACTO</h4>
         <?php   //FORMULARIO
             include_once "../forms/contacto/php/formulario.php";?>
-    </div>
+         </div>
 </div>
 <div class="row">
     <div class="footer-section">
