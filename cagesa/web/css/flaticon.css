@@ -1,0 +1,40 @@
+@font-face {
+	font-family: "Flaticon";
+	src: url("flaticon.eot");
+	src: url("flaticon.eot#iefix") format("embedded-opentype"),
+	url("flaticon.woff") format("woff"),
+	url("flaticon.ttf") format("truetype"),
+	url("flaticon.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+	font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+margin-left: 20px;
+}.flaticon-asesoramiento:before {
+	content: "\e000";
+}
+.flaticon-mantenimiento:before {
+	content: "\e001";
+}
+.flaticon-poda:before {
+	content: "\e002";
+}
+.flaticon-foto:before {
+	content: "\e003";
+}
+.flaticon-residuos:before {
+	content: "\e004";
+}
+.flaticon-fb:before {
+	content: "\e005";
+}
+.flaticon-twitter:before {
+	content: "\e006";
+}
+.flaticon-paisajismo:before {
+	content: "\e007";
+}
