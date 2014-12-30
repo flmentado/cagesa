@@ -1,0 +1,27 @@
+/////////////////////////////////////////////////////////////////////////////////
+// CAPTCHA
+/////////////////////////////////////////////////////////////////////////////////
+@import "variables";
+##{$formName}>div#captcha {
+  @include putBlock(left);
+  div#putImageCaptcha > div {
+    @include putBlock(left);
+    @include put_dimension(map-get($captcha, width), map-get($captcha, height));
+    @include put_image($captchaRefresh);
+    background-color: map-get($captcha, backGroundColor);
+    border: map-get($captcha, border);
+    input#captchaRefresh {
+      @include putBlock(right);
+      @include put_dimension(map-get($captchaRefresh, width), map-get($captchaRefresh, height));
+      @include put_image($captchaRefresh);
+      border: map-get($captchaRefresh, border);
+      border-radius: map-get($captchaRefresh, borderRadius);
+      margin: map-get($captchaRefresh, margin);
+      transition: transform .5s linear;
+      &:hover {
+        cursor: map-get($captchaRefresh, cursorHover);
+        transform: scale(map-get($captchaRefresh, scaleHover));
+      }
+    }
+  }
+}

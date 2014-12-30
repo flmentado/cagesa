@@ -1,321 +1,87 @@
-﻿<?php if (decode(KEY_PASS) != CLAVE) {
-    die("No se ha podido ejecutar.");
-}
+﻿<?php
+    if (!function_exists ('decode') || decode (KEY_PASS) != @CLAVE) {
+        die("No se ha podido ejecutar.");
+    }
 ?>
-<div class="slider_block">
-<div id="sliderc_container">
-<div u="slides" class="slides outside">
-<div>
-    <div id="slider1_container">
-        <!-- Loading Screen -->
-        <div u="loading" class='spinner'>
-            <div></div>
-            <div></div>
-        </div>
-        <!-- Slides Container -->
+<div id="sliderContainer">
+    <div u="loading">
+        <div></div>
+        <div></div>
+    </div>
+    <div u="slides">
+        <div>
+            <img u="image" src="<?php echo PATH_SLIDER_1_IMG ?>01.jpg"/>
 
-        <div u="slides" class="inside">
-            <!-- separador -->
-            <div>
-                <a u="image" href='#'><img src="<?php echo PATH_SLIDER_1_IMG?>001.jpg" alt="image jquery slider"/></a>
-                <div u=caption t="*" class="caption captionColor captionOrange">
-                    slider 1 texto 1
-                </div>
-
-            </div>
-            <div>
-                <a u="image" href='#'><img src="<?php echo PATH_SLIDER_1_IMG?>002.jpg" alt="image jquery slider"/></a>
-                <div u=caption t="*" class="caption captionColor captionOrange">
-                    slider 1 texto 2
-                </div>
-            </div>
-            <div>
-                <a u="image" href='#'><img src="<?php echo PATH_SLIDER_1_IMG?>003.jpg" alt="responsive image slider"/></a>
-                <div u=caption t="*" class="caption captionColor captionOrange">
-                    slider 1 texto 3
-                </div>
-            </div>
-            <div>
-                <a u="image" href='#'><img src="<?php echo PATH_SLIDER_1_IMG?>004.jpg" alt="touch swipe image slider"/></a>
-                <div u=caption t="*" class="caption captionColor captionOrange">
-                    slider 1 texto 4
-                </div>
-            </div>
+            <div u="caption" t="CLIP|LR" du="1500"></div>
+            <div u="caption" t="L|IB" t2=L d=-900 class="block"></div>
+            <div u="caption" t="RTT|360" d=-200 class="block"></div>
+            <div u="caption" t="DDGDANCE|RB" t2="RTT|10" d=-1800 du=3800 class="block">Resolver<br/>varias lineas</div>
+            <div u="caption" t="T|IE*IE" d=-1600 du=3800 t2="B" class="block"></div>
+            <div u="caption" t="ZMF|10" t2="B" d=-1300 class="block"></div>
+            <div u="caption" t="CLIP|L" d=-300 class="block"></div>
+            <a u="caption" t="CLIP|L" d=-300 href="#contacto" class="block"></a>
         </div>
-        <div u="navigator" class="jssorb01">
-            <!-- bullet navigator item prototype warning space at end name class-->
-            <div u="prototype" class="prototype "></div>
+        <div>
+            <img u="image" src="<?php echo PATH_SLIDER_1_IMG ?>02.jpg"/>
+            <a u=caption t="CLIP|LR" href="#clientes"></a>
+
+            <div u=caption t="CLIP|LR" t2="B" du="2000" class="block"></div>
+            <div u="caption" t="FADE" t2="B" d=-450 class="block">Sin JQuery<br/>Código abierto<br/>Reprogramado</div>
+            <div u="caption" t="T|IB" t2="R" d=-600 class="block"></div>
+            <div u="caption" t="MCLIP|T" t2="T" d=-450 class="block"></div>
+            <div u="caption" t="MCLIP|R" d=-300 class="block"></div>
+            <div u="caption" t="MCLIP|R" d=-300 class="block"></div>
+            <div u="caption" t="MCLIP|R" d=-300 class="block"></div>
+        </div>
+        <div>
+            <img u="image" src="<?php echo PATH_SLIDER_1_IMG ?>03.jpg"/>
+            <a href="#servicio"></a>
+
+            <div u=caption t="T" t2=NO class="block">Pendiente de ver si se puede poner varias lineas.<br/>En un
+                after:{content}<br/>para eliminar estas líneas en el html.
+            </div>
+            <div u=caption t="L" d=-750 class="block"></div>
+            <div u=caption t="CLIP|L" t2=B d=-450 class="block"></div>
+            <div u=caption t="DDG|TR" t2="TORTUOUS|VB" d=-750 class="block"></div>
+            <div u=caption t="RTT|10" d=-450 class="block"></div>
+            <div u=caption t="TORTUOUS|VB" d=-750 class="block"></div>
+            <div u=caption t="T" d=-450 class="block"></div>
+            <div u=caption t="FLTTR|R" t2="B" d=-600 class="block"></div>
+            <div u=caption t="ATTACK|BR" d=-600 class="block"></div>
+            <div u="caption" t="FLTTRWN|LT" d=-900 class="block"></div>
+            <div u="caption" t="RTTS|R" d=-900 class="block"></div>
+            <div u="caption" t="R|IB" t2=R d=-900 class="block"></div>
+        </div>
+        <div>
+            <img u="image" src="<?php echo PATH_SLIDER_1_IMG ?>04.jpg"/>
+
+            <div u=caption t="RTTS|T" d=-300 t2="B"></div>
+            <div u=caption t="T|IB" t2="T" d=-300 class="block"></div>
+            <div u=caption t="T|IB" t2=L d=-900 class="block"></div>
+            <div u="caption" t="WV|B" t2="T" d=-600 class="block"></div>
+            <div u="caption" t="WV|B" t2="T" d="-1100" class="block"></div>
+            <div u="caption" t="WV|B" t2="T" d="-1100" class="block"></div>
+            <div u="caption" t="WV|B" t2="T" d="-1100" class="block"></div>
+            <div u="caption" t="WV|B" t2="T" d="-1100" class="block"></div>
+            <div u="caption" t="LISTH|R" t2="CLIP|TB" d=-600 class="block">
+                Chrome&nbsp; &nbsp; &nbsp; 3+<br/>
+                Firerfox&nbsp; &nbsp; &nbsp; 2+<br/>
+                IE&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 6+<br/>
+                Safari&nbsp; &nbsp; &nbsp; &nbsp; 3.1+<br/>
+                Opera&nbsp; &nbsp; &nbsp; &nbsp;10+
+            </div>
+            <div u=caption t="TR" t2="T" d=-900 class="block"></div>
+            <div u=caption t="R" t2=R d=-900 class="block"></div>
+            <div u="caption" t="T|IB" d=-900 class="block"></div>
+            <div u="caption" t="T|IB" t2="ZMF|10" d=-900 class="ablock"></div>
+            <div u="caption" t="T|IB" t2=R d=-900 class="ablock"></div>
+            <div u="caption" t="T|IB" t2=B d=-900 class="ablock"></div>
+            <div u="caption" t="RTTL|BR" d=-450" class="ablock"></div>
         </div>
     </div>
-    <!-- Jssor Slider End -->
-    <div u="caption" t="RTT*JUP|BR" t2="SPACESHIP|RB" class="slider_header_title_1"></div>
-    <div class="slider_team_group_1">
-        <div u="caption" t="TEAM_1" d="-200" du="50%"></div>
-        <div u="caption" t="TEAM_1" d="-200" y="100%"></div>
-        <div u="caption" t="TEAM_1" d="-200" du="50%" debug-id="team-caption"></div>
-        <div u="caption" t="TEAM_1" d="-200" y="50%"></div>
-        <div u="caption" t="TEAM_1" d="-200" du="50%"></div>
-        <div u="caption" t="TEAM_1" d="-200" y="0"></div>
-        <div u="caption" t="TEAM_1" d="-200" du="50%"></div>
-        <div u="caption" t="TEAM_1" d="-200" y="-50%"></div>
-        <div u="caption" t="TEAM_1" d="-200" du="50%"></div>
-        <div u="caption" t="TEAM_1" d="-200" y="-100%"></div>
+    <div u="navigator" class="bullet">
+        <div u="prototype" class="prototype "></div>
     </div>
-</div>
-<div>
-    <!-- Jssor Slider Begin -->
-    <!-- You can move inline styles to css file or css block. -->
-    <div id="slider2_container" style="position: relative; top: 30px; left: 360px; width: 600px;
-                        height: 300px; overflow: hidden; border-radius: 8px; zoom: 1; filter: matrix">
-
-        <!-- Loading Screen -->
-        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
-            <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
-                                background-color: #000; top: 0px; left: 0px;width: 100%;height:100%;">
-            </div>
-            <div style="position: absolute; display: block; background: url('<?php echo PAHT_SLIDER_1?>img/loading.gif') no-repeat center center;
-                                top: 0px; left: 0px;width: 100%;height:100%;">
-            </div>
-        </div>
-
-        <!-- Slides Container -->
-        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 600px; height: 300px;
-                            overflow: hidden;">
-            <div>
-                <a u=image href="#"><img src="<?php echo PATH_SLIDER_1_IMG?>/2-001.jpg" alt="banner rotator"/></a>
-                <div u=caption t="*" class="captionOrange"
-                     style="position:absolute; left:20px; top: 30px; width:300px; height:30px;">
-                    slider 2 text 1
-                </div>
-            </div>
-            <div>
-                <a u=image href="#"><img src="<?php echo PATH_SLIDER_1_IMG?>002.jpg" alt="jquery banner rotator"/></a>
-                <div u=caption t="*" class="captionOrange"
-                     style="position:absolute; left:20px; top: 30px; width:300px; height:30px;">
-                    slider 2 text 2
-                </div>
-            </div>
-            <div>
-                <a u=image href="#"><img src="<?php echo PATH_SLIDER_1_IMG?>003.jpg" alt="responsive banner rotator"/></a>
-                <div u=caption t="*" class="captionOrange"
-                     style="position:absolute; left:20px; top: 30px; width:300px; height:30px;">
-                    mobile ready, touch swipe
-                </div>
-            </div>
-            <div>
-                <a u=image href="#"><img src="<?php echo PATH_SLIDER_1_IMG?>004.jpg" alt="touch swipe banner rotator"/></a>
-                <div u=caption t="*" class="captionOrange"
-                     style="position:absolute; left:20px; top: 30px; width:300px; height:30px;">
-                    slider 2 text 3
-                </div>
-            </div>
-        </div>
-        <!-- bullet navigator container -->
-        <div u="navigator" class="jssorb01">
-            <!-- bullet navigator item prototype -->
-            <div u="prototype" class="prototype "></div>
-        </div>
-        <?php
-        // <!-- Bullet Navigator Skin End -->
-
-        // <!-- Arrow Navigator Skin Begin -->
-        // <!-- Arrow Left -->
-        // <span u="arrowleft" class="jssora05l" style="width: 40px; height: 40px; top: 123px; left: 8px;">
-        // </span>
-        // <!-- Arrow Right -->
-        // <span u="arrowright" class="jssora05r" style="width: 40px; height: 40px; top: 123px; right: 8px">
-        // </span>
-        // <!-- Arrow Navigator Skin End -->
-        // <a style="display: none" href="http://www.jssor.com">image carousel</a>
-        ?>
-    </div>
-    <!-- Jssor Slider End -->
-    <div u="caption" t="T|IE*IE" t2="B*IB"
-         style="position: absolute; left: 360px;top:360px;width:600px;height:30px;font-size:28px;color:#fff;line-height:30px; text-align: center;">
-        Title 2
-    </div>
-    <a class="captionTextBlack" u="caption" t="CLIP|L" d="-200"
-       href="http://www.jssor.com/development/tool-caption-transition-viewer.html"
-       style="position: absolute; top: 30px; left: 0px; width: 320px; height: 30px; font-size: 26px; background-color:transparent;">390+
-        caption transitions</a>
-
-    <div u="caption" t="ZM" t2="NO" style="position: absolute; top: 80px; left: 0px; width: 320px; height: 80px;">
-        <div u="caption" t2="TEAM_2" class="captionOrange"
-             style="position: absolute; top: 0px; left: 0px; width: 200px; height: 30px;">
-            caption can be
-        </div>
-        <div u="caption" t2="TEAM_2" class="captionBlack"
-             style="position: absolute; top: 40px; left: 0px; width: 100px; height: 30px;">
-            in team
-        </div>
-        <div u="caption" t2="TEAM_2" class="captionBlack"
-             style="position: absolute; top: 40px; left: 130px; width: 100px; height: 30px;">
-            nested
-        </div>
-    </div>
-
-    <a class="captionTextBlack" u="caption" t="L|EP"
-       href="#" style="position: absolute; top: 210px; left: 0px; width: 320px; height: 30px; font-size: 26px; background-color:transparent;">360+
-        slideshow transitions</a>
-
-    <div u="caption" t="B*IB" t2="NO" style="position: absolute; top: 260px; left: 0px; width: 320px; height: 80px;">
-        <div u="caption" t2="TEAM_2" class="captionOrange"
-             style="position: absolute; top: 0px; left: 0px; width: 200px; height: 30px;">
-            slideshow can play
-        </div>
-        <div u="caption" t2="TEAM_2" class="captionBlack"
-             style="position: absolute; top: 40px; left: 0px; width: 100px; height: 30px;">
-            inside
-        </div>
-        <div u="caption" t2="TEAM_2" class="captionBlack"
-             style="position: absolute; top: 40px; left: 130px; width: 100px; height: 30px;">
-            outside
-        </div>
-    </div>
-</div>
-<div>
-    <!-- Jssor Slider Begin -->
-    <!-- You can move inline styles to css file or css block. -->
-    <div id="slider3_container" style="position: relative; top: 90px; left: 360px; width: 600px;
-                        height: 300px; overflow: hidden; border-radius: 8px;">
-
-        <!-- Loading Screen -->
-        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
-            <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
-                                background-color: #000; top: 0px; left: 0px;width: 100%;height:100%;">
-            </div>
-            <div style="position: absolute; display: block; background: url('<?php echo PAHT_SLIDER_1?>img/loading.gif') no-repeat center center;
-                                top: 0px; left: 0px;width: 100%;height:100%;">
-            </div>
-        </div>
-
-        <!-- Slides Container -->
-        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 600px; height: 300px;
-                            overflow: hidden;">
-            <div>
-                <a u=image href="#"><img src="<?php echo PATH_SLIDER_1_IMG?>001.jpg" alt="banner slider"/></a>
-                <div u="thumb">Do you notice it is draggable by mouse/finger?</div>
-            </div>
-            <div>
-                <a u=image href="#"><img src="<?php echo PATH_SLIDER_1_IMG?>002.jpg" alt="jquery banner slider"/></a>
-                <div u="thumb">Did you drag by either horizontal or vertical?</div>
-            </div>
-            <div>
-                <a u=image href="#"><img src="<?php echo PATH_SLIDER_1_IMG?>003.jpg" alt="responsive banner slider"/></a>
-                <div u="thumb">Do you notice navigator responses when drag?</div>
-            </div>
-            <div>
-                <a u=image href="#"><img src="<?php echo PATH_SLIDER_1_IMG?>/004.jpg" alt="touch swipe banner slider"/></a>
-                <div u="thumb">Do you notice arrow responses when click?</div>
-            </div>
-        </div>
-
-        <!-- ThumbnailNavigator Skin Begin -->
-        <div u="thumbnavigator" class="slider3-T"
-             style="position: absolute; bottom: 0px; left: 0px; height:45px; width:600px;">
-            <div style="filter: alpha(opacity=40); opacity:0.4; position: absolute; display: block;
-                                background-color: #000; top: 0px; left: 0px; width: 100%; height: 100%;">
-            </div>
-            <!-- Thumbnail Item Skin Begin -->
-            <div u="slides">
-                <div u="prototype" style="POSITION: absolute; WIDTH: 600px; HEIGHT: 45px; TOP: 0; LEFT: 0;">
-                    <thumbnailtemplate
-                            style="font-family: verdana; font-weight: normal; POSITION: absolute; WIDTH: 100%; HEIGHT: 100%; TOP: 0; LEFT: 0; color:#fff; line-height: 45px; font-size:20px; padding-left:10px;"></thumbnailtemplate>
-                </div>
-            </div>
-            <!-- Thumbnail Item Skin End -->
-        </div>
-        <!-- ThumbnailNavigator Skin End -->
-
-        <!-- Bullet Navigator Skin Begin -->
-        <!-- bullet navigator container -->
-        <div u="navigator" class="jssorb01">
-            <!-- bullet navigator item prototype -->
-            <div u="prototype" class="prototype "></div>
-        </div>
-        <!-- Bullet Navigator Skin End -->
-
-        <!-- Arrow Navigator Skin Begin -->
-        <!-- Arrow Left -->
-        <!--span u="arrowleft" class="jssora05l" style="width: 40px; height: 40px; top: 123px; left: 8px;">
-        </span>
-        <!-- Arrow Right -->
-        <!--span u="arrowright" class="jssora05r" style="width: 40px; height: 40px; top: 123px; right: 8px">
-        </span>
-        <!-- Arrow Navigator Skin End -->
-        <!--a style="display: none" href="http://www.jssor.com">image carousel</a-->
-    </div>
-    <!-- Jssor Slider End -->
-    <div u="caption" t="L*IB" t2="SPACESHIP|LB"
-         style="position: absolute; left: 360px;top:30px;width:600px;height:30px;font-size:28px;color:#fff;line-height:30px; text-align: center;">
-        supper scalable banner slider example
-    </div>
-    <div class="captionText captionTextBlack" u="caption" t="CLIP|LR" d="-200"
-         style="position: absolute; top: 60px; left: 0px; width: 320px; height: 30px; font-size: 26px; background-color:transparent;">
-        deep ui comstomization
-    </div>
-
-    <div u="caption" t2="ZM" style="position: absolute; top: 120px; left: 0px; width: 320px; height: 120px;">
-        <div u="caption" class="captionOrange" t="TEAM_2" t2="NO" d=-300
-             style="position: absolute; top: 0px; left: 0px; width: 200px; height: 30px;">
-            image thumbnail
-        </div>
-        <div u="caption" class="captionBlack" t="TEAM_2" t2="NO" d=-300
-             style="position: absolute; top: 40px; left: 0px; width: 200px; height: 30px;">
-            text thumbnail
-        </div>
-        <div u="caption" class="captionBlack" t="TEAM_2" t2="NO" d=-300
-             style="position: absolute; top: 80px; left: 00px; width: 200px; height: 30px;">
-            mixed thumbnail
-        </div>
-    </div>
-
-    <div u="caption" t="RTT|360" t2="NO" style="position: absolute; top: 290px; left: 0px; width: 320px; height: 80px;">
-        <div u="caption" class="captionOrange" t2="TEAM_2"
-             style="position: absolute; top: 0px; left: 0px; width: 120px; height: 30px;">
-            bullets
-        </div>
-        <div u="caption" class="captionOrange" t2="TEAM_2"
-             style="position: absolute; top: 40px; left: 0px; width: 120px; height: 30px;">
-            thumbnails
-        </div>
-        <div u="caption" class="captionBlack" t2="TEAM_2"
-             style="position: absolute; top: 20px; left: 130px; width: 30px; height: 30px;">
-            in
-        </div>
-        <div u="caption" class="captionBlack" t2="TEAM_2"
-             style="position: absolute; top: 0px; left: 170px; width: 120px; height: 30px;">
-            horizontal
-        </div>
-        <div u="caption" class="captionBlack" t2="TEAM_2"
-             style="position: absolute; top: 40px; left: 170px; width: 120px; height: 30px;">
-            vertical
-        </div>
-    </div>
-</div>
-</div>
-
-<!-- Bullet Navigator Skin Begin -->
-<!-- bullet navigator container -->
-<div u="navigator" class="jssorb03" style="position: absolute; bottom: 16px; left: 6px;">
-    <!-- bullet navigator item prototype -->
-    <div u="prototype"
-         style="POSITION: absolute; WIDTH: 21px; HEIGHT: 21px; text-align:center; line-height:21px; color:White; font-size:12px;">
-        <NumberTemplate></NumberTemplate>
-    </div>
-</div>
-<!-- Bullet Navigator Skin End -->
-
-<!-- Arrow Navigator Skin Begin -->
-<!-- Arrow Left -->
-<!--span u="arrowleft" class="jssora20l" style="width: 55px; height: 55px; top: 123px; left: 8px;">
-</span>
-<!-- Arrow Right -->
-<!--span u="arrowright" class="jssora20r" style="width: 55px; height: 55px; top: 123px; right: 8px">
-</span>
-<!-- Arrow Navigator Skin End -->
-<!--a style="display: none" href="http://www.jssor.com">image carousel</a>
-<!-- Trigger -->
-</div>
-<!-- Jssor Slider End -->
+    <span u="arrowleft" class="jssoral arrow"></span>
+    <span u="arrowright" class="jssorar arrow"></span>
 </div>

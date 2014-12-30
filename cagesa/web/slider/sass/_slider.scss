@@ -1,0 +1,190 @@
+////////////////////////////////////////////////////////////////////////////
+//SLIDER
+////////////////////////////////////////////////////////////////////////////
+
+@charset "UTF-8";
+@import 'variables';
+
+@font-face {
+  font-family: map-get($fontNameDefault, titulo);
+  src: url("#{$urlRootSlider}/fonts/fuente.ttf");
+}
+
+@font-face {
+  font-family: map-get($fontNameDefault, orange);
+  src: url("#{$urlRootSlider}/fonts/action.ttf");
+}
+
+##{map-get($sliderBox, name)} {
+  visibility: hidden;
+  box-sizing: content-box;
+  float: map-get($sliderBox, float);
+  margin: map-get($sliderBox, margin);
+  position: map-get($sliderBox, position);
+  width: map-get($sliderBox, width);
+  height: map-get($sliderBox, height);
+  border-radius: map-get($sliderBox, radius);
+  box-shadow: map-get($sliderBox, boxShadow);
+  border: map-get($sliderBox, border);
+  border-top: map-get($sliderBox, borderTop);
+  border-right: map-get($sliderBox, borderRight);
+  border-bottom: map-get($sliderBox, borderBottom);
+  border-left: map-get($sliderBox, borderLeft);
+  overflow: hidden;
+  @media screen and (max-width: map-get($mediaScreen, small)) {
+    border: none;
+  }
+  $strClass: #{''};
+  @each $class in $captionList {
+    $strClass: $strClass #{'.'}#{map-get($class, class)}#{','};
+  }
+  #{$strClass} {
+    height: map-get($caption, height);
+    line-height: map-get($caption, lineHeight);
+    text-align: #{map-get($caption, textAlign)};
+    border-radius: map-get($caption, borderRadius);
+  }
+  @each $cap in $captionList {
+    .#{map-get($cap, class)} {
+      @include put_class($cap);
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+  & div[u='loading'] {
+    @include put_position(absolute, 4px, 8px);
+    > div {
+      display: block;
+      filter: alpha(opacity=map-get($spinner, opacity)*100);
+      opacity: map-get($spinner, opacity);
+      @include put_position_dimension(absolute, 0px, 0px, 100%, 100%);
+    }
+    > div + div {
+      display: block;
+      @include put_position_dimension(absolute, 0px, 0px, 100%, 100%);
+      @include put_image($spinner);
+      background-color: map-get($spinner, backGroundColor);
+    }
+  }
+  & div[u='slides'] {
+    cursor: map-get($cursorDefault, default);
+    @include put_position_dimension(absolute, 0, 0, map-get($sliderBox, width), map-get($sliderBox, height));
+    overflow: hidden;
+    $numSlider: 2; //Comienza en el 2 siempre, el 1 es generado dinamicamente con las transiciones entre sliders
+    @each $i, $captionSlider in $captionSliders {
+      & > div:nth-of-type(#{$numSlider}) {
+        $div: 2; //Saltamos la etiqueta imagen del html
+        @each $indice, $datos in $captionSlider {
+          & > :nth-child(#{$div}) {
+            @if map-has-key($datos, imageSliderUrl) {
+              @include put_slider_image($datos)
+            } @else {
+              @include put_caption($datos);
+            }
+            $div: $div+1;
+          }
+        }
+      }
+      $numSlider: $numSlider+1;
+    }
+    @media screen and (max-width: map-get($mediaScreen, small)) {
+      .block {
+        display: none;
+      }
+    }
+  }
+  .bullet {
+    position: absolute;
+    box-sizing: content-box;
+    top: map-get($navigationBullet, posY);
+    left: map-get($navigationBullet, posX);
+    background: map-get($navigationBullet, backGroundColor);
+    padding: map-get($navigationBullet, padding);;
+    border-radius: map-get($navigationBullet, radius);
+    .prototype {
+      box-sizing: border-box;
+      border-radius: map-get($navigationBullet, bulletRadius);
+      box-shadow: map-get($navigationBullet, bulletShadow);
+      POSITION: absolute;
+      WIDTH: map-get($navigationBullet, bulletWidth);
+      HEIGHT: map-get($navigationBullet, bulletHeight);
+      margin-top: map-get($navigationBullet, bulletMarginTop);
+      margin-left: map-get($navigationBullet, bulletMarginLeft);
+      transition: map-get($navigationBullet, bulletTransition);
+    }
+    div {
+      filter: alpha(opacity=map-get($navigationBullet, bulletOpacity)*100);
+      opacity: map-get($navigationBullet, bulletOpacity);
+      cursor: map-get($navigationBullet, bulletCursor);
+      border: map-get($navigationBullet, bulletBorder);
+      background: map-get($navigationBullet, bulletBackGroundColor);
+      overflow: hidden;
+      &:hover {
+        background-color: map-get($navigationBullet, bulletHoverColor);
+      }
+    }
+    .av {
+      background-color: map-get($navigationBullet, bulletColor);
+      &:hover {
+        background-color: map-get($navigationBullet, bulletColor);
+      }
+    }
+    .dn {
+      background-color: #fff;
+      &:hover {
+        background-color: map-get($navigationBullet, bulletClickColor);
+      }
+    }
+  }
+  & span.arrow {
+    display: none;
+    @media screen and (max-width: map-get($mediaScreen, small)) {
+      display: block;
+    }
+  }
+  & span.jssoral, & span.jssorar, & span.jssoraldn, & span.jssorardn {
+    position: absolute;
+    cursor: map-get($arrowNavigation, cursor);
+    @if map-has-key($arrowNavigation, imageUrl) {
+      background-image: url(map-get($arrowNavigation,imageUrl));
+    }
+    overflow: hidden;
+  }
+  & span.jssoral {
+    background-position: map-get($arrowNavigation, arrowLeftPosition);
+    @include put_position(
+            '',
+            map-get($arrowNavigation, arrowLeftTop),
+            map-get($arrowNavigation, arrowLeftLeft)
+    );
+    @include put_dimension(
+            map-get($arrowNavigation, arrowLeftWidth),
+            map-get($arrowNavigation, arrowLeftHeight)
+    );
+    :hover {
+      background-position: map-get($arrowNavigation, arrowLeftPositionHover);
+    }
+  }
+  & span.jssorar {
+    background-position: map-get($arrowNavigation, arrowRightPosition);
+    @include put_position_dimension(
+            map-get($arrowNavigation, position),
+            map-get($arrowNavigation, arrowLeftTop),
+            map-get($arrowNavigation, arrowRightLeft),
+            map-get($arrowNavigation, arrowLeftWidth),
+            map-get($arrowNavigation, arrowLeftHeight)
+    );
+    :hover {
+      background-position: map-get($arrowNavigation, arrowRightPositionHover);
+    }
+  }
+  & span.jssoraldn {
+    background-position: map-get($arrowNavigation, arrowLeftPositionClick);
+  }
+  & span.jssorardn {
+    background-position: map-get($arrowNavigation, arrowRightPositionClick);
+  }
+}
+
+
