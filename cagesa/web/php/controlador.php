@@ -19,7 +19,7 @@
         "tlf" => array ("placeholder" => "Teléfono", "value" => ""),
         "fax" => array ("placeholder" => "Fax", "value" => ""),
         "email" => array ("placeholder" => "Correo Electrónico", "value" => ""),
-        "comentario" => array ("placeholder" => "Pon tu comentario.....", "value" => "","maxNumberChar"=>"100")),
+        "comentario" => array ("placeholder" => "Tu comentario.....", "value" => "","maxNumberChar"=>"250")),
         "servicios" => array ("mantenimiento" => array ("text" => "Mantenimiento de Jardines.", "value" => ""),
             "podaTala" => array ("text" => "Poda y/o Tala de palmeras y árboles.", "value" => ""),
             "tratamientoFitosanitario" => array ("text" => "Tratamientos fitosanitarios.", "value" => ""),
