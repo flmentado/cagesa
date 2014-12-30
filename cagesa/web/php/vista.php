@@ -22,9 +22,8 @@
 
     <script src="../js/scroll.js"></script>
     <script src="../captcha/js/captcha.js"></script>
-    <link rel="stylesheet"
-        href="<?php echo PAHT_SLIDER_1 ?>css/slider.css"
-        type="text/css"/>
+    <script src="../forms/contacto/js/contacto.js"></script>
+    <link rel="stylesheet" href="../css/miEstilo.css" type="text/css"/>
     <script type="text/javascript"
         src="<?php echo PAHT_SLIDER_1 ?>js/jssor.slider.min.js"></script>
     <script type="text/javascript"

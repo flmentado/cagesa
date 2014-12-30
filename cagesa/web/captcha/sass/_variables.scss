@@ -1,0 +1,31 @@
+/////////////////////////////////////////////////////////////////////////////////
+// CAPTCHA
+/////////////////////////////////////////////////////////////////////////////////
+@import "mixin";
+
+$urlRootCaptcha: "../captcha";
+
+//CAPTCHA
+$captcha: (
+        width:200px,
+        height:90px,
+        backGroundColor:map-get($backGroundColorDefault, grayLight),
+        border: map-get($borderWidthDefault, medium) solid map-get($colorDefault, black),
+        imageRepeat:no-repeat,
+        imageSize: 100%,
+        imagePosition: center
+);
+//IMAGE REFRESH
+$captchaRefresh: (
+        width:20px,
+        height:20px,
+        margin: 2 * map-get($marginDefault,small),
+        border: 3 * map-get($marginDefault,small) solid rgba(map-get($colorDefault, white), map-get($transparencyLevel, level_3)),
+        borderRadius: map-get($radiusDefault, circle),
+        imageUrl: "#{$urlRootCaptcha}/img/refresh.png",
+        imageRepeat:no-repeat,
+        imageSize: 100% 100%,
+        imagePosition: center,
+        cursoHoverr:pointer,
+        scaleHover:1.1
+);

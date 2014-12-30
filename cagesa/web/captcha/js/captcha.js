@@ -5,9 +5,7 @@ $(function(){
             $("#putImageCaptcha").load('../captcha/php/captcha_vista.php',function(){
                 captchaRefresh();
             });
-
         });
-
     };
     captchaRefresh();
 });

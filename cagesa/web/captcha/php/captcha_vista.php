@@ -8,5 +8,5 @@
  //Obtenemos el gráfico.
 ?>
 <div style="background-image: url('../captcha/php/captcha_function.php?rand=<?php echo rand(); ?>');">
-    <input type="button" id="captchaRefresh"/>
+    <input type="button" id="captchaRefresh" title="Actualizar"/>
 </div>

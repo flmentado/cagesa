@@ -1,4 +1,10 @@
+////////////////////////////////////////////////////////////////////////////////
+// SLIDER
+////////////////////////////////////////////////////////////////////////////////
 @import 'mixin';
+//ROOT FOR MODULE
+$urlRootSlider:'../slider';
+
 
 //CURSOR
 $cursorDefault: (
@@ -10,6 +16,12 @@ $borderWidthDefault: (
         small:1px,
         medium:4px,
         large:8px
+);
+$marginDefault: (
+        none : 0px,
+        small: 1px,
+        medium: 5px,
+        large: 10px
 );
 //FONTS
 $fontNameDefault: (
@@ -106,7 +118,7 @@ $sliderBox: (
         float: none,
         width:980px,
         height:500px,
-        margin:0px auto,
+        margin:map-get($marginDefault,none) auto,
         borderTop: 3px solid map-get($shadowDefaultColor, black),
         borderBottom: 3px solid map-get($shadowDefaultColor, black)
 );
@@ -169,7 +181,7 @@ $captionList: $captionOrange, $captionBlack;
 // imagePosition:
 // imageSize:
 $spinner: (
-        imageUrl:'../img/spinner/loading.gif',
+        imageUrl:"#{$urlRootSlider}/img/spinner/loading.gif",
         imageRepeat: no-repeat,
         imagePosition: center,
         imageSize:content,
@@ -626,7 +638,7 @@ $captionSlider_4_4: (
         top: 50px,
         width:30px,
         height:30px,
-        imageUrl: '../img/img/logo.png',
+        imageUrl: "#{$urlRootSlider}/img/img/logo.png",
         imagePosition: 0px 0px
 );
 $captionSlider_4_5: (
@@ -636,7 +648,7 @@ $captionSlider_4_5: (
         top: 100px,
         width:30px,
         height:30px,
-        imageUrl: '../img/img/logo.png',
+        imageUrl: "#{$urlRootSlider}/img/img/logo.png",
         imagePosition: -30px 0px
 );
 $captionSlider_4_6: (
@@ -646,7 +658,7 @@ $captionSlider_4_6: (
         top: 150px,
         width:30px,
         height:30px,
-        imageUrl: '../img/img/logo.png',
+        imageUrl: "#{$urlRootSlider}/img/img/logo.png",
         imagePosition: -60px 0px
 );
 $captionSlider_4_7: (
@@ -656,7 +668,7 @@ $captionSlider_4_7: (
         top: 200px,
         width:30px,
         height:30px,
-        imageUrl: '../img/img/logo.png',
+        imageUrl: "#{$urlRootSlider}/img/img/logo.png",
         imagePosition: -90px 0px
 );
 $captionSlider_4_8: (
@@ -666,7 +678,7 @@ $captionSlider_4_8: (
         top: 250px,
         width:30px,
         height:30px,
-        imageUrl: '../img/img/logo.png',
+        imageUrl: "#{$urlRootSlider}/img/img/logo.png",
         imagePosition: -120px 0px
 );
 
@@ -745,7 +757,7 @@ $captionSlider_4_15: (
         top: 160px,
         width:80px,
         height:160px,
-        imageUrl:'../img/img/aenorempresa.png',
+        imageUrl:"#{$urlRootSlider}/img/img/aenorempresa.png",
         imageRepeat:no-repeat,
         imageSize: 100% 100%
 );
@@ -757,7 +769,7 @@ $captionSlider_4_16: (
         top: 160px,
         width:80px,
         height:160px,
-        imageUrl:'../img/img/aenorambiental.png',
+        imageUrl:"#{$urlRootSlider}/img/img/aenorambiental.png",
         imageRepeat:no-repeat,
         imageSize: 100% 100%
 );
@@ -798,10 +810,10 @@ $navigationBullet: (
         posX:map-get($sliderBox,width)-124px,
         posY:map-get($sliderBox,height)-40px,
         backGroundColor: map-get($backGroundColorDefault, grayLight),
-        padding: 5px,
+        padding:map_get($marginDefault,medium),
         radius: map-get($radiusDefault, extra),
-        bulletMarginTop:5px,
-        bulletMarginLeft:5px,
+        bulletMarginTop:map_get($marginDefault,medium),
+        bulletMarginLeft:map_get($marginDefault,medium),
         bulletRadius: map-get($radiusDefault, circle),
         bulletShadow:map-get($boxShadowDefault, bullet),
         bulletWidth:20px,
@@ -822,7 +834,7 @@ $navigationBullet: (
 $arrowNavigation: (
         cursor:map-get($cursorDefault, pointer),
         position:abolute,
-        imageUrl:"../img/arrow/arrow.png",
+        imageUrl:"#{$urlRootSlider}/img/arrow/arrow.png",
         arrowLeftPosition:0px 0px,
         arrowLeftWidth:55px,
         arrowLeftHeight:166px,

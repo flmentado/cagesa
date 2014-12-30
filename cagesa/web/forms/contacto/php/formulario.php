@@ -51,55 +51,65 @@
             value="<?php echo isset($formulario["contacto"]["email"]["value"])
                 ? $formulario["contacto"]["email"]["value"] : "";
             ?>"/>
+        <label for="comentario">Comentario (<?php echo isset
+            ($formulario['contacto']['comentario']['maxNumberChar']) && is_numeric ($formulario['contacto']['comentario']['maxNumberChar'])
+                ? ($formulario['contacto']['comentario']['maxNumberChar']) : 90;?> carácteres máximo.)
+            <textarea id="comentario" name="comentario" maxNumberChar="<?php echo isset
+            ($formulario['contacto']['comentario']['maxNumberChar']) && is_numeric ($formulario['contacto']['comentario']['maxNumberChar'])
+                ? ($formulario['contacto']['comentario']['maxNumberChar']) : 90;?>"
+                placeholder="<?php echo isset($formulario['contacto']['comentario']['placeholder'])
+                    ? $formulario['contacto']['comentario']['placeholder']
+                    : ""; ?>"><?php echo isset($formulario["contacto"]["comentario"]["value"])
+                    ? $formulario["contacto"]["comentario"]["value"] : "";?></textarea></label>
     </div>
     <div class="formularioServicios">
-    <span>Estoy interesado en :</span>
-    <label for="mantenimiento">
-        <input id='mantenimiento'
-            type="checkbox"
-            <?php echo isset($formulario["servicios"]["mantenimiento"]["value"]) && strlen ($formulario["servicios"]["mantenimiento"]["value"]) > 0
-                ? "checked='checked'" : "";?>
-            name="mantenimiento"/>
-        <?php echo isset($formulario["servicios"]["mantenimiento"]["text"])
-            ? $formulario["servicios"]["mantenimiento"]["text"] : "" ?>
-    </label>
-    <label for="poda">
-        <input id='poda' type="checkbox"
-            <?php echo isset($formulario["servicios"]["podaTala"]["value"]) && strlen ($formulario["servicios"]["podaTala"]["value"]) > 0
-                ? "checked='checked'" : ""; ?>
-            name="podaTala"/>
-        <?php echo isset($formulario["servicios"]["podaTala"]["text"]) ? $formulario["servicios"]["podaTala"]["text"]
-            : "";?>
-    </label>
-    <label for="tratamiento">
-        <input id='tratamiento' type="checkbox"
-            <?php  echo isset($formulario["servicios"]["tratamientoFitosanitario"]["value"]) && strlen ($formulario["servicios"]["tratamientoFitosanitario"]["value"]) > 0
-                ? "checked='checked'" : ""; ?>
-            name="tratamientoFitosanitario"/>
-        <?php echo isset ($formulario["servicios"]["tratamientoFitosanitario"]["text"])
-            ? $formulario["servicios"]["tratamientoFitosanitario"]["text"] : ""; ?>
-    </label>
-    <label for="instalar">
-        <input id='instalar' type="checkbox"
-            <?php echo isset($formulario["servicios"]["instalarReparar"]["value"]) && strlen ($formulario["servicios"]["instalarReparar"]["value"]) > 0
-                ? "checked='checked'" : ""; ?>
-            name="instalarReparar"/>
-        <?php echo isset ($formulario["servicios"]["instalarReparar"]["text"])
-            ? $formulario["servicios"]["instalarReparar"]["text"] : ""; ?>
-    </label>
-    <label for="recogerResiduos">
-        <input id='recogerResiduos' type="checkbox"
-            <?php echo isset($formulario["servicios"]["recogerResiduos"]["value"]) && strlen ($formulario["servicios"]["recogerResiduos"]["value"]) > 0
-                ? "checked='checked'" : ""; ?>
-            name="recogerResiduos"/>
-        <?php echo isset ($formulario["servicios"]["recogerResiduos"]["text"])
-            ? $formulario["servicios"]["recogerResiduos"]["text"] : "";?>
-    </label>
+        <span>Estoy interesado en :</span>
+        <label for="mantenimiento">
+            <input id='mantenimiento'
+                type="checkbox"
+                <?php echo isset($formulario["servicios"]["mantenimiento"]["value"]) && strlen ($formulario["servicios"]["mantenimiento"]["value"]) > 0
+                    ? "checked='checked'" : "";?>
+                name="mantenimiento"/>
+            <?php echo isset($formulario["servicios"]["mantenimiento"]["text"])
+                ? $formulario["servicios"]["mantenimiento"]["text"] : "" ?>
+        </label>
+        <label for="poda">
+            <input id='poda' type="checkbox"
+                <?php echo isset($formulario["servicios"]["podaTala"]["value"]) && strlen ($formulario["servicios"]["podaTala"]["value"]) > 0
+                    ? "checked='checked'" : ""; ?>
+                name="podaTala"/>
+            <?php echo isset($formulario["servicios"]["podaTala"]["text"])
+                ? $formulario["servicios"]["podaTala"]["text"] : "";?>
+        </label>
+        <label for="tratamiento">
+            <input id='tratamiento' type="checkbox"
+                <?php  echo isset($formulario["servicios"]["tratamientoFitosanitario"]["value"]) && strlen ($formulario["servicios"]["tratamientoFitosanitario"]["value"]) > 0
+                    ? "checked='checked'" : ""; ?>
+                name="tratamientoFitosanitario"/>
+            <?php echo isset ($formulario["servicios"]["tratamientoFitosanitario"]["text"])
+                ? $formulario["servicios"]["tratamientoFitosanitario"]["text"] : ""; ?>
+        </label>
+        <label for="instalar">
+            <input id='instalar' type="checkbox"
+                <?php echo isset($formulario["servicios"]["instalarReparar"]["value"]) && strlen ($formulario["servicios"]["instalarReparar"]["value"]) > 0
+                    ? "checked='checked'" : ""; ?>
+                name="instalarReparar"/>
+            <?php echo isset ($formulario["servicios"]["instalarReparar"]["text"])
+                ? $formulario["servicios"]["instalarReparar"]["text"] : ""; ?>
+        </label>
+        <label for="recogerResiduos">
+            <input id='recogerResiduos' type="checkbox"
+                <?php echo isset($formulario["servicios"]["recogerResiduos"]["value"]) && strlen ($formulario["servicios"]["recogerResiduos"]["value"]) > 0
+                    ? "checked='checked'" : ""; ?>
+                name="recogerResiduos"/>
+            <?php echo isset ($formulario["servicios"]["recogerResiduos"]["text"])
+                ? $formulario["servicios"]["recogerResiduos"]["text"] : "";?>
+        </label>
     </div>
     <div id="captcha">
-       <div id="putImageCaptcha"><?php  include_once "../captcha/php/captcha_vista.php";?></div>
-       <span>Introduce los caracteres mostrados</span>
-       <input type="text" name="captcha" maxlength="10"/>
+        <div id="putImageCaptcha"><?php include_once "../captcha/php/captcha_vista.php"; ?></div>
+        <span>Introduce los caracteres mostrados</span>
+        <input type="text" name="captcha" maxlength="10"/>
     </div>
     <input type="submit" name="enviar" value="Enviar"/>
 </form>

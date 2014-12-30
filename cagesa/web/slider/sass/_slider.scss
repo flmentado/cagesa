@@ -1,14 +1,18 @@
+////////////////////////////////////////////////////////////////////////////
+//SLIDER
+////////////////////////////////////////////////////////////////////////////
+
 @charset "UTF-8";
 @import 'variables';
 
 @font-face {
   font-family: map-get($fontNameDefault, titulo);
-  src: url('../fonts/fuente.ttf');
+  src: url("#{$urlRootSlider}/fonts/fuente.ttf");
 }
 
 @font-face {
   font-family: map-get($fontNameDefault, orange);
-  src: url('../fonts/action.ttf');
+  src: url("#{$urlRootSlider}/fonts/action.ttf");
 }
 
 ##{map-get($sliderBox, name)} {

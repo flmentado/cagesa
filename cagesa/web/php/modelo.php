@@ -42,7 +42,7 @@
      *
      * @return string
      */
-    function limpiar_input ($cadena) {
+    function limpiarInput ($cadena) {
         $cadena = trim ($cadena);
         $cadena= htmlspecialchars($cadena);
         return stripslashes ($cadena);
@@ -62,41 +62,43 @@
         else
             $msgError.="Marca el tipo Remitente."."<br/>";
         if (isset($_POST['remitente']) && strlen($_POST['remitente'])>1)
-            $formulario["contacto"]["remitente"]["value"]=limpiar_input (ucwords ($_POST['remitente']));
+            $formulario["contacto"]["remitente"]["value"]=limpiarInput (ucwords ($_POST['remitente']));
         else
             $msgError.="Nombre de usuario erróneo."."<br/>";
+        if (isset($_POST['direccion']) && strlen($_POST['direccion'])>1)
+            $formulario["contacto"]["direccion"]["value"]=limpiarInput($_POST['direccion']);
+        else
+            $msgError.="Dirección Errónea."."<br/>";
         if (isset($_POST['tlf']) && preg_match($expresionRegularTelefono, $_POST['tlf']))
-            $formulario["contacto"]["tlf"]["value"]=limpiar_input($_POST['tlf']);
+            $formulario["contacto"]["tlf"]["value"]=limpiarInput($_POST['tlf']);
         else
             $msgError.="Teléfono de contacto erróneo."."<br/>";
         if (isset($_POST['fax']) &&  preg_match($expresionRegularTelefono, $_POST['fax']))
-            $formulario["contacto"]["fax"]["value"]=limpiar_input($_POST['fax']);
-        if (isset($_POST['direccion']) && strlen($_POST['direccion'])>1)
-            $formulario["contacto"]["direccion"]["value"]=limpiar_input($_POST['direccion']);
-        else
-            $msgError.="Dirección Errónea."."<br/>";
+            $formulario["contacto"]["fax"]["value"]=limpiarInput($_POST['fax']);
         if (isset($_POST['email']) && filter_input (INPUT_POST, 'email',FILTER_VALIDATE_EMAIL))
-            $formulario["contacto"]["email"]["value"]=limpiar_input ($_POST['email']);
+            $formulario["contacto"]["email"]["value"]=limpiarInput ($_POST['email']);
         else
             $msgError.="Email erróneo."."<br/>";
+        if (isset($_POST['comentario']))
+            $formulario["contacto"]["comentario"]["value"]=limpiarInput($_POST['comentario']);
         if (isset($_POST['mantenimiento'])) {
-            $formulario["servicios"]["mantenimiento"]["value"] = limpiar_input ($_POST['mantenimiento']);
+            $formulario["servicios"]["mantenimiento"]["value"] = limpiarInput ($_POST['mantenimiento']);
             $flagOption = true;
         }
         if (isset($_POST['podaTala'])) {
-            $formulario["servicios"]["podaTala"]["value"] = limpiar_input ($_POST['podaTala']);
+            $formulario["servicios"]["podaTala"]["value"] = limpiarInput ($_POST['podaTala']);
             $flagOption = true;
         }
         if (isset($_POST['tratamientoFitosanitario'])) {
-            $formulario["servicios"]["tratamientoFitosanitario"]["value"] = limpiar_input ($_POST['tratamientoFitosanitario']);
+            $formulario["servicios"]["tratamientoFitosanitario"]["value"] = limpiarInput ($_POST['tratamientoFitosanitario']);
             $flagOption = true;
         }
         if (isset($_POST['instalarReparar'])) {
-            $formulario["servicios"]["instalarReparar"]["value"] = limpiar_input ($_POST['instalarReparar']);
+            $formulario["servicios"]["instalarReparar"]["value"] = limpiarInput ($_POST['instalarReparar']);
             $flagOption = true;
         }
         if (isset($_POST['recogerResiduos'])) {
-            $formulario["servicios"]["recogerResiduos"]["value"] = limpiar_input ($_POST['recogerResiduos']);
+            $formulario["servicios"]["recogerResiduos"]["value"] = limpiarInput ($_POST['recogerResiduos']);
             $flagOption = true;
         }
         if (!$flagOption){
@@ -249,6 +251,11 @@
         //$headers .= "Bcc: \r\n";
         return @mail ($destinatario, $asunto, $cuerpo, $headers) ? true : false;
     }
-
+    function limpiarFormulario(&$formulario){
+        foreach ($formulario as $index=>$datos)
+            foreach($datos as $indice=>$valor){
+                $formulario[$index][$indice]['value']='';
+            }
+    }
 
 ?>

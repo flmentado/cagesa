@@ -1,0 +1,56 @@
+/////////////////////////////////////////////////////////////////////////////////
+// FORM
+/////////////////////////////////////////////////////////////////////////////////
+@import "variables";
+
+##{$formName} {
+  @include putBlock(left);
+  width: map-get($formContacto, width);
+  span {
+    display: block;
+    width: map-get($formContacto, width);
+  }
+  .formularioDatosContacto {
+    box-sizing: border-box;
+    max-width: map-get($formContacto, maxWidth);
+    > input.textoDatoContacto {
+      @include putBlock(left);
+      width: map-get($formContacto, width);
+      @include put_image($formContactoInputText);
+      padding: map-get($formContactoInputText, padding);
+    }
+    label{
+        > textarea#comentario {
+        resize: none;
+        width: map-get($formContactoTextArea, width);
+        height: map-get($formContactoTextArea, height);
+        background-color: map-get($formContactoTextArea, backGroundColor);
+        padding: map-get($formContactoTextArea, padding);
+      }
+    }
+  }
+  #remitente {
+    background-image: url("#{$urlRootForm}/img/user.png");
+  }
+  #direccion {
+    background-image: url("#{$urlRootForm}/img/direccion.png");
+  }
+  #tlf {
+    background-image: url("#{$urlRootForm}/img/tlf.png");
+  }
+  #fax {
+    background-image: url("#{$urlRootForm}/img/fax.png");
+  }
+  #email {
+    background-image: url("#{$urlRootForm}/img/mail.png");
+  }
+  input[type='submit'] {
+    clear: both;
+    display: block;
+    float: left;
+  }
+  div.formularioServicios {
+    box-sizing: border-box;
+    clear: left;
+  }
+}
