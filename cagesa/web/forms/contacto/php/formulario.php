@@ -10,6 +10,7 @@
     }
 ?>
 <form id="formularioContacto" method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>">
+    <div class="formularioHeader">SOLICITUD</div>
     <div class="radioTipocontacto">
         <input id="particular" type="radio" name="tipoRemitente" value="particular"
             <?php echo isset($formulario["contacto"]["tipoRemitente"]['value']) && strcmp ($formulario["contacto"]["tipoRemitente"]['value'],
@@ -63,7 +64,8 @@
                     ? $formulario["contacto"]["comentario"]["value"] : "";?></textarea></label>
     </div>
     <div class="formularioServicios">
-        <span>Estoy interesado en :</span>
+        <div class="formularioHeader">SERVICIOS</div>
+        <span>Me interesa :</span>
         <label for="mantenimiento">
             <input id='mantenimiento'
                 type="checkbox"
@@ -106,7 +108,22 @@
                 ? $formulario["servicios"]["recogerResiduos"]["text"] : "";?>
         </label>
     </div>
+    <div class="radioEncuesta">
+        <div class="formularioHeader">ENCUESTA</div>
+        <span>¿Cómo nos has conocido?</span>
+        <input id="conocido" type="radio" name="tipoEncuestaConocer" value="conocidos"
+            <?php echo isset($formulario["encuesta"]["encuesta"]['value']) && strcmp
+            ($formulario["encuesta"]["encuesta"]['value'],
+                'Conocidos') == 0 ? "checked='cheched'" : "";?>/>
+        <label for="conocido">Conocidos</label>
+        <input id="medComunicacion" type="radio" name="tipoEncuestaConocer" value="medComunicacion"
+            <?php echo isset($formulario["encuesta"]["encuesta"]['value']) && strcmp
+            ($formulario["encuesta"]["encuesta"]['value'],
+                'MedComunicacion') == 0 ? "checked='cheched'" : "";?>/>
+        <label for="medComunicacion">Medios de Comunicación</label>
+    </div>
     <div id="captcha">
+        <div class="formularioHeader">CÓDIGO VERIFICACIÓN</div>
         <div id="putImageCaptcha"><?php include_once "../captcha/php/captcha_vista.php"; ?></div>
         <span>Introduce los caracteres mostrados</span>
         <input type="text" name="captcha" maxlength="10"/>

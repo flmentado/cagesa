@@ -47,10 +47,26 @@
         $cadena= htmlspecialchars($cadena);
         return stripslashes ($cadena);
     }
+
+    /**
+     * Verificamos el valor del captcha por medio del cifrado md5.
+     *
+     * @param $TextCaptcha String que contiene el cifrado md5 generado por la imagen.
+     *
+     * @return bool
+     */
     function verificarCaptcha($TextCaptcha){
         session_start();
         return  md5( $TextCaptcha) != $_SESSION["clave"]?false:true;
     }
+
+    /**
+     * Verificamos los campos del formulario.
+     *
+     * @param $formulario tipo array con los datos enviado en el  formulario.
+     *
+     * @return string que muestra conjunto de errores si los hubiera.
+     */
     function verificarFormulario(&$formulario){
         $expresionRegularTelefono='/^[9|6|7][0-9]{8}$/';
         //field are ok
@@ -104,9 +120,20 @@
         if (!$flagOption){
             $msgError.="Marca almenos alguna opción."."<br/>";
         }
+        if (isset($_POST['tipoEncuestaConocer']))
+            $formulario["encuesta"]["encuesta"]["value"] = ucfirst($_POST['tipoEncuestaConocer']);
+        else
+            $msgError.="Selecciona una respuesta en la Encuesta."."<br/>";
         return $msgError;
     }
 
+    /**
+     * Enviar Email en formato html
+     *
+     * @param $formulario array con los valores obtenidos del formulario.
+     *
+     * @return bool
+     */
     function enviarEmail ($formulario) {
         $salida = '';
         $contador=0;
@@ -120,7 +147,7 @@
             }
 
         }
-        $destinatario = "franciscomentadomanzanares@yahoo.es";//, Josemartin.jose@gmail.com";
+        $destinatario = "franciscomentadomanzanares@yahoo.es, Josemartin.jose@gmail.com";
         $asunto = "Confirmación solicitud presupuesto";
         $cuerpo
             = '
@@ -251,6 +278,12 @@
         //$headers .= "Bcc: \r\n";
         return @mail ($destinatario, $asunto, $cuerpo, $headers) ? true : false;
     }
+
+    /**
+     * Limpia sólo los valores del formulario con indice igual a value.
+     *
+     * @param $formulario array que contiene los valores obtenidos por medio del formulario.
+     */
     function limpiarFormulario(&$formulario){
         foreach ($formulario as $index=>$datos)
             foreach($datos as $indice=>$valor){

@@ -184,8 +184,7 @@
     <div id="contacto"
         class="small-12">
         <hr/>
-        <h4 class="contacto">CONTACTO</h4>
-        <?php   //FORMULARIO
+       <?php   //FORMULARIO
             include_once "../forms/contacto/php/formulario.php";?>
          </div>
 </div>

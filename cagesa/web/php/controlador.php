@@ -24,7 +24,9 @@
             "podaTala" => array ("text" => "Poda y/o Tala de palmeras y árboles.", "value" => ""),
             "tratamientoFitosanitario" => array ("text" => "Tratamientos fitosanitarios.", "value" => ""),
             "instalarReparar" => array ("text" => "Instalación y/o Reparación de sistemas de riego.", "value" => ""),
-            "recogerResiduos" => array ("text" => "Recogida de residuos vegetales.", "value" => "")));
+            "recogerResiduos" => array ("text" => "Recogida de residuos vegetales.", "value" => "")),
+        "encuesta" => array ("encuesta" => array ("value" => ""))
+    );
 
     if (isset($_POST["enviar"]) && strcmp ($_POST["enviar"], "Enviar") == 0) {
         $msgError = verificarFormulario ($formulario);
