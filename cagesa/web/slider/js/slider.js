@@ -1,11 +1,38 @@
 /**
  * File create by Francisco Luis Mentado Manzanares on 18/12/2014.
+ *
  */
 
 slider_starter = function (containerId) {
     var _SlideshowTransitions = [
+        ////Swing Inside in Stairs *
+         {
+             $Duration: 1200,
+             x: 0.2,
+             y: -0.1,
+             $Delay: 20,
+             $Cols: 4,
+             $Rows: 2,
+             $Clip: 15,
+             $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $Formation: $JssorSlideshowFormations$.$FormationStraightStairs, $Assembly: 260, $Easing: { $Left: $JssorEasing$.$EaseInWave, $Top: $JssorEasing$.$EaseInWave, $Clip: $JssorEasing$.$EaseOutQuad },
+             $Round: { $Left: 1.3, $Top: 2.5}
+         }
+        ////Dodge Pet Inside in Random Chess
+       ,  {
+            $Duration: 1500,
+            x: 0.2,
+            y: -0.1,
+            $Delay: 80,
+            $Cols: 4,
+            $Rows: 2,
+            $Clip: 15,
+            $During: { $Left: [0.2, 0.8], $Top: [0.2, 0.8] },
+            $ChessMode: { $Column: 15, $Row: 15 },
+            $Easing: { $Left: $JssorEasing$.$EaseInWave, $Top: $JssorEasing$.$EaseInWave, $Clip: $JssorEasing$.$EaseLinear },
+            $Round: { $Left: 0.8, $Top: 2.5}
+        }
         //Collapse Random
-        {
+        , {
             $Duration: 1000,
             $Delay: 0,
             $Cols: 4,
@@ -14,7 +41,6 @@ slider_starter = function (containerId) {
             $SlideOut: true,
             $Easing: $JssorEasing$.$EaseOutQuad
         }
-
         //Fade in LR Chess
         , {
             $Duration: 1200,
@@ -26,7 +52,6 @@ slider_starter = function (containerId) {
             $Opacity: 2,
             $Outside: true
         }
-
         //Rotate VDouble+ out
         , {
             $Duration: 1000,
@@ -48,10 +73,6 @@ slider_starter = function (containerId) {
             $Opacity: 2,
             $Round: {$Rotate: 0.85}
         }
-
-        ////Swing Inside in Stairs *
-        //, { $Duration: 1200, x: 0.2, y: -0.1, $Delay: 20, $Cols: 10, $Rows: 4, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $Formation: $JssorSlideshowFormations$.$FormationStraightStairs, $Assembly: 260, $Easing: { $Left: $JssorEasing$.$EaseInWave, $Top: $JssorEasing$.$EaseInWave, $Clip: $JssorEasing$.$EaseOutQuad }, $Round: { $Left: 1.3, $Top: 2.5} }
-
         //Zoom HDouble+ out
         , {
             $Duration: 1200,
@@ -68,7 +89,6 @@ slider_starter = function (containerId) {
             },
             $Opacity: 2
         }
-
         ////Dodge Pet Inside in Stairs *
         //, { $Duration: 1500, x: 0.2, y: -0.1, $Delay: 20, $Cols: 10, $Rows: 4, $Clip: 15, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $Formation: $JssorSlideshowFormations$.$FormationStraightStairs, $Assembly: 260, $Easing: { $Left: $JssorEasing$.$EaseInWave, $Top: $JssorEasing$.$EaseInWave, $Clip: $JssorEasing$.$EaseOutQuad }, $Round: { $Left: 0.8, $Top: 2.5} }
 
@@ -240,9 +260,6 @@ slider_starter = function (containerId) {
             $Easing: {$Clip: $JssorEasing$.$EaseOutCubic, $Opacity: $JssorEasing$.$EaseLinear},
             $Opacity: 2
         }
-
-        ////Dodge Pet Inside in Random Chess
-        //, { $Duration: 1500, x: 0.2, y: -0.1, $Delay: 80, $Cols: 10, $Rows: 4, $Clip: 15, $During: { $Left: [0.2, 0.8], $Top: [0.2, 0.8] }, $ChessMode: { $Column: 15, $Row: 15 }, $Easing: { $Left: $JssorEasing$.$EaseInWave, $Top: $JssorEasing$.$EaseInWave, $Clip: $JssorEasing$.$EaseLinear }, $Round: { $Left: 0.8, $Top: 2.5} }
     ];
 
     var _CaptionTransitions = [];
@@ -258,87 +275,18 @@ slider_starter = function (containerId) {
         $Easing: {$Left: $JssorEasing$.$EaseInOutSine},
         $Opacity: 2
     };
-    _CaptionTransitions["T"] = {$Duration: 900, y: 0.6, $Easing: {$Top: $JssorEasing$.$EaseInOutSine}, $Opacity: 2};
+    _CaptionTransitions["T"] = {
+        $Duration: 900,
+        y: 0.6,
+        $Easing: {$Left: $JssorEasing$.$EaseInOutSine},
+        $Opacity: 2
+    };
     _CaptionTransitions["B"] = {
         $Duration: 900,
         y: -0.6,
-        $Easing: {$Top: $JssorEasing$.$EaseInOutSine},
-        $Opacity: 2
-    };
-    _CaptionTransitions["TR"] = {
-        $Duration: 900,
-        x: -0.6,
-        y: 0.6,
-        $Easing: {$Left: $JssorEasing$.$EaseInOutSine, $Top: $JssorEasing$.$EaseInOutSine},
-        $Opacity: 2
-    };
-
-    _CaptionTransitions["L|IB"] = {
-        $Duration: 1200,
-        x: 0.6,
-        $Easing: {$Left: $JssorEasing$.$EaseInOutBack},
-        $Opacity: 2
-    };
-    _CaptionTransitions["R|IB"] = {
-        $Duration: 1200,
-        x: -0.6,
-        $Easing: {$Left: $JssorEasing$.$EaseInOutBack},
-        $Opacity: 2
-    };
-    _CaptionTransitions["T|IB"] = {
-        $Duration: 1200,
-        y: 0.6,
-        $Easing: {$Top: $JssorEasing$.$EaseInOutBack},
-        $Opacity: 2
-    };
-
-    _CaptionTransitions["CLIP|LR"] = {
-        $Duration: 900,
-        $Clip: 3,
-        $Easing: {$Clip: $JssorEasing$.$EaseInOutCubic},
-        $Opacity: 2
-    };
-    _CaptionTransitions["CLIP|TB"] = {
-        $Duration: 900,
-        $Clip: 12,
-        $Easing: {$Clip: $JssorEasing$.$EaseInOutCubic},
-        $Opacity: 2
-    };
-    _CaptionTransitions["CLIP|L"] = {
-        $Duration: 900,
-        $Clip: 1,
-        $Easing: {$Clip: $JssorEasing$.$EaseInOutCubic},
-        $Opacity: 2
-    };
-
-    _CaptionTransitions["MCLIP|R"] = {
-        $Duration: 900,
-        x: -0.6,
         $Easing: {$Left: $JssorEasing$.$EaseInOutSine},
         $Opacity: 2
-        /*$Duration: 900,
-         $Clip: 2,
-         $Move: true,
-         $Easing: {$Clip: $JssorEasing$.$EaseInOutCubic},
-         $Opacity: 2*/
     };
-    _CaptionTransitions["MCLIP|T"] = {
-        $Duration: 900,
-        $Clip: 4,
-        $Move: true,
-        $Easing: {$Clip: $JssorEasing$.$EaseInOutCubic},
-        $Opacity: 2
-    };
-
-    _CaptionTransitions["WV|B"] = {
-        $Duration: 1200,
-        x: -0.2,
-        y: -0.6,
-        $Easing: {$Left: $JssorEasing$.$EaseInWave, $Top: $JssorEasing$.$EaseLinear},
-        $Opacity: 2,
-        $Round: {$Left: 1.5}
-    };
-
     _CaptionTransitions["TORTUOUS|VB"] = {
         $Duration: 1800,
         y: -0.2,
@@ -347,35 +295,6 @@ slider_starter = function (containerId) {
         $Opacity: 2,
         $During: {$Top: [0, 0.7]},
         $Round: {$Top: 1.3}
-    };
-
-    _CaptionTransitions["LISTH|R"] = {
-        $Duration: 1500,
-        x: -0.8,
-        $Clip: 1,
-        $Easing: $JssorEasing$.$EaseInOutCubic,
-        $ScaleClip: 0.8,
-        $Opacity: 2,
-        $During: {$Left: [0.4, 0.6], $Clip: [0, 0.4], $Opacity: [0.4, 0.6]}
-    };
-
-    _CaptionTransitions["RTT|360"] = {
-        $Duration: 900,
-        $Rotate: 1,
-        $Easing: {$Opacity: $JssorEasing$.$EaseLinear, $Rotate: $JssorEasing$.$EaseInQuad},
-        $Opacity: 2
-    };
-    _CaptionTransitions["RTT|10"] = {
-        $Duration: 900,
-        $Zoom: 11,
-        $Rotate: 1,
-        $Easing: {
-            $Zoom: $JssorEasing$.$EaseInExpo,
-            $Opacity: $JssorEasing$.$EaseLinear,
-            $Rotate: $JssorEasing$.$EaseInExpo
-        },
-        $Opacity: 2,
-        $Round: {$Rotate: 0.8}
     };
 
     _CaptionTransitions["RTTL|BR"] = {
@@ -394,117 +313,33 @@ slider_starter = function (containerId) {
         $Opacity: 2,
         $Round: {$Rotate: 0.8}
     };
-
-    _CaptionTransitions["T|IE*IE"] = {
-        $Duration: 1800,
-        y: 0.8,
-        $Zoom: 11,
-        $Rotate: -1.5,
-        $Easing: {
-            $Top: $JssorEasing$.$EaseInOutElastic,
-            $Zoom: $JssorEasing$.$EaseInElastic,
-            $Rotate: $JssorEasing$.$EaseInOutElastic
-        },
-        $Opacity: 2,
-        $During: {$Zoom: [0, 0.8], $Opacity: [0, 0.7]},
-        $Round: {$Rotate: 0.5}
-    };
-
-    _CaptionTransitions["RTTS|R"] = {
+    _CaptionTransitions["RTTL|BL"] = {
         $Duration: 900,
-        x: -0.6,
-        $Zoom: 1,
+        x: 0.6,
+        y: -0.6,
+        $Zoom: 11,
         $Rotate: 1,
         $Easing: {
-            $Left: $JssorEasing$.$EaseInQuad,
-            $Zoom: $JssorEasing$.$EaseInQuad,
-            $Rotate: $JssorEasing$.$EaseInQuad,
-            $Opacity: $JssorEasing$.$EaseOutQuad
+            $Left: $JssorEasing$.$EaseInCubic,
+            $Top: $JssorEasing$.$EaseInCubic,
+            $Zoom: $JssorEasing$.$EaseInCubic,
+            $Opacity: $JssorEasing$.$EaseLinear,
+            $Rotate: $JssorEasing$.$EaseInCubic
         },
         $Opacity: 2,
-        $Round: {$Rotate: 1.2}
+        $Round: {$Rotate: 0.8}
     };
-    _CaptionTransitions["RTTS|T"] = {
+    _CaptionTransitions["ZMF"] = {
+        $Duration:900,
+        $Zoom:1,
+        $Easing:$JssorEasing$.$EaseInCubic,
+        $Opacity:2};
+    _CaptionTransitions["ZMF|2"] = {
         $Duration: 900,
-        y: 0.6,
-        $Zoom: 1,
-        $Rotate: 1,
-        $Easing: {
-            $Top: $JssorEasing$.$EaseInQuad,
-            $Zoom: $JssorEasing$.$EaseInQuad,
-            $Rotate: $JssorEasing$.$EaseInQuad,
-            $Opacity: $JssorEasing$.$EaseOutQuad
-        },
-        $Opacity: 2,
-        $Round: {$Rotate: 1.2}
-    };
-
-    _CaptionTransitions["DDGDANCE|RB"] = {
-        $Duration: 1800,
-        x: -0.3,
-        y: -0.3,
-        $Zoom: 1,
-        $Easing: {
-            $Left: $JssorEasing$.$EaseInJump,
-            $Top: $JssorEasing$.$EaseInJump,
-            $Zoom: $JssorEasing$.$EaseOutQuad
-        },
-        $Opacity: 2,
-        $During: {$Left: [0, 0.8], $Top: [0, 0.8]},
-        $Round: {$Left: 0.8, $Top: 2.5}
-    };
-    _CaptionTransitions["ZMF|10"] = {
-        $Duration: 900,
-        $Zoom: 11,
+        $Zoom: 3,
         $Easing: {$Zoom: $JssorEasing$.$EaseInExpo, $Opacity: $JssorEasing$.$EaseLinear},
         $Opacity: 2
     };
-    _CaptionTransitions["DDG|TR"] = {
-        $Duration: 1200,
-        x: -0.3,
-        y: 0.3,
-        $Zoom: 1,
-        $Easing: {$Left: $JssorEasing$.$EaseInJump, $Top: $JssorEasing$.$EaseInJump},
-        $Opacity: 2,
-        $During: {$Left: [0, 0.8], $Top: [0, 0.8]},
-        $Round: {$Left: 0.8, $Top: 0.8}
-    };
-
-    _CaptionTransitions["FLTTR|R"] = {
-        $Duration: 900,
-        x: -0.2,
-        y: -0.1,
-        $Easing: {$Left: $JssorEasing$.$EaseLinear, $Top: $JssorEasing$.$EaseInWave},
-        $Opacity: 2,
-        $Round: {$Top: 1.3}
-    };
-    _CaptionTransitions["FLTTRWN|LT"] = {
-        $Duration: 1800,
-        x: 0.5,
-        y: 0.2,
-        $Zoom: 1,
-        $Easing: {
-            $Left: $JssorEasing$.$EaseInOutSine,
-            $Top: $JssorEasing$.$EaseInWave,
-            $Zoom: $JssorEasing$.$EaseInOutQuad
-        },
-        $Opacity: 2,
-        $During: {$Left: [0, 0.7], $Top: [0.1, 0.7]},
-        $Round: {$Top: 1.3}
-    };
-
-    _CaptionTransitions["ATTACK|BR"] = {
-        $Duration: 1500,
-        x: -0.1,
-        y: -0.5,
-        $Zoom: 1,
-        $Easing: {$Left: $JssorEasing$.$EaseOutWave, $Top: $JssorEasing$.$EaseInExpo},
-        $Opacity: 2,
-        $During: {$Left: [0.3, 0.7], $Top: [0, 0.7]},
-        $Round: {$Left: 1.3}
-    };
-
-    _CaptionTransitions["FADE"] = {$Duration: 900, $Opacity: 2};
 
     var options = {
         $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
@@ -536,7 +371,7 @@ slider_starter = function (containerId) {
             $Class: $JssorCaptionSlider$,                   //[Required] Class to create instance to animate caption
             $CaptionTransitions: _CaptionTransitions,       //[Required] An array of caption transitions to play caption, see caption transition section at jssor slideshow transition builder
             $PlayInMode: 1,                                 //[Optional] 0 None (no play), 1 Chain (goes after main slide), 3 Chain Flatten (goes after main slide and flatten all caption animations), default value is 1
-            $PlayOutMode: 3                                 //[Optional] 0 None (no play), 1 Chain (goes before main slide), 3 Chain Flatten (goes before main slide and flatten all caption animations), default value is 1
+            $PlayOutMode: 0                                 //[Optional] 0 None (no play), 1 Chain (goes before main slide), 3 Chain Flatten (goes before main slide and flatten all caption animations), default value is 1
         },
 
         $ArrowNavigatorOptions: {                       //[Optional] Options to specify and enable arrow navigator or not
@@ -564,7 +399,7 @@ slider_starter = function (containerId) {
     function ScaleSlider() {
         var parentWidth = jssor_slider1.$Elmt.parentNode.clientWidth;
         if (parentWidth)
-            jssor_slider1.$ScaleWidth(Math.max(Math.min(parentWidth, 980), 300));
+            jssor_slider1.$ScaleWidth(Math.max(Math.min(parentWidth,3072 ), 300));
         else
             $Jssor$.$Delay(ScaleSlider, 10);
     }
@@ -576,6 +411,7 @@ slider_starter = function (containerId) {
     //responsive code end
 
 }
+// Wait for load,
 window.onload = function () {
     var mySlider = document.getElementById('sliderContainer');
     slider_starter('sliderContainer');

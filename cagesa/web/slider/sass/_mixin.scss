@@ -1,7 +1,71 @@
 /////////////////////////////////////////////////////////////////////////////////
 // SLIDER
 /////////////////////////////////////////////////////////////////////////////////
+// USER SELECT
+@mixin user-select($select) {
+  -webkit-user-select: $select;
+  -moz-user-select: $select;
+  -ms-user-select: $select; // IE10+
+  -o-user-select: $select;
+  user-select: $select;
+}
+//TRANSITION GENERAL
+@mixin transition($transition...) {
+  -webkit-transition: $transition;
+  -moz-transition:    $transition;
+  -ms-transition:     $transition;
+  -o-transition:      $transition;
+  transition:        $transition;
+}
+//TRANSITION DELAY
+@mixin transition-delay($transition-delay) {
+  -webkit-transition-delay: $transition-delay;
+  -moz-transition-delay:    $transition-delay;
+  -ms-transition-delay:     $transition-delay;
+  -o-transition-delay:      $transition-delay;
+  transition-delay:         $transition-delay;
+}
+//TRANSITION DURATION
+@mixin transition-duration($transition-duration) {
+  -webkit-transition-duration: $transition-duration;
+  transition-duration: $transition-duration;
+}
+@mixin transition-transform($transition...) {
+  -webkit-transition: -webkit-transform $transition;
+  -moz-transition: -moz-transform $transition;
+  -o-transition: -o-transform $transition;
+  transition: transform $transition;
+}
 
+// TRANSFORMATION ROTATE
+@mixin rotate($degrees) {
+  -webkit-transform: rotate($degrees);
+  -ms-transform: rotate($degrees); // IE9+
+  transform: rotate($degrees);
+}
+// TRANSFORMATION SCALE
+@mixin scale($ratio) {
+  -webkit-transform: scale($ratio);
+  -ms-transform: scale($ratio); // IE9+
+  transform: scale($ratio);
+}
+// TRANSFORMATION TRANSLATE
+@mixin translate($x, $y) {
+  -webkit-transform: translate($x, $y);
+  -ms-transform: translate($x, $y); // IE9+
+  transform: translate($x, $y);
+}
+// TRANSFORMATION TRANSLATE 3D
+@mixin translate3d($x, $y, $z) {
+  -webkit-transform: translate3d($x, $y, $z);
+  transform: translate3d($x, $y, $z);
+}
+// BOX-SIZING
+@mixin box-sizing($boxmodel) {
+  -webkit-box-sizing: $boxmodel;
+  -moz-box-sizing: $boxmodel;
+  box-sizing: $boxmodel;
+}
 //CAPTION
 @mixin put_class($datos) {
   font-family: map-get($datos, fontFamily);
@@ -10,13 +74,18 @@
   text-shadow: map-get($datos, textShadow);
   background-color: map-get($datos, backGroundColor);
 }
-
+//BLOCK
+@mixin put_block($float){
+  box-sizing: border-box;
+  display:block;
+  float:$float;
+  position:relative;
+}
 //POSITION AND SIZE
 @mixin put_position_dimension($position, $top, $left, $width, $height) {
   @include put_position($position, $top, $left);
   @include put_dimension($width, $height);
 }
-
 //POSITION
 @mixin put_position($position, $top, $left) {
   position: $position;
@@ -28,6 +97,46 @@
 @mixin put_dimension($width, $height) {
   width: $width;
   height: $height;
+}
+// PUT IMAGE
+@mixin put_image($datos) {
+  @if map-has-key($datos,imageUrl) {
+    background-image: url(map-get($datos,imageUrl));
+  }
+  background-repeat: map-get($datos, imageRepeat);
+  background-position: map-get($datos, imagePosition);
+  background-size: map-get($datos, imageSize);
+}
+//
+@mixin put_element($datos){
+  border-radius: map-get($datos, borderRadius);
+  text-shadow: map-get($datos, textShadow);
+  color: map-get($datos, color);
+  background-color:map-get($datos, backGroundColor);
+  box-shadow: map-get($datos, boxShadow);
+  font-family: map-get($datos, fontFamily);
+  font-size: map-get($datos, fontSize);
+  font-style: map-get($datos, fontStyle);
+  text-align: map-get($datos, textAlign);
+  padding: map-get($datos, padding);
+  padding-top: map-get($datos, paddingTop);
+  padding-right: map-get($datos, paddingRight);
+  padding-bottom: map-get($datos, paddingBottom);
+  padding-left: map-get($datos, paddingLeft);
+  margin: map-get($datos, margin);
+  margin-top: map-get($datos, marginTop);
+  margin-right: map-get($datos, marginRight);
+  margin-bottom: map-get($datos, marginBottom);
+  margin-left: map-get($datos, marginLeft);
+  border: map-get($datos, border);
+  border-top: map-get($datos, borderTop);
+  border-right: map-get($datos, borderRight);
+  border-bottom: map-get($datos, borderBottom);
+  border-left: map-get($datos, borderLeft);
+  line-height: map-get($datos, lineHeight);
+  cursor:map-get($datos, cursor);
+  transition: map-get($datos, transition);
+  clear:map-get($datos, clear);
 }
 
 //PUT CAPTION
@@ -42,35 +151,12 @@
   @if str-length(#{map-get($datos, class)})>0 {
     @extend .#{#{map-get($datos, class)}};
   }
-  @if map-has-key($datos, imageUrl) {
-    background-image: url(map-get($datos,imageUrl));
-  }
-  background-position: map-get($datos, imagePosition);
-  background-repeat: map-get($datos, imageRepeat);
-  background-size: map-get($datos, imageSize);
-  border-radius: map-get($datos, borderRadius);
-  text-shadow: map-get($datos, textShadow);
-  color: map-get($datos, textColor);
-  box-shadow: map-get($datos, boxShadow);
-  font-family: map-get($datos, fontFamily);
-  font-size: map-get($datos, fontSize);
-  font-style: map-get($datos, fontStyle);
-  text-align: map-get($datos, textAlign);
-  padding: map-get($datos, textPadding);
-  height: map-get($datos, height);
-  line-height: map-get($datos, lineHeight);
-  transition: transform 1s lineal;
+  @include put_image($datos);
+  @include put_element($datos);
   &:after {
     content: map-get($datos, content);
   }
   &:hover {
     transform: scale(1.1);
   }
-}
-
-@mixin put_image($datos) {
-  background-image: url(map-get($datos,imageUrl));
-  background-repeat: map-get($datos, imageRepeat);
-  background-position: map-get($datos, imagePosition);
-  background-size: map-get($datos, imageSize);
 }

@@ -1,0 +1,96 @@
+/////////////////////////////////////////////////////////////////////////////////
+// FORM MODAL
+/////////////////////////////////////////////////////////////////////////////////
+@import "variables";
+
+##{$formModalName} {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 99999;
+  .ventanaModal {
+    position: absolute;
+    background: rgba(255, 255, 255, .9);
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 96%;
+    height: 90%;
+    right: 50%;
+    max-width: 600px;
+    bottom: 5%;
+    margin-right: -48%;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, .3);
+    .headerFormularioModal:before {
+      font-size: x-large;
+      display: block;
+      text-align: center;
+      line-height: 40px;
+      content: "SOLICITUD";
+      color: white;
+      text-shadow: 1px 1px rgba(0, 0, 0, .3);
+    }
+    @media screen and (min-width: 600px) {
+      width: 500px;
+      margin-right: -250px;
+    }
+  }
+
+  .closeFormModal {
+    background: rgba(128,0,0,1);
+    color: white;
+    line-height: 21px;
+    position: absolute;
+    right: 3px;
+    text-align: center;
+    top: 6px;
+    width: 24px;
+    text-decoration: none;
+    border: 2px solid white;
+    font-weight: bold;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, .3);
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 1s linear 0s;
+  }
+  .closeFormModal:hover {
+    background: rgba(255,0,0,1);
+  }
+  .headerFormularioModal, .cuerpoFormularioModal {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+  }
+  .headerFormularioModal {
+    height: 40px;
+    top: 0;
+    left: 0;
+    border-radius: 5px 5px 0 0;
+    border-bottom: 1px solid green;
+    background: linear-gradient(to bottom, #5bcf80 0%, #4d7809 100%);
+    box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, .3);
+    z-index: 2;
+  }
+  .cuerpoFormularioModal {
+    padding-top: 40px;
+    left: 0;
+    height: 100%;
+  }
+  .scroll {
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    padding: 0 5px;
+    width: 100%;
+    height: 98%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+}

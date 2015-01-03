@@ -1784,17 +1784,17 @@ select {
 
 /* line 44, ../scss/styles.scss */
 #uno {
-  background: url(../img/interior.jpg) no-repeat center center;
+  background: url(../slider/img/slider/02.jpg) no-repeat center center;
 }
 
 /* line 45, ../scss/styles.scss */
 #dos {
-  background: url(../img/hojas.jpg) no-repeat center center;
+  background: url(../slider/img/slider/03.jpg) no-repeat center center;
 }
 
 /* line 46, ../scss/styles.scss */
 #tres {
-  background: url(../img/sgv-gal-garden.jpg) no-repeat center center;
+  background: url(../slider/img/slider/01.jpg) no-repeat center center;
 }
 
 /* line 48, ../scss/styles.scss */

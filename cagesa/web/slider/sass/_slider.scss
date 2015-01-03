@@ -9,33 +9,19 @@
   font-family: map-get($fontNameDefault, titulo);
   src: url("#{$urlRootSlider}/fonts/fuente.ttf");
 }
-
-@font-face {
-  font-family: map-get($fontNameDefault, orange);
-  src: url("#{$urlRootSlider}/fonts/action.ttf");
-}
-
-##{map-get($sliderBox, name)} {
+##{$sliderName} {
   visibility: hidden;
-  box-sizing: content-box;
+  box-sizing: border-box;
   float: map-get($sliderBox, float);
-  margin: map-get($sliderBox, margin);
   position: map-get($sliderBox, position);
-  width: map-get($sliderBox, width);
-  height: map-get($sliderBox, height);
-  border-radius: map-get($sliderBox, radius);
-  box-shadow: map-get($sliderBox, boxShadow);
-  border: map-get($sliderBox, border);
-  border-top: map-get($sliderBox, borderTop);
-  border-right: map-get($sliderBox, borderRight);
-  border-bottom: map-get($sliderBox, borderBottom);
-  border-left: map-get($sliderBox, borderLeft);
+  @include put_dimension(map-get($sliderBox, width),map-get($sliderBox, height));
+  @include put_element($sliderBox);
   overflow: hidden;
   @media screen and (max-width: map-get($mediaScreen, small)) {
     border: none;
   }
   $strClass: #{''};
-  @each $class in $captionList {
+  @each $index,$class in $listClass {
     $strClass: $strClass #{'.'}#{map-get($class, class)}#{','};
   }
   #{$strClass} {
@@ -44,9 +30,9 @@
     text-align: #{map-get($caption, textAlign)};
     border-radius: map-get($caption, borderRadius);
   }
-  @each $cap in $captionList {
-    .#{map-get($cap, class)} {
-      @include put_class($cap);
+  @each $index,$class in $listClass {
+    .#{map-get($class, class)} {
+      @include put_class($class);
     }
   }
   a {
@@ -67,29 +53,27 @@
       background-color: map-get($spinner, backGroundColor);
     }
   }
-  & div[u='slides'] {
+  & div[u='slides']{
     cursor: map-get($cursorDefault, default);
     @include put_position_dimension(absolute, 0, 0, map-get($sliderBox, width), map-get($sliderBox, height));
     overflow: hidden;
-    $numSlider: 2; //Comienza en el 2 siempre, el 1 es generado dinamicamente con las transiciones entre sliders
+    $numSlider: 1;
     @each $i, $captionSlider in $captionSliders {
-      & > div:nth-of-type(#{$numSlider}) {
-        $div: 2; //Saltamos la etiqueta imagen del html
+        $text: 1;
         @each $indice, $datos in $captionSlider {
-          & > :nth-child(#{$div}) {
+          & .slider_#{$numSlider}_text_#{$text}{
             @if map-has-key($datos, imageSliderUrl) {
               @include put_slider_image($datos)
             } @else {
               @include put_caption($datos);
             }
-            $div: $div+1;
+            $text: $text+1;
           }
         }
-      }
       $numSlider: $numSlider+1;
     }
     @media screen and (max-width: map-get($mediaScreen, small)) {
-      .block {
+      .smartphoneHidden {
         display: none;
       }
     }

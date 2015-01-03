@@ -1,0 +1,14 @@
+/////////////////////////////////////////////////////////////////////////////////
+// FORM MODAL
+/////////////////////////////////////////////////////////////////////////////////
+@import "mixin";
+
+$urlRootForm: "../forms/modal";
+$formModalName: 'formularioModal';
+$formModalCaption:(
+        formulario:"Solicitud",
+        formularioError:"Formulario Erróneo",
+        formularioCorrecto:"Formulario Enviado",
+);
+
+//FORM MODAL

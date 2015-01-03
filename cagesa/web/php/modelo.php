@@ -73,30 +73,32 @@
         $msgError='';
         //at least one checkbutton checked
         $flagOption=false;
-        if (isset($_POST['tipoRemitente']))
-            $formulario["contacto"]["tipoRemitente"]["value"] = ucfirst($_POST['tipoRemitente']);
-        else
-            $msgError.="Marca el tipo Remitente."."<br/>";
-        if (isset($_POST['remitente']) && strlen($_POST['remitente'])>1)
-            $formulario["contacto"]["remitente"]["value"]=limpiarInput (ucwords ($_POST['remitente']));
-        else
-            $msgError.="Nombre de usuario erróneo."."<br/>";
-        if (isset($_POST['direccion']) && strlen($_POST['direccion'])>1)
-            $formulario["contacto"]["direccion"]["value"]=limpiarInput($_POST['direccion']);
-        else
-            $msgError.="Dirección Errónea."."<br/>";
-        if (isset($_POST['tlf']) && preg_match($expresionRegularTelefono, $_POST['tlf']))
-            $formulario["contacto"]["tlf"]["value"]=limpiarInput($_POST['tlf']);
-        else
-            $msgError.="Teléfono de contacto erróneo."."<br/>";
+        if (isset($_POST['tipoRemitente'])) {
+            $formulario["contacto"]["tipoRemitente"]["value"] = ucfirst ($_POST['tipoRemitente']);
+            $formulario["contacto"]["tipoRemitente"]["err"]=false;
+        }
+        if (isset($_POST['remitente']) && strlen($_POST['remitente'])>1) {
+            $formulario["contacto"]["remitente"]["value"] = limpiarInput (ucwords ($_POST['remitente']));
+            $formulario["contacto"]["remitente"]["err"]=false;
+        }
+        if (isset($_POST['direccion']) && strlen($_POST['direccion'])>1) {
+            $formulario["contacto"]["direccion"]["value"] = limpiarInput ($_POST['direccion']);
+            $formulario["contacto"]["direccion"]["err"]=false;
+        }
+        if (isset($_POST['tlf']) && preg_match($expresionRegularTelefono, $_POST['tlf'])) {
+            $formulario["contacto"]["tlf"]["value"] = limpiarInput ($_POST['tlf']);
+            $formulario["contacto"]["tlf"]["err"]=false;
+        }
         if (isset($_POST['fax']) &&  preg_match($expresionRegularTelefono, $_POST['fax']))
-            $formulario["contacto"]["fax"]["value"]=limpiarInput($_POST['fax']);
-        if (isset($_POST['email']) && filter_input (INPUT_POST, 'email',FILTER_VALIDATE_EMAIL))
-            $formulario["contacto"]["email"]["value"]=limpiarInput ($_POST['email']);
-        else
-            $msgError.="Email erróneo."."<br/>";
+            $formulario["contacto"]["fax"]["value"] = limpiarInput ($_POST['fax']);
+        if (isset($_POST['email']) && filter_input (INPUT_POST, 'email',FILTER_VALIDATE_EMAIL)) {
+            $formulario["contacto"]["email"]["value"] = limpiarInput ($_POST['email']);
+            $formulario["contacto"]["email"]["err"]=false;
+        }
         if (isset($_POST['comentario']))
             $formulario["contacto"]["comentario"]["value"]=limpiarInput($_POST['comentario']);
+
+        //SERVICIOS
         if (isset($_POST['mantenimiento'])) {
             $formulario["servicios"]["mantenimiento"]["value"] = limpiarInput ($_POST['mantenimiento']);
             $flagOption = true;
@@ -117,13 +119,22 @@
             $formulario["servicios"]["recogerResiduos"]["value"] = limpiarInput ($_POST['recogerResiduos']);
             $flagOption = true;
         }
-        if (!$flagOption){
-            $msgError.="Marca almenos alguna opción."."<br/>";
+
+        //ENCUESTA
+        if (isset($_POST['tipoEncuestaConocer'])) {
+            $formulario["encuesta"]["encuesta"]["value"] = ucfirst ($_POST['tipoEncuestaConocer']);
+            $formulario["encuesta"]["encuesta"]["err"]=false;
         }
-        if (isset($_POST['tipoEncuestaConocer']))
-            $formulario["encuesta"]["encuesta"]["value"] = ucfirst($_POST['tipoEncuestaConocer']);
-        else
-            $msgError.="Selecciona una respuesta en la Encuesta."."<br/>";
+        //CONTACTO Obtener Errores
+        foreach ($formulario["contacto"] as $indiceCampo=>$campo) {
+            if ($formulario["contacto"][$indiceCampo]["err"]===true) {
+                $msgError .= "<li>".$formulario["contacto"][$indiceCampo]["errMsg"]."</li>";
+            }
+        }
+        //SERVICIOS Obtener Errores
+        if (!$flagOption){
+            $msgError.='<li>'.$formulario["servicios"]["mantenimiento"]["errMsg"].'</li>';
+        }
         return $msgError;
     }
 

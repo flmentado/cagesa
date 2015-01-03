@@ -2,31 +2,52 @@
 // FORM
 /////////////////////////////////////////////////////////////////////////////////
 @import "variables";
-
 ##{$formName} {
-  @include putBlock(left);
-  width: map-get($formContacto, width);
-  span {
+  @include put_block(none);
+  @include put_element($formContacto);
+  .formularioHeader{
+   @include put_element($formularioHeader);
+   }
+ .fila{
+   @include put_element($formContactoFila);
+ }
+ label{
+   @include put_element($formContactoLabel);
+ }
+ span {
     display: block;
-    width: map-get($formContacto, width);
+    @include put_dimension(map-get($formContactoSpan, width),map-get($formContactoSpan, height));
+    @include put_element($formContactoSpan);
+    > textarea{
+      resize: none;
+      @include put_dimension(map-get($formContactoTextArea, width),map-get($formContactoTextArea, height));
+      @include put_element($formContactoTextArea);
+      &:focus{
+        @include  put_element($focus);
+      }
+    }
+  }
+  .obligatorio{
+    background-color: map-get($formContactoInputText, colorCampoObligatorio);
+  }
+  .error{
+    background-color: map-get($formContactoInputText, colorCampoError);
+  }
+  .correcto{
+    background-color: map-get($formContactoInputText, colorCampoCorrecto);
   }
   .formularioDatosContacto {
     box-sizing: border-box;
     max-width: map-get($formContacto, maxWidth);
-    > input.textoDatoContacto {
-      @include putBlock(left);
-      width: map-get($formContacto, width);
-      @include put_image($formContactoInputText);
-      padding: map-get($formContactoInputText, padding);
-    }
-    label{
-        > textarea#comentario {
-        resize: none;
-        width: map-get($formContactoTextArea, width);
-        height: map-get($formContactoTextArea, height);
-        background-color: map-get($formContactoTextArea, backGroundColor);
-        padding: map-get($formContactoTextArea, padding);
-      }
+    font-size: inherit;
+  }
+  .ponerAura {
+    @include put_block(left);
+    width: map-get($formContacto, width);
+    @include put_image($formContactoInputText);
+    @include put_element($formContactoInputText);
+    &:focus{
+      @include put_element($focus);
     }
   }
   #remitente {
@@ -44,13 +65,14 @@
   #email {
     background-image: url("#{$urlRootForm}/img/mail.png");
   }
+  #pass {
+    background-image: url("#{$urlRootForm}/img/pass.png");
+  }
+
   input[type='submit'] {
     clear: both;
     display: block;
     float: left;
   }
-  div.formularioServicios {
-    box-sizing: border-box;
-    clear: left;
-  }
+
 }

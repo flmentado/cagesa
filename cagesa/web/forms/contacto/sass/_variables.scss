@@ -9,17 +9,72 @@ $formName: 'formularioContacto';
 //FORM
 $formContacto: (
         width:100%,
-        maxWidth:400px
+        maxWidth:400px,
+        fontSize:map-get($fontSizeDefault,medium),
+        color:rgba(0,50,0,1),
+        textShadow:1px 1px rgba(255,255,255,.5)
+);
+$formularioHeader:(
+        fontSize:map-get($fontSizeDefault,large),
+        color:map-get($colorDefault,greenMedium),
+        textShadow: map-get($textShadowDefault,white_5),
+        borderBottom: 2px ridge rgba(200,240,200,.8),
+        paddingLeft: 5px,
+        marginTop:5px,
+        marginBottom: 10px
+);
+$formContactoFila: (
+        paddingBottom: 5px
 );
 $formContactoInputText: (
         imageRepeat: no-repeat,
-        imagePosition: 5px center,
-        imageSize: 2em 2em,
-        padding: map-get($borderWidthDefault, medium) 2px map-get($borderWidthDefault, medium) 3em
+        imagePosition: 10px center,
+        imageSize: 1.5em 1.6em,
+        padding: map-get($marginDefault, medium) 1em map-get($marginDefault, medium) 2.8em,
+        fontSize:map-get($formContacto,fontSize),
+        color:map-get($formContacto,color),
+        textShadow:map-get($formContacto,textShadow),
+        marginBottom: 10px,
+        border: 1px solid darkseagreen,
+        box-shadow: none,
+        borderRadius: 25px,
+        cursor:pointer,
+        transition: all .6s linear,
+        colorCampoObligatorio: #F7FFF7,
+        colorCampoError: green,
+        colorCampoCorrecto: red
+);
+$formContactoSpan: (
+        fontSize:map-get($formContacto,fontSize),
+        width:map-get($formContacto,width),
+        height:auto,
+        color:map-get($formContacto,color),
+        textShadow:map-get($formContacto,textShadow),
+        paddingBottom: 5px,
+        clear:both
 );
 $formContactoTextArea: (
         width:100%,
         height: 6em,
         backGroundColor:map-get($shadowDefaultColor,white),
-        padding: map-get($borderWidthDefault, medium)
+        padding: map-get($borderWidthDefault, medium),
+        fontSize:map-get($formContacto,fontSize),
+        color:map-get($formContacto,color),
+        textShadow:map-get($formContacto,textShadow),
+        box-shadow: none,
+        border: 1px solid darkseagreen,
+        cursor:pointer,
+        transition: box-shadow 1s linear 0s,
+        clear:both
+);
+$formContactoLabel: (
+        fontSize:map-get($formContacto,fontSize),
+        color:map-get($formContacto,color),
+        textShadow:map-get($formContacto,textShadow),
+        clear:both,
+);
+$focus:(
+        cursor:default,
+        boxShadow:0px 0px 6px 6px rgba(darkseagreen,.3),
+        borderColor:rgb(0,210,0)
 );
