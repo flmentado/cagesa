@@ -3,21 +3,19 @@
 /////////////////////////////////////////////////////////////////////////////////
 @import "variables";
 ##{$formName}>div#captcha {
-  @include put_block(left);
+  @include put_element(map-get($captcha,putInit));
   div#putImageCaptcha > div {
-    @include put_block(left);
-    @include put_dimension(map-get($captcha, width), map-get($captcha, height));
-    @include put_image($captchaRefresh);
+    @include put_element(map-get($captcha,putInit));
+    @include put_element(map-get($captcha,putSize));
+    @include put_element(map-get($captchaRefresh,putImage));
     @include put_element($captcha);
-
     input#captchaRefresh {
-      @include put_block(right);
-      @include put_dimension(map-get($captchaRefresh, width), map-get($captchaRefresh, height));
-      @include put_image($captchaRefresh);
+      @include put_element(map-get($captchaRefresh,putInit));
+      @include put_element(map-get($captchaRefresh,putSize));
+      @include put_element(map-get($captchaRefresh,putImage));
       @include put_element($captchaRefresh);
       &:hover {
-        cursor: map-get($captchaRefresh, cursorHover);
-        transform: scale(map-get($captchaRefresh, scaleHover));
+        @include put_element(map-get($captchaRefresh,hover));
       }
     }
   }

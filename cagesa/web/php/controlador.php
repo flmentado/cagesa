@@ -102,7 +102,6 @@
             )
         )
     );
-
     if (isset($_POST["enviar"]) && strcmp ($_POST["enviar"], "Enviar") == 0) {
         $msgError = verificarFormulario ($formulario);
         if (isset($_POST["captcha"]) && is_string ($_POST["captcha"])) {

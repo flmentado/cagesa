@@ -10,13 +10,10 @@
   src: url("#{$urlRootSlider}/fonts/fuente.ttf");
 }
 ##{$sliderName} {
-  visibility: hidden;
-  box-sizing: border-box;
-  float: map-get($sliderBox, float);
-  position: map-get($sliderBox, position);
-  @include put_dimension(map-get($sliderBox, width),map-get($sliderBox, height));
+  @include put_element(map-get($sliderBox,putInit));
+  @include put_element(map-get($sliderBox,putSize));
   @include put_element($sliderBox);
-  overflow: hidden;
+
   @media screen and (max-width: map-get($mediaScreen, small)) {
     border: none;
   }
@@ -25,10 +22,8 @@
     $strClass: $strClass #{'.'}#{map-get($class, class)}#{','};
   }
   #{$strClass} {
-    height: map-get($caption, height);
-    line-height: map-get($caption, lineHeight);
-    text-align: #{map-get($caption, textAlign)};
-    border-radius: map-get($caption, borderRadius);
+    @include put_element(map-get($caption,putSize));
+    @include put_element($caption);
   }
   @each $index,$class in $listClass {
     .#{map-get($class, class)} {
@@ -39,34 +34,32 @@
     text-decoration: none;
   }
   & div[u='loading'] {
-    @include put_position(absolute, 4px, 8px);
+    position:absolute;
     > div {
-      display: block;
-      filter: alpha(opacity=map-get($spinner, opacity)*100);
-      opacity: map-get($spinner, opacity);
-      @include put_position_dimension(absolute, 0px, 0px, 100%, 100%);
-    }
+      @include put_element(map-get($spinner,putInit));
+      @include put_element(map-get($spinner,putSize));
+      @include put_element(map-get($spinner,putPosition));
+}
     > div + div {
       display: block;
-      @include put_position_dimension(absolute, 0px, 0px, 100%, 100%);
-      @include put_image($spinner);
-      background-color: map-get($spinner, backGroundColor);
+      position:absolute;
+      @include put_element(map-get($spinner,putSize));
+      @include put_element(map-get($spinner,putPosition));
+      @include put_element(map-get($spinner,putImage));
+      @include put_element($spinner);
     }
   }
   & div[u='slides']{
-    cursor: map-get($cursorDefault, default);
-    @include put_position_dimension(absolute, 0, 0, map-get($sliderBox, width), map-get($sliderBox, height));
-    overflow: hidden;
+    @include put_element(map-get($sliders,putInit));
+    @include put_element(map-get($sliders,putSize));
+    @include put_element(map-get($sliders,putPosition));
+    @include put_element($sliders);
     $numSlider: 1;
     @each $i, $captionSlider in $captionSliders {
         $text: 1;
         @each $indice, $datos in $captionSlider {
           & .slider_#{$numSlider}_text_#{$text}{
-            @if map-has-key($datos, imageSliderUrl) {
-              @include put_slider_image($datos)
-            } @else {
-              @include put_caption($datos);
-            }
+            @include put_caption($datos);
             $text: $text+1;
           }
         }
@@ -128,46 +121,32 @@
     }
   }
   & span.jssoral, & span.jssorar, & span.jssoraldn, & span.jssorardn {
-    position: absolute;
-    cursor: map-get($arrowNavigation, cursor);
-    @if map-has-key($arrowNavigation, imageUrl) {
-      background-image: url(map-get($arrowNavigation,imageUrl));
+    @include put_element($arrowNavigation);
+    @if map-has-key(map-get($arrowNavigation,putImage),imageUrl) {
+      @include put_element(map-get($arrowNavigation, putImage));
     }
-    overflow: hidden;
-  }
+ }
   & span.jssoral {
-    background-position: map-get($arrowNavigation, arrowLeftPosition);
-    @include put_position(
-            '',
-            map-get($arrowNavigation, arrowLeftTop),
-            map-get($arrowNavigation, arrowLeftLeft)
-    );
-    @include put_dimension(
-            map-get($arrowNavigation, arrowLeftWidth),
-            map-get($arrowNavigation, arrowLeftHeight)
-    );
+    @include put_element(map-get(map-get($arrowNavigation,arrowLeft),putSize));
+    @include put_element(map-get(map-get($arrowNavigation,arrowLeft),putPosition));
+    @include put_element(map-get(map-get($arrowNavigation,arrowLeft),putImage));
     :hover {
-      background-position: map-get($arrowNavigation, arrowLeftPositionHover);
+      @include put_element(map-get(map-get($arrowNavigation,arrowLeft),hover));
     }
   }
   & span.jssorar {
-    background-position: map-get($arrowNavigation, arrowRightPosition);
-    @include put_position_dimension(
-            map-get($arrowNavigation, position),
-            map-get($arrowNavigation, arrowLeftTop),
-            map-get($arrowNavigation, arrowRightLeft),
-            map-get($arrowNavigation, arrowLeftWidth),
-            map-get($arrowNavigation, arrowLeftHeight)
-    );
+    @include put_element(map-get(map-get($arrowNavigation,arrowRight),putSize));
+    @include put_element(map-get(map-get($arrowNavigation,arrowRight),putPosition));
+    @include put_element(map-get(map-get($arrowNavigation,arrowRight),putImage));
     :hover {
-      background-position: map-get($arrowNavigation, arrowRightPositionHover);
+      @include put_element(map-get(map-get($arrowNavigation,arrowRight),hover));
     }
   }
   & span.jssoraldn {
-    background-position: map-get($arrowNavigation, arrowLeftPositionClick);
+    @include put_element(map-get(map-get($arrowNavigation,arrowLeft),click));
   }
   & span.jssorardn {
-    background-position: map-get($arrowNavigation, arrowRightPositionClick);
+    @include put_element(map-get(map-get($arrowNavigation,arrowRight),click));
   }
 }
 

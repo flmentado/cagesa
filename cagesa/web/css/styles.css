@@ -1895,8 +1895,10 @@ h2 {
 /* line 100, ../scss/styles.scss */
 #servicios .panel {
   text-align: center;
-  background: #76cc52;
+  background: rgba(118, 204, 82,.6);
+  box-shadow: 4px 4px 4px rgba(0,0,0,.3);
   color: #fff;
+
 }
 /* line 105, ../scss/styles.scss */
 #servicios h3 {

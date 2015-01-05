@@ -7,27 +7,49 @@ $urlRootCaptcha: "../captcha";
 
 //CAPTCHA
 $captcha: (
-        width:300px,
-        height:135px,
-        marginBottom:10px,
+        putInit:(
+                boxSizing: border-box,
+                display:block,
+                float:none,
+                position:relative
+        ),
+        putSize:(
+                width:300px,
+                height:135px
+        ),
+        putPosition:(
+        ),
+        margin:0 auto 10px auto,
+        //marginBottom:10px,
         backGroundColor:map-get($backGroundColorDefault, grayLight),
         border: map-get($borderWidthDefault, medium) solid map-get($colorDefault, black),
-        imageRepeat:no-repeat,
-        imageSize: 100%,
-        imagePosition: center
 );
 //IMAGE REFRESH
 $captchaRefresh: (
-        width:20px,
-        height:20px,
+        putInit:(
+                boxSizing: border-box,
+                display:block,
+                float:right,
+                position:relative
+        ),
+        putSize:(
+                width:20px,
+                height:20px
+        ),
+        putPosition:(
+        ),
+        putImage:(
+                imageUrl: "#{$urlRootCaptcha}/img/refresh.png",
+                imageRepeat:no-repeat,
+                imageSize: 100% 100%,
+                imagePosition: center,
+        ),
+        hover:(
+                cursor:pointer,
+                transformScale: 1.1
+        ),
         margin: 2 * map-get($marginDefault,small),
         border: 3 * map-get($marginDefault,small) solid rgba(map-get($colorDefault, white), map-get($transparencyLevel, level_3)),
         borderRadius: map-get($radiusDefault, circle),
-        imageUrl: "#{$urlRootCaptcha}/img/refresh.png",
-        imageRepeat:no-repeat,
-        imageSize: 100% 100%,
-        imagePosition: center,
-        transition: transform .5s linear,
-        cursorHover:pointer,
-        scaleHover:1.1
+        transition: transform .5s linear 0s,
 );

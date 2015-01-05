@@ -5,10 +5,130 @@
 
 $urlRootForm: "../forms/modal";
 $formModalName: 'formularioModal';
-$formModalCaption:(
+$formModalCaption: (
         formulario:"Solicitud",
         formularioError:"Formulario Erróneo",
         formularioCorrecto:"Formulario Enviado",
 );
-
 //FORM MODAL
+$formularioFondoModal: (
+        putInit:(
+                display:none,
+                position:fixed
+        ),
+        putSize:(
+                width:100%,
+                height:100%
+        ),
+        putPosition:(
+                top:0,
+                left:0
+        ),
+        media:(
+                maxWidth:500px
+        ),
+        backGroundColor:map-get($shadowDefaultColor, black_5),
+        zIndex:99
+);
+$formularioVentanaModal: (
+        putInit:(
+                display:block,
+                position:absolute
+        ),
+        putSize:(
+                width:98%,
+                height:90%
+        ),
+        putPosition:(
+                top:5%,
+                left:100%
+        ),
+        borderRadius:5px 0 0 5px,
+        boxShadow:map-get($boxShadowDefault, bottomRightBlack),
+        backGround:rgba(245, 255, 245, .9),
+        zIndex:1
+);
+$formularioVentanaModalTitulo: (
+        putInit:(
+                boxSizing: border-box,
+                display:block,
+                position:absolute
+        ),
+        putSize:(
+                width:100%,
+                height:40px
+        ),
+        putPosition:(
+                top:0,
+                left:0
+        ),
+        before:(
+                fontSize:map-get($fontSizeDefault, extra),
+                content: "SOLICITUD",
+                lineHeight: 40px,
+                color: map-get($colorDefault, white),
+                textShadow:map-get($textShadowDefault, black_3)
+        ),
+        textAlign: center,
+        borderRadius:5px 0 0 0,
+        boxShadow:map-get($boxShadowDefault, bottomRightBlack),
+        zIndex:map-get($formularioVentanaModal,zIndex) + 1,
+);
+$formularioVentanaModalCuerpo: (
+        putInit:(
+                boxSizing: border-box,
+                display:block,
+                position:absolute
+        ),
+        putSize:(
+                width:100%,
+                height:100%
+        ),
+        putPosition:(
+                top:0,
+                left:0
+        ),
+        paddingTop: 40px,
+        zIndex:map-get($formularioVentanaModal, zIndex)
+);
+$formularioVentanaModalBotonCerrar: (
+        putInit:(
+                position: absolute
+        ),
+        putSize:(
+                width: 24px
+        ),
+        putPosition:(
+                top:6px,
+                right:3px
+        ),
+        backGroundColor: rgba(128, 0, 0, 1),
+        color: map-get($colorDefault, white),
+        lineHeight: 21px,
+        textDecoration: none,
+        border: 2px solid white,
+        fontWeight: bold,
+        boxShadow: 0px 0px 4px rgba(0, 0, 0, .3),
+        borderRadius: 5px,
+        fontSize: 16px,
+        transition: all 1s linear 0s,
+        hover:(
+                backGroundColor: rgba(255, 0, 0, 1)
+        )
+);
+$formularioModalScroll: (
+        putInit:(
+                boxSizing: border-box,
+                display: block,
+                position: relative
+        ),
+        putSize:(
+                width: 100%,
+                height: 98%
+        ),
+        putPosition:(
+        ),
+        padding: 0 5px,
+        overFlowX: hidden,
+        overFlowY: auto
+);

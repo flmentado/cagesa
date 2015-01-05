@@ -8,13 +8,30 @@ $formName: 'formularioContacto';
 
 //FORM
 $formContacto: (
-        width:100%,
-        maxWidth:400px,
+        putInit:(
+                box-sizing: border-box,
+                display:block,
+                position:relative,
+                float:left
+        ),
+        putSize:(
+                width:100%
+        ),
+        putPosition:(
+                top:0,
+                left:0
+        ),
         fontSize:map-get($fontSizeDefault,medium),
         color:rgba(0,50,0,1),
         textShadow:1px 1px rgba(255,255,255,.5)
 );
 $formularioHeader:(
+        putInit:(
+        ),
+        putSize:(
+        ),
+        putPosition:(
+        ),
         fontSize:map-get($fontSizeDefault,large),
         color:map-get($colorDefault,greenMedium),
         textShadow: map-get($textShadowDefault,white_5),
@@ -24,57 +41,219 @@ $formularioHeader:(
         marginBottom: 10px
 );
 $formContactoFila: (
-        paddingBottom: 5px
+        putInit:(
+        ),
+        putSize:(
+        ),
+        putPosition:(
+        ),
+        display:block,
+        float:left,
+        width:100%,
+        lineHeight: 30px,
+        position:relative,
+        boxSizing:border-box
 );
-$formContactoInputText: (
-        imageRepeat: no-repeat,
-        imagePosition: 10px center,
-        imageSize: 1.5em 1.6em,
-        padding: map-get($marginDefault, medium) 1em map-get($marginDefault, medium) 2.8em,
+$formContactoInputRadio: (
+        putInit:(
+                display:block,
+                float:left
+        ),
+        putSize:(
+        ),
+        putPosition:(
+        ),
+        display:block,
+        float:left,
+        position:relative,
+        height:24px
+
+);
+$formContactoBloqueInput:(
+        putInit:(
+                boxSizing: border-box
+        ),
+        putSize:(
+                maxWidth: 400px
+        ),
+        putPosition:(
+        ),
+        font-size: inherit
+);
+$formContactoLabel: (
+        putInit:(
+        ),
+        putSize:(
+        ),
+        putPosition:(
+        ),
+        display:block,
+        float:left,
+        position:relative,
         fontSize:map-get($formContacto,fontSize),
         color:map-get($formContacto,color),
         textShadow:map-get($formContacto,textShadow),
-        marginBottom: 10px,
-        border: 1px solid darkseagreen,
-        box-shadow: none,
-        borderRadius: 25px,
-        cursor:pointer,
-        transition: all .6s linear,
-        colorCampoObligatorio: #F7FFF7,
-        colorCampoError: green,
-        colorCampoCorrecto: red
+        lineHeight:30px,
 );
 $formContactoSpan: (
+        putInit:(
+                display:block
+        ),
+        putSize:(
+                width:map-get($formContacto,width),
+                height:auto
+        ),
+        putPosition:(
+        ),
+        textArea: (
+                putInit:(
+                        display:block
+                ),
+                putSize:(
+                        width:100%,
+                        height: 6em
+                ),
+                putPosition:(
+                ),
+                backGroundColor:map-get($shadowDefaultColor,white),
+                padding: map-get($borderWidthDefault, medium),
+                fontSize:map-get($formContacto,fontSize),
+                color:map-get($formContacto,color),
+                textShadow:map-get($formContacto,textShadow),
+                box-shadow: none,
+                border: 1px solid darkseagreen,
+                cursor:pointer,
+                transition: box-shadow 1s linear 0s,
+                clear:both
+        ),
         fontSize:map-get($formContacto,fontSize),
-        width:map-get($formContacto,width),
-        height:auto,
         color:map-get($formContacto,color),
         textShadow:map-get($formContacto,textShadow),
         paddingBottom: 5px,
         clear:both
 );
-$formContactoTextArea: (
-        width:100%,
-        height: 6em,
-        backGroundColor:map-get($shadowDefaultColor,white),
-        padding: map-get($borderWidthDefault, medium),
+
+$formContactoInputText: (
+        putInit:(
+                boxSizing: border-box,
+                display:block,
+                float:left,
+                position:relative
+        ),
+        putSize:(
+                width: map-get($formContacto, width)
+        ),
+        putPosition:(
+        ),
+        focus:(
+                cursor:default,
+                boxShadow:0px 0px 6px 6px rgba(darkseagreen,.3),
+                borderColor:rgb(0,210,0)
+        ),
+        putImage:(
+                imageRepeat: no-repeat,
+                imagePosition: 10px center,
+                imageSize: 1.5em 1.6em,
+        ),
+        remitente :(
+                putSize:(
+                        width:100%
+                ),
+                putImage:(
+                        imageUrl: "#{$urlRootForm}/img/user.png"
+                )
+        ),
+        direccion :(
+                putSize:(
+                        width:100%
+                ),
+                putImage:(
+                        imageUrl: "#{$urlRootForm}/img/direccion.png"
+                )
+        ),
+        tlf :(
+                putSize:(
+                        width:100%
+                ),
+                putImage:(
+                        imageUrl: "#{$urlRootForm}/img/tlf.png"
+                )
+        ),
+        fax :(
+                putSize:(
+                        width:100%
+                ),
+                putImage:(
+                        imageUrl: "#{$urlRootForm}/img/fax.png"
+                )
+        ),
+        email :(
+                putSize:(
+                        width:100%
+                ),
+                putImage:(
+                        imageUrl: "#{$urlRootForm}/img/mail.png"
+                )
+        ),
+        padding: map-get($marginDefault, medium) 1em map-get($marginDefault, medium) 2.8em,
         fontSize:map-get($formContacto,fontSize),
         color:map-get($formContacto,color),
         textShadow:map-get($formContacto,textShadow),
-        box-shadow: none,
+        margin: 5px 0,
+        lineHeight:1.4,
+        borderRadius: 25px,
         border: 1px solid darkseagreen,
+        box-shadow: none,
         cursor:pointer,
-        transition: box-shadow 1s linear 0s,
+        transition: all .6s linear
+
+);
+$formContactoInputTextObligatorio:(
+        putInit:(
+        ),
+        putSize:(
+        ),
+        putPosition:(
+        ),
+        putImage:(
+        ),
+        backgroundColor:#F7FFF7
+);
+$formContactoInputTextError:(
+        putInit:(
+        ),
+        putSize:(
+        ),
+        putPosition:(
+        ),
+        putImage:(
+        ),
+        backgroundColor:red
+);
+$formContactoInputTextCorrecto:(
+        putInit:(
+        ),
+        putSize:(
+        ),
+        putPosition:(
+        ),
+        putImage:(
+        ),
+        backgroundColor:green
+);
+$formContactoEnviar:(
+        putInit:(
+                display:block,
+                float:left
+        ),
+        putSize:(
+        ),
+        putPosition:(
+        ),
+        putImage:(
+        ),
+        hover:(
+
+        ),
         clear:both
-);
-$formContactoLabel: (
-        fontSize:map-get($formContacto,fontSize),
-        color:map-get($formContacto,color),
-        textShadow:map-get($formContacto,textShadow),
-        clear:both,
-);
-$focus:(
-        cursor:default,
-        boxShadow:0px 0px 6px 6px rgba(darkseagreen,.3),
-        borderColor:rgb(0,210,0)
 );

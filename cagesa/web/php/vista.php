@@ -10,7 +10,8 @@
     <title></title>
     <!--meta name="viewport" content="width=device-width"-->
     <meta name="viewport" content="width=320px, initial-scale=1.0, maximum-scale=1.0">
-    <meta name="keywords" content="cagesa, jardineria, arboles, ecologico, palmeras, mantenimiento, jardín, jardin"/>
+    <meta name="keywords" content="gran canaria, cagesa, jardineria, arboles, ecologico, palmeras, mantenimiento,
+    jardin"/>
     <link rel="stylesheet" href="../css/app.css">
     <link rel="stylesheet" href="../css/flaticon.css">
     <link rel="stylesheet" href="../css/styles.css">
