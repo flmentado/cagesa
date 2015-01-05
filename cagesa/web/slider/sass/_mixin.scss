@@ -9,6 +9,12 @@
   -o-user-select: $select;
   user-select: $select;
 }
+//BOX_SHADOW
+@mixin box-shadow($shadow) {
+  -webkit-box-shadow: $shadow; // iOS <4.3 & Android <4.1
+  -ms-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
 //GRADIENT HORIZONTAL
 @mixin gradient_horizontal($start-color, $end-color, $start-percent, $end-percent)
 {
@@ -190,7 +196,11 @@
   border-right: map-get($datos, borderRight);
   border-bottom: map-get($datos, borderBottom);
   border-left: map-get($datos, borderLeft);
-  box-shadow: map-get($datos, boxShadow);
+  outline: map-get($datos, outLine);
+  //BOX SHADOW
+  @if map-has-key($datos,boxShadow) {
+    @include box-shadow(map-get($datos, boxShadow));
+  }
   //BACKGROUND
   background:map-get($datos, backGround);
   background-color:map-get($datos, backGroundColor);

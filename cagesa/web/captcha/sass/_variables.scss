@@ -14,8 +14,8 @@ $captcha: (
                 position:relative
         ),
         putSize:(
-                width:300px,
-                height:135px
+                width:map-get(map-get(map-get($formContactoInputText, pass),putSize),width),
+                height:map-get(map-get(map-get($formContactoInputText, pass),putSize),width) * .33
         ),
         putPosition:(
         ),

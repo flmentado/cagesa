@@ -15,61 +15,63 @@ $formContacto: (
                 float:left
         ),
         putSize:(
-                width:100%
+                width:100%,
+                height:100%
         ),
         putPosition:(
                 top:0,
                 left:0
         ),
-        fontSize:map-get($fontSizeDefault,medium),
-        color:rgba(0,50,0,1),
-        textShadow:1px 1px rgba(255,255,255,.5)
+        fontFamily:map-get($fontNameDefault,titulo),
+        fontSize:map-get($fontSizeDefault,large),
+        color:rgba(0, 50, 0, 1),
+        textShadow:1px 1px rgba(255, 255, 255, .5)
 );
-$formularioHeader:(
+$formularioHeader: (
         putInit:(
         ),
         putSize:(
         ),
         putPosition:(
         ),
-        fontSize:map-get($fontSizeDefault,large),
-        color:map-get($colorDefault,greenMedium),
-        textShadow: map-get($textShadowDefault,white_5),
-        borderBottom: 2px ridge rgba(200,240,200,.8),
+        fontFamily: map-get($formContacto,fontFamily),
+        fontSize:map-get($fontSizeDefault, large),
+        color:map-get($colorDefault, greenMedium),
+        textShadow: map-get($textShadowDefault, white_5),
+        borderBottom: 2px ridge rgba(200, 240, 200, .8),
         paddingLeft: 5px,
         marginTop:5px,
         marginBottom: 10px
 );
 $formContactoFila: (
         putInit:(
+                boxSizing:border-box,
+                display:block,
+                float:left,
+                position:relative
         ),
         putSize:(
+                width:100%
         ),
         putPosition:(
         ),
-        display:block,
-        float:left,
-        width:100%,
         lineHeight: 30px,
-        position:relative,
-        boxSizing:border-box
 );
 $formContactoInputRadio: (
         putInit:(
                 display:block,
-                float:left
+                float:left,
+                position:relative
         ),
         putSize:(
+                height:24px,
+                width:24px
         ),
         putPosition:(
         ),
-        display:block,
-        float:left,
-        position:relative,
-        height:24px
-
+        textAlign:center
 );
-$formContactoBloqueInput:(
+$formContactoBloqueInput: (
         putInit:(
                 boxSizing: border-box
         ),
@@ -82,31 +84,34 @@ $formContactoBloqueInput:(
 );
 $formContactoLabel: (
         putInit:(
+                display:block,
+                float:left,
+                position:relative
         ),
         putSize:(
+                width:80%
         ),
         putPosition:(
         ),
-        display:block,
-        float:left,
-        position:relative,
-        fontSize:map-get($formContacto,fontSize),
-        color:map-get($formContacto,color),
-        textShadow:map-get($formContacto,textShadow),
-        lineHeight:30px,
+        fontFamily: inherit,
+        fontSize:map-get($formContacto, fontSize),
+        color:map-get($formContacto, color),
+        textShadow:map-get($formContacto, textShadow),
+        lineHeight:30px
 );
 $formContactoSpan: (
         putInit:(
                 display:block
         ),
         putSize:(
-                width:map-get($formContacto,width),
+                width:map-get($formContacto, width),
                 height:auto
         ),
         putPosition:(
         ),
         textArea: (
                 putInit:(
+                        boxSizing: border-box,
                         display:block
                 ),
                 putSize:(
@@ -115,20 +120,23 @@ $formContactoSpan: (
                 ),
                 putPosition:(
                 ),
-                backGroundColor:map-get($shadowDefaultColor,white),
+                backGroundColor:map-get($shadowDefaultColor, white),
                 padding: map-get($borderWidthDefault, medium),
-                fontSize:map-get($formContacto,fontSize),
-                color:map-get($formContacto,color),
-                textShadow:map-get($formContacto,textShadow),
+                fontFamily: inherit,
+                fontSize:map-get($formContacto, fontSize),
+                color:map-get($formContacto, color),
+                textShadow:map-get($formContacto, textShadow),
                 box-shadow: none,
                 border: 1px solid darkseagreen,
-                cursor:pointer,
+                cursor: pointer,
                 transition: box-shadow 1s linear 0s,
-                clear:both
+                outLine: none,
+                clear: both
         ),
-        fontSize:map-get($formContacto,fontSize),
-        color:map-get($formContacto,color),
-        textShadow:map-get($formContacto,textShadow),
+        fontFamily: inherit,
+        fontSize:map-get($formContacto, fontSize),
+        color:map-get($formContacto, color),
+        textShadow:map-get($formContacto, textShadow),
         paddingBottom: 5px,
         clear:both
 );
@@ -147,9 +155,9 @@ $formContactoInputText: (
         ),
         focus:(
                 cursor:default,
-                boxShadow:0px 0px 6px 6px rgba(darkseagreen,.3),
-                borderColor:rgb(0,210,0)
-        ),
+                boxShadow:0px 0px 5px 5px rgba(darkseagreen, .3),
+                outLine: none
+             ),
         putImage:(
                 imageRepeat: no-repeat,
                 imagePosition: 10px center,
@@ -195,10 +203,23 @@ $formContactoInputText: (
                         imageUrl: "#{$urlRootForm}/img/mail.png"
                 )
         ),
+        pass :(
+                putInit:(
+                        float:none
+                ),
+                putSize:(
+                        width:300px
+                ),
+                putImage:(
+                        imageUrl: "#{$urlRootForm}/img/pass.png"
+                ),
+                margin: 0 auto
+        ),
         padding: map-get($marginDefault, medium) 1em map-get($marginDefault, medium) 2.8em,
-        fontSize:map-get($formContacto,fontSize),
-        color:map-get($formContacto,color),
-        textShadow:map-get($formContacto,textShadow),
+        fontFamily: inherit,
+        fontSize:map-get($formContacto, fontSize),
+        color:map-get($formContacto, color),
+        textShadow:map-get($formContacto, textShadow),
         margin: 5px 0,
         lineHeight:1.4,
         borderRadius: 25px,
@@ -206,9 +227,8 @@ $formContactoInputText: (
         box-shadow: none,
         cursor:pointer,
         transition: all .6s linear
-
 );
-$formContactoInputTextObligatorio:(
+$formContactoInputTextObligatorio: (
         putInit:(
         ),
         putSize:(
@@ -219,7 +239,7 @@ $formContactoInputTextObligatorio:(
         ),
         backgroundColor:#F7FFF7
 );
-$formContactoInputTextError:(
+$formContactoInputTextError: (
         putInit:(
         ),
         putSize:(
@@ -230,7 +250,7 @@ $formContactoInputTextError:(
         ),
         backgroundColor:red
 );
-$formContactoInputTextCorrecto:(
+$formContactoInputTextCorrecto: (
         putInit:(
         ),
         putSize:(
@@ -241,7 +261,7 @@ $formContactoInputTextCorrecto:(
         ),
         backgroundColor:green
 );
-$formContactoEnviar:(
+$formContactoEnviar: (
         putInit:(
                 display:block,
                 float:left
@@ -253,7 +273,6 @@ $formContactoEnviar:(
         putImage:(
         ),
         hover:(
-
         ),
         clear:both
 );

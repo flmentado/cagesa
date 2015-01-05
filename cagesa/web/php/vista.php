@@ -12,11 +12,11 @@
     <meta name="viewport" content="width=320px, initial-scale=1.0, maximum-scale=1.0">
     <meta name="keywords" content="gran canaria, cagesa, jardineria, arboles, ecologico, palmeras, mantenimiento,
     jardin"/>
-    <link rel="stylesheet" href="../css/app.css">
+    <link rel="stylesheet" href="../css/app.cssa">
     <link rel="stylesheet" href="../css/flaticon.css">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/styles.cssa">
     <script src="../js/jquery.2.1.2.js"></script>
-    <script src="../js/modernizr.js"></script>
+    <script src="../js/modernize.jsa"></script>
 
     <link rel="stylesheet" href="../css/miEstilo.css" type="text/css"/>
     <script type="text/javascript" src="<?php echo PAHT_SLIDER_1 ?>js/jssor.slider.min.js"></script>
@@ -62,7 +62,7 @@
                     title="Norma UNE  EN  ISO 9001" class="has-tip"> AENOR</span><span>. Además una de nuestras prioridades es la protección y cuidado del medio ambiente.</span>
             </p>
         </div>
-        <div class="img-quienes small-12 medium-6 columns"><a class="button medium radius formularioModal">Consulta
+        <div class="img-quienes small-12 medium-6 columns"><a class="button medium radius formularioModal">Solicita
                 presupuesto</a>
         </div>
     </div>
@@ -160,15 +160,15 @@
         </div>
     </div>
 </div>
-<script src="../js/jquery.js"></script>
-<script src="../js/foundation.js"></script>
-<script src="../js/foundation.topbar.js"></script>
-<script src="../js/foundation.orbit.js"></script>
-<script src="../js/foundation.tooltip.js"></script>
-<script src="../js/foundation.reveal.js"></script>
-<script src="../js/foundation.equalizer.js"></script>
-<script src="../js/app.js"></script>
-<script src="../js/jquery.stellar.js"></script>
-<script src="../js/cagesa.js"></script>
+<script src="../js/jquery.jsa"></script>
+<script src="../js/foundation.jsa"></script>
+<script src="../js/foundation.topbar.jsa"></script>
+<script src="../js/foundation.orbit.jsa"></script>
+<script src="../js/foundation.tooltip.jsa"></script>
+<script src="../js/foundation.reveal.jsa"></script>
+<script src="../js/foundation.equalizer.jsa"></script>
+<script src="../js/app.jsa"></script>
+<script src="../js/jquery.stellar.jsa"></script>
+<script src="../js/cagesa.jas"></script>
 </body>
 </html>

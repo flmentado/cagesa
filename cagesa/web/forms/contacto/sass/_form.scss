@@ -2,24 +2,25 @@
 // FORM
 /////////////////////////////////////////////////////////////////////////////////
 @import "variables";
+
 ##{$formName} {
-  @include put_element(map-get($formContacto, putInit));
-  @include put_element(map-get($formContacto, putSize));
-  @include put_element(map-get($formContacto, putPosition));
-  @include put_element($formContacto);
-  .formularioHeader{
+ .formularioHeader{
    @include put_element($formularioHeader);
    }
  .fila{
+   @include put_element(map-get($formContactoFila, putInit));
+   @include put_element(map-get($formContactoFila, putSize));
    @include put_element($formContactoFila);
  }
  label{
+   @include put_element(map-get($formContactoLabel, putInit));
+   @include put_element(map-get($formContactoLabel, putSize));
    @include put_element($formContactoLabel);
  }
  span {
    @include put_element(map-get($formContactoSpan, putInit));
    @include put_element(map-get($formContactoSpan, putSize));
-    @include put_element($formContactoSpan);
+   @include put_element($formContactoSpan);
     > textarea{
       resize: none;
       @include put_element(map-get(map-get($formContactoSpan, textArea),putInit));
@@ -52,6 +53,7 @@
     &:focus{
       @include put_element(map-get($formContactoInputText, focus));
     }
+
   }
   #remitente {
     @include put_element(map-get(map-get($formContactoInputText, remitente),putImage));
@@ -74,19 +76,27 @@
     @include put_element(map-get(map-get($formContactoInputText, email),putSize));
   }
   #pass {
-    background-image: url("#{$urlRootForm}/img/pass.png");
-    float:none;
-    width: 300px;
-    margin:0 auto;
+    @include put_element(map-get(map-get($formContactoInputText, pass),putInit));
+    @include put_element(map-get(map-get($formContactoInputText, pass),putSize));
+    @include put_element(map-get(map-get($formContactoInputText, pass),putImage));
+    @include put_element(map-get($formContactoInputText, pass));
   }
   input[type='radio'] {
-    //@include put_element(map-get($formContactoEnviar, putInit));
-    //@include put_element(map-get($formContactoInputText, putSize));
-    //@include put_element(map-get($formContactoInputText, putImage));
-    @include put_element($formContactoInputRadio);
+    @include put_element(map-get($formContactoInputRadio, putInit));
+    @include put_element(map-get($formContactoInputRadio, putSize));
   }
-  input[type='submit'] {
+  input[type='checkbox'] {
+    @include put_element(map-get($formContactoInputRadio, putInit));
+    @include put_element(map-get($formContactoInputRadio, putSize));
+  }
+  .submit {
     @include put_element(map-get($formContactoEnviar, putInit));
+    background:linear-gradient(to bottom, #c9de96 0%,#8ab66b 44%,#398235 100%); /* W3C */
+    border:1px solid red;
+    width:120px;
+    height:40px;
+    outline: none;
+    text-decoration: none;
     //@include put_element(map-get($formContactoInputText, putSize));
     //@include put_element(map-get($formContactoInputText, putImage));
     @include put_element($formContactoEnviar);

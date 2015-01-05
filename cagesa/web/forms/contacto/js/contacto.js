@@ -6,4 +6,18 @@ $(function () {
             }
         }
     });
+    $('#formularioContacto .submit').on('click', function(evt){
+        evt.preventDefault();
+        $.ajax({
+            type: "POST",
+            url:"../php/controlador.php",
+            data: $('#formularioContacto').serialize()+"&enviar=Enviar",
+            success: function(datos){
+                console.log("OK");
+            }
+
+        });
+
+    });
+
 });
