@@ -60,7 +60,7 @@
   background-repeat: no-repeat;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=0); // IE9 and down, gets no color-stop at all for proper fallback
 }
-// GRADIENT VERTICAL
+// GRADIENT RADIAL
 @mixin gradient_radial($inner-color, $outer-color) {
   background-image: -webkit-gradient(radial, center center, 0, center center, 460, from($inner-color), to($outer-color));
   background-image: -webkit-radial-gradient(circle, $inner-color, $outer-color);
@@ -153,6 +153,7 @@
   width: map-get($datos, width);
   max-width: map-get($datos, maxWidth);
   height: map-get($datos, height);
+  max-height: map-get($datos, maxHeight);
   overflow: map-get($datos, overFlow);
   overflow-x:map-get($datos, overFlowX);
   overflow-y:map-get($datos, overFlowY);
@@ -191,6 +192,10 @@
   content: map-get($datos, content);
   //BORDER
   border-radius: map-get($datos, borderRadius);
+  border-top-left-radius:map-get($datos, borderRadiusTop);
+  border-top-right-radius:map-get($datos, borderRadiusRight);
+  border-bottom-right-radius:map-get($datos, borderRadiusBottom);
+  border-bottom-left-radius:map-get($datos, borderRadiusLeft);
   border: map-get($datos, border);
   border-top: map-get($datos, borderTop);
   border-right: map-get($datos, borderRight);
@@ -200,6 +205,15 @@
   //BOX SHADOW
   @if map-has-key($datos,boxShadow) {
     @include box-shadow(map-get($datos, boxShadow));
+  }
+  //GRADIENT
+  @if map-has-key($datos,gradientVertical) {
+    @include gradient_vertical(
+      map-get(map-get(map-get($datos,gradientVertical),from),color),
+      map-get(map-get(map-get($datos,gradientVertical),to),color),
+      map-get(map-get(map-get($datos,gradientVertical),from),percent),
+      map-get(map-get(map-get($datos,gradientVertical),to),percent)
+    );
   }
   //BACKGROUND
   background:map-get($datos, backGround);

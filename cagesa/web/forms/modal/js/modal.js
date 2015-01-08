@@ -1,9 +1,9 @@
 /*
-* 03/01/2015
-* Ventana modal.
-* Desarrollado por Francisco Luis Mentado Manzanares.
-*
-*/
+ * 03/01/2015
+ * Ventana modal.
+ * Desarrollado por Francisco Luis Mentado Manzanares.
+ *
+ */
 $(function () {
     var velocidadFade = 500;
     var velocidadScroll = 800;

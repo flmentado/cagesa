@@ -1,6 +1,7 @@
 /**
  * Created by Francisco Luis Mentado Manzanares on 17/12/2014.
  */
+
 $(document).ready(function () {
     $('a[href*=#]:not([href=#])').click(function (event) {
         event.preventDefault();

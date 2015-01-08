@@ -5,12 +5,10 @@
      * Date: 25/12/2014
      * Time: 22:06
      */
-    if (!function_exists ('decode') || @decode (KEY_PASS) != @CLAVE) {
-        die("No se ha podido ejecutar.");
-    }
 ?>
-<form id="formularioContacto" method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>">
-    <div class="formularioHeader">CLIENTE</div>
+<form id="formularioContacto">
+  <?php echo isset($msgError)?"<ol>$msgError</ol>":'';?>
+   <div class="formularioHeader">CLIENTE</div>
     <div class="radioTipoContacto">
         <div class="fila">
             <input id="particular" type="radio" name="tipoRemitente" value="particular"
@@ -125,7 +123,6 @@
     <div class="formularioHeader">ENCUESTA</div>
     <div class="radioEncuesta">
         <span>¿Cómo nos has conocido?</span>
-
         <div class="fila">
             <input id="conocido" type="radio" name="tipoEncuestaConocer" value="conocidos"
                 <?php echo isset($formulario["encuesta"]["encuesta"]['value']) && strcmp ($formulario["encuesta"]["encuesta"]['value'],
@@ -141,8 +138,11 @@
     </div>
     <div class="formularioHeader">CÓDIGO VERIFICACIÓN</div>
     <div id="captcha">
-        <div id="putImageCaptcha"><?php include "../captcha/php/captcha_vista.php"; ?></div>
-        <input id="pass" type="text" class="ponerAura" placeholder="Introduce caracteres" name="captcha"
+        <div id="putImageCaptcha">
+            <?php
+                include realpath($_SERVER[DOCUMENT_ROOT])."/cagesa/cagesa/web/captcha/php/captcha_vista.php";
+            ?></div>
+        <input id="pass" type="text" class="ponerAura obligatorio" placeholder="Introduce caracteres" name="captcha"
             maxlength="10"/>
     </div>
     <span class="submit">Enviar</span>

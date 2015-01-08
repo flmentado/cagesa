@@ -25,7 +25,7 @@ $formContacto: (
         fontFamily:map-get($fontNameDefault,titulo),
         fontSize:map-get($fontSizeDefault,large),
         color:rgba(0, 50, 0, 1),
-        textShadow:1px 1px rgba(255, 255, 255, .5)
+        textShadow: map-get($textShadowDefault, white_5)
 );
 $formularioHeader: (
         putInit:(
@@ -237,7 +237,7 @@ $formContactoInputTextObligatorio: (
         ),
         putImage:(
         ),
-        backgroundColor:#F7FFF7
+        backGroundColor:rgba(255,255,230,.8)
 );
 $formContactoInputTextError: (
         putInit:(
@@ -248,7 +248,7 @@ $formContactoInputTextError: (
         ),
         putImage:(
         ),
-        backgroundColor:red
+        backGroundColor:red
 );
 $formContactoInputTextCorrecto: (
         putInit:(
@@ -259,20 +259,49 @@ $formContactoInputTextCorrecto: (
         ),
         putImage:(
         ),
-        backgroundColor:green
+        backGroundColor:green
 );
 $formContactoEnviar: (
         putInit:(
                 display:block,
-                float:left
+                float:right
         ),
         putSize:(
+                width:120px
         ),
         putPosition:(
         ),
         putImage:(
         ),
         hover:(
+                cursor:pointer,
+                gradientVertical:(
+                        from:(
+                                color:#ffde96,
+                                percent:0%
+                        ),
+                        to:(
+                                color:#398235,
+                                percent:100%
+                        )
+                ),
         ),
-        clear:both
+        gradientVertical:(
+                from:(
+                        color: #00bf7a,
+                        percent:0%
+                ),
+                to:(
+                        color:#007fff,
+                        percent:100%
+                )
+        ),
+        clear:both,
+        lineHeight:32px,
+        textAlign:center,
+        border:1px solid rgba(0,200,0,.6),
+        borderRadius:10px,
+        boxShadow:map-get($boxShadowDefault, bottomRightBlack),
+        margin: 25px 0 10px 0
+
 );

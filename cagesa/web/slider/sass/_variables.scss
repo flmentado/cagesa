@@ -86,6 +86,7 @@ $shadowDefaultColor: (
 $boxShadowDefault: (
         bullet:0 0 6px map-get($shadowDefaultColor, white_10),
         slider: 0 0 6px map-get($shadowDefaultColor, black_5),
+        bottomBlack: 0px 4px 4px map-get($shadowDefaultColor, black_3),
         bottomRightBlack: 4px 4px 4px map-get($shadowDefaultColor, black_3)
 );
 $textShadowDefault: (

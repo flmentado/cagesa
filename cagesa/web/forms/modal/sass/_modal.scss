@@ -18,7 +18,6 @@
       @include put_element(map-get($formularioVentanaModalTitulo, putSize));
       @include put_element(map-get($formularioVentanaModalTitulo, putPosition));
       @include put_element($formularioVentanaModalTitulo);
-      @include gradient_vertical(#5bcf80, #4d7809, 0%, 100%);
       &:before {
         @include put_element(map-get($formularioVentanaModalTitulo, before));
       }

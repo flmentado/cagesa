@@ -5,7 +5,7 @@
      * Date: 08/12/2014
      * Time: 8:31
      */
-    header ("Location: php/controlador.php");
+    header ("Location: php/cagesa.php");
     exit;
 ?>
 

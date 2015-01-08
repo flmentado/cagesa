@@ -1,16 +1,10 @@
 <?php
     /**
      * Created by PhpStorm.
-     * User: Francisco Mentado Manzanares
+     * User: Francisco Luis Mentado
      * Date: 08/12/2014
-     * Time: 8:32
+     * Time: 8:40
      */
-    //Constantes
-    define("CLAVE", md5 (microtime () * mktime ()));
-    define("KEY_PASS", base64_encode (CLAVE));
-    define("PAHT_SLIDER_1", "../slider/");
-    define("PATH_SLIDER_1_IMG", PAHT_SLIDER_1 . 'img/slider/');
-   //funciones
     @require_once "modelo.php";
     //Variables
     $formulario = array
@@ -66,7 +60,7 @@
                                         "text" => "Mantenimiento de Jardines.",
                                         "value" => "",
                                         "err"=>true,
-                                        "errMsg"=>"Servicios."
+                                        "errMsg"=>"Selecciona al menos un Servicio.."
             ),
             "podaTala" => array (
                                         "text" => "Poda y/o Tala de palmeras y árboles.",
@@ -115,8 +109,8 @@
                 echo "FORMULARIO OK, MAIL FAIL";
         limpiarFormulario($formulario);
         } else {
-            echo "<ol>$msgError</ol>";
-            echo "FORMULARIO FAIL";
+            //echo "<ol>$msgError</ol>";
+           // echo "FORMULARIO FAIL";
         }
     }
     @require_once "vista.php";

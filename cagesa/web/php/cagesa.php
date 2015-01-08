@@ -1,9 +1,18 @@
 <?php
-    if (!function_exists ('decode') || @decode (KEY_PASS) != @CLAVE) {
-        die("No se ha podido ejecutar.");
-    }
+    /**
+     * Created by PhpStorm.
+     * User: Francisco Mentado Manzanares
+     * Date: 08/12/2014
+     * Time: 8:32
+     */
+    //Constantes
+    define("CLAVE", md5 (microtime () * mktime ()));
+    define("KEY_PASS", base64_encode (CLAVE));
+    define("PAHT_SLIDER_1", "../slider/");
+    define("PATH_SLIDER_1_IMG", PAHT_SLIDER_1 . 'img/slider/');
+    @require_once "modelo.php";
 ?>
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -12,19 +21,15 @@
     <meta name="viewport" content="width=320px, initial-scale=1.0, maximum-scale=1.0">
     <meta name="keywords" content="gran canaria, cagesa, jardineria, arboles, ecologico, palmeras, mantenimiento,
     jardin"/>
-    <link rel="stylesheet" href="../css/app.cssa">
     <link rel="stylesheet" href="../css/flaticon.css">
-    <link rel="stylesheet" href="../css/styles.cssa">
     <script src="../js/jquery.2.1.2.js"></script>
-    <script src="../js/modernize.jsa"></script>
-
     <link rel="stylesheet" href="../css/miEstilo.css" type="text/css"/>
     <script type="text/javascript" src="<?php echo PAHT_SLIDER_1 ?>js/jssor.slider.min.js"></script>
     <script type="text/javascript" src="<?php echo PAHT_SLIDER_1 ?>js/slider.js"></script>
     <script src="../js/scroll.js"></script>
-    <script src="../captcha/js/captcha.js"></script>
     <script src="../forms/contacto/js/contacto.js"></script>
     <script src="../forms/modal/js/modal.js"></script>
+    <script src="../captcha/js/captcha.js"></script>
 </head>
 <body>
 <div id="topbar">
@@ -146,6 +151,11 @@
         </ul>
     </div>
 </div>
+<?php
+//////////////////////////////////////////////////////////////////////////
+// FORMULARIO
+//////////////////////////////////////////////////////////////////////////
+?>
 <div id="formularioModal">
     <div class="ventanaModal">
         <div class="headerFormularioModal">
@@ -155,20 +165,10 @@
         <div class="cuerpoFormularioModal">
             <div class="scroll">
                 <?php   //FORMULARIO
-                    include "../forms/contacto/php/formulario.php";?>
+                    include "../forms/contacto/php/controlador.php";?>
             </div>
         </div>
     </div>
 </div>
-<script src="../js/jquery.jsa"></script>
-<script src="../js/foundation.jsa"></script>
-<script src="../js/foundation.topbar.jsa"></script>
-<script src="../js/foundation.orbit.jsa"></script>
-<script src="../js/foundation.tooltip.jsa"></script>
-<script src="../js/foundation.reveal.jsa"></script>
-<script src="../js/foundation.equalizer.jsa"></script>
-<script src="../js/app.jsa"></script>
-<script src="../js/jquery.stellar.jsa"></script>
-<script src="../js/cagesa.jas"></script>
 </body>
 </html>
