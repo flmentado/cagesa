@@ -1,0 +1,103 @@
+/////////////////////////////////////////////////////////////////////////////////
+// FORM
+/////////////////////////////////////////////////////////////////////////////////
+@import "variables";
+
+##{$formName} {
+ .formularioHeader{
+   @include put_element(map-get($formularioHeader, putInit));
+   @include put_element(map-get($formularioHeader, putSize));
+   @include put_element($formularioHeader);
+   }
+ .fila{
+   @include put_element(map-get($formContactoFila, putInit));
+   @include put_element(map-get($formContactoFila, putSize));
+   @include put_element($formContactoFila);
+ }
+ label{
+   @include put_element(map-get($formContactoLabel, putInit));
+   @include put_element(map-get($formContactoLabel, putSize));
+   @include put_element($formContactoLabel);
+ }
+ span {
+   @include put_element(map-get($formContactoSpan, putInit));
+   @include put_element(map-get($formContactoSpan, putSize));
+   @include put_element($formContactoSpan);
+    > textarea{
+      resize: none;
+      @include put_element(map-get(map-get($formContactoSpan, textArea),putInit));
+      @include put_element(map-get(map-get($formContactoSpan, textArea),putSize));
+      @include put_element(map-get($formContactoSpan, textArea));
+      &:focus{
+        @include  put_element(map-get($formContactoInputText,focus));
+      }
+    }
+  }
+
+  .formularioDatosContacto {
+    @include put_element(map-get($formContactoBloqueInput, putInit));
+    @include put_element(map-get($formContactoBloqueInput, putSize));
+    @include put_element($formContactoBloqueInput);
+  }
+  .ponerAura {
+    @include put_element(map-get($formContactoInputText, putInit));
+    @include put_element(map-get($formContactoInputText, putSize));
+    @include put_element(map-get($formContactoInputText, putImage));
+    @include put_element($formContactoInputText);
+    &:focus{
+      @include put_element(map-get($formContactoInputText, focus));
+    }
+
+  }
+  #remitente {
+    @include put_element(map-get(map-get($formContactoInputText, remitente),putImage));
+    @include put_element(map-get(map-get($formContactoInputText, remitente),putSize));
+  }
+  #direccion {
+    @include put_element(map-get(map-get($formContactoInputText, direccion),putImage));
+    @include put_element(map-get(map-get($formContactoInputText, direccion),putSize));
+  }
+  #tlf {
+    @include put_element(map-get(map-get($formContactoInputText, tlf),putImage));
+    @include put_element(map-get(map-get($formContactoInputText, tlf),putSize));
+  }
+  #fax {
+    @include put_element(map-get(map-get($formContactoInputText, fax),putImage));
+    @include put_element(map-get(map-get($formContactoInputText, fax),putSize));
+  }
+  #email {
+    @include put_element(map-get(map-get($formContactoInputText, email),putImage));
+    @include put_element(map-get(map-get($formContactoInputText, email),putSize));
+  }
+  #pass {
+    @include put_element(map-get(map-get($formContactoInputText, pass),putInit));
+    @include put_element(map-get(map-get($formContactoInputText, pass),putSize));
+    @include put_element(map-get(map-get($formContactoInputText, pass),putImage));
+    @include put_element(map-get($formContactoInputText, pass));
+  }
+  input[type='radio'] {
+    @include put_element(map-get($formContactoInputRadio, putInit));
+    @include put_element(map-get($formContactoInputRadio, putSize));
+  }
+  input[type='checkbox'] {
+    @include put_element(map-get($formContactoInputRadio, putInit));
+    @include put_element(map-get($formContactoInputRadio, putSize));
+  }
+  .submit {
+    @include put_element(map-get($formContactoEnviar, putInit));
+    @include put_element(map-get($formContactoEnviar, putSize));
+    @include put_element($formContactoEnviar);
+    &:hover{
+      @include put_element(map-get($formContactoEnviar, hover));
+    }
+  }
+  .obligatorio{
+    @include put_element($formContactoInputTextObligatorio);
+  }
+  .error{
+    @include put_element($formContactoInputTextError);
+  }
+  .correcto{
+    @include put_element($formContactoInputTextCorrecto);
+  }
+}

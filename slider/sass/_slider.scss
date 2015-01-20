@@ -1,0 +1,142 @@
+////////////////////////////////////////////////////////////////////////////
+//SLIDER
+////////////////////////////////////////////////////////////////////////////
+
+@charset "UTF-8";
+@import 'variables';
+
+@font-face {
+  font-family: map-get($globalFontName, titulo);
+  src: url("#{$urlRootSlider}/fonts/fuente.ttf");
+}
+##{$sliderName} {
+  @include put_element(map-get($sliderBox,putInit));
+  @include put_element(map-get($sliderBox,putSize));
+  @include put_element(map-get($sliderBox,putPosition));
+  @include put_element($sliderBox);
+
+  @media screen and (max-width: map-get($globalMediaScreen, small)) {
+    border: none;
+  }
+  $strClass: #{''};
+  @each $index,$class in $listClass {
+    $strClass: $strClass #{'.'}#{map-get($class, class)}#{','};
+  }
+  #{$strClass} {
+    @include put_element(map-get($caption,putSize));
+    @include put_element($caption);
+  }
+  @each $index,$class in $listClass {
+    .#{map-get($class, class)} {
+      @include put_class($class);
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+  & div[u='loading'] {
+    position:absolute;
+    > div {
+      @include put_element(map-get($spinner,putInit));
+      @include put_element(map-get($spinner,putSize));
+      @include put_element(map-get($spinner,putPosition));
+}
+    > div + div {
+      display: block;
+      position:absolute;
+      @include put_element(map-get($spinner,putSize));
+      @include put_element(map-get($spinner,putPosition));
+      @include put_element(map-get($spinner,putImage));
+      @include put_element($spinner);
+    }
+  }
+  & div[u='slides']{
+    @include put_element(map-get($sliders,putInit));
+    @include put_element(map-get($sliders,putSize));
+    @include put_element(map-get($sliders,putPosition));
+    @include put_element($sliders);
+    $numSlider: 1;
+    @each $i, $captionSlider in $captionSliders {
+        $text: 1;
+        @each $indice, $datos in $captionSlider {
+          & .slider_#{$numSlider}_text_#{$text}{
+            @include put_caption($datos);
+            $text: $text+1;
+          }
+        }
+      $numSlider: $numSlider+1;
+    }
+    @media screen and (max-width: map-get($globalMediaScreen, small)) {
+      .smartphoneHidden {
+        display: none;
+      }
+    }
+  }
+  .bullet {
+   @include put_element(map-get($navigationBullet,putInit));
+   @include put_element(map-get($navigationBullet,putPosition));
+   @include put_element($navigationBullet);
+   .prototype {
+      @include put_element(map-get(map-get($navigationBullet,prototype),putInit));
+      POSITION: absolute;
+      WIDTH: map-get(map-get(map-get($navigationBullet,prototype),putSize),width);
+      HEIGHT: map-get(map-get(map-get($navigationBullet,prototype),putSize),height);
+      @include put_element(map-get($navigationBullet,prototype));
+    }
+    div {
+      @include put_element(map-get(map-get($navigationBullet,div),putInit));
+      @include put_element(map-get($navigationBullet,div));
+     &:hover {
+       @include put_element( map-get(map-get($navigationBullet, div),hover));
+      }
+    }
+    .av {
+      @include put_element( map-get($navigationBullet, activate));
+      &:hover {
+        @include put_element( map-get(map-get($navigationBullet, activate),hover));
+      }
+    }
+    .dn {
+      background-color: #fff;
+      &:hover {
+        background-color: map-get($navigationBullet, bulletClickColor);
+      }
+    }
+  }
+  & span.arrow {
+    display: none;
+    @media screen and (max-width: map-get($globalMediaScreen, small)) {
+      display: block;
+    }
+  }
+  & span.jssoral, & span.jssorar, & span.jssoraldn, & span.jssorardn {
+    @include put_element($arrowNavigation);
+    @if map-has-key(map-get($arrowNavigation,putImage),imageUrl) {
+      @include put_element(map-get($arrowNavigation, putImage));
+    }
+ }
+  & span.jssoral {
+    @include put_element(map-get(map-get($arrowNavigation,arrowLeft),putSize));
+    @include put_element(map-get(map-get($arrowNavigation,arrowLeft),putPosition));
+    @include put_element(map-get(map-get($arrowNavigation,arrowLeft),putImage));
+    :hover {
+      @include put_element(map-get(map-get($arrowNavigation,arrowLeft),hover));
+    }
+  }
+  & span.jssorar {
+    @include put_element(map-get(map-get($arrowNavigation,arrowRight),putSize));
+    @include put_element(map-get(map-get($arrowNavigation,arrowRight),putPosition));
+    @include put_element(map-get(map-get($arrowNavigation,arrowRight),putImage));
+    :hover {
+      @include put_element(map-get(map-get($arrowNavigation,arrowRight),hover));
+    }
+  }
+  & span.jssoraldn {
+    @include put_element(map-get(map-get($arrowNavigation,arrowLeft),click));
+  }
+  & span.jssorardn {
+    @include put_element(map-get(map-get($arrowNavigation,arrowRight),click));
+  }
+}
+
+

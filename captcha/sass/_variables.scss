@@ -1,0 +1,56 @@
+/////////////////////////////////////////////////////////////////////////////////
+// CAPTCHA
+/////////////////////////////////////////////////////////////////////////////////
+@import "mixin";
+
+$urlRootCaptcha: "../captcha";
+
+//CAPTCHA
+$captcha: (
+        putInit:(
+                boxSizing: border-box,
+                display:block,
+                float:none,
+                position:relative,
+                clear:both
+        ),
+        putSize:(
+                width:map-get(map-get(map-get($formContactoInputText, pass),putSize),width),
+                height:map-get(map-get(map-get($formContactoInputText, pass),putSize),width) * .33
+        ),
+        putPosition:(
+        ),
+        margin:0 auto  map-get($globalPixel, large) auto,
+        backGroundColor:map-get($globalBackGroundColor, grayLight),
+        border: map-get($globalPixel, medium) solid map-get($globalColor, black),
+        clear:both
+);
+//IMAGE REFRESH
+$captchaRefresh: (
+        putInit:(
+                boxSizing: border-box,
+                display:block,
+                float:right,
+                position:relative
+        ),
+        putSize:(
+                width:20px,
+                height:20px
+        ),
+        putPosition:(
+        ),
+        putImage:(
+                imageUrl: "#{$urlRootCaptcha}/img/refresh.png",
+                imageRepeat:no-repeat,
+                imageSize: 100% 100%,
+                imagePosition: center,
+        ),
+        hover:(
+                cursor:pointer,
+                transformScale: 1.1
+        ),
+        margin: 2 * map-get($globalPixel,small),
+        border: 3 * map-get($globalPixel,small) solid rgba(map-get($globalColor, white), map-get($transparencyLevel, level_3)),
+        borderRadius: map-get($globalRadius, circle),
+        transition: transform .5s linear 0s,
+);

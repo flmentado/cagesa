@@ -1,0 +1,331 @@
+/////////////////////////////////////////////////////////////////////////////////
+// FORM
+/////////////////////////////////////////////////////////////////////////////////
+@import "mixin";
+
+$urlRootForm: "../forms/contacto";
+$formName: 'formularioContacto';
+
+//FORM
+$formContacto: (
+        putInit:(
+                box-sizing: border-box,
+                display:block,
+                position:relative,
+                float:left
+        ),
+        putSize:(
+                width:100%,
+                height:100%
+        ),
+        putPosition:(
+                top:0,
+                left:0
+        ),
+        fontFamily:map-get($globalFontName,titulo),
+        fontSize:map-get($globalFontSize,large),
+        color:rgba(0, 50, 0, 1),
+        textShadow: map-get($globalTextShadow, white_5)
+);
+$formularioHeader: (
+        putInit:(
+                float:left
+        ),
+        putSize:(
+                width:100%
+
+        ),
+        putPosition:(
+        ),
+        fontFamily: map-get($formContacto,fontFamily),
+        fontSize:map-get($globalFontSize, x-large),
+        color:map-get($globalColor, greenMedium),
+        textShadow: map-get($globalTextShadow, white_5),
+        borderBottom: 2* map-get($globalPixel,small) ridge rgba(200, 240, 200, .8),
+        marginTop: map-get($globalPixel, extra),
+        marginBottom: map-get($globalPixel, large)
+);
+$formContactoFila: (
+        putInit:(
+                boxSizing:border-box,
+                display:block,
+                float:left,
+                position:relative
+        ),
+        putSize:(
+                width:100%
+        ),
+        putPosition:(
+        ),
+        lineHeight: map-get($globalLineHeight, normal)
+);
+$formContactoInputRadio: (
+        putInit:(
+                display:block,
+                float:left,
+                position:relative
+        ),
+        putSize:(
+                height:24 * map-get($globalPixel, small),
+                width: 24 * map-get($globalPixel, small)
+        ),
+        putPosition:(
+        ),
+        textAlign:center
+);
+$formContactoBloqueInput: (
+        putInit:(
+                boxSizing: border-box
+        ),
+        putSize:(
+                maxWidth: 400 * map-get($globalPixel, small)
+        ),
+        putPosition:(
+        ),
+        font-size: inherit
+);
+$formContactoLabel: (
+        putInit:(
+                display:block,
+                float:left,
+                position:relative
+        ),
+        putSize:(
+                width:80%
+        ),
+        putPosition:(
+        ),
+        fontFamily: inherit,
+        fontSize:map-get($formContacto, fontSize),
+        color:map-get($formContacto, color),
+        textShadow:map-get($formContacto, textShadow),
+        lineHeight:map-get($globalLineHeight, normal)
+);
+$formContactoSpan: (
+        putInit:(
+                display:block,
+                float:left
+        ),
+        putSize:(
+                width:100%,
+                height:auto
+        ),
+        putPosition:(
+        ),
+        textArea: (
+                putInit:(
+                        boxSizing: border-box,
+                        display:block
+                ),
+                putSize:(
+                        width:100%,
+                        height: 6em
+                ),
+                putPosition:(
+                ),
+                backGroundColor:map-get($globalShadowColor, white),
+                padding: map-get($globalPixel, medium),
+                fontFamily: inherit,
+                fontSize:map-get($formContacto, fontSize),
+                color:map-get($formContacto, color),
+                textShadow:map-get($formContacto, textShadow),
+                box-shadow: none,
+                border: map-get($globalPixel,small) solid darkseagreen,
+                cursor: map-get($globalCursor,pointer),
+                transition: box-shadow 1s linear 0s,
+                outLine: none,
+                clear: both
+        ),
+        fontFamily: inherit,
+        fontSize:map-get($formContacto, fontSize),
+        acolor:map-get($formContacto, color),
+        textShadow:map-get($formContacto, textShadow),
+        marginBottom:map-get($globalPixel,large),
+        clear:both
+);
+
+$formContactoInputText: (
+        putInit:(
+                boxSizing: border-box,
+                display:block,
+                float:left,
+                position:relative,
+                clear:both
+        ),
+        putSize:(
+                width: map-get($formContacto, width)
+        ),
+        putPosition:(
+        ),
+        focus:(
+                cursor:default,
+                boxShadow:map-get($globalBoxShadow,inputBox),
+                outLine: none
+             ),
+        putImage:(
+                imageRepeat: no-repeat,
+                imagePosition: map-get($globalPixel,large) center,
+                imageSize: 1.5em 1.6em,
+        ),
+        remitente :(
+                putSize:(
+                        width:100%
+                ),
+                putImage:(
+                        imageUrl: "#{$urlRootForm}/img/user.png"
+                )
+        ),
+        direccion :(
+                putSize:(
+                        width:100%
+                ),
+                putImage:(
+                        imageUrl: "#{$urlRootForm}/img/direccion.png"
+                )
+        ),
+        tlf :(
+                putSize:(
+                        width:100%
+                ),
+                putImage:(
+                        imageUrl: "#{$urlRootForm}/img/tlf.png"
+                )
+        ),
+        fax :(
+                putSize:(
+                        width:100%
+                ),
+                putImage:(
+                        imageUrl: "#{$urlRootForm}/img/fax.png"
+                )
+        ),
+        email :(
+                putSize:(
+                        width:100%
+                ),
+                putImage:(
+                        imageUrl: "#{$urlRootForm}/img/mail.png"
+                )
+        ),
+        pass :(
+                putInit:(
+                        float:none
+                ),
+                putSize:(
+                        width:300px
+                ),
+                putImage:(
+                        imageUrl: "#{$urlRootForm}/img/pass.png"
+                ),
+                margin: 0 auto
+        ),
+        padding: map-get($globalPixel, medium) 1em map-get($globalPixel, medium) 2.8em,
+        fontFamily: inherit,
+        fontSize:map-get($formContacto, fontSize),
+        color:map-get($formContacto, color),
+        textShadow:map-get($formContacto, textShadow),
+        margin: map-get($globalPixel, medium) 0,
+        lineHeight:map-get($globalLineHeight,scale),
+        borderRadius: map-get($globalRadius, extra),
+        border:  map-get($globalPixel, small) solid darkseagreen,
+        box-shadow: none,
+        cursor: map-get($globalCursor, pointer),
+        transition: all .6s linear
+);
+$formContactoInputTextObligatorio: (
+        putInit:(
+        ),
+        putSize:(
+        ),
+        putPosition:(
+        ),
+        putImage:(
+        ),
+        backGroundColor:rgba(255,255,230,.8)
+);
+$formContactoInputTextError: (
+        putInit:(
+        ),
+        putSize:(
+        ),
+        putPosition:(
+        ),
+        putImage:(
+        ),
+        fontSize:map-get($globalFontSize,large),
+        textShadow:map-get($globalTextShadow,black_3),
+        borderRadiusLeft:map-get($globalRadius,extra),
+        boxShadow:map-get($globalBoxShadow,bottomBlack),
+        padding:map_get($globalPixel,medium),
+        backGroundColor:rgba(255,0,0,.5),
+        color:map-get($globalColor,white),
+        cursor:map-get($globalCursor,pointer)
+);
+$formContactoInputTextCorrecto: (
+        putInit:(
+        ),
+        putSize:(
+        ),
+        putPosition:(
+        ),
+        putImage:(
+        ),
+        fontSize:map-get($globalFontSize,large),
+        textShadow:map-get($globalTextShadow,white_3),
+        borderRadiusLeft:map-get($globalRadius,extra),
+        boxShadow:map-get($globalBoxShadow,bottomBlack),
+        padding:map_get($globalPixel,medium),
+        backGroundColor:rgba(0,255,0,.5),
+        color:map-get($globalColor,black),
+        wordWarp:break-word,
+        cursor:map-get($globalCursor,pointer)
+);
+$formContactoEnviar: (
+        putInit:(
+                display:block,
+                float:right
+        ),
+        putSize:(
+                width:120px
+        ),
+        putPosition:(
+        ),
+        putImage:(
+        ),
+        hover:(
+                cursor:pointer,
+                /*gradientVertical:(
+                        from:(
+                                color:#ffde96,
+                                percent:0%
+                        ),
+                        to:(
+                                color:#398235,
+                                percent:100%
+                        )
+                ),*/
+                backGroundColor:map-get($globalColor,menuBarHover)
+        ),
+        /*gradientVertical:(
+                from:(
+                        color: #73880a,
+                        percent:0%
+                ),
+                to:(
+                        color:#72b50e,
+                        percent:100%
+                )
+        ),*/
+        clear:both,
+        fontSize:map-get($globalFontSize,large),
+        color:map_get($globalColor,white),
+        textShadow:map-get($globalTextShadow,black_3),
+        lineHeight: map-get($globalLineHeight,normal),
+        textAlign:center,
+        backGroundColor:map-get($globalColor,menuBar),
+        border:map-get($globalPixel,small) solid map-get($globalShadowColor,black_3),
+        borderRadius:map-get($globalRadius,large),
+        //boxShadow:map-get($globalBoxShadow, bottomRightBlack),
+        margin: map-get($globalPixel,extra) map-get($globalPixel,large) map-get($globalPixel,large) 0,
+        transition: background 1s linear
+);

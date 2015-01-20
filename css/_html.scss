@@ -1,0 +1,81 @@
+@import "variables";
+
+html,body{
+  padding:0;
+  margin:0;
+}
+body{
+  @include user-select(none);
+}
+##{$menuBarName}{
+  @include put_element(map-get($menuBar, putInit));
+  @include put_element(map-get($menuBar, putSize));
+  @include put_element(map-get($menuBar, putPosition));
+  @include put_element($menuBar);
+  >span{
+    @include put_element(map-get($menuBar, span));
+    &.menuDesplegable {
+      &:after {
+        @include put_element(map-get(map-get(map-get(map-get($menuBar, span),menuDesplegable),after),putInit));
+        @include put_element(map-get(map-get(map-get(map-get($menuBar, span),menuDesplegable),after),putSize));
+        @include put_element(map-get(map-get(map-get(map-get($menuBar, span),menuDesplegable),after),putPosition));
+        @include put_element(map-get(map-get(map-get($menuBar, span),menuDesplegable),after));
+        @media screen and (max-width:map-get($globalMediaScreen,medium)) {
+          display: block;
+        }
+       }
+      &:hover{
+        @include put_element(map-get(map-get(map-get($menuBar, span),menuDesplegable),hover));
+      }
+    }
+  }
+  .nav{
+    @include put_element(map-get(map-get($menuBar, nav),putInit));
+    @include put_element(map-get(map-get($menuBar, nav),putSize));
+    @include put_element(map-get(map-get($menuBar, nav),putPosition));
+    @include put_element(map-get($menuBar, nav));
+    >li{
+      @include put_element(map-get(map-get(map-get($menuBar, nav),li),putInit));
+      @include put_element(map-get(map-get(map-get($menuBar, nav),li),putSize));
+      @include put_element(map-get(map-get(map-get($menuBar, nav),li),putPosition));
+      @include put_element(map-get(map-get($menuBar, nav),li));
+      a{
+        @include put_element(map-get(map-get(map-get(map-get($menuBar, nav),li),a),putInit));
+        @include put_element(map-get(map-get(map-get(map-get($menuBar, nav),li),a),putSize));
+        @include put_element(map-get(map-get(map-get(map-get($menuBar, nav),li),a),putPosition));
+        @include put_element(map-get(map-get(map-get($menuBar, nav),li),a));
+      }
+      &:hover{
+        @include put_element(map-get(map-get(map-get($menuBar, nav),li),hover));
+      }
+
+    }
+
+  }
+}
+
+@media screen and (max-width:640px) {
+
+  #menu>span.menuDesplegable:after{
+    display: block;
+  }
+  #menu .nav{
+    position: absolute;
+    top:75px;
+    height:11em;
+    margin-right: -120px;
+    background-color: rgba(101, 127, 90,.9);
+    box-shadow: -4px 4px 4px rgba(0,0,0,.3);
+    transition: margin-right .3s linear;
+  }
+  #menu .nav>li{
+    clear:both;
+
+  }
+  #menu .nav>li>a{
+    padding-left: 5px;
+    text-align: left;
+    z-index: 1;
+  }
+}
+

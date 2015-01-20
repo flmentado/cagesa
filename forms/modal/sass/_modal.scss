@@ -1,0 +1,50 @@
+/////////////////////////////////////////////////////////////////////////////////
+// FORM MODAL
+/////////////////////////////////////////////////////////////////////////////////
+@import "variables";
+
+##{$formModalName} {
+  @include put_element(map-get($formularioFondoModal, putInit));
+  @include put_element(map-get($formularioFondoModal, putSize));
+  @include put_element(map-get($formularioFondoModal, putPosition));
+  @include put_element($formularioFondoModal);
+  .ventanaModal {
+    @include put_element(map-get($formularioVentanaModal, putInit));
+    @include put_element(map-get($formularioVentanaModal, putSize));
+    @include put_element(map-get($formularioVentanaModal, putPosition));
+    @include put_element($formularioVentanaModal);
+    .headerFormularioModal {
+      @include put_element(map-get($formularioVentanaModalTitulo, putInit));
+      @include put_element(map-get($formularioVentanaModalTitulo, putSize));
+      @include put_element(map-get($formularioVentanaModalTitulo, putPosition));
+      @include put_element($formularioVentanaModalTitulo);
+      &:before {
+        @include put_element(map-get($formularioVentanaModalTitulo, before));
+      }
+    }
+    .cuerpoFormularioModal {
+      @include put_element(map-get($formularioVentanaModalCuerpo, putInit));
+      @include put_element(map-get($formularioVentanaModalCuerpo, putSize));
+      @include put_element(map-get($formularioVentanaModalCuerpo, putPosition));
+      @include put_element($formularioVentanaModalCuerpo);
+    }
+    .closeFormModal {
+      @include put_element(map-get($formularioVentanaModalBotonCerrar, putInit));
+      @include put_element(map-get($formularioVentanaModalBotonCerrar, putSize));
+      @include put_element(map-get($formularioVentanaModalBotonCerrar, putPosition));
+      @include put_element($formularioVentanaModalBotonCerrar);
+      &:hover {
+        @include put_element(map-get($formularioVentanaModalBotonCerrar, hover));
+      }
+    }
+    .scroll {
+      @include put_element(map-get($formularioModalScroll, putInit));
+      @include put_element(map-get($formularioModalScroll, putSize));
+      @include put_element(map-get($formularioModalScroll, putPosition));
+      @include put_element($formularioModalScroll);
+    }
+    @media screen and (min-width: 600px) {
+      @include put_element(map-get($formularioFondoModal, media));
+    }
+  }
+}

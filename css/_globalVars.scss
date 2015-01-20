@@ -1,0 +1,107 @@
+////////////////////////////////////////////////////////////////////////////////
+// GLOBAL VARIABLES
+////////////////////////////////////////////////////////////////////////////////
+@import 'globalMixin';
+
+//CURSOR
+$globalCursor: (
+        pointer : pointer,
+        default: default
+);
+//PIXEL
+$globalPixel: (
+        none : 0px,
+        small: 1px,
+        medium: 5px,
+        large: 10px,
+        extra:25px
+);
+//FONTS
+$globalFontName: (
+        titulo: titulo,
+        orange: orange
+);
+//FONT SIZE
+$globalFontSize: (
+        small:14px ,
+        medium:16px,
+        large:20px,
+        x-large:24px,
+        extra:28px,
+        super:44px
+);
+//LINE HEIGHT
+$globalLineHeight:(
+        normal: 30 * map-get($globalPixel,small),
+        scale: 1.4
+);
+//RADIUS
+$globalRadius: (
+        small:map-get($globalPixel,small),
+        normal:map-get($globalPixel,normal),
+        large: map-get($globalPixel,large),
+        extra: map-get($globalPixel,extra),
+        circle: 50%
+);
+
+// TRANSPARENCY LEVEL
+$transparencyLevel: (
+        level_0: 0,
+        level_1: .1,
+        level_2: .2,
+        level_3: .3,
+        level_4: .4,
+        level_5: .5,
+        level_6: .6,
+        level_7: .7,
+        level_8: .8,
+        level_9: .9,
+        level_10: 1
+);
+//USER COLOR
+$globalColor: (
+        greenMedium:rgb(0, 180, 0),
+        white:rgb(255, 255, 255),
+        black:rgb(0, 0, 0),
+        orange:rgb(235, 81, 0),
+        menuBar: rgb(101, 127, 90),
+        menuBarHover:rgb(54, 67, 48)
+);
+//BACKGROUND
+$globalBackGroundColor: (
+        orange:rgba(map-get($globalColor, orange), map-get($transparencyLevel, level_6)),
+        grayLight:rgba(map-get($globalColor, black), map-get($transparencyLevel, level_4)),
+        menuBar:rgba(map-get($globalColor,'menuBar'),map-get($transparencyLevel, level_9))
+);
+//SHADOW COLOR
+$globalShadowColor: (
+        black_10: rgba(map-get($globalColor, black), map-get($transparencyLevel, level_10)),
+        black_5: rgba(map-get($globalColor, black), map-get($transparencyLevel, level_5)),
+        black_3:rgba(map-get($globalColor, black), map-get($transparencyLevel, level_3)),
+        white_10:rgba(map-get($globalColor, white), map-get($transparencyLevel, level_10)),
+        white_5:rgba(map-get($globalColor, white), map-get($transparencyLevel, level_5))
+);
+//SHADOW
+$globalBoxShadow: (
+        bullet:0 0 6px map-get($globalShadowColor, white_10),
+        slider: 0 0 4px map-get($globalShadowColor, black_5),
+        bottomBlack: 0px 4px 4px map-get($globalShadowColor, black_3),
+        bottomRightBlack: 4px 4px 4px map-get($globalShadowColor, black_3),
+        roundBlack: 0px 0px 4px map-get($globalShadowColor, black_3),
+        inputBox: 0px 0px 5px 5px rgba(darkseagreen, .3)
+);
+$globalTextShadow: (
+        white_5: 1px 1px map-get($globalShadowColor, white_5),
+        white_3: 1px 1px map-get($globalShadowColor, white_3),
+        black_5: 1px 1px map-get($globalShadowColor, black_5),
+        black_3: 1px 1px map-get($globalShadowColor, black_3)
+);
+
+
+//MEDIA SCREEN
+$globalMediaScreen: (
+        small:480px,
+        medium:640px,
+        large:967px
+);
+

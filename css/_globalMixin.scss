@@ -1,0 +1,269 @@
+/////////////////////////////////////////////////////////////////////////////////
+// SLIDER
+/////////////////////////////////////////////////////////////////////////////////
+// USER SELECT
+@mixin user-select($select) {
+  -webkit-user-select: $select;
+  -moz-user-select: $select;
+  -ms-user-select: $select; // IE10+
+  -o-user-select: $select;
+  user-select: $select;
+}
+//BOX_SHADOW
+@mixin box-shadow($shadow) {
+  -webkit-box-shadow: $shadow; // iOS <4.3 & Android <4.1
+  -ms-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+//GRADIENT HORIZONTAL
+@mixin gradient_horizontal($start-color, $end-color, $start-percent, $end-percent)
+{
+  background-image: -webkit-gradient(linear, $start-percent top, $end-percent top, from($start-color), to($end-color)); // Safari 4+, Chrome 2+
+  background-image: -webkit-linear-gradient(left, color-stop($start-color $start-percent), color-stop($end-color $end-percent)); // Safari 5.1+, Chrome 10+
+  background-image: -moz-linear-gradient(left, $start-color $start-percent, $end-color $end-percent); // FF 3.6+
+  background-image:  linear-gradient(to right, $start-color $start-percent, $end-color $end-percent); // Standard, IE10
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=1); // IE9 and down
+}
+
+//GRADIENT VERTICAL
+@mixin gradient_vertical($start-color, $end-color, $start-percent, $end-percent) {
+  background-image: -webkit-gradient(linear, left $start-percent, left $end-percent, from($start-color), to($end-color)); // Safari 4+, Chrome 2+
+  background-image: -webkit-linear-gradient(top, $start-color, $start-percent, $end-color, $end-percent); // Safari 5.1+, Chrome 10+
+  background-image:  -moz-linear-gradient(top, $start-color $start-percent, $end-color $end-percent); // FF 3.6+
+  background-image: linear-gradient(to bottom, $start-color $start-percent, $end-color $end-percent); // Standard, IE10
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=0); // IE9 and down
+}
+//GRADIENT DIRECCIONAL
+@mixin gradient_directional($start-color, $end-color, $deg) {
+  background-repeat: repeat-x;
+  background-image: -webkit-linear-gradient($deg, $start-color, $end-color); // Safari 5.1+, Chrome 10+
+  background-image: -moz-linear-gradient($deg, $start-color, $end-color); // FF 3.6+
+  background-image: linear-gradient($deg, $start-color, $end-color); // Standard, IE10
+}
+//GRADIENT HORIZONTAL 3 COLOURS
+@mixin gradient_horizontal_3_colors($start-color, $mid-color, $color-stop, $end-color) {
+  background-image: -webkit-gradient(left, linear, 0 0, 0 100%, from($start-color), color-stop($color-stop, $mid-color), to($end-color));
+  background-image: -webkit-linear-gradient(left, $start-color, $mid-color $color-stop, $end-color);
+  background-image: -moz-linear-gradient(left, $start-color, $mid-color $color-stop, $end-color);
+  background-image: linear-gradient(to right, $start-color, $mid-color $color-stop, $end-color);
+  background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=1); // IE9 and down, gets no color-stop at all for proper fallback
+}
+//GRADIENT VERTICAL 3 COLOURS
+@mixin gradient_vertical_3_colors($start-color, $mid-color, $color-stop, $end-color) {
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from($start-color), color-stop($color-stop, $mid-color), to($end-color));
+  background-image: -webkit-linear-gradient($start-color, $mid-color $color-stop, $end-color);
+  background-image: -moz-linear-gradient(top, $start-color, $mid-color $color-stop, $end-color);
+  background-image: linear-gradient($start-color, $mid-color $color-stop, $end-color);
+  background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=0); // IE9 and down, gets no color-stop at all for proper fallback
+}
+// GRADIENT RADIAL
+@mixin gradient_radial($inner-color, $outer-color) {
+  background-image: -webkit-gradient(radial, center center, 0, center center, 460, from($inner-color), to($outer-color));
+  background-image: -webkit-radial-gradient(circle, $inner-color, $outer-color);
+  background-image: -moz-radial-gradient(circle, $inner-color, $outer-color);
+  background-image: radial-gradient(circle, $inner-color, $outer-color);
+  background-repeat: no-repeat;
+}
+// GRADIENT STRIPPER
+@mixin gradient_striped($color, $angle) {
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.25, rgba(255,255,255,.15)), color-stop(.25, transparent), color-stop(.5, transparent), color-stop(.5, rgba(255,255,255,.15)), color-stop(.75, rgba(255,255,255,.15)), color-stop(.75, transparent), to(transparent));
+  background-image: -webkit-linear-gradient($angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient($angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient($angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+}
+//TRANSITION GENERAL
+@mixin transition($transition...) {
+  -webkit-transition: $transition;
+  -moz-transition:    $transition;
+  -ms-transition:     $transition;
+  -o-transition:      $transition;
+  transition:        $transition;
+}
+//TRANSITION DELAY
+@mixin transition-delay($transition-delay) {
+  -webkit-transition-delay: $transition-delay;
+  -moz-transition-delay:    $transition-delay;
+  -ms-transition-delay:     $transition-delay;
+  -o-transition-delay:      $transition-delay;
+  transition-delay:         $transition-delay;
+}
+//TRANSITION DURATION
+@mixin transition-duration($transition-duration) {
+  -webkit-transition-duration: $transition-duration;
+  transition-duration: $transition-duration;
+}
+@mixin transition-transform($transition...) {
+  -webkit-transition: -webkit-transform $transition;
+  -moz-transition: -moz-transform $transition;
+  -o-transition: -o-transform $transition;
+  transition: transform $transition;
+}
+
+// TRANSFORMATION ROTATE
+@mixin rotate($degrees) {
+  -webkit-transform: rotate($degrees);
+  -ms-transform: rotate($degrees); // IE9+
+  transform: rotate($degrees);
+}
+// TRANSFORMATION SCALE
+@mixin scale($ratio) {
+  -webkit-transform: scale($ratio);
+  -ms-transform: scale($ratio); // IE9+
+  transform: scale($ratio);
+}
+// TRANSFORMATION TRANSLATE
+@mixin translate($x, $y) {
+  -webkit-transform: translate($x, $y);
+  -ms-transform: translate($x, $y); // IE9+
+  transform: translate($x, $y);
+}
+// TRANSFORMATION TRANSLATE 3D
+@mixin translate_3d($x, $y, $z) {
+  -webkit-transform: translate3d($x, $y, $z);
+  transform: translate3d($x, $y, $z);
+}
+// BOX-SIZING
+@mixin box_sizing($boxmodel) {
+  -webkit-box-sizing: $boxmodel;
+  -moz-box-sizing: $boxmodel;
+  box-sizing: $boxmodel;
+}
+//CAPTION
+@mixin put_class($datos) {
+  font-family: map-get($datos, fontFamily);
+  font-size: map-get($datos, fontSize);
+  color: map-get($datos, color);
+  text-shadow: map-get($datos, textShadow);
+  background-color: map-get($datos, backGroundColor);
+}
+//ELEMENT
+@mixin put_element($datos){
+    //USER SELECT
+    @if map-has-key($datos, userSelect) {
+      @include user-select(map-get($datos, userSelect));
+    }
+    //CLEAR
+    clear: map-get($datos, clear);
+    //INIT
+    box-sizing: map-get($datos, boxSizing);
+    visibility: map-get($datos, visibility);
+    display: map-get($datos, display);
+    position: map-get($datos, position);
+    float: map-get($datos, float);
+    width: map-get($datos, width);
+    max-width: map-get($datos, maxWidth);
+    height: map-get($datos, height);
+    max-height: map-get($datos, maxHeight);
+    overflow: map-get($datos, overFlow);
+    overflow-x: map-get($datos, overFlowX);
+    overflow-y: map-get($datos, overFlowY);
+    opacity: map-get($datos, opacity);
+    @if map-has-key($datos, opacity) {
+      filter: alpha(opacity=map-get($datos, opacity) * 100);
+    }
+    //POSITION
+    top: map-get($datos, top);
+    left: map-get($datos, left);
+    right: map-get($datos, right);
+    bottom: map-get($datos, bottom);
+    // MARGIN
+    margin: map-get($datos, margin);
+    margin-top: map-get($datos, marginTop);
+    margin-right: map-get($datos, marginRight);
+    margin-bottom: map-get($datos, marginBottom);
+    margin-left: map-get($datos, marginLeft);
+    // PADDING
+    padding: map-get($datos, padding);
+    padding-top: map-get($datos, paddingTop);
+    padding-right: map-get($datos, paddingRight);
+    padding-bottom: map-get($datos, paddingBottom);
+    padding-left: map-get($datos, paddingLeft);
+    //FONT
+    font-family: map-get($datos, fontFamily);
+    font-size: map-get($datos, fontSize);
+    font-weight: map-get($datos, fontWeight);
+    font-style: map-get($datos, fontStyle);
+    //TEXT
+    word-wrap: map-get($datos, wordWarp);
+    color: map-get($datos, color);
+    text-shadow: map-get($datos, textShadow);
+    text-decoration: map-get($datos, textDecoration);
+    text-align: map-get($datos, textAlign);
+    line-height: map-get($datos, lineHeight);
+    content: map-get($datos, content);
+    //BORDER
+    border-radius: map-get($datos, borderRadius);
+    border-top-left-radius: map-get($datos, borderRadiusTop);
+    border-top-right-radius: map-get($datos, borderRadiusRight);
+    border-bottom-right-radius: map-get($datos, borderRadiusBottom);
+    border-bottom-left-radius: map-get($datos, borderRadiusLeft);
+    border: map-get($datos, border);
+    border-top: map-get($datos, borderTop);
+    border-right: map-get($datos, borderRight);
+    border-bottom: map-get($datos, borderBottom);
+    border-left: map-get($datos, borderLeft);
+    outline: map-get($datos, outLine);
+    //BOX SHADOW
+    @if map-has-key($datos, boxShadow) {
+      @include box-shadow(map-get($datos, boxShadow));
+    }
+    //GRADIENT
+    @if map-has-key($datos, gradientVertical) {
+      @include gradient_vertical(
+              map-get(map-get(map-get($datos, gradientVertical), from), color),
+              map-get(map-get(map-get($datos, gradientVertical), to), color),
+              map-get(map-get(map-get($datos, gradientVertical), from), percent),
+              map-get(map-get(map-get($datos, gradientVertical), to), percent)
+      );
+    }
+    //BACKGROUND
+    background: map-get($datos, backGround);
+    background-color: map-get($datos, backGroundColor);
+    @if map-has-key($datos, imageUrl) {
+      background-image: url(map-get($datos,imageUrl));
+    }
+    background-repeat: map-get($datos, imageRepeat);
+    background-position: map-get($datos, imagePosition);
+    background-size: map-get($datos, imageSize);
+    //CURSOR
+    cursor: map-get($datos, cursor);
+    //TRANSITION
+    @if map-has-key($datos, transition) {
+      @include transition(map-get($datos, transition));
+    }
+    //TRANSFORM
+    @if map-has-key($datos, transformScale) {
+      @include scale(map-get($datos, transformScale));
+    }
+    @if map-has-key($datos, transformRotate) {
+      @include scale(map-get($datos, transformRotate));
+    }
+    //Z-INDEX
+    z-index: map-get($datos, zIndex);
+}
+//PUT CAPTION
+@mixin put_caption($datos) {
+  @if map-has-key($datos,putInit) {
+    @include put_element(map-get($datos, putInit));
+  }
+  @if map-has-key($datos,putSize) {
+    @include put_element(map-get($datos, putSize));
+  }
+  @if map-has-key($datos,putPosition) {
+    @include put_element(map-get($datos, putPosition));
+  }
+  @if str-length(#{map-get($datos, class)})>0 {
+    @extend .#{#{map-get($datos, class)}};
+  }
+  @if map-has-key($datos,putImage) {
+    @include put_element(map-get($datos, putImage));
+  }
+  @include put_element($datos);
+  &:after {
+    content: map-get($datos, content);
+  }
+ }

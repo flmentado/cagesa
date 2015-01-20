@@ -1,0 +1,112 @@
+////////////////////////////////////////////////////////////////////////////////
+// HTML VARIABLES
+////////////////////////////////////////////////////////////////////////////////
+@import 'globalMixin';
+$menuBarName:'menu';
+//MENU BAR
+$heightBar:3em;
+
+$menuBar: (
+        putInit:(
+                display:block,
+                position:fixed
+        ),
+        putSize:(
+                width:100%,
+                height:$heightBar
+        ),
+        putPosition:(
+                top:0,
+                left:0
+        ),
+        span:(
+                color:map-get($globalColor,white),
+                textShadow:map-get($globalTextShadow,black_3),
+                fontSize:2.6em,
+                menuDesplegable:(
+                        after:(
+                                putInit:(
+                                        display:none,
+                                        position:absolute
+                                ),
+                                putSize:(
+                                ),
+                                putPosition:(
+                                        top:0,
+                                        right:20px
+                                ),
+                                media:(
+
+
+                                ),
+                                fontFamily:Flaticon,
+                                fontSize:40px,
+                                content:"\e004"
+                ),
+                        hover:(
+                                cursor:pointer
+                        )
+                ),
+
+        ),
+        media:(
+                maxWidth:640px
+        ),
+        nav:(
+                putInit:(
+                        display:block,
+                        position:absolute
+                ),
+                putSize:(
+                        height:$heightBar
+                ),
+                putPosition:(
+                        top:0,
+                        right:0px
+                ),
+                li:(
+                        putInit:(
+                                display:block,
+                                float:left
+                        ),
+                        putSize:(
+                        ),
+                        putPosition:(
+                        ),
+                        a:(
+                                putInit:(
+                                        boxSizing:border-box,
+                                        display:block,
+                                ),
+                                putSize:(
+                                        width:110px
+                                ),
+                                putPosition:(
+                                ),
+                                fontSize:1.4em,
+                                color:map-get($globalColor,white),
+                                lineHeight: 2,
+                                textDecoration:none,
+                                textAlign:center,
+                                textShadow:map-get($globalTextShadow,black_3)
+                        ),
+                        hover:(
+                                backGroundColor:map-get($globalColor,menuBarHover)
+                        ),
+                        padding-left: map-get($globalPixel,medium),
+                        transition:background 1s linear
+                ),
+                lineHeight: 1.4em,
+                padding:0,
+                margin:0,
+                overFlow: hidden
+),
+        backGroundColor: map-get($globalBackGroundColor,menuBar),
+        lineHeight: $heightBar,
+        boxShadow: map-get($globalBoxShadow,buttomBlack),
+        padding: 0 map-get($globalPixel,medium),
+        userSelect:none,
+        zIndex: 99
+);
+
+

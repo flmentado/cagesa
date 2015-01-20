@@ -1,0 +1,141 @@
+/////////////////////////////////////////////////////////////////////////////////
+// FORM MODAL
+/////////////////////////////////////////////////////////////////////////////////
+@import "mixin";
+
+$urlRootForm: "../forms/modal";
+$formModalName: 'formularioModal';
+$formModalCaption: (
+        formulario:"Solicitud",
+        formularioError:"Formulario Erróneo",
+        formularioCorrecto:"Formulario Enviado",
+);
+//FORM MODAL
+$formularioFondoModal: (
+        putInit:(
+                display:none,
+                position:fixed
+        ),
+        putSize:(
+                width:100%,
+                height:100%
+        ),
+        putPosition:(
+                top:0,
+                left:0
+        ),
+        media:(
+                maxWidth:500px
+        ),
+        backGroundColor:map-get($globalShadowColor, black_5),
+        zIndex:99
+);
+$formularioVentanaModal: (
+        putInit:(
+                display:block,
+                position:absolute
+        ),
+        putSize:(
+                width:98%,
+                height:90%
+        ),
+        putPosition:(
+                top:5%,
+                left:100%
+        ),
+        borderRadiusTop:20px,
+        borderRadiusLeft:20px,
+        boxShadow:map-get($globalBoxShadow, bottomRightBlack),
+        backGround:rgba(245, 255, 245, .9),
+        zIndex:1
+);
+$formularioVentanaModalTitulo: (
+        putInit:(
+                boxSizing: border-box,
+                display:block,
+                position:absolute
+        ),
+        putSize:(
+                width:100%,
+                height:40px
+        ),
+        putPosition:(
+                top:0,
+                left:0
+        ),
+        before:(
+                fontSize:map-get($globalFontSize, extra),
+                content: "SOLICITUD",
+                lineHeight: 1.25 * map-get($globalLineHeight,normal),
+                color: map-get($globalColor, white),
+                textShadow:map-get($globalTextShadow, black_3)
+        ),
+        textAlign: center,
+        borderRadiusTop:map-get($formularioVentanaModal,borderRadiusTop),
+        boxShadow:map-get($globalBoxShadow, bottomBlack),
+        backGroundColor:map-get($globalColor,menuBar ),
+        zIndex:map-get($formularioVentanaModal,zIndex) + 1,
+);
+$formularioVentanaModalCuerpo: (
+        putInit:(
+                boxSizing: border-box,
+                display:block,
+                position:absolute
+        ),
+        putSize:(
+                width:100%,
+                height:100%
+        ),
+        putPosition:(
+                top:0,
+                left:0
+        ),
+        paddingTop: 40px,
+        zIndex:map-get($formularioVentanaModal, zIndex)
+);
+$formularioVentanaModalBotonCerrar: (
+        putInit:(
+                position: absolute
+        ),
+        putSize:(
+                width: 24px,
+                height: 24px
+        ),
+        putPosition:(
+                top:6px,
+                right:3px
+        ),
+        hover:(
+                cursor:pointer,
+                backGroundColor: rgba(255, 0, 0, 1)
+        ),
+        backGroundColor: rgba(128, 0, 0, 1),
+        color: map-get($globalColor, white),
+        lineHeight: map-get($globalLineHeight,scale),
+        textDecoration: none,
+        border: 2*map-get($globalPixel,small) solid map-get($globalColor,white),
+        fontWeight: bold,
+        boxShadow: map-get($globalBoxShadow,roundBlack),
+        borderRadius: map-get($globalRadius,circle),
+        fontSize: map-get($globalFontSize,medium),
+        transition: all 1s linear 0s,
+);
+$formularioModalScroll: (
+        putInit:(
+                boxSizing: border-box,
+                display: block,
+                position: relative
+        ),
+        putSize:(
+                width: 100%,
+                height:96%
+
+        ),
+        putPosition:(
+                left:0,
+                right:0
+        ),
+        padding: 0 map-get($globalPixel,medium),
+        overFlowX: hidden,
+        overFlowY: auto
+);

@@ -1,0 +1,25 @@
+/////////////////////////////////////////////////////////////////////////////////
+// SLIDER
+/////////////////////////////////////////////////////////////////////////////////
+//PUT CAPTION
+@mixin put_caption($datos) {
+  @if map-has-key($datos,putInit) {
+    @include put_element(map-get($datos, putInit));
+  }
+  @if map-has-key($datos,putSize) {
+    @include put_element(map-get($datos, putSize));
+  }
+  @if map-has-key($datos,putPosition) {
+    @include put_element(map-get($datos, putPosition));
+  }
+  @if str-length(#{map-get($datos, class)})>0 {
+    @extend .#{#{map-get($datos, class)}};
+  }
+  @if map-has-key($datos,putImage) {
+    @include put_element(map-get($datos, putImage));
+  }
+  @include put_element($datos);
+  &:after {
+    content: map-get($datos, content );
+  }
+ }

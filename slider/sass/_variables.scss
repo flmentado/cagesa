@@ -1,0 +1,510 @@
+////////////////////////////////////////////////////////////////////////////////
+//SLIDER
+////////////////////////////////////////////////////////////////////////////////
+@import 'mixin';
+//ROOT FOR MODULE
+$urlRootSlider:'../slider';
+$sliderName: 'sliderContainer';
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// SLIDER
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Parametros:
+//-------------------------------------------
+// float:
+// margin:
+// position:
+// width:
+// height:
+// borderRadius:
+// boxShadow:
+// border:
+// border-top:
+// border-right:
+// border-bottom:
+// border-left:
+//
+$sliderBox: (
+        putInit:(
+                boxSizing: border-box,
+                visibility: hidden,
+                position: relative,
+                float: none,
+                overFlow:hidden
+        ),
+        putSize:(
+                width: 800px,
+                height: 450px
+        ),
+        putPosition:(
+                top:50px,
+                left:0
+        ),
+        margin:map-get($globalPixel,none) auto,
+        borderTop: 3px solid map-get($globalShadowColor, black),
+        borderBottom: 3px solid map-get($globalShadowColor, black),
+);
+$sliders: (
+        putInit:(
+                box-sizing: border-box,
+
+                position: absolute,
+                overFlow:hidden
+        ),
+        putSize:(
+                width: map-get(map-get($sliderBox,putSize),width),
+                height:  map-get(map-get($sliderBox,putSize),height)
+        ),
+        putPosition:(
+                top:0,
+                left:0
+        ),
+        cursor: map-get($globalCursor, default)
+);
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// CAPTIONS (CLASS)
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Parametros:
+//-------------------------------------------
+// class -> Obligatorio
+// height:
+// lineHeight:
+// fontFamily:
+// fontSize:
+// color:
+// backGroundColor:
+// borderRadius:
+// textAlign:
+// textShadow:
+//
+
+
+
+$caption: (//Default property for captions
+        putInit:(
+        ),
+        putSize:(
+                height : map-get($globalLineHeight,normal)
+        ),
+        putPosition:(
+        ),
+        lineHeight:map-get($globalLineHeight,normal),
+        textAlign : center,
+        borderRadius :map-get($globalRadius, normal)
+);
+
+$captionBlack: (
+        class:'captionBlack',
+        putInit:(
+        ),
+        putSize:(
+        ),
+        putPosition:(
+        ),
+        fontFamily:map-get($globalFontName, titulo),
+        fontSize: map-get($globalFontSize,super),
+        color: map-get($globalColor, white),
+        backGroundColor: map-get($globalBackGroundColor, grayLight)
+);
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// CAPTION CLASS LIST
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+$listClass: (
+        captionBlack:$captionBlack
+);
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// SPINNER
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Parametros Imagen
+// ------------------------------------------------------------
+// imageUrl:
+// imageRepeat:
+// imagePosition:
+// imageSize:
+$spinner: (
+        putInit:(
+                display:block,
+                position:absolute,
+                opacity: .7
+        ),
+        putSize:(
+                width:100%,
+                height:100%
+        ),
+        putPosition:(
+                top:0,
+                left:0
+        ),
+        putImage:(
+                imageUrl:"#{$urlRootSlider}/img/spinner/loading.gif",
+                imageRepeat: no-repeat,
+                imagePosition: center,
+                imageSize:content
+        ),
+        backGroundColor:map-get($globalBackGroundColor, grayLight)
+);
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//  CAPTIONS TRANSITIONS
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Parametros
+// ------------------------------------------------------------
+// class ->obligatorio
+// position ->obligatorio
+// left ->obligatorio
+// top ->obligatorio
+// width ->obligatorio
+// height
+// lineHeight
+// padding
+// paddingTop
+// paddingRight
+// paddingBottom
+// paddingLeft
+// margin
+// marginTop
+// marginRight
+// marginBottom
+// marginLeft
+// border
+// borderTop
+// borderRight
+// borderBottom
+// borderLeft
+// borderRadius
+// boxShadow -> Sólo para los que son de tamaño fijo
+// boxSizing
+// backGroundPosition-> para imagenes puedes dejar la clase nula.
+// backGround
+// backGroundColor
+// fontName
+// fontSize
+// fontStyle
+// content
+// color
+// textShadow
+// textAlign
+// clear
+// zIndex
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// SLIDER 1
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+$captionSlider_1_1: (
+        class: map-get($captionBlack, class),
+        putInit:(
+                position:absolute,
+        ),
+        putSize:(
+                width: 1 * (map-get(map-get($sliderBox,putSize),width)), //100%
+                height:100px,
+        ),
+        putPosition:(
+                left:0px,
+                top: 120px
+        ),
+        lineHeight:100px,
+        content: 'Más de quince años a su servicio',
+        borderRadius:map-get($globalRadius, medium)
+);
+
+// ARRAYS CAPTIONS SLIDER 1
+$captionSliders_1: (
+        caption_1: $captionSlider_1_1
+);
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// SLIDER 2
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+$captionSlider_2_1: (
+        class: map-get($captionBlack, class),
+        putInit:(
+                position:absolute
+        ),
+        putSize:(
+                width: .8 * (map-get(map-get($sliderBox,putSize),width)), //80%
+                height:50px,
+        ),
+        putPosition:(
+                left: .1 * (map-get(map-get($sliderBox,putSize),width)), //10%
+                top: 55px
+        ),
+        lineHeight:50px,
+        content: 'Personal especializado',
+);
+$captionSlider_2_2: (
+        class: map-get($captionBlack, class),
+        putInit:(
+                position:absolute
+        ),
+        putSize:(
+                width: 1 * (map-get(map-get($sliderBox,putSize),width)),//100%
+                height:50px,
+        ),
+        putPosition:(
+                left:0px,
+                top: 110px
+        ),
+        lineHeight:50px,
+        fontSize:1.2 * map-get($globalFontSize,extra),
+        content: 'Certificación AENOR Norma UNE EN ISO 9001',
+);
+$captionSlider_2_3: (
+        class:'', // not class
+        putInit:(
+                position:absolute
+        ),
+        putSize:(
+                width:100px,
+                height:200px
+        ),
+        putPosition:(
+                left:360px,
+                top: 165px
+        ),
+        putImage:(
+                imageUrl:"#{$urlRootSlider}/img/img/aenor_empresa.jpg",
+                imageRepeat:no-repeat,
+                imageSize: 100% 100%,
+        ),
+        boxShadow: map-get($globalBoxShadow,bottomRight)
+);
+// ARRAYS CAPTIONS SLIDER 2
+$captionSliders_2: (
+        caption_1: $captionSlider_2_1,
+        caption_2: $captionSlider_2_2,
+        caption_3: $captionSlider_2_3
+);
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// SLIDER 3
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+$captionSlider_3_1: (
+        class: map-get($captionBlack, class),
+        putInit:(
+                position:absolute
+        ),
+        putSize:(
+                width: .8 * (map-get(map-get($sliderBox,putSize),width)),//80%
+                height:50px,
+        ),
+        putPosition:(
+                left: .1 * (map-get(map-get($sliderBox,putSize),width)),//10%
+                top: 55px
+        ),
+        lineHeight:50px,
+        content: 'Comprometidos con el entorno',
+);
+$captionSlider_3_2: (
+        class: map-get($captionBlack, class),
+        putInit:(
+                position:absolute
+        ),
+        putSize:(
+                width:100%,
+                height:50px
+        ),
+        putPosition:(
+                left:0,
+                top: 110px
+        ),
+        lineHeight:50px,
+        fontSize:1.2 * map-get($globalFontSize,extra),
+        content: 'Certificación AENOR Norma UNE EN ISO 9001',
+        boxShadow:map-get($globalBoxShadow,black)
+);
+$captionSlider_3_3: (
+        class:'', // not class
+        putInit:(
+                position:absolute
+        ),
+        putSize:(
+                width:100px,
+                height:200px
+        ),
+        putPosition:(
+                left:292px,
+                top: 165px
+        ),
+        putImage:(
+                imageUrl:"#{$urlRootSlider}/img/img/aenor_gestion_ambiental.jpg",
+                imageRepeat:no-repeat,
+                imageSize: 100% 100%
+        ),
+        boxShadow: map-get($globalBoxShadow,bottomRight)
+);
+$captionSlider_3_4: (
+        class:'', // not class
+        putInit:(
+                position:absolute
+        ),
+        putSize:(
+                width:100px,
+                height:200px
+        ),
+        putPosition:(
+                left:426px,
+                top: 165px
+        ),
+        putImage:(
+                imageUrl:"#{$urlRootSlider}/img/img/aenor_medio_ambiente.jpg",
+                imageRepeat:no-repeat,
+                imageSize: 100% 100%
+        ),
+        boxShadow: map-get($globalBoxShadow,bottomRight)
+);
+
+// ARRAYS CAPTIONS SLIDER 3
+$captionSliders_3: (
+        caption_1: $captionSlider_3_1,
+        caption_2: $captionSlider_3_2,
+        caption_3: $captionSlider_3_3,
+        caption_4: $captionSlider_3_4
+);
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ARRAY SLIDERS
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+$captionSliders: (
+        slider_1:$captionSliders_1,
+        slider_2:$captionSliders_2,
+        slider_3:$captionSliders_3
+);
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// NAVIGATION BULLET
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+$navigationBullet: (
+        putInit:(
+                boxSizing: content-box,
+                position:absolute
+        ),
+        putSize:(
+        ),
+        putPosition:(
+                left:map-get(map-get($sliderBox,putSize),width)-128px,
+                top: 10px
+        ),
+        prototype:(
+                putInit:(
+                        boxSizing: border-box
+                ),
+                putSize:(
+                        width:28px,
+                        height:28px
+                ),
+                putPosition:(
+                ),
+                marginTop:map_get($globalPixel,medium),
+                marginLeft:map_get($globalPixel,medium),
+                borderRadius: map-get($globalRadius, circle),
+                boxShadow:map-get($globalBoxShadow, bullet),
+                transition:background-color 1s ease-in-out
+        ),
+        div:(
+                putInit:(
+                        overflow: hidden
+                ),
+                putSize:(
+                ),
+                putPosition:(
+                ),
+                hover:(
+                        backGroundColor:map-get($globalColor, white)
+                ),
+                opacity:.7,
+                cursor: map-get($globalCursor,pointer),
+                border: 2 * map-get($globalPixel, small) solid map-get($globalColor, white),
+                backGroundColor:map-get($globalBackGroundColor, orange),
+        ),
+        activate:(
+                putInit:(
+                ),
+                putSize:(
+                ),
+                putPosition:(
+                ),
+                hover:(
+                        backGroundColor:map-get($globalColor,white)
+                ),
+                backGroundColor:map-get($globalColor, greenMedium)
+        ),
+        click:(
+                putInit:(
+                ),
+                putSize:(
+                ),
+                putPosition:(
+                ),
+                hover:(
+                        backGroundColor:map-get($globalColor, white)
+                ),
+                backGroundColor:map-get($globalColor, greenMedium)
+        ),
+        backGroundColor: transparent,//map-get($globalBackGroundColor, grayLight),
+        padding:map_get($globalPixel,medium),
+        borderRadius: map-get($globalRadius, extra),
+);
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ARROW NAVIGATION
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+$arrowNavigation: (
+        putInit:(
+                position:absolute,
+                overFlow:hidden
+        ),
+        putSize:(
+                width:80px,
+                height:160px
+        ),
+        putPosition:(
+                left:312px,
+                top: 165px
+        ),
+        putImage:(
+                imageUrl:"#{$urlRootSlider}/img/arrow/arrow.png",
+        ),
+        arrowLeft:(
+                putInit:(
+                ),
+                putSize:(
+                        width:55px,
+                        height:166px
+                ),
+                putPosition:(
+                        left:2px,
+                        top: 123px
+                ),
+                putImage:(
+                       imagePosition:0px 0px
+                ),
+                hover:(
+                        imagePosition:-110px 0px
+                ),
+                click:(
+                        imagePosition:-220px 0px
+                ),
+        ),
+        arrowRight:(
+                putInit:(
+                ),
+                putSize:(
+                        width:55px,
+                        height:166px
+                ),
+                putPosition:(
+                        right:2px,
+                        top: 123px
+                ),
+                putImage:(
+                        imagePosition:-55px 0px
+                ),
+                hover:(
+                        imagePosition:-165px 0px
+                ),
+                click:(
+                        imagePosition:-175px 0px
+                ),
+        ),
+        cursor:map-get($globalCursor, cursor),
+        overFlow:hidden,
+);
